@@ -1,0 +1,5 @@
+*.csproj
+*.sln
+/DeepSky/Library
+/DeepSky/Logs
+/DeepSky/UserSettings

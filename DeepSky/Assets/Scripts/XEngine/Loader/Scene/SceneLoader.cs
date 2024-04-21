@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 namespace XEngine.Loader
 {
-    public class SceneLoader
+    public class SceneLoader:BaseLoader
     {
         private bool m_SceneComplete=false;
         private Action<float> m_ProgressCallback;
@@ -16,6 +16,17 @@ namespace XEngine.Loader
         private AsyncOperation m_LoadRequest;
 
         public void LoadSceneSync(){
+
+        }
+
+        public override void StopLoad(){
+
+        }
+        public override void Tick(){
+
+        }
+
+        public override void ClearCache(){
 
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using XEngine.Time;
+using XEngine.Loader;
 
 ///框架代理类 一些框架内代理方法由这边抛出
 public static class XFacade
@@ -16,6 +17,7 @@ public static class XFacade
 
     
     public static void Tick(){
+        XResourceLoader.GetInstance().Tick();
         TimeManager.GetInstance().Tick();
     }
 }

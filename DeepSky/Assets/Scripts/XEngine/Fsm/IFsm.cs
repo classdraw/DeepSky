@@ -9,12 +9,12 @@ namespace XEngine.Fsm
         /// <summary>
         /// 当前状态
         /// </summary>
-        IState CurrentState();
+        IFsmState CurrentState();
 
         /// <summary>
         /// 默认状态
         /// </summary>
-        IState DefaultState();
+        IFsmState DefaultState();
         
         /// <summary>
         /// 执行

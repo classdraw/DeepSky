@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using Game.Fsm;
 ///启动项目入口
 public class AppDelegate : Singleton<AppDelegate>
 {
@@ -25,7 +25,7 @@ public class AppDelegate : Singleton<AppDelegate>
     }
 
     // private GameObject m_ConfigObj;
-    //参数设置
+    //参数设置 后续steam可能需要自定义一些初始化设置
     private void SetSceneParam(){
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
@@ -44,5 +44,6 @@ public class AppDelegate : Singleton<AppDelegate>
     private void Next(){
         XFacade.Init();
         Global.CreateInstance();
+        AppStateManager.GetInstance().ChangeState(SplashState.Index);
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 using XEngine.Fsm;
 using Utilities;
 using XLua;
-
+using XEngine.Loader;
+using YooAsset;
 
 namespace Game.Fsm
 {
@@ -18,7 +19,15 @@ namespace Game.Fsm
         }
         public void Enter(){
             XLogger.Log("SplashState Enter");
+            
+
+            //PatchOperation operation = new PatchOperation("DefaultPackage", EDefaultBuildPipeline.BuiltinBuildPipeline.ToString(), PlayMode);
+		    // YooAssets.StartOperation(operation);
+            // GameResourceManager.GetInstance().InitAssetLink();
+            
         }
+
+        
 
         public void Exit(){
 

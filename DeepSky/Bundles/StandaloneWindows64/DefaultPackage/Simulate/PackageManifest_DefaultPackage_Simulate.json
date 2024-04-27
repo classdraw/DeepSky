@@ -1,0 +1,157 @@
+{
+    "FileVersion": "2.0.0",
+    "EnableAddressable": true,
+    "LocationToLower": false,
+    "IncludeAssetGUID": false,
+    "OutputNameStyle": 0,
+    "BuildPipeline": "BuiltinBuildPipeline",
+    "PackageName": "DefaultPackage",
+    "PackageVersion": "Simulate",
+    "AssetList": [
+        {
+            "Address": "Cube",
+            "AssetPath": "Assets/MyGameAssets/GameRes/Effects/Cube.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 0
+        },
+        {
+            "Address": "Sphere",
+            "AssetPath": "Assets/MyGameAssets/GameRes/Role/Sphere.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 1
+        },
+        {
+            "Address": "Sphere1",
+            "AssetPath": "Assets/MyGameAssets/GameRes/Role/Sphere1.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 1
+        },
+        {
+            "Address": "NewUnlitShader",
+            "AssetPath": "Assets/MyGameAssets/GameRes/Shaders/NewUnlitShader.shader",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 2
+        },
+        {
+            "Address": "New Scene",
+            "AssetPath": "Assets/MyGameAssets/GameRes/Scenes/New Scene.unity",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 3
+        },
+        {
+            "Address": "Plane",
+            "AssetPath": "Assets/MyGameAssets/GameRes/UI/Plane.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 4
+        },
+        {
+            "Address": "Links",
+            "AssetPath": "Assets/MyGameAssets/GameRes/ScriptObject/Links.asset",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5
+        },
+        {
+            "Address": "New Material",
+            "AssetPath": "Assets/MyGameAssets/GameRes/Bytes/New Material.mat",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 6
+        },
+        {
+            "Address": "New Material1",
+            "AssetPath": "Assets/MyGameAssets/GameRes/Materials/New Material1.mat",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 7
+        }
+    ],
+    "BundleList": [
+        {
+            "BundleName": "defaultpackage_assets_mygameassets_gameres_effects.bundle",
+            "UnityCRC": 0,
+            "FileHash": "7bdc0040b62307e2e8070606d08c6158",
+            "FileCRC": "00000000",
+            "FileSize": 3097,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_mygameassets_gameres_role.bundle",
+            "UnityCRC": 0,
+            "FileHash": "de87dbfeccf7e7dab3e87a0bdf2a9767",
+            "FileCRC": "00000000",
+            "FileSize": 6177,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_unityshaders.bundle",
+            "UnityCRC": 0,
+            "FileHash": "fb82293786afa71a48aa1e33013a16be",
+            "FileCRC": "00000000",
+            "FileSize": 1409,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_mygameassets_gameres_scenes.bundle",
+            "UnityCRC": 0,
+            "FileHash": "369c3e95ef4c8f72bf82fe006c33d027",
+            "FileCRC": "00000000",
+            "FileSize": 8200,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_mygameassets_gameres_ui.bundle",
+            "UnityCRC": 0,
+            "FileHash": "a70ddab94403a752a91969f138bcdff9",
+            "FileCRC": "00000000",
+            "FileSize": 3144,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_mygameassets_gameres_scriptobject.bundle",
+            "UnityCRC": 0,
+            "FileHash": "dacf541e3b30be24f20f4a88353429e9",
+            "FileCRC": "00000000",
+            "FileSize": 723,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_mygameassets_gameres_bytes.bundle",
+            "UnityCRC": 0,
+            "FileHash": "9503f4fdad38258ad3a605e574b28bb8",
+            "FileCRC": "00000000",
+            "FileSize": 3690,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_mygameassets_gameres_materials.bundle",
+            "UnityCRC": 0,
+            "FileHash": "9366cf8b6e843b610ae12f17d3c43f5e",
+            "FileCRC": "00000000",
+            "FileSize": 3692,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        }
+    ]
+}

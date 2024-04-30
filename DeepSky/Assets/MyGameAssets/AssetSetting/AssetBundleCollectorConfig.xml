@@ -1,4 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root Version="v2.0.0">
-  <Common ShowPackageView="False" ShowEditorAlias="False" UniqueBundleName="False" />
+  <Common ShowPackageView="True" ShowEditorAlias="False" UniqueBundleName="True" />
+  <Package PackageName="DefaultPackage" PackageDesc="默认分组" AutoAddressable="True" LocationToLower="False" IncludeAssetGUID="False" IgnoreDefaultType="True">
+    <Group GroupActiveRule="EnableGroup" GroupName="battle" GroupDesc="战斗" AssetTags="">
+      <Collector CollectPath="Assets/MyGameAssets/GameRes/Effects" CollectGUID="d3bb8650290b1934c9ab0ebd28783476" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/MyGameAssets/GameRes/Role" CollectGUID="0ad89818bce296d42a49f83582d7fd59" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="shader" GroupDesc="着色器" AssetTags="">
+      <Collector CollectPath="Assets/MyGameAssets/GameRes/Shaders" CollectGUID="5da588b963b303f49b39e19b012905c2" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="scene" GroupDesc="场景" AssetTags="">
+      <Collector CollectPath="Assets/MyGameAssets/GameRes/Scenes" CollectGUID="ec3309969819207489a2c6a4decc5353" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="ugui" GroupDesc="UI" AssetTags="">
+      <Collector CollectPath="Assets/MyGameAssets/GameRes/UI" CollectGUID="c4be7637ce47e634aa7dfdb149359152" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="ScriptObject" GroupDesc="脚本数据" AssetTags="">
+      <Collector CollectPath="Assets/MyGameAssets/GameRes/ScriptObject" CollectGUID="7b216a39c1020254ebbec22194749750" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="bytes" GroupDesc="二进制" AssetTags="">
+      <Collector CollectPath="Assets/MyGameAssets/GameRes/Bytes" CollectGUID="d12dee9dae6223848af4a89272e24574" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="Material" GroupDesc="材质" AssetTags="">
+      <Collector CollectPath="Assets/MyGameAssets/GameRes/Materials" CollectGUID="196b8b6f18f63f441b75cf6adb8f07d3" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+  </Package>
 </root>

@@ -1,4 +1,5 @@
 using UnityEngine;
+using YooAsset;
 
 namespace Utilities
 {
@@ -20,6 +21,13 @@ namespace Utilities
 
             return EnableBundle;
         }
+        #endregion
+
+        #region 内置配置
+
+        public static EPlayMode PlayMode;
+        public static GameConfig.EPartType PartType;
+        public static EDefaultBuildPipeline DefaultBuildPipeline;
         #endregion
     }
 

@@ -7,45 +7,59 @@ using XLua;
 using XEngine.Loader;
 using YooAsset;
 
+
 namespace Game.Fsm
 {
     //刚进入游戏第一个状态机，bundle更新处理
     [LuaCallCSharp]
-    public class SplashState:IFsmState
+    public class SplashState:BaseFsmState
     {
         public static int Index=0;
-        public SplashState(){
+        public SplashState(BaseFsm fsm):base(fsm){
 
         }
-        public void Enter(){
+        public override void Enter(){
             XLogger.Log("SplashState Enter");
+            InitGameConfig();
+            //这里打开loadui
             
-
-            //PatchOperation operation = new PatchOperation("DefaultPackage", EDefaultBuildPipeline.BuiltinBuildPipeline.ToString(), PlayMode);
-		    // YooAssets.StartOperation(operation);
-            // GameResourceManager.GetInstance().InitAssetLink();
+            XResourceLoader.BeginInitYooAsset(this.OnYooAssetCallback);
+            
             
         }
 
-        
+        //基础配置初始化
+        private void InitGameConfig(){
+            var gameObj=GameObject.Find("GameConfig");
+            var gameConfig=gameObj.GetComponent<GameConfig>();
+            GameConsts.PlayMode=gameConfig.m_ePlayMode;
+            GameConsts.PartType=gameConfig.m_ePartType;
+            GameConsts.DefaultBuildPipeline=gameConfig.m_eDefaultBuildPipeline;
+        }
 
-        public void Exit(){
+        private void OnYooAssetCallback(){
+            XLogger.Log("YooAsset初始化结束");
+            //到这里位置 热更新就结束了
+            AppStateManager.GetInstance().ChangeState(LuaInitState.Index);
+        }
+
+        public override void Exit(){
 
         }
 
-        public void Tick(){
+        public override void Tick(){
 
         }
 
-        public void Release(){
+        public override void Release(){
 
         }
 
-        public void Reset(){
+        public override void Reset(){
 
         }
 
-        public bool CanChangeNext(int fsmEnum,params object[]objs){
+        public override bool CanChangeNext(int fsmEnum,params object[]objs){
             return true;
         }
     }

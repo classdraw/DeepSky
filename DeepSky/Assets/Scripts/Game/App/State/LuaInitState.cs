@@ -3,38 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using XEngine.Fsm;
 using XLua;
+using YooAsset;
 
 namespace Game.Fsm
 {
     [LuaCallCSharp]
-    public class LuaInitState:IFsmState
+    public class LuaInitState:BaseFsmState
     {
         public static int Index=1;
-        public LuaInitState(){
+        public LuaInitState(BaseFsm fsm):base(fsm){
 
         }
-        public void Enter(){
+        public override void Enter(){
             XLogger.Log("LuaInitState Enter");
+            XFacade.Init();
+            Global.CreateInstance();
+
+            var handle1 = YooAssets.LoadAssetSync("Sphere1");
+            handle1.InstantiateSync(Vector3.zero, Quaternion.identity, null);
         }
 
         
-        public void Exit(){
+        public override void Exit(){
 
         }
 
-        public void Tick(){
+        public override void Tick(){
 
         }
 
-        public void Release(){
+        public override void Release(){
 
         }
 
-        public void Reset(){
+        public override void Reset(){
 
         }
 
-        public bool CanChangeNext(int fsmEnum,params object[]objs){
+        public override bool CanChangeNext(int fsmEnum,params object[]objs){
             return true;
         }
     }

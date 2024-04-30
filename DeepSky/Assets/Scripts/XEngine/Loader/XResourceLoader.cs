@@ -1,8 +1,12 @@
-using System;
-using Utilities;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using Utilities;
 using XEngine.Cache;
 using Game.Config;
+using YooAsset;
+using XEngine.YooAsset.Patch;
+using System;
 
 namespace XEngine.Loader
 {
@@ -11,10 +15,40 @@ namespace XEngine.Loader
     {
 
 #region 生命周期函数逻辑
+
+
+        //切场景尝试销毁
+        public void TryReleaseUnLoadYooAsset(){
+            if (YooAssets.Initialized)
+            {
+                var package = YooAssets.GetPackage(GameConsts.PartType.ToString());
+                package.UnloadUnusedAssets();
+            }
+        }
+ 
+        //开始yooasset初始化
+        public static void BeginInitYooAsset(Action call){
+            CoroutineManager.GetInstance().StartCoroutine(_beginAssetCtrl(call));
+        }
+        //资源控制器加载
+        private static IEnumerator _beginAssetCtrl(Action call){
+            //初始化资源系统
+            YooAssets.Initialize();
+            string packageName = GameConsts.PartType.ToString();
+            //资源运行模式
+            PatchOperation operation = new PatchOperation(packageName, GameConsts.DefaultBuildPipeline.ToString(), GameConsts.PlayMode);
+            YooAssets.StartOperation(operation);
+
+            yield return operation;
+            if(call!=null){
+                call();
+            }
+        }
+
+
         protected override void Init()
         {
             base.Init();
-
         }
 
         public void Tick(){

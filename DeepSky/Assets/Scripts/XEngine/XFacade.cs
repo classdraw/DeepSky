@@ -13,11 +13,17 @@ public static class XFacade
         XLogger.Log("XFacade Init");
         m_Root=new GameObject("XEngine");
         GameObject.DontDestroyOnLoad(m_Root);
+        XResourceLoader.CreateInstance(m_Root.transform);
+        TimeManager.CreateInstance(m_Root.transform);
+        
     }
 
     
     public static void Tick(){
         XResourceLoader.GetInstance().Tick();
         TimeManager.GetInstance().Tick();
+
     }
+
+    // public static 
 }

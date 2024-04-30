@@ -24,6 +24,7 @@ public class AppDelegate : Singleton<AppDelegate>
         this.Next();
     }
 
+
     // private GameObject m_ConfigObj;
     //参数设置 后续steam可能需要自定义一些初始化设置
     private void SetSceneParam(){
@@ -42,8 +43,6 @@ public class AppDelegate : Singleton<AppDelegate>
     }
 
     private void Next(){
-        XFacade.Init();
-        Global.CreateInstance();
         AppStateManager.GetInstance().ChangeState(SplashState.Index);
     }
 }

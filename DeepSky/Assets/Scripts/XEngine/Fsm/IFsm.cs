@@ -9,12 +9,12 @@ namespace XEngine.Fsm
         /// <summary>
         /// 当前状态
         /// </summary>
-        IFsmState CurrentState();
+        BaseFsmState CurrentState();
 
         /// <summary>
         /// 默认状态
         /// </summary>
-        IFsmState DefaultState();
+        BaseFsmState DefaultState();
         
         /// <summary>
         /// 执行
@@ -40,5 +40,10 @@ namespace XEngine.Fsm
         bool TryChangeState(int fsmEnum,params object[] objs);
 
         void Release();
+
+        // 获取状态机全局面板值
+        public System.Object GetBlackboardValue(string key);
+        // 设置状态机全局面板值
+        public void SetBlackboardValue(string key, System.Object value);
     }
 }

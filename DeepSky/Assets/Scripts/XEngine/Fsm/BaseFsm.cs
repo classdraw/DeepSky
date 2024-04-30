@@ -4,17 +4,20 @@ using UnityEngine;
 
 namespace XEngine.Fsm{
     public class BaseFsm:IFsm{
-        protected Dictionary<int,IFsmState> m_States=new Dictionary<int, IFsmState>();
+        //所有后台面板值
+        private readonly Dictionary<string, System.Object> m_BlackBoard = new Dictionary<string, object>();
+        //所有状态
+        protected Dictionary<int,BaseFsmState> m_States=new Dictionary<int, BaseFsmState>();
         //当前状态
-        protected IFsmState m_Current;
+        protected BaseFsmState m_Current;
         //默认状态
-        protected IFsmState m_Default;
+        protected BaseFsmState m_Default;
         //下一个状态
-        protected IFsmState m_Next; 
-        public IFsmState CurrentState(){
+        protected BaseFsmState m_Next;
+        public BaseFsmState CurrentState(){
             return m_Current;
         }
-        public IFsmState DefaultState(){
+        public BaseFsmState DefaultState(){
             return m_Default;
         }
 
@@ -58,7 +61,7 @@ namespace XEngine.Fsm{
                 kvp.Value.Release();
             }
         }
-        protected virtual IFsmState ChooseState(int fsmEnum){
+        protected virtual BaseFsmState ChooseState(int fsmEnum){
             return null;
         }
         public bool TryChangeState(int fsmEnum,params object[]objs){
@@ -82,6 +85,21 @@ namespace XEngine.Fsm{
             }
             
             return true;
+        }
+
+
+        public System.Object GetBlackboardValue(string key) {
+            if (m_BlackBoard.TryGetValue(key,out System.Object value)) {
+                return value;
+            }
+            return null;
+        }
+
+        public void SetBlackboardValue(string key,System.Object value) {
+            if (m_BlackBoard.ContainsKey(key) == false)
+                m_BlackBoard.Add(key, value);
+            else
+                m_BlackBoard[key] = value;
         }
     }
 }

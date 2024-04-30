@@ -8,12 +8,12 @@ namespace Game.Fsm{
     {
         protected override void Init()
         {
-            m_States.Add(SplashState.Index,new SplashState());
-            m_States.Add(LuaInitState.Index,new LuaInitState());
+            m_States.Add(SplashState.Index,new SplashState(this));
+            m_States.Add(LuaInitState.Index,new LuaInitState(this));
             m_Default=m_States[SplashState.Index];
         }
 
-        protected override IFsmState ChooseState(int fsmEnum)
+        protected override BaseFsmState ChooseState(int fsmEnum)
         {
             if(fsmEnum>=0&&fsmEnum<=m_States.Count-1){
                 return m_States[fsmEnum];

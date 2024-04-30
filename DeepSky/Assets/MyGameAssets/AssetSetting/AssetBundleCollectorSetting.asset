@@ -123,3 +123,16 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
+    - GroupName: linkdata
+      GroupDesc: "\u5173\u8054\u8D44\u6E90"
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/MyGameAssets/GameRes/ZLinkData
+        CollectorGUID: b6d61fbd0314966419a173dccf11ee73
+        CollectorType: 2
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 

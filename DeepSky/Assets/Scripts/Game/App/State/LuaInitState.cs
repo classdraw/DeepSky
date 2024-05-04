@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using XEngine.Fsm;
 using XLua;
+using YooAsset;
 
 namespace Game.Fsm
 {
@@ -20,6 +21,9 @@ namespace Game.Fsm
 
 
             // var handle1 = YooAssets.LoadAssetSync("Sphere1");
+            // var handle2 = YooAssets.LoadAssetSync("Sphere1");
+            // Debug.LogError(handle1.GetHashCode()+">>>"+handle2.GetHashCode());
+            // Debug.LogError(handle1.AssetObject.GetHashCode()+">>>"+handle2.AssetObject.GetHashCode());
             // handle1.Dispose();
             // handle1.InstantiateSync().transform.position=Vector3.one;
             

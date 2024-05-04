@@ -59,9 +59,30 @@ namespace XEngine.Loader
 #region 加载方法
 
         ///同步加载一个资源
-        public T LoadAssetSync<T>(string assetPath)where T:UnityEngine.Object{
-           return null;
+        public AssetHandle LoadAssetSyncT<T>(string assetPath)where T:UnityEngine.Object{
+            return YooAssets.LoadAssetSync<T>(assetPath);
         }
+
+        public AssetHandle LoadAssetSync(string assetPath){
+            return YooAssets.LoadAssetSync(assetPath);
+        }
+        //异步加载一个资源
+        public AssetHandle LoadAssetAsyncT<T>(string assetPath,Action<AssetHandle> callback)where T:UnityEngine.Object{
+            var handle=YooAssets.LoadAssetAsync<T>(assetPath);
+            handle.Completed+=(AssetHandle h)=>{
+                callback(h);
+            };
+            return handle;
+        }
+
+        public AssetHandle LoadAssetAsync(string assetPath,Action<AssetHandle> callback){
+            var handle=YooAssets.LoadAssetAsync(assetPath);
+            handle.Completed+=(AssetHandle h)=>{
+                callback(h);
+            };
+            return handle;
+        }
+
 
 #endregion
 

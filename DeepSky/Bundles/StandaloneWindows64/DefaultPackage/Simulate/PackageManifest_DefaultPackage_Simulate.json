@@ -58,6 +58,13 @@
             "BundleID": 5
         },
         {
+            "Address": "PoolConfig",
+            "AssetPath": "Assets/MyGameAssets/GameRes/ScriptObject/PoolConfig.asset",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5
+        },
+        {
             "Address": "New Material",
             "AssetPath": "Assets/MyGameAssets/GameRes/Bytes/New Material.mat",
             "AssetGUID": "",
@@ -88,7 +95,7 @@
             "UnityCRC": 0,
             "FileHash": "de87dbfeccf7e7dab3e87a0bdf2a9767",
             "FileCRC": "00000000",
-            "FileSize": 6177,
+            "FileSize": 6287,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -128,7 +135,7 @@
             "UnityCRC": 0,
             "FileHash": "dacf541e3b30be24f20f4a88353429e9",
             "FileCRC": "00000000",
-            "FileSize": 723,
+            "FileSize": 1430,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

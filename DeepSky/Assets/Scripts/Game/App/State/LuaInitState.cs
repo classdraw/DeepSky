@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using XEngine.Fsm;
 using XLua;
-using YooAsset;
 
 namespace Game.Fsm
 {
@@ -16,11 +15,15 @@ namespace Game.Fsm
         }
         public override void Enter(){
             XLogger.Log("LuaInitState Enter");
-            XFacade.Init();
-            Global.CreateInstance();
+            XFacade.Init();//框架初始化
+            Global.CreateInstance();//游戏全局mono初始化
 
-            var handle1 = YooAssets.LoadAssetSync("Sphere1");
-            handle1.InstantiateSync(Vector3.zero, Quaternion.identity, null);
+
+            // var handle1 = YooAssets.LoadAssetSync("Sphere1");
+            // handle1.Dispose();
+            // handle1.InstantiateSync().transform.position=Vector3.one;
+            
+            // handle1.InstantiateSync(Vector3.zero, Quaternion.identity, null);
         }
 
         

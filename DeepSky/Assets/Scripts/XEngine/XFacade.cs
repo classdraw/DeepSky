@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using XEngine.Time;
 using XEngine.Loader;
+using XEngine.Pool;
 
 ///框架代理类 一些框架内代理方法由这边抛出
 public static class XFacade
@@ -15,14 +16,14 @@ public static class XFacade
         GameObject.DontDestroyOnLoad(m_Root);
         XResourceLoader.CreateInstance(m_Root.transform);
         TimeManager.CreateInstance(m_Root.transform);
-        
+        PoolManager.CreateInstance(m_Root.transform);
     }
 
     
     public static void Tick(){
         XResourceLoader.GetInstance().Tick();
         TimeManager.GetInstance().Tick();
-
+        PoolManager.GetInstance().Tick();
     }
 
     // public static 

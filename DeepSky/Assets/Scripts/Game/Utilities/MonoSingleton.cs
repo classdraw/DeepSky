@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class  AutoCreateInstanceAttribute:Attribute
+    public class  AutoCreateInstanceAttribute:Attribute
     {
         public bool _autoCreate=true;
         public AutoCreateInstanceAttribute(bool create){

@@ -32,9 +32,9 @@ namespace XEngine.Pool
     public class ConfigData{
         public string m_Path;//唯一key
         public float m_GameObjectLifeTime=40f;//单个池子自身缩减的时间
+        public int m_OneDestroyCount=1;//单次删除数量
         public float m_GrainLifeTime=30f;//单个池子存活时间
         public int m_PoolMaxCount=30;//单个池上限
-        public bool m_SavePrefab=true;//保存prefab
         public bool m_IsActiveOpt=true;//是否active处理
     }
 }

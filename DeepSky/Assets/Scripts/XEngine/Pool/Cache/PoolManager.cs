@@ -48,7 +48,7 @@ namespace XEngine.Pool
         #region config
         public ConfigData GetPoolConfigData(string assetPath){
             if(m_Config==null){
-                return null;
+                return new ConfigData();
             }
             if(m_Config.m_Datas.ContainsKey(assetPath)){
                 return m_Config.m_Datas[assetPath];

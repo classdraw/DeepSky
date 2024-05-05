@@ -25,8 +25,16 @@ namespace XEngine.Pool
         //生命周期 销毁方式
         private PoolLife_Type_Enum m_PoolLifeType=PoolLife_Type_Enum.TickRelease;
 
-        private List<ResHandle> m_Handles;//对象池存放的handle
-        private List<ResHandle> m_UseHandles;//正在使用的handle
+        private List<ResHandle> m_Handles=new List<ResHandle>();//对象池存放的handle
+        private List<ResHandle> m_UseHandles=new List<ResHandle>();//正在使用的handle
+
+        public bool IsEmpty(){
+            if(m_Handles.Count>0||m_UseHandles.Count>0){
+                return false;
+            }
+            return true;
+        }
+        
         private string m_AssetPath;
 
         private AssetHandle m_AssetHandle;
@@ -40,9 +48,9 @@ namespace XEngine.Pool
         public void Init(string assetPath){
             IsGameObject=false;
             m_AssetPath=assetPath;
-            m_Handles=new List<ResHandle>();
-            m_UseHandles=new List<ResHandle>();
             m_ConfigData=PoolManager.GetInstance().GetPoolConfigData(assetPath);
+            m_fGrainLifeTime=m_ConfigData.m_GrainLifeTime;
+            m_fGameObjectLifeTime=m_ConfigData.m_GameObjectLifeTime;
         }
 
         public void Dispose(ResHandle resHandle){
@@ -51,6 +59,15 @@ namespace XEngine.Pool
             m_Handles.Add(resHandle);
             UseCount--;
             PoolCount++;
+        }
+
+        public void ReleaseInPoolHandle(ResHandle resHandle){
+            if(IsGameObject&&resHandle.GetObj()!=null){
+                GameObject.Destroy(resHandle.GetGameObject());
+            }
+            m_Handles.Remove(resHandle);
+            PoolManager.ReleaseEmptyResHandle(resHandle);
+            PoolCount--;
         }
 
         //同步
@@ -80,7 +97,10 @@ namespace XEngine.Pool
                 if(resHandle.GetObj()!=null&&IsGameObject){
                     var obj =resHandle.GetGameObject();
                     obj.transform.parent=transform;
-                    obj.SetActive(false);
+                    if(this._getIsActiveOpt()){
+                        obj.SetActive(false);
+                    }
+                    
                     if(obj.transform is RectTransform){
                         //后续ui有别的处理方式
                     }else{
@@ -92,7 +112,10 @@ namespace XEngine.Pool
                 if(resHandle.GetObj()!=null&&IsGameObject){
                     var obj =resHandle.GetGameObject();
                     obj.transform.parent=null;
-                    obj.SetActive(true);
+                    if(this._getIsActiveOpt()){
+                        obj.SetActive(true);
+                    }
+                    
                     if(obj.transform is RectTransform){
                         //后续ui有别的处理方式
                     }else{
@@ -225,10 +248,57 @@ namespace XEngine.Pool
                 m_SyncCallbacks.Clear();
             }
 
-            
+            var deltaTime=UnityEngine.Time.deltaTime;
+            if(IsEmpty()){
+                m_fGrainLifeTime-=deltaTime;
+            }else{
+                m_fGrainLifeTime=_getGrainLifeTime();
+                if(m_Handles.Count>0){
+                    m_fGameObjectLifeTime-=deltaTime;
+                    if(m_fGameObjectLifeTime<=0f){
+                        //移除一些gameobject
+                        int temp=0;
+                        int cCount=m_Handles.Count;
+                        for(int i=0;i<cCount;i++){
+                            this.ReleaseInPoolHandle(m_Handles[i]);
+                            i--;cCount--;
+
+                            temp++;
+                            if(temp>=_getOneDestroyCount()){
+                                break;
+                            }
+                        }
+                        m_fGameObjectLifeTime=_getGameLifeTime();
+                    }//
+                }
+                
+            }
+        }
+        public float m_fGrainLifeTime;
+        public bool IsOver{get{return m_fGrainLifeTime<=0;}}
+        public float m_fGameObjectLifeTime;
+
+        private float _getGrainLifeTime(){
+            return m_ConfigData.m_GrainLifeTime;
         }
 
+        private float _getGameLifeTime(){
+            return m_ConfigData.m_GameObjectLifeTime;
+        }
 
-        // private float _getGameObjectLifeTime
+        private float _getOneDestroyCount(){
+            return m_ConfigData.m_OneDestroyCount;
+        }
+        private bool _getIsActiveOpt(){
+            return m_ConfigData.m_IsActiveOpt;
+        }
+
+        public void DestroySelf(){
+            if(m_AssetHandle!=null){
+                m_AssetHandle.Dispose();
+            }
+            m_AssetHandle=null;
+            GameObject.Destroy(gameObject);
+        }
     }
 }

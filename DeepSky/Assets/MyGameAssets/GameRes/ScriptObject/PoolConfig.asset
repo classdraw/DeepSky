@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5632e871d1a26224cbbb37d0656afe51, type: 3}
-  m_Name: AAAA
+  m_Name: PoolConfig
   m_EditorClassIdentifier: 
   m_DefaultConfig:
-    m_Path: 
-    m_GameObjectLifeTime: 40
+    m_Path: default
+    m_GameObjectLifeTime: 30
+    m_OneDestroyCount: 3
     m_GrainLifeTime: 30
     m_PoolMaxCount: 30
-    m_SavePrefab: 1
     m_IsActiveOpt: 1
   m_Configs:
-  - m_Path: 
-    m_GameObjectLifeTime: 40
+  - m_Path: Cube
+    m_GameObjectLifeTime: 30
+    m_OneDestroyCount: 3
     m_GrainLifeTime: 30
     m_PoolMaxCount: 30
-    m_SavePrefab: 1
     m_IsActiveOpt: 1
-  - m_Path: 3401
-    m_GameObjectLifeTime: 40
+  - m_Path: Sphere
+    m_GameObjectLifeTime: 30
+    m_OneDestroyCount: 3
     m_GrainLifeTime: 30
     m_PoolMaxCount: 30
-    m_SavePrefab: 1
     m_IsActiveOpt: 1

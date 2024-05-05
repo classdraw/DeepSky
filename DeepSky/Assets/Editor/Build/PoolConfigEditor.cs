@@ -36,12 +36,10 @@ public class PoolConfigEditor:Editor{
         var config1=pool.m_DefaultConfig;
         config1.m_Path=EditorGUILayout.TextField("    路径:",config1.m_Path);
         config1.m_GameObjectLifeTime=EditorGUILayout.FloatField("    OBJ缩减时间:",config1.m_GameObjectLifeTime);
+        config1.m_OneDestroyCount=EditorGUILayout.IntField("     一次缩减数量:",config1.m_OneDestroyCount);
         config1.m_GrainLifeTime=EditorGUILayout.FloatField("    孵化池缩减时间:",config1.m_GrainLifeTime);
         config1.m_PoolMaxCount=EditorGUILayout.IntField("    单池上线:",config1.m_PoolMaxCount);
-        EditorGUILayout.BeginHorizontal();
-        EditorGUILayout.LabelField("    是否池保存prefab:");
-        config1.m_SavePrefab=EditorGUILayout.Toggle(config1.m_SavePrefab);
-        EditorGUILayout.EndHorizontal();
+
 
         EditorGUILayout.BeginHorizontal();
         EditorGUILayout.LabelField("    池中active处理:");
@@ -55,12 +53,9 @@ public class PoolConfigEditor:Editor{
             EditorGUILayout.LabelField("  "+i+":");
             config.m_Path=EditorGUILayout.TextField("    路径:",config.m_Path);
             config.m_GameObjectLifeTime=EditorGUILayout.FloatField("    OBJ缩减时间:",config.m_GameObjectLifeTime);
+            config.m_OneDestroyCount=EditorGUILayout.IntField("     一次缩减数量:",config.m_OneDestroyCount);
             config.m_GrainLifeTime=EditorGUILayout.FloatField("    孵化池缩减时间:",config.m_GrainLifeTime);
             config.m_PoolMaxCount=EditorGUILayout.IntField("    单池上线:",config.m_PoolMaxCount);
-            EditorGUILayout.BeginHorizontal();
-            EditorGUILayout.LabelField("    是否池保存prefab:");
-            config.m_SavePrefab=EditorGUILayout.Toggle(config.m_SavePrefab);
-            EditorGUILayout.EndHorizontal();
 
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField("    池中active处理:");

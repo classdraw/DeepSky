@@ -29,10 +29,20 @@ namespace XEngine.Pool
 
 		}
 
+        private List<string> m_DestroyKeys=new List<string>();
         public void Tick(){
+            m_DestroyKeys.Clear();
             foreach(var kvp in m_PoolsMap){
                 kvp.Value.Tick();
+                if(kvp.Value.IsOver){
+                    m_DestroyKeys.Add(kvp.Key);
+                }
             }
+
+            for(int i=0;i<m_DestroyKeys.Count;i++){
+                _removeGameObjectPool(m_DestroyKeys[i]);
+            }
+            m_DestroyKeys.Clear();
         }
 
         #region 获取销毁逻辑
@@ -46,7 +56,14 @@ namespace XEngine.Pool
             return poolGrain;
 
 		}
-
+        private void _removeGameObjectPool(string assetPath){
+            if(!m_PoolsMap.ContainsKey(assetPath)){
+                return;
+            }
+            var poolGrain=m_PoolsMap[assetPath];
+            m_PoolsMap.Remove(assetPath);
+            poolGrain.DestroySelf();
+        }
         private void _addGameObjectPool(string assetPath){
             GameObject go = new GameObject(assetPath);
             go.transform.SetParent(this.transform);

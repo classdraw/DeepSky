@@ -14,29 +14,29 @@ public class Global:MonoSingleton<Global>
         GameUtils.IS_QUIT=true;
         YooAssets.Destroy();
     }
-    private List<ResHandle> m_objs=new List<ResHandle>();
+    // private List<ResHandle> m_objs=new List<ResHandle>();
     private void Update()
     {
         //整个框架tick
         XFacade.Tick();
-        //测试加载
-        if(Input.GetKeyDown(KeyCode.U)){
-            var obj1=PoolManager.GetInstance().LoadResourceSync("Cube");
-            obj1.GetGameObject().transform.position=Vector3.zero;
-            m_objs.Add(obj1);
+        // //测试加载
+        // if(Input.GetKeyDown(KeyCode.U)){
+        //     var obj1=PoolManager.GetInstance().LoadResourceSync("Cube");
+        //     obj1.GetGameObject().transform.position=Vector3.zero;
+        //     m_objs.Add(obj1);
 
-        }else if(Input.GetKeyDown(KeyCode.I)){
-            if(m_objs.Count>0){
-                var oo=m_objs[0];
-                m_objs.RemoveAt(0);
-                oo.Dispose();
-            }
-        }else if(Input.GetKeyDown(KeyCode.O)){
-            var hhh=PoolManager.GetInstance().LoadResourceAsync("Sphere",(a)=>{
-                //加载结束
-            });
-            m_objs.Add(hhh);
-        }
+        // }else if(Input.GetKeyDown(KeyCode.I)){
+        //     if(m_objs.Count>0){
+        //         var oo=m_objs[0];
+        //         m_objs.RemoveAt(0);
+        //         oo.Dispose();
+        //     }
+        // }else if(Input.GetKeyDown(KeyCode.O)){
+        //     var hhh=PoolManager.GetInstance().LoadResourceAsync("Sphere",(a)=>{
+        //         //加载结束
+        //     });
+        //     m_objs.Add(hhh);
+        // }
     }
 
     protected override void Init(){

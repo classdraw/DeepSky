@@ -14,9 +14,13 @@ namespace XEngine.Loader{
         //所有加载的handles
         // private List<AssetHandle> handles=new List<AssetHandle>();
 
-
+        //同步
         public ResHandle LoadResourceSync(string assetPath){
             return PoolManager.GetInstance().LoadResourceSync(assetPath);
+        }
+        //异步
+        public ResHandle LoadResourceAsync(string assetPath,System.Action<ResHandle> callback){
+            return PoolManager.GetInstance().LoadResourceAsync(assetPath,callback);
         }
 
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 using XEngine.Fsm;
 using XLua;
 using YooAsset;
+using XEngine.Pool;
 
 namespace Game.Fsm
 {
@@ -19,6 +20,8 @@ namespace Game.Fsm
             XFacade.Init();//框架初始化
             Global.CreateInstance();//游戏全局mono初始化
 
+            //对象池初始化
+            PoolManager.GetInstance().InitConfig();
 
             // var handle1 = YooAssets.LoadAssetSync("Sphere1");
             // var handle2 = YooAssets.LoadAssetSync("Sphere1");

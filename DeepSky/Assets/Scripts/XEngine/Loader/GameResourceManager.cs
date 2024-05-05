@@ -4,6 +4,7 @@ using UnityEngine;
 using Utilities;
 using Game.Config;
 using YooAsset;
+using XEngine.Pool;
 
 namespace XEngine.Loader{
     //游戏唯一加载的类，poolmanager也归于这个管理
@@ -12,6 +13,12 @@ namespace XEngine.Loader{
     {
         //所有加载的handles
         // private List<AssetHandle> handles=new List<AssetHandle>();
+
+
+        public ResHandle LoadResourceSync(string assetPath){
+            return PoolManager.GetInstance().LoadResourceSync(assetPath);
+        }
+
     }
 
 }

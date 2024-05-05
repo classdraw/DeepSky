@@ -7,6 +7,7 @@ namespace XEngine.Pool
     [CreateAssetMenu(fileName = "PoolConfig", menuName = "Scriptable Objects/PoolConfig")]
     public class PoolConfig:ScriptableObject
     {
+        public ConfigData m_DefaultConfig=new ConfigData();
         public List<ConfigData> m_Configs=new List<ConfigData>();
 
         public Dictionary<string,ConfigData> m_Datas=new Dictionary<string, ConfigData>();

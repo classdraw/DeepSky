@@ -24,12 +24,15 @@ namespace XEngine.Pool
         private System.Action<ResHandle> m_Callback;
         public bool IsDone{get{return this.m_PoolGrain!=null&&this.m_Object!=null;}}
 
-        public void Build(PoolGrain poolGrain,UnityEngine.Object obj,System.Action<ResHandle> callback){
+        public void Build(PoolGrain poolGrain,UnityEngine.Object obj){
             m_PoolGrain=poolGrain;
             m_Object=obj;
+
+        }
+
+        public void SetCallback(System.Action<ResHandle> callback){
             m_Callback=callback;
         }
-        
         public void OnLoadedCall(){
             if(m_Callback!=null){
                 m_Callback(this);
@@ -53,21 +56,22 @@ namespace XEngine.Pool
             if(m_PoolGrain!=null){//资源释放
                 m_PoolGrain.Dispose(this);
             }
-            m_PoolGrain=null;
-
-            m_Object=null;
             m_Callback=null;
         }
 
 
         //池调用（框架调用）
         public void Get(){
-
+            m_PoolGrain=null;
+            m_Object=null;
+            m_Callback=null;
         }
 
         //池调用(框架调用)
         public void Release(){
-            Dispose();
+            m_PoolGrain=null;
+            m_Object=null;
+            m_Callback=null;
         }
     }
 }

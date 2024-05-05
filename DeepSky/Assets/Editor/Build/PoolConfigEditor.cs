@@ -31,6 +31,24 @@ public class PoolConfigEditor:Editor{
             }
         }
 
+
+        EditorGUILayout.LabelField("默认:");
+        var config1=pool.m_DefaultConfig;
+        config1.m_Path=EditorGUILayout.TextField("    路径:",config1.m_Path);
+        config1.m_GameObjectLifeTime=EditorGUILayout.FloatField("    OBJ缩减时间:",config1.m_GameObjectLifeTime);
+        config1.m_GrainLifeTime=EditorGUILayout.FloatField("    孵化池缩减时间:",config1.m_GrainLifeTime);
+        config1.m_PoolMaxCount=EditorGUILayout.IntField("    单池上线:",config1.m_PoolMaxCount);
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.LabelField("    是否池保存prefab:");
+        config1.m_SavePrefab=EditorGUILayout.Toggle(config1.m_SavePrefab);
+        EditorGUILayout.EndHorizontal();
+
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.LabelField("    池中active处理:");
+        config1.m_IsActiveOpt=EditorGUILayout.Toggle(config1.m_IsActiveOpt);
+        EditorGUILayout.EndHorizontal();
+
+
         EditorGUILayout.LabelField("内容:");
         for(int i=0;i<pool.m_Configs.Count;i++){
             var config=pool.m_Configs[i];

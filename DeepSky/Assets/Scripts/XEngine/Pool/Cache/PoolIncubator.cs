@@ -62,16 +62,10 @@ namespace XEngine.Pool
             return poolGrain.LoadResourceSync();
         }
 
-        
-        public ResHandle LoadResourceSyncT<T>(string resPath){
-            var poolGrain=_getOrAddGameObjectPool(resPath);
-            return poolGrain.LoadResourceSync();
-        }
-
-        public void LoadResourceAsync(string resPath,System.Action<ResHandle> callback){
+        public ResHandle LoadResourceAsync(string resPath,System.Action<ResHandle> callback){
 
             var poolGrain=_getOrAddGameObjectPool(resPath);
-            poolGrain.LoadResourceAsync(callback);
+            return poolGrain.LoadResourceAsync(callback);
         }
 
         #endregion

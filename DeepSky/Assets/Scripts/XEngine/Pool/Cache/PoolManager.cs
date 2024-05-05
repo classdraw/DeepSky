@@ -41,7 +41,7 @@ namespace XEngine.Pool
         }
 
         public ResHandle LoadResourceAsync(string assetPath,System.Action<ResHandle> callback){
-            return null;
+            return m_PoolObject.LoadResourceAsync(assetPath,callback);
         }
         #endregion
 

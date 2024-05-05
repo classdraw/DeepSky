@@ -57,15 +57,19 @@ namespace XEngine.Pool
         public ResHandle LoadResourceSync(){
             _tryInitSync();
             _foreachAsycCallback();
-
-            var resHandle= this._getResHandle();
-            if(!resHandle.IsDone){
-                var obj=this._getObject();
-                resHandle.Build(this,obj);
+            if(IsLoaded()){
+                var resHandle= this._getResHandle();
+                if(!resHandle.IsDone){
+                    var obj=this._getObject();
+                    resHandle.Build(this,obj);
+                }else{
+                    this._filterPassPool(resHandle,false);
+                }
+                return resHandle;
             }else{
-                this._filterPassPool(resHandle,false);
+                return null;
             }
-            return resHandle;
+            
         }
 
         private void _filterPassPool(ResHandle resHandle,bool inPool){
@@ -106,17 +110,24 @@ namespace XEngine.Pool
                 return null;
             }
             var resHandle=_getResHandle();
-            if(resHandle.IsDone){
-                this._filterPassPool(resHandle,false);
-                resHandle.SetCallback(callback);
-                m_SyncCallbacks.Add(resHandle);
+            if(IsLoaded()){
+                if(resHandle.IsDone){
+                    this._filterPassPool(resHandle,false);
+                    resHandle.SetCallback(callback);
+                    m_SyncCallbacks.Add(resHandle);
+                }else{
+                    var obj=this._getObject();
+                    resHandle.Build(this,obj);
+                    resHandle.SetCallback(callback);
+                    m_SyncCallbacks.Add(resHandle);
+                }
             }else{
                 resHandle.Build(this,null);
                 resHandle.SetCallback(callback);
                 m_AsyncCallbacks.Add(resHandle);
-                _tryInitAsync();
             }
             
+            _tryInitAsync();
             return resHandle;
         }
         #endregion
@@ -140,7 +151,7 @@ namespace XEngine.Pool
 
         }
         private void _tryInitSync(){
-            if(!IsInit()){
+            if(!IsLoaded()){
                 //正在异步 也取消
                 if(m_AssetHandle!=null){
                     m_AssetHandle.Dispose();
@@ -154,7 +165,7 @@ namespace XEngine.Pool
         }
 
         private void _tryInitAsync(){
-            if(!IsInit()){
+            if(!IsLoaded()){
                 if(m_AssetHandle==null){
                     m_AssetHandle=XResourceLoader.GetInstance().LoadAssetAsync(m_AssetPath,this.OnAssetCallback);
                 }
@@ -165,10 +176,11 @@ namespace XEngine.Pool
             if(handle.AssetObject!=null&&handle.AssetObject is GameObject){
                 IsGameObject=true;
             }
+            m_AssetHandle=handle;//这里两个handle值一样  再赋值一次
             _foreachAsycCallback();
         }
 
-        private bool IsInit(){
+        private bool IsLoaded(){
             return m_AssetHandle!=null&&m_AssetHandle.AssetObject!=null;
         }
 
@@ -189,7 +201,7 @@ namespace XEngine.Pool
         }
 
         private UnityEngine.Object _getObject(){
-            if(!IsInit()){
+            if(!IsLoaded()){
                 Debug.LogError(m_AssetPath+" GetObject Error!!!");
                 return null;
             }

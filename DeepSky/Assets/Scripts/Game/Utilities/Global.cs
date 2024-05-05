@@ -31,6 +31,11 @@ public class Global:MonoSingleton<Global>
                 m_objs.RemoveAt(0);
                 oo.Dispose();
             }
+        }else if(Input.GetKeyDown(KeyCode.O)){
+            var hhh=PoolManager.GetInstance().LoadResourceAsync("Sphere",(a)=>{
+                //加载结束
+            });
+            m_objs.Add(hhh);
         }
     }
 

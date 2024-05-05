@@ -37,6 +37,7 @@ namespace XEngine.Pool
             if(m_Callback!=null){
                 m_Callback(this);
             }
+            m_Callback=null;
         }
         public UnityEngine.Object GetObj(){
             return m_Object;

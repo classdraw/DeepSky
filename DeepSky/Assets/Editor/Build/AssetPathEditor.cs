@@ -29,12 +29,12 @@ public class AssetPathEditor:Editor
         // 
         string pp=Application.dataPath;
         var o=pp.Replace("Assets","")+Extra_Dir;
-        string resPath=pp+"/ExtraRes";
+        string resPath=pp.Replace("Assets","")+"ExtraRes";
         Directory.Delete(o,true);
         List<string> dirs=new List<string>();
         GetDirectoryDirs(resPath,ref dirs);
         for(int i=0;i<dirs.Count;i++){
-            var outPath=dirs[i].Replace("Assets/ExtraRes","Assets/Editor/MyGameAssets/ExtraRes");
+            var outPath=dirs[i].Replace("ExtraRes","Assets/Editor/MyGameAssets/ExtraRes");
             CopyDir(dirs[i],outPath);
         }
         

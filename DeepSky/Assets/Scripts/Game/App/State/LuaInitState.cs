@@ -5,6 +5,7 @@ using XEngine.Fsm;
 using XLua;
 using YooAsset;
 using XEngine.Pool;
+using XEngine.Loader;
 
 namespace Game.Fsm
 {
@@ -22,6 +23,9 @@ namespace Game.Fsm
 
             //对象池初始化
             PoolManager.GetInstance().InitConfig();
+            LuaScriptManager.GetInstance().InitGame();
+            // var b=GameResourceManager.GetInstance().LoadResourceSync("main");
+            // Debug.LogError("11111111111");
 
             // var handle1 = YooAssets.LoadAssetSync("Sphere1");
             // var handle2 = YooAssets.LoadAssetSync("Sphere1");

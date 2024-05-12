@@ -9,12 +9,82 @@ using Utilities;
 
 public class AssetPathEditor:Editor
 {
-    private static string Bundle_Dir="Assets/MyGameAssets/GameRes/";
-    private static string Asset_MappingPath="Assets/MyGameAssets/GameRes/ScriptObject/Links.asset";
+    private static string Bundle_Dir="Assets/Editor/MyGameAssets/GameRes/";
+    private static string Asset_MappingPath="Assets/Editor/MyGameAssets/GameRes/ScriptObject/Links.asset";
+
+    private static string Extra_Dir="Assets/Editor/MyGameAssets/ExtraRes";
 
     private static string[] Ignore_Dirs=new string[]{
         "Resources/Link"
     };
+
+    [MenuItem("Deep/Build/外部文件拷贝(必须点)")]
+    private static void BuildExtraInfo(){
+        Debug.LogError("BuildExtraInfo Begin");
+        CopyExtraRes();
+        Debug.LogError("BuildExtraInfo Success!!!");
+    }
+
+    private static void CopyExtraRes(){
+        // 
+        string pp=Application.dataPath;
+        var o=pp.Replace("Assets","")+Extra_Dir;
+        string resPath=pp+"/ExtraRes";
+        Directory.Delete(o,true);
+        List<string> dirs=new List<string>();
+        GetDirectoryDirs(resPath,ref dirs);
+        for(int i=0;i<dirs.Count;i++){
+            var outPath=dirs[i].Replace("Assets/ExtraRes","Assets/Editor/MyGameAssets/ExtraRes");
+            CopyDir(dirs[i],outPath);
+        }
+        
+        
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+    }
+
+    private static void GetDirectoryDirs(string dir,ref List<string> dirs){
+        var dd=Directory.GetDirectories(dir);
+        for(int i=0;i<dd.Length;i++){
+            var d=dd[i];
+            dirs.Add(d);
+            GetDirectoryDirs(d,ref dirs);
+        }
+    }
+
+    private static void CopyDir(string dir, string desDir)
+    {
+        try{
+            if (!System.IO.Directory.Exists(desDir))
+            {
+                System.IO.Directory.CreateDirectory(desDir);
+            }
+        }catch{
+
+        }
+        
+        var files = System.IO.Directory.GetFiles(dir);
+        if (files != null)
+        {
+            foreach (var item in files)
+            {
+                string desPath = System.IO.Path.Combine(desDir, System.IO.Path.GetFileName(item));
+
+                //如果是文件
+                var fileExist = System.IO.File.Exists(item);
+                if (fileExist)
+                {
+                    if(desPath.Contains(".lua")){
+                        desPath=desPath.Replace(".lua",".bytes");
+                    }
+                    //复制文件到指定目录下                     
+                    System.IO.File.Copy(item, desPath, true);
+                }
+
+            }
+        }
+    }
+
 
     [MenuItem("Deep/Build/AssetPath映射生成")]
     private static void BuildAssetPathMapping(){

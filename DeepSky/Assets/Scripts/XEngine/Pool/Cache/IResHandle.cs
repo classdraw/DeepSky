@@ -23,7 +23,7 @@ namespace XEngine.Pool
 
         private System.Action<ResHandle> m_Callback;
         public bool IsDone{get{return this.m_PoolGrain!=null&&this.m_Object!=null;}}
-
+        public bool IsEmpty(){ return m_Object==null;}
         public void Build(PoolGrain poolGrain,UnityEngine.Object obj){
             m_PoolGrain=poolGrain;
             m_Object=obj;

@@ -15,14 +15,18 @@ namespace XEngine.Loader{
         // private List<AssetHandle> handles=new List<AssetHandle>();
 
         //同步
-        public ResHandle LoadResourceSync(string assetPath){
-            return PoolManager.GetInstance().LoadResourceSync(assetPath);
+        public ResHandle LoadResourceSync(string assetPath,int poolIndex=0){
+            return PoolManager.GetInstance().LoadResourceSync(assetPath,poolIndex);
         }
         //异步
-        public ResHandle LoadResourceAsync(string assetPath,System.Action<ResHandle> callback){
-            return PoolManager.GetInstance().LoadResourceAsync(assetPath,callback);
+        public ResHandle LoadResourceAsync(string assetPath,System.Action<ResHandle> callback,int poolIndex=0){
+            return PoolManager.GetInstance().LoadResourceAsync(assetPath,callback,poolIndex);
         }
 
+
+        public ResHandle LoadResourceSyncLua(string assetPath){
+            return PoolManager.GetInstance().LoadResourceSync(assetPath,1);
+        }
     }
 
 }

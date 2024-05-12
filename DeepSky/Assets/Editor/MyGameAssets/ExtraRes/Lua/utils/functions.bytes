@@ -1,0 +1,1756 @@
+
+--[[--
+
+输出格式化字符串
+
+~~~ lua
+
+printf("The value = %d", 100)
+
+~~~
+
+@param string fmt 输出格式
+@param [mixed ...] 更多参数
+
+]]
+function printf(fmt, ...)
+    print(string.format(tostring(fmt), ...))
+end
+--[[
+    检查并尝试转换为数值，如果无法转换则返回 0
+
+    @param mixed value 要检查的值
+    @param [integer base] 进制，默认为十进制
+
+    @return number
+]]
+function checkNumber(value,base)
+    return tonumber(value, base) or 0
+end
+
+--[[--
+
+检查并尝试转换为整数，如果无法转换则返回 0
+
+@param mixed value 要检查的值
+
+@return integer
+
+]]
+function checkInt(value)
+    return math.round(checkNumber(value))
+end
+
+--[[--
+
+检查并尝试转换为布尔值，除了 nil 和 false，其他任何值都会返回 true
+
+@param mixed value 要检查的值
+
+@return boolean
+
+]]
+function checkBool(value)
+    return (value ~= nil and value ~= false)
+end
+
+
+--[[--
+
+检查值是否是一个表格，如果不是则返回一个空表格
+
+@param mixed value 要检查的值
+
+@return table
+
+]]
+function checkTable(value)
+    if type(value) ~= "table" then value = {} end
+    return value
+end
+
+--[[--
+
+如果表格中指定 key 的值为 nil，或者输入值不是表格，返回 false，否则返回 true
+
+@param table hashtable 要检查的表格
+@param mixed key 要检查的键名
+
+@return boolean
+
+]]
+function isSet(hashtable, key)
+    local t = type(hashtable)
+    return (t == "table" or t == "userdata") and hashtable[key] ~= nil
+end
+
+
+--[[--
+
+深度克隆一个值
+
+~~~ lua
+
+-- 下面的代码，t2 是 t1 的引用，修改 t2 的属性时，t1 的内容也会发生变化
+local t1 = {a = 1, b = 2}
+local t2 = t1
+t2.b = 3    -- t1 = {a = 1, b = 3} <-- t1.b 发生变化
+
+-- Clone() 返回 t1 的副本，修改 t2 不会影响 t1
+local t1 = {a = 1, b = 2}
+local t2 = Clone(t1)
+t2.b = 3    -- t1 = {a = 1, b = 2} <-- t1.b 不受影响
+
+~~~
+
+@param mixed object 要克隆的值
+
+@return mixed
+
+]]
+function Clone(object)
+    local lookup_table = {}
+    local function _copy(object)
+        if type(object) ~= "table" then
+            return object
+        elseif lookup_table[object] then
+            return lookup_table[object]
+        end
+        local new_table = {}
+        lookup_table[object] = new_table
+        for key, value in pairs(object) do
+            new_table[_copy(key)] = _copy(value)
+        end
+        return setmetatable(new_table, getmetatable(object))
+    end
+    return _copy(object)
+end
+
+
+
+--[[--
+
+创建一个类
+
+~~~ lua
+
+-- 定义名为 Shape 的基础类
+local Shape = class("Shape")
+
+-- ctor() 是类的构造函数，在调用 Shape.new() 创建 Shape 对象实例时会自动执行
+function Shape:ctor(shapeName)
+    self.shapeName = shapeName
+    printf("Shape:ctor(%s)", self.shapeName)
+end
+
+-- 为 Shape 定义个名为 draw() 的方法
+function Shape:draw()
+    printf("draw %s", self.shapeName)
+end
+
+--
+
+-- Circle 是 Shape 的继承类
+local Circle = class("Circle", Shape)
+
+function Circle:ctor()
+    -- 如果继承类覆盖了 ctor() 构造函数，那么必须手动调用父类构造函数
+    -- 类名.super 可以访问指定类的父类
+    Circle.super.ctor(self, "circle")
+    self.radius = 100
+end
+
+function Circle:setRadius(radius)
+    self.radius = radius
+end
+
+-- 覆盖父类的同名方法
+function Circle:draw()
+    printf("draw %s, raidus = %0.2f", self.shapeName, self.raidus)
+end
+
+--
+
+local Rectangle = class("Rectangle", Shape)
+
+function Rectangle:ctor()
+    Rectangle.super.ctor(self, "rectangle")
+end
+
+--
+
+local circle = Circle.new()             -- 输出: Shape:ctor(circle)
+circle:setRaidus(200)
+circle:draw()                           -- 输出: draw circle, radius = 200.00
+
+local rectangle = Rectangle.new()       -- 输出: Shape:ctor(rectangle)
+rectangle:draw()                        -- 输出: draw rectangle
+
+~~~
+
+### 高级用法
+
+class() 除了定义纯 Lua 类之外，还可以从 C++ 对象继承类。
+
+比如需要创建一个工具栏，并在添加按钮时自动排列已有的按钮，那么我们可以使用如下的代码：
+
+~~~ lua
+
+-- 从 cc.Node 对象派生 Toolbar 类，该类具有 cc.Node 的所有属性和行为
+local Toolbar = class("Toolbar", function()
+    return display.newNode() -- 返回一个 cc.Node 对象
+end)
+
+-- 构造函数
+function Toolbar:ctor()
+    self.buttons = {} -- 用一个 table 来记录所有的按钮
+end
+
+-- 添加一个按钮，并且自动设置按钮位置
+function Toolbar:addButton(button)
+    -- 将按钮对象加入 table
+    self.buttons[#self.buttons + 1] = button
+
+    -- 添加按钮对象到 cc.Node 中，以便显示该按钮
+    -- 因为 Toolbar 是从 cc.Node 继承的，所以可以使用 addChild() 方法
+    self:addChild(button)
+
+    -- 按照按钮数量，调整所有按钮的位置
+    local x = 0
+    for _, button in ipairs(self.buttons) do
+        button:setPosition(x, 0)
+        -- 依次排列按钮，每个按钮之间间隔 10 点
+        x = x + button:getContentSize().width + 10
+    end
+end
+
+~~~
+
+class() 的这种用法让我们可以在 C++ 对象基础上任意扩展行为。
+
+既然是继承，自然就可以覆盖 C++ 对象的方法：
+
+~~~ lua
+
+function Toolbar:setPosition(x, y)
+    -- 由于在 Toolbar 继承类中覆盖了 cc.Node 对象的 setPosition() 方法
+    -- 所以我们要用以下形式才能调用到 cc.Node 原本的 setPosition() 方法
+    getmetatable(self).setPosition(self, x, y)
+
+    printf("x = %0.2f, y = %0.2f", x, y)
+end
+
+~~~
+
+**注意:** Lua 继承类覆盖的方法并不能从 C++ 调用到。也就是说通过 C++ 代码调用这个 cc.Node 对象的 setPosition() 方法时，并不会执行我们在 Lua 中定义的 Toolbar:setPosition() 方法。
+
+@param string classname 类名
+@param [mixed super] 父类或者创建对象实例的函数
+
+@return table
+
+]]
+function Class(classname, super)
+    local superType = type(super)
+    local cls
+
+    if --[[superType ~= "function" and ]]superType ~= "table" then
+        superType = nil
+        super = nil
+    end
+
+   --[[ if superType == "function" or (super and super.__ctype == 1) then
+        -- inherited from native C++ Object
+        cls = {}
+
+        if superType == "table" then
+            -- copy fields from super
+            for k,v in pairs(super) do cls[k] = v end
+            cls.__create = super.__create
+            cls.super    = super
+        else
+            cls.__create = super
+            cls.ctor = function() end
+        end
+
+        cls.__cname = classname
+        cls.__ctype = 1
+
+        function cls.New(...)
+            local instance = cls.__create(...)
+            -- copy fields from class to native object
+            for k,v in pairs(cls) do instance[k] = v end
+            instance.class = cls
+            instance:ctor(...)
+            return instance
+        end
+        
+        function cls.New2(instance,...)
+            -- copy fields from class to native object
+            for k,v in pairs(cls) do instance[k] = v end
+            instance.class = cls
+            instance:ctor(...)
+            return instance
+        end
+
+    else ]]
+        -- inherited from Lua Object
+        if super then
+            cls = {}
+            setmetatable(cls, {__index = super})
+            cls.super = super
+        else
+            cls = {ctor = function() end}
+            setmetatable(cls, {})
+        end
+
+        cls.__cname = classname
+        cls.__ctype = 2 -- lua
+        cls.__index = cls
+
+        function cls.New(...)
+            local instance = setmetatable({}, cls)
+            instance.class = cls
+            instance:ctor(...)
+            return instance
+        end
+        
+        getmetatable(cls).__call = function(t,...)
+            local instance = setmetatable({}, t)
+            instance.class = cls
+            instance:ctor(...)
+            return instance
+        end
+        
+        function cls.New2(instance,...)
+            instance = setmetatable(instance, cls)
+            instance.class = cls
+            instance:ctor(...)
+            return instance
+        end
+--    end
+
+    return cls
+end
+
+
+--[[--
+
+如果对象是指定类或其子类的实例，返回 true，否则返回 false
+
+~~~ lua
+
+local Animal = class("Animal")
+local Duck = class("Duck", Animal)
+
+print(iskindof(Duck.new(), "Animal")) -- 输出 true
+
+~~~
+
+@param mixed obj 要检查的对象
+@param string classname 类名
+
+@return boolean
+
+]]
+function isKindOf(obj, classname)
+    local t = type(obj)
+    local mt
+    if t == "table" then
+        mt = getmetatable(obj)
+    elseif t == "userdata" then
+        mt = tolua.getpeer(obj)
+    end
+
+    while mt do
+        if mt.__cname == classname then
+            return true
+        end
+        mt = mt.super
+    end
+
+    return false
+end
+
+
+
+--[[--
+
+将 Lua 对象及其方法包装为一个匿名函数
+
+@param mixed obj Lua 对象
+@param function method 对象方法
+
+@return function
+
+]]
+function handler(obj, method)
+    return function(...)
+        return method(obj, ...)
+    end
+end
+
+function InterfaceCallback(callback)
+    return function(errorId)
+        if callback ~= nil then
+            callback(errorId)
+        end
+    end
+end
+
+
+--[[--
+
+根据系统时间初始化随机数种子，让后续的 math.random() 返回更随机的值
+
+]]
+-- function math.newrandomseed()
+--     local ok, socket = pcall(function()
+--         return require("socket")
+--     end)
+
+--     if ok then
+--         -- 如果集成了 socket 模块，则使用 socket.gettime() 获取随机数种子
+--         math.randomseed(socket.gettime() * 1000)
+--     else
+--         math.randomseed(os.time())
+--     end
+--     math.random()
+--     math.random()
+--     math.random()
+--     math.random()
+-- end
+
+
+--[[--
+
+对数值进行四舍五入，如果不是数值则返回 0
+
+@param number value 输入值
+
+@return number
+
+]]
+function math.round(value)
+    return math.floor(value + 0.5)
+end
+
+
+math.Deg2Rad = math.rad(1)
+math.Rad2Deg = math.deg(1)
+
+
+function math.angle2radian(angle)
+    return angle*math.Deg2Rad
+end
+
+function math.radian2angle(radian)
+    return radian*math.Rad2Deg
+end
+
+
+--[[--
+约等于
+@param number number1, number2
+@return boolean
+]]
+function math.approximate(number1, number2)
+    local error = 10 ^ -5
+    return math.abs(number1 - number2) < error
+end
+
+
+--[[--
+
+检查指定的文件或目录是否存在，如果存在返回 true，否则返回 false
+
+可以使用 cc.FileUtils:fullPathForFilename() 函数查找特定文件的完整路径，例如：
+
+~~~ lua
+
+local path = cc.FileUtils:getInstance():fullPathForFilename("gamedata.txt")
+if io.exists(path) then
+    ....
+end
+
+~~~
+
+@param string path 要检查的文件或目录的完全路径
+
+@return boolean
+
+]]
+function io.exists(path)
+    local file = io.open(path, "r")
+    if file then
+        io.close(file)
+        return true
+    end
+    return false
+end
+
+
+
+
+--[[--
+
+读取文件内容，返回包含文件内容的字符串，如果失败返回 nil
+
+io.readfile() 会一次性读取整个文件的内容，并返回一个字符串，因此该函数不适宜读取太大的文件。
+
+@param string path 文件完全路径
+
+@return string
+
+]]
+function io.readfile(path)
+    local file = io.open(path, "r")
+    if file then
+        local content = file:read("*a")
+        io.close(file)
+        return content
+    end
+    return nil
+end
+
+
+--[[--
+
+以字符串内容写入文件，成功返回 true，失败返回 false
+
+"mode 写入模式" 参数决定 io.writefile() 如何写入内容，可用的值如下：
+
+-   "w+" : 覆盖文件已有内容，如果文件不存在则创建新文件
+-   "a+" : 追加内容到文件尾部，如果文件不存在则创建文件
+
+此外，还可以在 "写入模式" 参数最后追加字符 "b" ，表示以二进制方式写入数据，这样可以避免内容写入不完整。
+
+**Android 特别提示:** 在 Android 平台上，文件只能写入存储卡所在路径，assets 和 data 等目录都是无法写入的。
+
+@param string path 文件完全路径
+@param string content 要写入的内容
+@param [string mode] 写入模式，默认值为 "w+b"
+
+@return boolean
+
+]]
+function io.writefile(path, content, mode)
+    mode = mode or "w+b"
+    local file = io.open(path, mode)
+    if file then
+        if file:write(content) == nil then return false end
+        io.close(file)
+        return true
+    else
+        return false
+    end
+end
+
+
+
+--[[--
+
+拆分一个路径字符串，返回组成路径的各个部分
+
+~~~ lua
+
+local pathinfo  = io.pathinfo("/var/app/test/abc.png")
+
+-- 结果:
+-- pathinfo.dirname  = "/var/app/test/"
+-- pathinfo.filename = "abc.png"
+-- pathinfo.basename = "abc"
+-- pathinfo.extname  = ".png"
+
+~~~
+
+@param string path 要分拆的路径字符串
+
+@return table
+
+]]
+function io.pathinfo(path)
+    local pos = string.len(path)
+    local extpos = pos + 1
+    while pos > 0 do
+        local b = string.byte(path, pos)
+        if b == 46 then -- 46 = char "."
+            extpos = pos
+        elseif b == 47 then -- 47 = char "/"
+            break
+        end
+        pos = pos - 1
+    end
+
+    local dirname = string.sub(path, 1, pos)
+    local filename = string.sub(path, pos + 1)
+    extpos = extpos - pos
+    local basename = string.sub(filename, 1, extpos - 1)
+    local extname = string.sub(filename, extpos)
+    return {
+        dirname = dirname,
+        filename = filename,
+        basename = basename,
+        extname = extname
+    }
+end
+
+--[[--
+
+返回指定文件的大小，如果失败返回 false
+
+@param string path 文件完全路径
+
+@return integer
+
+]]
+function io.filesize(path)
+    local size = false
+    local file = io.open(path, "r")
+    if file then
+        local current = file:seek()
+        size = file:seek("end")
+        file:seek("set", current)
+        io.close(file)
+    end
+    return size
+end
+
+function table.weak(mode,t)
+    if nil == t then t = {} end
+    if nil == mode then mode = "kv" end
+    local weak_mt = { __mode = mode }
+    setmetatable(t,weak_mt)
+    return t
+end
+
+--[[--
+
+计算表格包含的字段数量
+
+Lua table 的 "#" 操作只对依次排序的数值下标数组有效，table.nums() 则计算 table 中所有不为 nil 的值的个数。
+
+@param table t 要检查的表格
+
+@return integer
+
+]]
+function table.nums(t)
+    local count = 0
+    for k, v in pairs(t) do
+        count = count + 1
+    end
+    return count
+end
+
+
+
+--[[--
+
+返回指定表格中的所有键
+
+~~~ lua
+
+local hashtable = {a = 1, b = 2, c = 3}
+local keys = table.keys(hashtable)
+-- keys = {"a", "b", "c"}
+
+~~~
+
+@param table hashtable 要检查的表格
+
+@return table
+
+]]
+function table.keys(hashtable)
+    local keys = {}
+    for k, v in pairs(hashtable) do
+        keys[#keys + 1] = k
+    end
+    return keys
+end
+
+
+--[[--
+
+返回指定表格中的所有值
+
+~~~ lua
+
+local hashtable = {a = 1, b = 2, c = 3}
+local values = table.values(hashtable)
+-- values = {1, 2, 3}
+
+~~~
+
+@param table hashtable 要检查的表格
+
+@return table
+
+]]
+function table.values(hashtable,isArray)
+    local p = pairs
+    if true == isArray then p = ipairs end
+    local values = {}
+    for k, v in p(hashtable) do
+        values[#values + 1] = v
+    end
+    return values
+end
+
+
+--[[--
+
+将来源表格中所有键及其值复制到目标表格对象中，如果存在同名键，则覆盖其值
+
+~~~ lua
+
+local dest = {a = 1, b = 2}
+local src  = {c = 3, d = 4}
+table.merge(dest, src)
+-- dest = {a = 1, b = 2, c = 3, d = 4}
+
+~~~
+
+@param table dest 目标表格
+@param table src 来源表格
+
+]]
+function table.merge(dest, src)
+    for k, v in pairs(src) do
+        dest[k] = v
+    end
+end
+
+
+
+--[[--
+
+在目标表格的指定位置插入来源表格，如果没有指定位置则连接两个表格
+
+~~~ lua
+
+local dest = {1, 2, 3}
+local src  = {4, 5, 6}
+table.insertto(dest, src)
+-- dest = {1, 2, 3, 4, 5, 6}
+
+dest = {1, 2, 3}
+table.insertto(dest, src, 5)
+-- dest = {1, 2, 3, nil, 4, 5, 6}
+
+~~~
+
+@param table dest 目标表格
+@param table src 来源表格
+@param [integer begin] 插入位置
+
+]]
+function table.insertto(dest, src, begin)
+	begin = checkint(begin)
+	if begin <= 0 then
+		begin = #dest + 1
+	end
+
+	local len = #src
+	for i = 0, len - 1 do
+		dest[i + begin] = src[i + 1]
+	end
+end
+
+
+--[[
+
+从表格中查找指定值，返回其索引，如果没找到返回 false
+
+~~~ lua
+
+local array = {"a", "b", "c"}
+print(table.indexof(array, "b")) -- 输出 2
+
+~~~
+
+@param table array 表格
+@param mixed value 要查找的值
+@param [integer begin] 起始索引值
+
+@return integer
+
+]]
+function table.indexof(array, value, begin)
+    for i = begin or 1, #array do
+        if array[i] == value then return i end
+    end
+	return false
+end
+
+function table.sub(array,i,j)
+    local tb = {}
+    j = math.min(j, #array)
+    for index = i, j,1 do
+        table.insert(tb,#tb+1,array[index])
+    end
+    return tb
+end
+
+function table.onlyreadcopy(t)
+    local temp=t or {};
+    local mt={
+        __index=function(t,k)return temp[k] end;
+        __newindex=function(t,k,v)
+            XLogger.LogError("Error尝试新数据");
+        end
+    }
+
+    setmetatable(temp,mt);
+    return temp;
+end
+
+--[[--
+从表格中查找是否包含指定索引，找到返回true，否则返回false
+~~~ lua
+local hashtable = {name = "dualface", comp = "chukong"}
+print(table.haskey(hashtable, "name")) -- 输出 true
+~~~
+
+@param table hashtable 表格
+@param mixed key 要查找的索引
+
+@return bool 
+
+]]
+
+function table.haskey(hashtable, key)
+    for k, v in pairs(hashtable) do
+        if k == key then return true end
+    end
+    return false
+end
+
+function table.hasValue(hashtable, value)
+    for k, v in pairs(hashtable) do
+        if v == value then return true end
+    end
+    return false
+end
+
+
+
+--[[--
+
+从表格中查找指定值，返回其 key，如果没找到返回 nil
+
+~~~ lua
+
+local hashtable = {name = "dualface", comp = "chukong"}
+print(table.keyof(hashtable, "chukong")) -- 输出 comp
+
+~~~
+
+@param table hashtable 表格
+@param mixed value 要查找的值
+
+@return string 该值对应的 key
+
+]]
+function table.keyof(hashtable, value)
+    for k, v in pairs(hashtable) do
+        if v == value then return k end
+    end
+    return nil
+end
+
+
+--[[--
+
+从表格中删除指定值，返回删除的值的个数
+
+~~~ lua
+
+local array = {"a", "b", "c", "c"}
+print(table.removebyvalue(array, "c", true)) -- 输出 2
+
+~~~
+
+@param table array 表格
+@param mixed value 要删除的值
+@param [boolean removeall] 是否删除所有相同的值
+
+@return integer
+
+]]
+function table.removebyvalue(array, value, removeall)
+    local c, i, max = 0, 1, #array
+    while i <= max do
+        if array[i] == value then
+            table.remove(array, i)
+            c = c + 1
+            i = i - 1
+            max = max - 1
+            if not removeall then break end
+        end
+        i = i + 1
+    end
+    return c
+end
+
+
+
+
+--[[--
+
+对表格中每一个值执行一次指定的函数，并用函数返回值更新表格内容
+
+~~~ lua
+
+local t = {name = "dualface", comp = "chukong"}
+table.map(t, function(v, k)
+    -- 在每一个值前后添加括号
+    return "[" .. v .. "]"
+end)
+
+-- 输出修改后的表格内容
+for k, v in pairs(t) do
+    print(k, v)
+end
+
+-- 输出
+-- name [dualface]
+-- comp [chukong]
+
+~~~
+
+fn 参数指定的函数具有两个参数，并且返回一个值。原型如下：
+
+~~~ lua
+
+function map_function(value, key)
+    return value
+end
+
+~~~
+
+@param table t 表格
+@param function fn 函数
+
+]]
+function table.map(t, fn)
+    for k, v in pairs(t) do
+        t[k] = fn(v, k)
+    end
+end
+
+
+--[[--
+
+对表格中每一个值执行一次指定的函数，但不改变表格内容
+
+~~~ lua
+
+local t = {name = "dualface", comp = "chukong"}
+table.walk(t, function(v, k)
+    -- 输出每一个值
+    print(v)
+end)
+
+~~~
+
+fn 参数指定的函数具有两个参数，没有返回值。原型如下：
+
+~~~ lua
+
+function map_function(value, key)
+
+end
+
+~~~
+
+@param table t 表格
+@param function fn 函数
+
+]]
+function table.walk(t, fn)
+    for k,v in pairs(t) do
+        fn(v, k)
+    end
+end
+
+
+--[[--
+
+对表格中每一个值执行一次指定的函数，如果该函数返回 false，则对应的值会从表格中删除
+
+~~~ lua
+
+local t = {name = "dualface", comp = "chukong"}
+table.filter(t, function(v, k)
+    return v ~= "dualface" -- 当值等于 dualface 时过滤掉该值
+end)
+
+-- 输出修改后的表格内容
+for k, v in pairs(t) do
+    print(k, v)
+end
+
+-- 输出
+-- comp chukong
+
+~~~
+
+fn 参数指定的函数具有两个参数，并且返回一个 boolean 值。原型如下：
+
+~~~ lua
+
+function map_function(value, key)
+    return true or false
+end
+
+~~~
+
+@param table t 表格
+@param function fn 函数
+
+]]
+function table.filter(t, fn)
+    for k, v in pairs(t) do
+        if not fn(v, k) then t[k] = nil end
+    end
+end
+
+
+--[[--
+
+遍历表格，确保其中的值唯一
+
+~~~ lua
+
+local t = {"a", "a", "b", "c"} -- 重复的 a 会被过滤掉
+local n = table.unique(t)
+
+for k, v in pairs(n) do
+    print(v)
+end
+
+-- 输出
+-- a
+-- b
+-- c
+
+~~~
+
+@param table t 表格
+
+@return table 包含所有唯一值的新表格
+
+]]
+function table.unique(t)
+    local check = {}
+    local n = {}
+    for k, v in pairs(t) do
+        if not check[v] then
+            n[k] = v
+            check[v] = true
+        end
+    end
+    return n
+end
+
+
+
+--[[--
+
+遍历表格，确保其中的值唯一
+
+倒序一个数组表
+local t = {"a", "b", "c", "d"} -- 重复的 a 会被过滤掉
+local n = table.reverse(t)
+for k, v in ipairs(n) do
+print(v)
+end
+
+-- 输出
+-- d
+-- c
+-- b
+-- a
+@param table t 表格
+
+@return table 包含所有唯一值的新表格
+
+]]
+function table.reverse(array)
+    local t = #array
+    for index=t-1,1,-1 do
+        array[t]=table.remove(array,index)
+    end
+    return array
+end
+
+--[[--
+
+返回表是否为空
+
+@param table t 表格
+@return bool 是否为空表
+
+]]
+function table.empty(t)
+    if t==nil then
+        return true;
+    end
+    return next(t) == nil
+end
+
+
+--[[--
+表为空则返回{}
+@param table p_table
+@return table
+]]
+function table.autoCreate(p_table)
+    return p_table or {}
+end
+
+--[[--
+清空表
+@param table p_table
+]]
+function table.clear(p_table)
+    for k, _ in pairs(p_table) do
+        p_table[k] = nil
+    end
+end
+
+--[[--
+清空数组表
+@param table p_table
+]]
+function table.clearArray(p_table)
+    for k, _ in ipairs(p_table) do
+        p_table[k] = nil
+    end
+end
+
+
+string._htmlspecialchars_set = {}
+string._htmlspecialchars_set["&"] = "&amp;"
+string._htmlspecialchars_set["\""] = "&quot;"
+string._htmlspecialchars_set["'"] = "&#039;"
+string._htmlspecialchars_set["<"] = "&lt;"
+string._htmlspecialchars_set[">"] = "&gt;"
+
+--[[--
+
+将特殊字符转为 HTML 转义符
+
+~~~ lua
+
+print(string.htmlspecialchars("<ABC>"))
+-- 输出 &lt;ABC&gt;
+
+~~~
+
+@param string input 输入字符串
+
+@return string 转换结果
+
+]]
+function string.htmlspecialchars(input)
+    for k, v in pairs(string._htmlspecialchars_set) do
+        input = string.gsub(input, k, v)
+    end
+    return input
+end
+
+
+--[[--
+
+将 HTML 转义符还原为特殊字符，功能与 string.htmlspecialchars() 正好相反
+
+~~~ lua
+
+print(string.restorehtmlspecialchars("&lt;ABC&gt;"))
+-- 输出 <ABC>
+
+~~~
+
+@param string input 输入字符串
+
+@return string 转换结果
+
+]]
+function string.restorehtmlspecialchars(input)
+    for k, v in pairs(string._htmlspecialchars_set) do
+        input = string.gsub(input, v, k)
+    end
+    return input
+end
+
+
+--[[--
+
+将字符串中的 \n 换行符转换为 HTML 标记
+
+~~~ lua
+
+print(string.nl2br("Hello\nWorld"))
+-- 输出
+-- Hello<br />World
+
+~~~
+
+@param string input 输入字符串
+
+@return string 转换结果
+
+]]
+function string.nl2br(input)
+    return string.gsub(input, "\n", "<br />")
+end
+
+
+--[[--
+
+将字符串中的特殊字符和 \n 换行符转换为 HTML 转移符和标记
+
+~~~ lua
+
+print(string.nl2br("<Hello>\nWorld"))
+-- 输出
+-- &lt;Hello&gt;<br />World
+
+~~~
+
+@param string input 输入字符串
+
+@return string 转换结果
+
+]]
+function string.text2html(input)
+    input = string.gsub(input, "\t", "    ")
+    input = string.htmlspecialchars(input)
+    input = string.gsub(input, " ", "&nbsp;")
+    input = string.nl2br(input)
+    return input
+end
+
+
+
+--[[--
+
+用指定字符或字符串分割输入字符串，返回包含分割结果的数组
+
+~~~ lua
+
+local input = "Hello,World"
+local res = string.split(input, ",")
+-- res = {"Hello", "World"}
+
+local input = "Hello-+-World-+-Quick"
+local res = string.split(input, "-+-")
+-- res = {"Hello", "World", "Quick"}
+
+~~~
+
+@param string input 输入字符串
+@param string delimiter 分割标记字符或字符串
+
+@return array 包含分割结果的数组
+
+]]
+function string.split(input, delimiter)
+    if nil == input then return {} end
+    input = tostring(input)
+    delimiter = tostring(delimiter)
+    if (delimiter=='') then return false end
+    local pos,arr = 0, {}
+    -- for each divider found
+    for st,sp in function() return string.find(input, delimiter, pos, true) end do
+        table.insert(arr, string.sub(input, pos, st - 1))
+        pos = sp + 1
+    end
+    table.insert(arr, string.sub(input, pos))
+    return arr
+end
+
+
+
+--[[--
+
+去除输入字符串头部的空白字符，返回结果
+
+~~~ lua
+
+local input = "  ABC"
+print(string.ltrim(input))
+-- 输出 ABC，输入字符串前面的两个空格被去掉了
+
+~~~
+
+空白字符包括：
+
+-   空格
+-   制表符 \t
+-   换行符 \n
+-   回到行首符 \r
+
+@param string input 输入字符串
+
+@return string 结果
+
+@see string.rtrim, string.trim
+
+]]
+function string.ltrim(input)
+    return string.gsub(input, "^[ \t\n\r]+", "")
+end
+
+
+
+--[[--
+
+去除输入字符串尾部的空白字符，返回结果
+
+~~~ lua
+
+local input = "ABC  "
+print(string.ltrim(input))
+-- 输出 ABC，输入字符串最后的两个空格被去掉了
+
+~~~
+
+@param string input 输入字符串
+
+@return string 结果
+
+@see string.ltrim, string.trim
+
+]]
+function string.rtrim(input)
+    return string.gsub(input, "[ \t\n\r]+$", "")
+end
+
+
+
+--[[--
+
+去掉字符串首尾的空白字符，返回结果
+
+@param string input 输入字符串
+
+@return string 结果
+
+@see string.ltrim, string.rtrim
+
+]]
+function string.trim(input)
+    input = string.gsub(input, "^[ \t\n\r]+", "")
+    return string.gsub(input, "[ \t\n\r]+$", "")
+end
+
+
+--[[--
+
+将字符串的第一个字符转为大写，返回结果
+
+~~~ lua
+
+local input = "hello"
+print(string.ucfirst(input))
+-- 输出 Hello
+
+~~~
+
+@param string input 输入字符串
+
+@return string 结果
+
+]]
+function string.ucfirst(input)
+    return string.upper(string.sub(input, 1, 1)) .. string.sub(input, 2)
+end
+
+local function urlencodechar(char)
+    return "%" .. string.format("%02X", string.byte(char))
+end
+
+
+--[[--
+
+将字符串转换为符合 URL 传递要求的格式，并返回转换结果
+
+~~~ lua
+
+local input = "hello world"
+print(string.urlencode(input))
+-- 输出
+-- hello%20world
+
+~~~
+
+@param string input 输入字符串
+
+@return string 转换后的结果
+
+@see string.urldecode
+
+]]
+function string.urlencode(input)
+    -- convert line endings
+    input = string.gsub(tostring(input), "\n", "\r\n")
+    -- escape all characters but alphanumeric, '.' and '-'
+    input = string.gsub(input, "([^%w%.%- ])", urlencodechar)
+    -- convert spaces to "+" symbols
+    local ret, _ = string.gsub(input, " ", "+")
+    return ret
+end
+
+
+--[[--
+
+将 URL 中的特殊字符还原，并返回结果
+
+~~~ lua
+
+local input = "hello%20world"
+print(string.urldecode(input))
+-- 输出
+-- hello world
+
+~~~
+
+@param string input 输入字符串
+
+@return string 转换后的结果
+
+@see string.urlencode
+
+]]
+function string.urldecode(input)
+    input = string.gsub (input, "+", " ")
+    input = string.gsub (input, "%%(%x%x)", function(h) return string.char(checknumber(h,16)) end)
+    input = string.gsub (input, "\r\n", "\n")
+    return input
+end
+
+
+--[[--
+
+计算 UTF8 字符串的长度，每一个中文算一个字符
+
+~~~ lua
+
+local input = "你好World"
+print(string.utf8len(input))
+-- 输出 7
+
+~~~
+
+@param string input 输入字符串
+
+@return integer 长度
+
+]]
+function string.utf8len(input)
+    local len  = string.len(input)
+    local left = len
+    local cnt  = 0
+    local arr  = {0, 0xc0, 0xe0, 0xf0, 0xf8, 0xfc}
+    while left ~= 0 do
+        local tmp = string.byte(input, -left)
+        local i   = #arr
+        while arr[i] do
+            if tmp >= arr[i] then
+                left = left - i
+                break
+            end
+            i = i - 1
+        end
+        cnt = cnt + 1
+    end
+    return cnt
+end
+
+
+--[[--
+
+把指定的字符串转化成对应字符的数组
+
+]]
+function string.utf8toarr(input)
+    local arr = {0, 0xc0, 0xe0, 0xf0, 0xf8, 0xfc}
+    local len = string.len(input)
+    local charArr = {}
+    local left = len
+    while left ~= 0 do
+        local charLeft = left
+        local tmp = string.byte(input, -left)
+        local i = #arr
+        while arr[i] do
+            if tmp >= arr[i] then
+                left = left - i
+                break
+            end
+            i = i - 1
+        end
+        charArr[#charArr+1] = string.sub(input, len-charLeft+1, len-left)
+    end
+    return charArr
+end
+
+
+
+--[[--
+
+    截取指定字符个数的字符串，超过指定个数的，截取，然后添加...
+    eg: s = "su好帅啊哈哈哈哈哈哈哈" maxLen = 5
+        那么该函数返回的就是 su好帅啊...
+]]
+function string.getMaxLenString(s, maxLen)
+    local len = string.utf8len(s)
+    if len <= maxLen then
+        return s
+    end
+    local ret = ""
+    local charTable = string.utf8toarr(s)
+    for index = 1, maxLen do
+        ret = ret..charTable[index]
+    end
+    ret = ret.."..."
+    return ret
+end
+
+
+
+--[[--
+
+将数值格式化为包含千分位分隔符的字符串
+
+~~~ lua
+
+print(string.formatnumberthousands(1924235))
+-- 输出 1,924,235
+
+~~~
+
+@param number num 数值
+
+@return string 格式化结果
+
+]]
+function string.formatnumberthousands(num)
+    local formatted = tostring(checknumber(num))
+    local k
+    while true do
+        formatted, k = string.gsub(formatted, "^(-?%d+)(%d%d%d)", '%1,%2')
+        if k == 0 then break end
+    end
+    return formatted
+end
+
+
+--[[--
+
+判断str是否以substr开头
+
+~~~ lua
+
+print(string.startswith("1234","12"))
+-- 输出 true
+
+~~~
+
+@param string str 被查找的字符串
+@param string substr 目标子字符串
+
+@return bool true/false
+
+]]
+function string.startswith(str, substr)
+    if nil == str or nil == substr then return false end
+    if 1 ~= string.find(str, substr) then return false end
+    return true
+end
+
+
+--[[--
+
+判断str是否以substr结尾
+
+~~~ lua
+
+print(string.endswith("1234","34"))
+-- 输出 true
+
+~~~
+
+@param string str 被查找的字符串
+@param string substr 目标子字符串
+
+@return bool true/false
+
+]]
+function string.endswith(str, substr)
+    if nil == str or nil == substr then return false end
+    return string.startswith(string.reverse(str),string.reverse(substr))
+end
+
+function string.upperFirst(str)
+    local f = string.sub(str,1,1)
+    local e = string.sub(str,2,-1)
+    return string.upper(f)..e
+end
+
+function decodeBase64(str64)  
+    local b64chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'  
+    local temp={}  
+    for i=1,64 do  
+        temp[string.sub(b64chars,i,i)] = i  
+    end  
+    temp['=']=0  
+    local str=""  
+    for i=1,#str64,4 do  
+        if i>#str64 then  
+            break  
+        end  
+        local data = 0  
+        local str_count=0  
+        for j=0,3 do  
+            local str1=string.sub(str64,i+j,i+j)  
+            if not temp[str1] then  
+                return  
+            end  
+            if temp[str1] < 1 then  
+                data = data * 64  
+            else  
+                data = data * 64 + temp[str1]-1  
+                str_count = str_count + 1  
+            end  
+        end  
+        for j=16,0,-8 do  
+            if str_count > 0 then  
+                str=str..string.char(math.floor(data/math.pow(2,j)))  
+                data=math.mod(data,math.pow(2,j))  
+                str_count = str_count - 1  
+            end  
+        end  
+    end  
+  
+    local last = tonumber(string.byte(str, string.len(str), string.len(str)))  
+    if last == 0 then  
+        str = string.sub(str, 1, string.len(str) - 1)  
+    end  
+    return str  
+end 
+
+function math.formatNumberRound(value ,decimalNum)
+    local v = value * math.pow (10, decimalNum)
+    v = math.round(v)
+    v = v / math.pow(10,decimalNum)
+    return v
+end
+
+function math.formatNumberFloor(value,decimalNum)
+    local v = value * math.pow (10, decimalNum)
+    v = math.floor(v)
+    v = v / math.pow(10,decimalNum)
+    return v
+end
+
+function math.formatNumberCeil(value,decimalNum)
+    local v = value * math.pow (10, decimalNum)
+    v = math.ceil(v)
+    v = v / math.pow(10,decimalNum)
+    return v
+end
+--四舍五入格式化数字 eg:
+--1.25 3 true
+--result = 1.250
+--1.200 3 false
+--result = 1.2
+--1.2599 3 false
+--result = 1.26
+function math.formatNumberRoundString(value,decimalNum,isDecimalZeroShow)
+    -- print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    -- print(value.." "..decimalNum)
+    local valueStr = ""
+    value = math.formatNumberRound(value,decimalNum)
+    value = value * math.pow(10,decimalNum)
+    valueStr = tostring(value)
+    -- print("valueStr "..valueStr)
+    local valueStrTable = {valueStr}
+    if string.find(valueStr,".") then
+        valueStrTable = {}
+        valueStrTable = string.split(valueStr,".")
+    end
+    local intStr = valueStrTable[1]
+   -- local intStrTable = loadstring(intStr)
+    local ret = ""
+    local meetBiggerZero = false
+   
+    local size = string.len(intStr)
+    if size <= decimalNum then
+        for index = 1,decimalNum - size + 1 do
+            intStr = "0"..intStr
+        end
+        size = decimalNum + 1
+    end
+     -- print("suzhaohui ~~~~~~~~~~~~~~~~intStr~~~~~~~~~~~~~~"..intStr)
+    for index = 1, size do 
+         local item = string.sub(intStr,size - index + 1,size - index + 1)
+        if item ~= "0" then
+            meetBiggerZero = true
+        end
+        if isDecimalZeroShow == true then
+            ret = item..ret
+             if  index  == decimalNum  then
+               ret = "."..ret
+            end
+        else
+            if item == "0" and ( meetBiggerZero == true  or index > decimalNum)  then
+                -- print("suzhaohui item index > decialnum" ..item)
+                ret = item..ret
+            elseif item ~= "0"  then
+                ret = item..ret
+            end
+
+             if  index  == decimalNum and meetBiggerZero == true then
+               ret = "."..ret
+            end
+        end 
+        -- print("ret "..ret)  
+    end
+    --no use logic
+    local firstStr = string.sub(ret,1,1)
+    if firstStr == "." then
+        ret = "0"..ret
+    end
+    -- print("result " .. ret)
+   return ret
+
+end
+-- math.newrandomseed()
+
+function __G__TRACKBACK__(errorMessage)
+    if errorMessage then
+        print("----------------------------------------")
+        print("LUA ERROR: " .. tostring(errorMessage) .. "\n")
+        print(debug.traceback("", 2))
+        print("----------------------------------------")
+    end
+
+end
+
+function tryCallMethod(func,errorFunc)
+    if func==nil then
+        return false;
+    end
+    local status= xpcall(func,__G__TRACKBACK__);
+    if status==nil or status==false then
+        if errorFunc~=nil then
+            errorFunc();
+        end
+    end
+    return status;
+end
+

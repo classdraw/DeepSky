@@ -5,19 +5,29 @@ using XEngine.Loader;
 
 namespace XEngine.Pool
 {
+    
     [XLua.LuaCallCSharp]
     public class PoolManager :MonoSingleton<PoolManager>
     {
+        public enum Pool_Category_Enum{
+            AssetPool=0,
+            LuaPool=1,
+            Count=2
+        }
         private static ObjectPool<ResHandle> ResHandlePool=new ObjectPool<ResHandle>(l=>l.Get(), l=>l.Release());
         public static ResHandle GetEmptyResHandle(){return ResHandlePool.Get();}
         public static void ReleaseEmptyResHandle(ResHandle resHandle){ResHandlePool.Release(resHandle);}
         
         private PoolConfig m_Config=null;
-        private PoolIncubator m_PoolObject;
+
+        private Dictionary<int,PoolIncubator> m_PoolObjects=new Dictionary<int, PoolIncubator>();
         #region 初始化销毁逻辑
 		protected override void Init(){
 			XLogger.Log("PoolManager初始化");
-			m_PoolObject=PoolIncubator.Create("DefaultPool",gameObject);
+            int count=(int)Pool_Category_Enum.Count;
+            for(int i=0;i<count;i++){
+                m_PoolObjects.Add(i,PoolIncubator.Create(((Pool_Category_Enum)i).ToString(),gameObject));
+            }
         }
 
 		public void InitConfig(){
@@ -30,18 +40,21 @@ namespace XEngine.Pool
             if(m_Config==null){
                 return;
             }
-			m_PoolObject.Tick();
+            foreach(var kvp in m_PoolObjects){
+                kvp.Value.Tick();
+            }
+
 		}
 
 		#endregion
 
         #region 外部调用
-        public ResHandle LoadResourceSync(string assetPath){
-            return m_PoolObject.LoadResourceSync(assetPath);
+        public ResHandle LoadResourceSync(string assetPath,int poolIndex=0){
+            return m_PoolObjects[poolIndex].LoadResourceSync(assetPath);
         }
 
-        public ResHandle LoadResourceAsync(string assetPath,System.Action<ResHandle> callback){
-            return m_PoolObject.LoadResourceAsync(assetPath,callback);
+        public ResHandle LoadResourceAsync(string assetPath,System.Action<ResHandle> callback,int poolIndex=0){
+            return m_PoolObjects[poolIndex].LoadResourceAsync(assetPath,callback);
         }
         #endregion
 

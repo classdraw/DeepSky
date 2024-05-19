@@ -1,0 +1,116 @@
+7024: 10:07:47.973 - ---
+7024: 10:07:47.973 - Service: "Photon Socket Server" starting
+7024: 10:07:47.973 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+7024: 10:07:47.976 - Will produce at most: 10 crash dumps
+7024: 10:07:47.976 - Action: run as exe
+7024: 10:07:47.977 - Server Starting...
+7024: 10:07:47.977 -    Tick count: 964058968 (wraps in: 38.5522 days)
+7024: 10:07:47.977 - Tick count 64: 964058968
+7024: 10:07:47.977 - Photon Version: 4.0.28.2962
+7024: 10:07:47.977 - PID: 17288
+7024: 10:07:47.978 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+7024: 10:07:47.978 - Will NOT log unimportant exceptions
+7024: 10:07:47.982 - Not using performance counters as they are not currently installed. Run the service with /InstallCounters to install them.
+7024: 10:07:47.982 - Shutdown timeout enabled: 30000ms
+7024: 10:07:47.983 - Starting I/O thread pool with 2 threads
+7024: 10:07:47.983 - Using Standard allocator
+7024: 10:07:47.983 - Max message size: 512000
+7024: 10:07:47.983 - Starting business logic thread pool with the following settings
+7024: 10:07:47.983 - InitialThreads: 4 threads
+7024: 10:07:47.983 - MinThreads: 4 threads
+7024: 10:07:47.983 - Thread pool is fixed size
+7024: 10:07:47.983 - Starting ENet thread pool with the following settings
+7024: 10:07:47.983 - InitialThreads: 2 threads
+7024: 10:07:47.983 - MinThreads: 2 threads
+7024: 10:07:47.983 - Thread pool is fixed size
+7024: 10:07:47.983 - OnlyDispatchTimers: False
+7024: 10:07:47.984 - S2S: flow control: Max pending writes: 50
+7024: 10:07:47.984 - S2S: flow control: Max queued buffers: 200
+7024: 10:07:47.984 - S2S: flow control: Max pending writes MUX: 500
+7024: 10:07:47.984 - S2S: flow control: Max queued buffers MUX: 2000
+7024: 10:07:47.984 - S2S: MaxInboundMessageSize: 512000
+7024: 10:07:47.984 - S2S: MaxOutboundMessageSize: 512000
+7024: 10:07:47.984 - S2S: No inactivity timeout
+7024: 10:07:47.992 - WebSocket S2S: MaxInboundMessageSize: 512000
+7024: 10:07:47.992 - WebSocket S2S: MaxOutboundMessageSize: 512000
+7024: 10:07:47.992 - WebSocket S2S: No inactivity timeout
+7024: 10:07:47.992 - Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+7024: 10:07:47.992 - Per peer bandwidth limit
+7024: 10:07:47.992 - Transmit Rate Limit: 256 KB/Sec
+7024: 10:07:47.992 - Limit period: 200ms
+7024: 10:07:47.992 - Limit per period: 52428 bytes
+7024: 10:07:47.992 - Max queued data for transmission per peer: 512000 bytes
+7024: 10:07:47.992 - Minimum retransmit timeout: 200
+7024: 10:07:47.992 - No Maximum retransmit timeout
+7024: 10:07:47.992 - Minimum ENet timeout: 5000ms
+7024: 10:07:47.992 - Maximum ENet timeout: 30000ms
+7024: 10:07:47.992 - Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+7024: 10:07:47.992 - No RTT ACK adjustment timeout
+7024: 10:07:47.992 - Outbound ENet: MaxInboundMessageSize: 512000
+7024: 10:07:47.992 - Outbound ENet: MaxOutboundMessageSize: 512000
+7024: 10:07:47.999 - GetRuntime - About to load CLR - versions available:
+7024: 10:07:47.999 - v2.0.50727
+7024: 10:07:47.999 - v4.0.30319
+7024: 10:07:47.999 - Configuration requests: "v2.0.50727"
+7024: 10:07:47.999 - About to load version: "v2.0.50727"
+7024: 10:07:48.032 - About to load runtime: PhotonHostRuntime.PhotonDomainManager from PhotonHostRuntime, Culture=neutral, PublicKeyToken=02C301B61B060C4D
+7024: 10:07:48.032 - CLRBaseDirectory set to "D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy"
+7024: 10:07:48.032 - Optimising event broadcast for 20 or more peers
+7024: 10:07:48.033 - Start: About to load CLR - versions available:
+7024: 10:07:48.033 - v2.0.50727
+7024: 10:07:48.033 - v4.0.30319
+7024: 10:07:48.033 - No preference in configuration file, will load latest.
+7024: 10:07:48.033 - About to load version: "v4.0.30319"
+7024: 10:07:48.035 - Loaded version: "v4.0.30319"
+7024: 10:07:48.151 - Photon host runtime loaded
+7024: 10:07:49.762 - License is valid.
+7024: 10:07:49.762 - Licensed for 100 concurrent connections.
+7024: 10:07:49.762 - ENet: Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+7024: 10:07:49.762 - ENet: Per peer bandwidth limit
+7024: 10:07:49.762 - ENet: Transmit Rate Limit: 256 KB/Sec
+7024: 10:07:49.762 - ENet: Limit period: 200ms
+7024: 10:07:49.762 - ENet: Limit per period: 52428 bytes
+7024: 10:07:49.762 - ENet: Max queued data for transmission per peer: 512000 bytes
+7024: 10:07:49.762 - ENet: Minimum retransmit timeout: 200
+7024: 10:07:49.762 - No Maximum retransmit timeout
+7024: 10:07:49.762 - ENet: Minimum timeout: 5000ms
+7024: 10:07:49.762 - ENet: Maximum timeout: 30000ms
+7024: 10:07:49.762 - ENet: Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+7024: 10:07:49.762 - No RTT ACK adjustment timeout
+7024: 10:07:49.762 - About to load application: SAAServer from SAAServer
+7024: 10:07:49.762 - Auto restart is enabled for application, existing connections will be terminated during restart
+7024: 10:07:49.762 - Application will restart 1000ms after the last change detected
+7024: 10:07:49.762 - Application will restart if files matching the following are changed: "dll;config"
+7024: 10:07:49.762 - Application will NOT restart if files matching the following are changed: "log4net.config"
+7024: 10:07:49.815 - Taking reference on default app domain
+7024: 10:07:49.854 - Application: "SAAServer" started in app domain: 2
+7024: 10:07:49.854 - About to load application: CounterPublisher from CounterPublisher
+7024: 10:07:49.854 - Auto restart is enabled for application, existing connections will be terminated during restart
+7024: 10:07:49.854 - Application will restart 1000ms after the last change detected
+7024: 10:07:49.854 - Application will restart if files matching the following are changed: "dll;config"
+7024: 10:07:49.854 - Application will NOT restart if files matching the following are changed: "log4net.config"
+7024: 10:07:49.902 - Taking reference on default app domain
+7024: 10:07:49.934 - Application: "CounterPublisher" started in app domain: 3
+7024: 10:07:49.934 - Adding TCP listener on: 0.0.0.0: 4530 with a listen backlog of: 150
+7024: 10:07:49.934 - TCP inactivity timeout: 10000ms
+7024: 10:07:49.934 - TCP disconnect timeout: 120000ms
+7024: 10:07:49.934 - MaxInboundMessageSize: 512000
+7024: 10:07:49.934 - MaxOutboundMessageSize: 512000
+7024: 10:07:49.934 - Forcing all applications ids to: "SAAServer"
+7024: 10:07:49.934 - Serving policy file requests from: "D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+7024: 10:07:49.934 - Adding TCP listener on: 0.0.0.0: 4520 with a listen backlog of: 150
+7024: 10:07:49.934 - TCP inactivity timeout: 5000ms
+7024: 10:07:49.934 - TCP disconnect timeout: 120000ms
+7024: 10:07:49.934 - MaxInboundMessageSize: 512000
+7024: 10:07:49.934 - MaxOutboundMessageSize: 512000
+7024: 10:07:49.934 - Forcing all applications ids to: "SAAServer"
+7024: 10:07:49.934 - MaxInboundMessageSize: 512000
+7024: 10:07:49.934 - MaxOutboundMessageSize: 512000
+7024: 10:07:49.934 - UDP address specified as: "0.0.0.0" adding listener to each available IPv4 address
+7024: 10:07:49.935 - Adding UDP listener on: 192.168.1.11: 7777 with a listen backlog of: 500
+7024: 10:07:49.935 - Adding UDP listener on: 127.0.0.1: 7777 with a listen backlog of: 500
+7024: 10:07:49.935 - Adding Policy File listener on: 0.0.0.0: 843 with a listen backlog of: 150 and serving Policy File: "D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+7024: 10:07:49.935 - TCP inactivity timeout: 1000ms
+7024: 10:07:49.935 - Adding Policy File listener on: 0.0.0.0: 943 with a listen backlog of: 150 and serving Policy File: "D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy-silverlight.xml"
+7024: 10:07:49.935 - TCP inactivity timeout: 1000ms
+7024: 10:07:49.949 - Service is running...

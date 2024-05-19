@@ -1,0 +1,540 @@
+8872: 07:49:11.635 - ---
+8872: 07:49:11.635 - Service: "Photon Socket Server" starting
+8872: 07:49:11.635 - Config File: E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+8872: 07:49:11.637 - Will produce at most: 10 crash dumps
+8872: 07:49:11.638 - Action: run as exe
+8872: 07:49:11.638 - Server Starting...
+8872: 07:49:11.638 -    Tick count: 391109265 (wraps in: 45.1835 days)
+8872: 07:49:11.638 - Tick count 64: 391109265
+8872: 07:49:11.638 - Photon Version: 4.0.28.2962
+8872: 07:49:11.638 - PID: 14224
+8872: 07:49:11.638 - Config File: E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+8872: 07:49:11.639 - Will NOT log unimportant exceptions
+8872: 07:49:11.641 - Not using performance counters as they are not currently installed. Run the service with /InstallCounters to install them.
+8872: 07:49:11.641 - Shutdown timeout enabled: 30000ms
+8872: 07:49:11.641 - Starting I/O thread pool with 2 threads
+8872: 07:49:11.641 - Using Standard allocator
+8872: 07:49:11.641 - Max message size: 512000
+8872: 07:49:11.641 - Starting business logic thread pool with the following settings
+8872: 07:49:11.641 - InitialThreads: 4 threads
+8872: 07:49:11.641 - MinThreads: 4 threads
+8872: 07:49:11.641 - Thread pool is fixed size
+8872: 07:49:11.641 - Starting ENet thread pool with the following settings
+8872: 07:49:11.641 - InitialThreads: 2 threads
+8872: 07:49:11.641 - MinThreads: 2 threads
+8872: 07:49:11.641 - Thread pool is fixed size
+8872: 07:49:11.641 - OnlyDispatchTimers: False
+8872: 07:49:11.641 - S2S: flow control: Max pending writes: 50
+8872: 07:49:11.641 - S2S: flow control: Max queued buffers: 200
+8872: 07:49:11.641 - S2S: flow control: Max pending writes MUX: 500
+8872: 07:49:11.641 - S2S: flow control: Max queued buffers MUX: 2000
+8872: 07:49:11.641 - S2S: MaxInboundMessageSize: 512000
+8872: 07:49:11.641 - S2S: MaxOutboundMessageSize: 512000
+8872: 07:49:11.641 - S2S: No inactivity timeout
+8872: 07:49:11.647 - WebSocket S2S: MaxInboundMessageSize: 512000
+8872: 07:49:11.647 - WebSocket S2S: MaxOutboundMessageSize: 512000
+8872: 07:49:11.647 - WebSocket S2S: No inactivity timeout
+8872: 07:49:11.647 - Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+8872: 07:49:11.647 - Per peer bandwidth limit
+8872: 07:49:11.647 - Transmit Rate Limit: 256 KB/Sec
+8872: 07:49:11.647 - Limit period: 200ms
+8872: 07:49:11.647 - Limit per period: 52428 bytes
+8872: 07:49:11.647 - Max queued data for transmission per peer: 512000 bytes
+8872: 07:49:11.647 - Minimum retransmit timeout: 200
+8872: 07:49:11.647 - No Maximum retransmit timeout
+8872: 07:49:11.647 - Minimum ENet timeout: 5000ms
+8872: 07:49:11.647 - Maximum ENet timeout: 30000ms
+8872: 07:49:11.647 - Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+8872: 07:49:11.647 - No RTT ACK adjustment timeout
+8872: 07:49:11.647 - Outbound ENet: MaxInboundMessageSize: 512000
+8872: 07:49:11.647 - Outbound ENet: MaxOutboundMessageSize: 512000
+8872: 07:49:11.649 - GetRuntime - About to load CLR - versions available:
+8872: 07:49:11.649 - v2.0.50727
+8872: 07:49:11.649 - v4.0.30319
+8872: 07:49:11.649 - Configuration requests: "v2.0.50727"
+8872: 07:49:11.649 - About to load version: "v2.0.50727"
+8872: 07:49:11.658 - About to load runtime: PhotonHostRuntime.PhotonDomainManager from PhotonHostRuntime, Culture=neutral, PublicKeyToken=02C301B61B060C4D
+8872: 07:49:11.658 - CLRBaseDirectory set to "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy"
+8872: 07:49:11.658 - Optimising event broadcast for 20 or more peers
+8872: 07:49:11.659 - Start: About to load CLR - versions available:
+8872: 07:49:11.659 - v2.0.50727
+8872: 07:49:11.659 - v4.0.30319
+8872: 07:49:11.659 - No preference in configuration file, will load latest.
+8872: 07:49:11.659 - About to load version: "v4.0.30319"
+8872: 07:49:11.660 - Loaded version: "v4.0.30319"
+8872: 07:49:11.773 - Photon host runtime loaded
+8872: 07:49:14.119 - License is valid.
+8872: 07:49:14.119 - Licensed for 100 concurrent connections.
+8872: 07:49:14.119 - ENet: Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+8872: 07:49:14.119 - ENet: Per peer bandwidth limit
+8872: 07:49:14.119 - ENet: Transmit Rate Limit: 256 KB/Sec
+8872: 07:49:14.119 - ENet: Limit period: 200ms
+8872: 07:49:14.119 - ENet: Limit per period: 52428 bytes
+8872: 07:49:14.119 - ENet: Max queued data for transmission per peer: 512000 bytes
+8872: 07:49:14.119 - ENet: Minimum retransmit timeout: 200
+8872: 07:49:14.119 - No Maximum retransmit timeout
+8872: 07:49:14.119 - ENet: Minimum timeout: 5000ms
+8872: 07:49:14.119 - ENet: Maximum timeout: 30000ms
+8872: 07:49:14.119 - ENet: Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+8872: 07:49:14.119 - No RTT ACK adjustment timeout
+8872: 07:49:14.119 - About to load application: SAAServer from SAAServer
+8872: 07:49:14.119 - Auto restart is enabled for application, existing connections will be terminated during restart
+8872: 07:49:14.119 - Application will restart 1000ms after the last change detected
+8872: 07:49:14.119 - Application will restart if files matching the following are changed: "dll;config"
+8872: 07:49:14.119 - Application will NOT restart if files matching the following are changed: "log4net.config"
+8872: 07:49:14.187 - Taking reference on default app domain
+8872: 07:49:14.243 - Application: "SAAServer" started in app domain: 2
+8872: 07:49:14.243 - About to load application: CounterPublisher from CounterPublisher
+8872: 07:49:14.243 - Auto restart is enabled for application, existing connections will be terminated during restart
+8872: 07:49:14.243 - Application will restart 1000ms after the last change detected
+8872: 07:49:14.243 - Application will restart if files matching the following are changed: "dll;config"
+8872: 07:49:14.243 - Application will NOT restart if files matching the following are changed: "log4net.config"
+8872: 07:49:14.302 - Taking reference on default app domain
+8872: 07:49:14.346 - Application: "CounterPublisher" started in app domain: 3
+8872: 07:49:14.347 - Adding TCP listener on: 0.0.0.0: 4530 with a listen backlog of: 150
+8872: 07:49:14.347 - TCP inactivity timeout: 10000ms
+8872: 07:49:14.347 - TCP disconnect timeout: 120000ms
+8872: 07:49:14.347 - MaxInboundMessageSize: 512000
+8872: 07:49:14.347 - MaxOutboundMessageSize: 512000
+8872: 07:49:14.347 - Forcing all applications ids to: "SAAServer"
+8872: 07:49:14.348 - Serving policy file requests from: "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+8872: 07:49:14.351 - Adding TCP listener on: 0.0.0.0: 4520 with a listen backlog of: 150
+8872: 07:49:14.351 - TCP inactivity timeout: 5000ms
+8872: 07:49:14.351 - TCP disconnect timeout: 120000ms
+8872: 07:49:14.351 - MaxInboundMessageSize: 512000
+8872: 07:49:14.351 - MaxOutboundMessageSize: 512000
+8872: 07:49:14.351 - Forcing all applications ids to: "SAAServer"
+8872: 07:49:14.351 - MaxInboundMessageSize: 512000
+8872: 07:49:14.351 - MaxOutboundMessageSize: 512000
+8872: 07:49:14.351 - UDP address specified as: "0.0.0.0" adding listener to each available IPv4 address
+8872: 07:49:14.352 - Adding UDP listener on: 192.168.1.7: 7777 with a listen backlog of: 500
+8872: 07:49:14.352 - Adding UDP listener on: 127.0.0.1: 7777 with a listen backlog of: 500
+8872: 07:49:14.353 - Adding Policy File listener on: 0.0.0.0: 843 with a listen backlog of: 150 and serving Policy File: "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+8872: 07:49:14.353 - TCP inactivity timeout: 1000ms
+8872: 07:49:14.353 - Adding Policy File listener on: 0.0.0.0: 943 with a listen backlog of: 150 and serving Policy File: "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy-silverlight.xml"
+8872: 07:49:14.353 - TCP inactivity timeout: 1000ms
+8872: 07:49:14.370 - Service is running...
+12908: 07:53:37.843 - Restarting application: "SAAServer" due to file changes
+12908: 07:53:37.843 - Application: "SAAServer" restart request (abort existing connections)
+12908: 07:53:37.886 - Taking reference on default app domain
+12908: 07:53:37.916 - Application: "SAAServer" started in app domain: 4
+12908: 07:53:38.038 - RequestApplicationStop: 2
+12908: 07:53:38.042 - Application: "SAAServer" stopped in app domain: 2 (abort existing connections)
+12908: 07:53:38.042 - Application: "SAAServer" restart complete.
+3624: 07:53:38.042 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+2220: 07:53:38.047 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='2'
+3624: 07:53:38.049 - CManagedHost::OnDomainUnload() - 2
+12908: 07:57:29.354 - Restarting application: "SAAServer" due to file changes
+12908: 07:57:29.354 - Application: "SAAServer" restart request (abort existing connections)
+12908: 07:57:29.397 - Taking reference on default app domain
+12908: 07:57:29.429 - Application: "SAAServer" started in app domain: 5
+12908: 07:57:29.551 - RequestApplicationStop: 4
+12908: 07:57:29.553 - Application: "SAAServer" stopped in app domain: 4 (abort existing connections)
+12908: 07:57:29.553 - Application: "SAAServer" restart complete.
+3624: 07:57:29.557 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+2220: 07:57:29.587 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='4'
+3624: 07:57:29.589 - CManagedHost::OnDomainUnload() - 4
+12908: 07:57:45.509 - Restarting application: "SAAServer" due to file changes
+12908: 07:57:45.509 - Application: "SAAServer" restart request (abort existing connections)
+12908: 07:57:45.552 - Taking reference on default app domain
+12908: 07:57:45.581 - Application: "SAAServer" started in app domain: 6
+12908: 07:57:45.705 - RequestApplicationStop: 5
+12908: 07:57:45.710 - Application: "SAAServer" stopped in app domain: 5 (abort existing connections)
+3624: 07:57:45.710 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+12908: 07:57:45.710 - Application: "SAAServer" restart complete.
+2220: 07:57:45.715 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='5'
+3624: 07:57:45.715 - CManagedHost::OnDomainUnload() - 5
+12908: 08:02:22.641 - Restarting application: "SAAServer" due to file changes
+12908: 08:02:22.641 - Application: "SAAServer" restart request (abort existing connections)
+12908: 08:02:22.703 - Taking reference on default app domain
+12908: 08:02:22.746 - Application: "SAAServer" started in app domain: 7
+12908: 08:02:22.906 - RequestApplicationStop: 6
+12908: 08:02:22.907 - Application: "SAAServer" stopped in app domain: 6 (abort existing connections)
+12908: 08:02:22.907 - Application: "SAAServer" restart complete.
+3624: 08:02:22.912 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+2220: 08:02:22.918 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='6'
+3624: 08:02:22.921 - CManagedHost::OnDomainUnload() - 6
+12908: 08:07:35.493 - Restarting application: "SAAServer" due to file changes
+12908: 08:07:35.493 - Application: "SAAServer" restart request (abort existing connections)
+12908: 08:07:35.536 - Taking reference on default app domain
+12908: 08:07:35.566 - Application: "SAAServer" started in app domain: 8
+12908: 08:07:35.686 - RequestApplicationStop: 7
+12908: 08:07:35.688 - Application: "SAAServer" stopped in app domain: 7 (abort existing connections)
+12908: 08:07:35.688 - Application: "SAAServer" restart complete.
+3624: 08:07:35.691 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+2220: 08:07:35.696 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='7'
+3624: 08:07:35.698 - CManagedHost::OnDomainUnload() - 7
+12908: 08:08:59.486 - Restarting application: "SAAServer" due to file changes
+12908: 08:08:59.486 - Application: "SAAServer" restart request (abort existing connections)
+12908: 08:08:59.529 - Taking reference on default app domain
+12908: 08:08:59.557 - Application: "SAAServer" started in app domain: 9
+12908: 08:08:59.679 - RequestApplicationStop: 8
+12908: 08:08:59.681 - Application: "SAAServer" stopped in app domain: 8 (abort existing connections)
+12908: 08:08:59.681 - Application: "SAAServer" restart complete.
+3624: 08:08:59.685 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+2220: 08:08:59.690 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='8'
+3624: 08:08:59.692 - CManagedHost::OnDomainUnload() - 8
+8872: 16:01:42.495 - Service is stopped...
+8872: 16:01:42.495 - Server shutting down...
+8872: 16:01:42.495 - Shutdown monitoring enabled, 30000ms before process abort
+8872: 16:01:42.495 - Notifying CLR applications of shutdown...
+8872: 16:01:42.495 - RequestApplicationStop: 3
+8872: 16:01:42.506 - RequestApplicationStop: 9
+8872: 16:01:42.510 - RequestStop: defalt app domain
+8872: 16:01:42.511 - Shutting down WebSocket Outbound Connection Manager...
+8872: 16:01:42.512 - Shutting down TCP Outbound Connection Manager...
+8872: 16:01:42.512 - Shutting down ENet Outbound Connection Manager...
+8872: 16:01:42.512 - Disconnecting all outbound peers...
+8872: 16:01:42.512 - Shutting down ENet host...
+8872: 16:01:42.512 - Disconnecting all peers...
+8872: 16:01:42.512 - CUDPSocketServer::OnError() - CUDPSocketServer::OnSendToCompletionError(): 在一个非套接字上尝试了一个操作。
+8872: 16:01:42.512 - 1 disconnected
+8872: 16:01:42.512 - Shutting down socket servers...
+8872: 16:01:42.512 - Shutting down ENet thread pool...
+8872: 16:01:42.513 - Shutting down TCP inactivity timers...
+8872: 16:01:42.513 - ENet Host - Resetting all peers...
+8872: 16:01:42.513 - WaitingForShutdownToComplete: NativePolicy:0.0.0.0:843
+8872: 16:01:42.513 - OnShutdownCompleted: NativePolicy:0.0.0.0:843
+8872: 16:01:42.513 - WaitingForShutdownToComplete: NativePolicy:0.0.0.0:943
+8872: 16:01:42.513 - OnShutdownCompleted: NativePolicy:0.0.0.0:943
+8872: 16:01:42.513 - WaitingForShutdownToComplete: TCP:0.0.0.0:4520
+8872: 16:01:42.513 - OnShutdownCompleted: TCP:0.0.0.0:4520
+8872: 16:01:42.513 - WaitingForShutdownToComplete: TCP:0.0.0.0:4530
+8872: 16:01:42.513 - OnShutdownCompleted: TCP:0.0.0.0:4530
+8872: 16:01:42.513 - WaitingForShutdownToComplete: UDP:127.0.0.1:7777
+8872: 16:01:42.513 - OnShutdownCompleted: UDP:127.0.0.1:7777
+8872: 16:01:42.513 - WaitingForShutdownToComplete: UDP:192.168.1.7:7777
+8872: 16:01:42.513 - OnShutdownCompleted: UDP:192.168.1.7:7777
+8872: 16:01:42.513 - Shutting down CLR applications...
+3624: 16:01:42.515 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+8872: 16:01:42.517 - Shutting down business logic thread pool...
+8872: 16:01:42.517 - Shutting down I/O thread pool...
+8872: 16:01:42.517 - Destroying servers
+8872: 16:01:42.518 - Destroying WebSocket Outbound Connection Manager
+8872: 16:01:42.518 - Destroying TCP Outbound Connection Manager
+8872: 16:01:42.518 - Destroying TCP inactivity timer
+8872: 16:01:42.518 - Destroying ENet timer wheel
+8872: 16:01:42.518 - Destroying ENet host
+8872: 16:01:42.518 - Destroying ENet outbound host
+8872: 16:01:42.518 - Destroying HTTP inactivity timer
+8872: 16:01:42.518 - Destroying HTTP host
+8872: 16:01:42.518 - Destroying HTTP Chunk host
+8872: 16:01:42.518 - Flushing ENET buffer allocator...
+8872: 16:01:42.518 - Flushing TCP buffer handle allocator...
+8872: 16:01:42.518 - Flushing stream socket allocator...
+8872: 16:01:42.518 - Flushing inbound datagram socket allocator...
+8872: 16:01:42.519 - Flushing outbound datagram socket allocator...
+8872: 16:01:42.519 - Destroying CLR dispatcher
+8872: 16:01:42.519 - Destroying CLR applications
+8872: 16:01:42.520 - ~CCLRApplicationCollection() - Waiting up to 10 seconds for the CLR to release all of our objects
+2220: 16:01:42.525 - Unloading Domain: ApplicationName = 'CounterPublisher', DomainId='3'
+3624: 16:01:42.525 - CManagedHost::OnDomainUnload() - 3
+3624: 16:01:42.529 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+2220: 16:01:42.539 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='9'
+3624: 16:01:42.542 - CManagedHost::OnDomainUnload() - 9
+8872: 16:01:42.543 - ~CCLRApplicationCollection() - Done. All objects released
+8872: 16:01:42.544 - ~CManagedHost() - Release default app domain
+8872: 16:01:42.544 - CManagedHost::OnDomainUnload() - 1
+8872: 16:01:42.544 - ~CManagedHost() - Waiting up to 10 seconds for CLR shutdown...
+8872: 16:01:42.544 - ~CManagedHost
+8872: 16:01:42.544 - Destroying ENet thread pool
+8872: 16:01:42.544 - Destroying Business logic thread pool
+8872: 16:01:42.544 - Destroying I/O thread pool
+8872: 16:01:42.544 - Destroying ENet buffer allocator
+8872: 16:01:42.544 - Destroying TCP buffer allocator
+8872: 16:01:42.544 - Destroying TCP socket allocator
+8872: 16:01:42.544 - Destroying ENet inbound socket allocator
+8872: 16:01:42.544 - Destroying ENet outbound socket allocator
+8872: 16:01:42.544 - Destroying shared datagram flow control data
+8872: 16:01:42.545 - Shutdown complete...
+8872: 16:01:42.546 - Service shutting down
+8872: 16:01:42.549 - Service shut down complete
+15444: 16:01:46.376 - ---
+15444: 16:01:46.376 - Service: "Photon Socket Server" starting
+15444: 16:01:46.376 - Config File: E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+15444: 16:01:46.379 - Will produce at most: 10 crash dumps
+15444: 16:01:46.379 - Action: run as exe
+15444: 16:01:46.382 - Server Starting...
+15444: 16:01:46.382 -    Tick count: 420664000 (wraps in: 44.8415 days)
+15444: 16:01:46.382 - Tick count 64: 420664000
+15444: 16:01:46.382 - Photon Version: 4.0.28.2962
+15444: 16:01:46.382 - PID: 17704
+15444: 16:01:46.383 - Config File: E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+15444: 16:01:46.383 - Will NOT log unimportant exceptions
+15444: 16:01:46.386 - Not using performance counters as they are not currently installed. Run the service with /InstallCounters to install them.
+15444: 16:01:46.387 - Shutdown timeout enabled: 30000ms
+15444: 16:01:46.387 - Starting I/O thread pool with 2 threads
+15444: 16:01:46.387 - Using Standard allocator
+15444: 16:01:46.387 - Max message size: 512000
+15444: 16:01:46.387 - Starting business logic thread pool with the following settings
+15444: 16:01:46.387 - InitialThreads: 4 threads
+15444: 16:01:46.387 - MinThreads: 4 threads
+15444: 16:01:46.387 - Thread pool is fixed size
+15444: 16:01:46.388 - Starting ENet thread pool with the following settings
+15444: 16:01:46.388 - InitialThreads: 2 threads
+15444: 16:01:46.388 - MinThreads: 2 threads
+15444: 16:01:46.388 - Thread pool is fixed size
+15444: 16:01:46.388 - OnlyDispatchTimers: False
+15444: 16:01:46.388 - S2S: flow control: Max pending writes: 50
+15444: 16:01:46.388 - S2S: flow control: Max queued buffers: 200
+15444: 16:01:46.388 - S2S: flow control: Max pending writes MUX: 500
+15444: 16:01:46.388 - S2S: flow control: Max queued buffers MUX: 2000
+15444: 16:01:46.388 - S2S: MaxInboundMessageSize: 512000
+15444: 16:01:46.388 - S2S: MaxOutboundMessageSize: 512000
+15444: 16:01:46.388 - S2S: No inactivity timeout
+15444: 16:01:46.395 - WebSocket S2S: MaxInboundMessageSize: 512000
+15444: 16:01:46.395 - WebSocket S2S: MaxOutboundMessageSize: 512000
+15444: 16:01:46.395 - WebSocket S2S: No inactivity timeout
+15444: 16:01:46.395 - Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+15444: 16:01:46.395 - Per peer bandwidth limit
+15444: 16:01:46.395 - Transmit Rate Limit: 256 KB/Sec
+15444: 16:01:46.395 - Limit period: 200ms
+15444: 16:01:46.395 - Limit per period: 52428 bytes
+15444: 16:01:46.395 - Max queued data for transmission per peer: 512000 bytes
+15444: 16:01:46.395 - Minimum retransmit timeout: 200
+15444: 16:01:46.395 - No Maximum retransmit timeout
+15444: 16:01:46.395 - Minimum ENet timeout: 5000ms
+15444: 16:01:46.395 - Maximum ENet timeout: 30000ms
+15444: 16:01:46.395 - Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+15444: 16:01:46.395 - No RTT ACK adjustment timeout
+15444: 16:01:46.395 - Outbound ENet: MaxInboundMessageSize: 512000
+15444: 16:01:46.395 - Outbound ENet: MaxOutboundMessageSize: 512000
+15444: 16:01:46.398 - GetRuntime - About to load CLR - versions available:
+15444: 16:01:46.398 - v2.0.50727
+15444: 16:01:46.398 - v4.0.30319
+15444: 16:01:46.398 - Configuration requests: "v2.0.50727"
+15444: 16:01:46.398 - About to load version: "v2.0.50727"
+15444: 16:01:46.415 - About to load runtime: PhotonHostRuntime.PhotonDomainManager from PhotonHostRuntime, Culture=neutral, PublicKeyToken=02C301B61B060C4D
+15444: 16:01:46.415 - CLRBaseDirectory set to "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy"
+15444: 16:01:46.415 - Optimising event broadcast for 20 or more peers
+15444: 16:01:46.416 - Start: About to load CLR - versions available:
+15444: 16:01:46.416 - v2.0.50727
+15444: 16:01:46.416 - v4.0.30319
+15444: 16:01:46.416 - No preference in configuration file, will load latest.
+15444: 16:01:46.416 - About to load version: "v4.0.30319"
+15444: 16:01:46.417 - Loaded version: "v4.0.30319"
+15444: 16:01:46.536 - Photon host runtime loaded
+15444: 16:01:48.152 - License is valid.
+15444: 16:01:48.152 - Licensed for 100 concurrent connections.
+15444: 16:01:48.152 - ENet: Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+15444: 16:01:48.152 - ENet: Per peer bandwidth limit
+15444: 16:01:48.152 - ENet: Transmit Rate Limit: 256 KB/Sec
+15444: 16:01:48.152 - ENet: Limit period: 200ms
+15444: 16:01:48.152 - ENet: Limit per period: 52428 bytes
+15444: 16:01:48.152 - ENet: Max queued data for transmission per peer: 512000 bytes
+15444: 16:01:48.152 - ENet: Minimum retransmit timeout: 200
+15444: 16:01:48.153 - No Maximum retransmit timeout
+15444: 16:01:48.153 - ENet: Minimum timeout: 5000ms
+15444: 16:01:48.153 - ENet: Maximum timeout: 30000ms
+15444: 16:01:48.153 - ENet: Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+15444: 16:01:48.153 - No RTT ACK adjustment timeout
+15444: 16:01:48.153 - About to load application: SAAServer from SAAServer
+15444: 16:01:48.153 - Auto restart is enabled for application, existing connections will be terminated during restart
+15444: 16:01:48.153 - Application will restart 1000ms after the last change detected
+15444: 16:01:48.153 - Application will restart if files matching the following are changed: "dll;config"
+15444: 16:01:48.153 - Application will NOT restart if files matching the following are changed: "log4net.config"
+15444: 16:01:48.224 - Taking reference on default app domain
+15444: 16:01:48.279 - Application: "SAAServer" started in app domain: 2
+15444: 16:01:48.279 - About to load application: CounterPublisher from CounterPublisher
+15444: 16:01:48.279 - Auto restart is enabled for application, existing connections will be terminated during restart
+15444: 16:01:48.279 - Application will restart 1000ms after the last change detected
+15444: 16:01:48.279 - Application will restart if files matching the following are changed: "dll;config"
+15444: 16:01:48.279 - Application will NOT restart if files matching the following are changed: "log4net.config"
+15444: 16:01:48.342 - Taking reference on default app domain
+15444: 16:01:48.381 - Application: "CounterPublisher" started in app domain: 3
+15444: 16:01:48.381 - Adding TCP listener on: 0.0.0.0: 4530 with a listen backlog of: 150
+15444: 16:01:48.381 - TCP inactivity timeout: 10000ms
+15444: 16:01:48.381 - TCP disconnect timeout: 120000ms
+15444: 16:01:48.381 - MaxInboundMessageSize: 512000
+15444: 16:01:48.381 - MaxOutboundMessageSize: 512000
+15444: 16:01:48.381 - Forcing all applications ids to: "SAAServer"
+15444: 16:01:48.381 - Serving policy file requests from: "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+15444: 16:01:48.382 - Adding TCP listener on: 0.0.0.0: 4520 with a listen backlog of: 150
+15444: 16:01:48.382 - TCP inactivity timeout: 5000ms
+15444: 16:01:48.382 - TCP disconnect timeout: 120000ms
+15444: 16:01:48.382 - MaxInboundMessageSize: 512000
+15444: 16:01:48.382 - MaxOutboundMessageSize: 512000
+15444: 16:01:48.382 - Forcing all applications ids to: "SAAServer"
+15444: 16:01:48.382 - MaxInboundMessageSize: 512000
+15444: 16:01:48.382 - MaxOutboundMessageSize: 512000
+15444: 16:01:48.382 - UDP address specified as: "0.0.0.0" adding listener to each available IPv4 address
+15444: 16:01:48.382 - Adding UDP listener on: 192.168.1.7: 7777 with a listen backlog of: 500
+15444: 16:01:48.382 - Adding UDP listener on: 127.0.0.1: 7777 with a listen backlog of: 500
+15444: 16:01:48.383 - Adding Policy File listener on: 0.0.0.0: 843 with a listen backlog of: 150 and serving Policy File: "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+15444: 16:01:48.383 - TCP inactivity timeout: 1000ms
+15444: 16:01:48.383 - Adding Policy File listener on: 0.0.0.0: 943 with a listen backlog of: 150 and serving Policy File: "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy-silverlight.xml"
+15444: 16:01:48.383 - TCP inactivity timeout: 1000ms
+15444: 16:01:48.400 - Service is running...
+5052: 16:02:25.693 - Restarting application: "SAAServer" due to file changes
+5052: 16:02:25.693 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:02:25.710 - Failed to restart application: CManagedHost::CreateApplicationInNewAppDomain() - Failed to create new application domain for : "SAAServer" - Can't find SAAServer.dll in E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\CounterPublisher\bin or E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\SAAServer\bin
+5052: 16:02:27.826 - Restarting application: "SAAServer" due to file changes
+5052: 16:02:27.826 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:02:27.905 - Taking reference on default app domain
+5052: 16:02:27.978 - Application: "SAAServer" started in app domain: 4
+5052: 16:02:28.202 - RequestApplicationStop: 2
+5052: 16:02:28.205 - Application: "SAAServer" stopped in app domain: 2 (abort existing connections)
+5052: 16:02:28.205 - Application: "SAAServer" restart complete.
+6708: 16:02:28.213 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 16:02:28.221 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='2'
+6708: 16:02:28.225 - CManagedHost::OnDomainUnload() - 2
+5052: 16:04:16.179 - Restarting application: "SAAServer" due to file changes
+5052: 16:04:16.179 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:04:16.254 - Taking reference on default app domain
+5052: 16:04:16.297 - Application: "SAAServer" started in app domain: 5
+5052: 16:04:16.529 - RequestApplicationStop: 4
+5052: 16:04:16.531 - Application: "SAAServer" stopped in app domain: 4 (abort existing connections)
+5052: 16:04:16.531 - Application: "SAAServer" restart complete.
+6708: 16:04:16.537 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 16:04:16.547 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='4'
+6708: 16:04:16.551 - CManagedHost::OnDomainUnload() - 4
+5052: 16:05:35.878 - Restarting application: "SAAServer" due to file changes
+5052: 16:05:35.878 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:05:35.975 - Taking reference on default app domain
+5052: 16:05:36.038 - Application: "SAAServer" started in app domain: 6
+5052: 16:05:36.348 - RequestApplicationStop: 5
+5052: 16:05:36.350 - Application: "SAAServer" stopped in app domain: 5 (abort existing connections)
+5052: 16:05:36.351 - Application: "SAAServer" restart complete.
+6708: 16:05:36.358 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 16:05:36.366 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='5'
+6708: 16:05:36.370 - CManagedHost::OnDomainUnload() - 5
+5052: 16:12:01.588 - Restarting application: "SAAServer" due to file changes
+5052: 16:12:01.588 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:12:01.647 - Taking reference on default app domain
+5052: 16:12:01.696 - Application: "SAAServer" started in app domain: 7
+5052: 16:12:01.889 - RequestApplicationStop: 6
+5052: 16:12:01.891 - Application: "SAAServer" stopped in app domain: 6 (abort existing connections)
+5052: 16:12:01.891 - Application: "SAAServer" restart complete.
+6708: 16:12:01.896 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 16:12:01.902 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='6'
+6708: 16:12:01.904 - CManagedHost::OnDomainUnload() - 6
+5052: 16:13:51.446 - Restarting application: "SAAServer" due to file changes
+5052: 16:13:51.446 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:13:51.508 - Taking reference on default app domain
+5052: 16:13:51.559 - Application: "SAAServer" started in app domain: 8
+5052: 16:13:51.737 - RequestApplicationStop: 7
+5052: 16:13:51.738 - Application: "SAAServer" stopped in app domain: 7 (abort existing connections)
+5052: 16:13:51.738 - Application: "SAAServer" restart complete.
+6708: 16:13:51.742 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 16:13:51.751 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='7'
+6708: 16:13:51.754 - CManagedHost::OnDomainUnload() - 7
+5052: 16:16:51.817 - Restarting application: "SAAServer" due to file changes
+5052: 16:16:51.817 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:16:51.873 - Taking reference on default app domain
+5052: 16:16:51.910 - Application: "SAAServer" started in app domain: 9
+5052: 16:16:52.061 - RequestApplicationStop: 8
+5052: 16:16:52.063 - Application: "SAAServer" stopped in app domain: 8 (abort existing connections)
+5052: 16:16:52.063 - Application: "SAAServer" restart complete.
+6708: 16:16:52.066 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 16:16:52.071 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='8'
+6708: 16:16:52.074 - CManagedHost::OnDomainUnload() - 8
+5052: 16:29:40.199 - Restarting application: "SAAServer" due to file changes
+5052: 16:29:40.199 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:29:40.264 - Taking reference on default app domain
+5052: 16:29:40.309 - Application: "SAAServer" started in app domain: 10
+5052: 16:29:40.496 - RequestApplicationStop: 9
+5052: 16:29:40.500 - Application: "SAAServer" stopped in app domain: 9 (abort existing connections)
+5052: 16:29:40.500 - Application: "SAAServer" restart complete.
+6708: 16:29:40.506 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 16:29:40.513 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='9'
+6708: 16:29:40.514 - CManagedHost::OnDomainUnload() - 9
+5052: 16:33:12.277 - Restarting application: "SAAServer" due to file changes
+5052: 16:33:12.277 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:33:12.331 - Taking reference on default app domain
+5052: 16:33:12.369 - Application: "SAAServer" started in app domain: 11
+5052: 16:33:12.510 - RequestApplicationStop: 10
+5052: 16:33:12.512 - Application: "SAAServer" stopped in app domain: 10 (abort existing connections)
+5052: 16:33:12.512 - Application: "SAAServer" restart complete.
+6708: 16:33:12.515 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 16:33:12.520 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='10'
+6708: 16:33:12.523 - CManagedHost::OnDomainUnload() - 10
+5052: 16:35:33.826 - Restarting application: "SAAServer" due to file changes
+5052: 16:35:33.826 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:35:33.875 - Taking reference on default app domain
+5052: 16:35:33.909 - Application: "SAAServer" started in app domain: 12
+5052: 16:35:34.069 - RequestApplicationStop: 11
+5052: 16:35:34.071 - Application: "SAAServer" stopped in app domain: 11 (abort existing connections)
+5052: 16:35:34.071 - Application: "SAAServer" restart complete.
+6708: 16:35:34.075 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 16:35:34.081 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='11'
+6708: 16:35:34.084 - CManagedHost::OnDomainUnload() - 11
+5052: 16:36:53.669 - Restarting application: "SAAServer" due to file changes
+5052: 16:36:53.669 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:36:53.714 - Taking reference on default app domain
+5052: 16:36:53.749 - Application: "SAAServer" started in app domain: 13
+5052: 16:36:53.888 - RequestApplicationStop: 12
+5052: 16:36:53.894 - Application: "SAAServer" stopped in app domain: 12 (abort existing connections)
+5052: 16:36:53.894 - Application: "SAAServer" restart complete.
+6708: 16:36:53.894 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 16:36:53.900 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='12'
+6708: 16:36:53.902 - CManagedHost::OnDomainUnload() - 12
+5052: 16:37:51.361 - Restarting application: "SAAServer" due to file changes
+5052: 16:37:51.361 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:37:51.405 - Taking reference on default app domain
+5052: 16:37:51.439 - Application: "SAAServer" started in app domain: 14
+5052: 16:37:51.596 - RequestApplicationStop: 13
+5052: 16:37:51.602 - Application: "SAAServer" stopped in app domain: 13 (abort existing connections)
+6708: 16:37:51.602 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+5052: 16:37:51.602 - Application: "SAAServer" restart complete.
+7828: 16:37:51.607 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='13'
+6708: 16:37:51.610 - CManagedHost::OnDomainUnload() - 13
+5052: 16:40:40.649 - Restarting application: "SAAServer" due to file changes
+5052: 16:40:40.649 - Application: "SAAServer" restart request (abort existing connections)
+5052: 16:40:40.707 - Taking reference on default app domain
+5052: 16:40:40.748 - Application: "SAAServer" started in app domain: 15
+5052: 16:40:40.964 - RequestApplicationStop: 14
+5052: 16:40:40.971 - Application: "SAAServer" stopped in app domain: 14 (abort existing connections)
+6708: 16:40:40.971 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+5052: 16:40:40.971 - Application: "SAAServer" restart complete.
+7828: 16:40:40.976 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='14'
+6708: 16:40:40.980 - CManagedHost::OnDomainUnload() - 14
+5052: 17:21:59.452 - Restarting application: "SAAServer" due to file changes
+5052: 17:21:59.452 - Application: "SAAServer" restart request (abort existing connections)
+5052: 17:21:59.511 - Taking reference on default app domain
+5052: 17:21:59.545 - Application: "SAAServer" started in app domain: 16
+5052: 17:21:59.694 - RequestApplicationStop: 15
+5052: 17:21:59.695 - Application: "SAAServer" stopped in app domain: 15 (abort existing connections)
+5052: 17:21:59.695 - Application: "SAAServer" restart complete.
+6708: 17:21:59.699 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 17:21:59.704 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='15'
+6708: 17:21:59.706 - CManagedHost::OnDomainUnload() - 15
+5052: 17:24:25.926 - Restarting application: "SAAServer" due to file changes
+5052: 17:24:25.926 - Application: "SAAServer" restart request (abort existing connections)
+5052: 17:24:26.018 - Taking reference on default app domain
+5052: 17:24:26.088 - Application: "SAAServer" started in app domain: 17
+5052: 17:24:26.339 - RequestApplicationStop: 16
+5052: 17:24:26.341 - Application: "SAAServer" stopped in app domain: 16 (abort existing connections)
+5052: 17:24:26.341 - Application: "SAAServer" restart complete.
+6708: 17:24:26.347 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 17:24:26.354 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='16'
+6708: 17:24:26.360 - CManagedHost::OnDomainUnload() - 16
+5052: 17:27:51.121 - Restarting application: "SAAServer" due to file changes
+5052: 17:27:51.121 - Application: "SAAServer" restart request (abort existing connections)
+5052: 17:27:51.198 - Taking reference on default app domain
+5052: 17:27:51.245 - Application: "SAAServer" started in app domain: 18
+5052: 17:27:51.454 - RequestApplicationStop: 17
+5052: 17:27:51.458 - Application: "SAAServer" stopped in app domain: 17 (abort existing connections)
+5052: 17:27:51.458 - Application: "SAAServer" restart complete.
+6708: 17:27:51.464 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 17:27:51.473 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='17'
+6708: 17:27:51.478 - CManagedHost::OnDomainUnload() - 17
+5052: 17:29:48.241 - Restarting application: "SAAServer" due to file changes
+5052: 17:29:48.241 - Application: "SAAServer" restart request (abort existing connections)
+5052: 17:29:48.319 - Taking reference on default app domain
+5052: 17:29:48.370 - Application: "SAAServer" started in app domain: 19
+5052: 17:29:48.630 - RequestApplicationStop: 18
+5052: 17:29:48.632 - Application: "SAAServer" stopped in app domain: 18 (abort existing connections)
+5052: 17:29:48.632 - Application: "SAAServer" restart complete.
+6708: 17:29:48.635 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+7828: 17:29:48.643 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='18'
+6708: 17:29:48.647 - CManagedHost::OnDomainUnload() - 18
+5052: 17:33:29.385 - Restarting application: "SAAServer" due to file changes
+5052: 17:33:29.385 - Application: "SAAServer" restart request (abort existing connections)
+5052: 17:33:29.431 - Taking reference on default app domain
+5052: 17:33:29.471 - Application: "SAAServer" started in app domain: 20
+5052: 17:33:29.604 - RequestApplicationStop: 19
+5052: 17:33:29.609 - Application: "SAAServer" stopped in app domain: 19 (abort existing connections)
+6708: 17:33:29.609 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+5052: 17:33:29.609 - Application: "SAAServer" restart complete.
+7828: 17:33:29.614 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='19'
+6708: 17:33:29.616 - CManagedHost::OnDomainUnload() - 19

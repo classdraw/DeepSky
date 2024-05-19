@@ -1,0 +1,383 @@
+14880: 08:13:23.906 - ---
+14880: 08:13:23.906 - Service: "Photon Socket Server" starting
+14880: 08:13:23.906 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+14880: 08:13:23.908 - Will produce at most: 10 crash dumps
+14880: 08:13:23.909 - Action: run as exe
+14880: 08:13:23.909 - Server Starting...
+14880: 08:13:23.909 -    Tick count: 437542531 (wraps in: 44.6461 days)
+14880: 08:13:23.909 - Tick count 64: 437542531
+14880: 08:13:23.910 - Photon Version: 4.0.28.2962
+14880: 08:13:23.910 - PID: 14400
+14880: 08:13:23.910 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+14880: 08:13:23.911 - Will NOT log unimportant exceptions
+14880: 08:13:23.915 - Not using performance counters as they are not currently installed. Run the service with /InstallCounters to install them.
+14880: 08:13:23.915 - Shutdown timeout enabled: 30000ms
+14880: 08:13:23.916 - Starting I/O thread pool with 2 threads
+14880: 08:13:23.916 - Using Standard allocator
+14880: 08:13:23.916 - Max message size: 512000
+14880: 08:13:23.916 - Starting business logic thread pool with the following settings
+14880: 08:13:23.916 - InitialThreads: 4 threads
+14880: 08:13:23.916 - MinThreads: 4 threads
+14880: 08:13:23.916 - Thread pool is fixed size
+14880: 08:13:23.917 - Starting ENet thread pool with the following settings
+14880: 08:13:23.917 - InitialThreads: 2 threads
+14880: 08:13:23.917 - MinThreads: 2 threads
+14880: 08:13:23.917 - Thread pool is fixed size
+14880: 08:13:23.917 - OnlyDispatchTimers: False
+14880: 08:13:23.917 - S2S: flow control: Max pending writes: 50
+14880: 08:13:23.917 - S2S: flow control: Max queued buffers: 200
+14880: 08:13:23.917 - S2S: flow control: Max pending writes MUX: 500
+14880: 08:13:23.917 - S2S: flow control: Max queued buffers MUX: 2000
+14880: 08:13:23.917 - S2S: MaxInboundMessageSize: 512000
+14880: 08:13:23.917 - S2S: MaxOutboundMessageSize: 512000
+14880: 08:13:23.917 - S2S: No inactivity timeout
+14880: 08:13:23.924 - WebSocket S2S: MaxInboundMessageSize: 512000
+14880: 08:13:23.924 - WebSocket S2S: MaxOutboundMessageSize: 512000
+14880: 08:13:23.924 - WebSocket S2S: No inactivity timeout
+14880: 08:13:23.924 - Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+14880: 08:13:23.924 - Per peer bandwidth limit
+14880: 08:13:23.924 - Transmit Rate Limit: 256 KB/Sec
+14880: 08:13:23.924 - Limit period: 200ms
+14880: 08:13:23.924 - Limit per period: 52428 bytes
+14880: 08:13:23.924 - Max queued data for transmission per peer: 512000 bytes
+14880: 08:13:23.924 - Minimum retransmit timeout: 200
+14880: 08:13:23.924 - No Maximum retransmit timeout
+14880: 08:13:23.924 - Minimum ENet timeout: 5000ms
+14880: 08:13:23.924 - Maximum ENet timeout: 30000ms
+14880: 08:13:23.924 - Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+14880: 08:13:23.924 - No RTT ACK adjustment timeout
+14880: 08:13:23.924 - Outbound ENet: MaxInboundMessageSize: 512000
+14880: 08:13:23.924 - Outbound ENet: MaxOutboundMessageSize: 512000
+14880: 08:13:23.930 - GetRuntime - About to load CLR - versions available:
+14880: 08:13:23.930 - v2.0.50727
+14880: 08:13:23.930 - v4.0.30319
+14880: 08:13:23.930 - Configuration requests: "v2.0.50727"
+14880: 08:13:23.930 - About to load version: "v2.0.50727"
+14880: 08:13:23.951 - About to load runtime: PhotonHostRuntime.PhotonDomainManager from PhotonHostRuntime, Culture=neutral, PublicKeyToken=02C301B61B060C4D
+14880: 08:13:23.951 - CLRBaseDirectory set to "D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy"
+14880: 08:13:23.951 - Optimising event broadcast for 20 or more peers
+14880: 08:13:23.953 - Start: About to load CLR - versions available:
+14880: 08:13:23.953 - v2.0.50727
+14880: 08:13:23.953 - v4.0.30319
+14880: 08:13:23.953 - No preference in configuration file, will load latest.
+14880: 08:13:23.953 - About to load version: "v4.0.30319"
+14880: 08:13:23.954 - Loaded version: "v4.0.30319"
+14880: 08:13:24.067 - Photon host runtime loaded
+14880: 08:13:25.895 - License is valid.
+14880: 08:13:25.895 - Licensed for 100 concurrent connections.
+14880: 08:13:25.895 - ENet: Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+14880: 08:13:25.895 - ENet: Per peer bandwidth limit
+14880: 08:13:25.895 - ENet: Transmit Rate Limit: 256 KB/Sec
+14880: 08:13:25.895 - ENet: Limit period: 200ms
+14880: 08:13:25.895 - ENet: Limit per period: 52428 bytes
+14880: 08:13:25.895 - ENet: Max queued data for transmission per peer: 512000 bytes
+14880: 08:13:25.895 - ENet: Minimum retransmit timeout: 200
+14880: 08:13:25.895 - No Maximum retransmit timeout
+14880: 08:13:25.895 - ENet: Minimum timeout: 5000ms
+14880: 08:13:25.895 - ENet: Maximum timeout: 30000ms
+14880: 08:13:25.895 - ENet: Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+14880: 08:13:25.895 - No RTT ACK adjustment timeout
+14880: 08:13:25.895 - About to load application: SAAServer from SAAServer
+14880: 08:13:25.895 - Auto restart is enabled for application, existing connections will be terminated during restart
+14880: 08:13:25.895 - Application will restart 1000ms after the last change detected
+14880: 08:13:25.895 - Application will restart if files matching the following are changed: "dll;config"
+14880: 08:13:25.895 - Application will NOT restart if files matching the following are changed: "log4net.config"
+14880: 08:13:25.954 - Taking reference on default app domain
+14880: 08:13:25.998 - Application: "SAAServer" started in app domain: 2
+14880: 08:13:25.998 - About to load application: CounterPublisher from CounterPublisher
+14880: 08:13:25.998 - Auto restart is enabled for application, existing connections will be terminated during restart
+14880: 08:13:25.998 - Application will restart 1000ms after the last change detected
+14880: 08:13:25.998 - Application will restart if files matching the following are changed: "dll;config"
+14880: 08:13:25.998 - Application will NOT restart if files matching the following are changed: "log4net.config"
+14880: 08:13:26.049 - Taking reference on default app domain
+14880: 08:13:26.085 - Application: "CounterPublisher" started in app domain: 3
+14880: 08:13:26.085 - Adding TCP listener on: 0.0.0.0: 4530 with a listen backlog of: 150
+14880: 08:13:26.085 - TCP inactivity timeout: 10000ms
+14880: 08:13:26.085 - TCP disconnect timeout: 120000ms
+14880: 08:13:26.085 - MaxInboundMessageSize: 512000
+14880: 08:13:26.085 - MaxOutboundMessageSize: 512000
+14880: 08:13:26.085 - Forcing all applications ids to: "SAAServer"
+14880: 08:13:26.085 - Serving policy file requests from: "D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+14880: 08:13:26.085 - Adding TCP listener on: 0.0.0.0: 4520 with a listen backlog of: 150
+14880: 08:13:26.085 - TCP inactivity timeout: 5000ms
+14880: 08:13:26.085 - TCP disconnect timeout: 120000ms
+14880: 08:13:26.085 - MaxInboundMessageSize: 512000
+14880: 08:13:26.085 - MaxOutboundMessageSize: 512000
+14880: 08:13:26.085 - Forcing all applications ids to: "SAAServer"
+14880: 08:13:26.085 - MaxInboundMessageSize: 512000
+14880: 08:13:26.085 - MaxOutboundMessageSize: 512000
+14880: 08:13:26.085 - UDP address specified as: "0.0.0.0" adding listener to each available IPv4 address
+14880: 08:13:26.086 - Adding UDP listener on: 192.168.1.6: 7777 with a listen backlog of: 500
+14880: 08:13:26.086 - Adding UDP listener on: 127.0.0.1: 7777 with a listen backlog of: 500
+14880: 08:13:26.086 - Adding Policy File listener on: 0.0.0.0: 843 with a listen backlog of: 150 and serving Policy File: "D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+14880: 08:13:26.086 - TCP inactivity timeout: 1000ms
+14880: 08:13:26.086 - Adding Policy File listener on: 0.0.0.0: 943 with a listen backlog of: 150 and serving Policy File: "D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy-silverlight.xml"
+14880: 08:13:26.086 - TCP inactivity timeout: 1000ms
+14880: 08:13:26.100 - Service is running...
+14880: 08:20:30.463 - Service is stopped...
+14880: 08:20:30.463 - Server shutting down...
+14880: 08:20:30.463 - Shutdown monitoring enabled, 30000ms before process abort
+14880: 08:20:30.463 - Notifying CLR applications of shutdown...
+14880: 08:20:30.463 - RequestApplicationStop: 3
+14880: 08:20:30.466 - RequestApplicationStop: 2
+14880: 08:20:30.469 - RequestStop: defalt app domain
+14880: 08:20:30.470 - Shutting down WebSocket Outbound Connection Manager...
+14880: 08:20:30.470 - Shutting down TCP Outbound Connection Manager...
+14880: 08:20:30.471 - Shutting down ENet Outbound Connection Manager...
+14880: 08:20:30.471 - Disconnecting all outbound peers...
+14880: 08:20:30.471 - Shutting down ENet host...
+14880: 08:20:30.471 - Disconnecting all peers...
+14880: 08:20:30.471 - CUDPSocketServer::OnError() - CUDPSocketServer::OnSendToCompletionError(): 在一个非套接字上尝试了一个操作。
+14880: 08:20:30.471 - CUDPSocketServer::OnError() - CUDPSocketServer::OnSendToCompletionError(): 在一个非套接字上尝试了一个操作。
+14880: 08:20:30.471 - 2 disconnected
+14880: 08:20:30.471 - Shutting down socket servers...
+14880: 08:20:30.471 - Shutting down ENet thread pool...
+14880: 08:20:30.471 - Shutting down TCP inactivity timers...
+14880: 08:20:30.471 - ENet Host - Resetting all peers...
+14880: 08:20:30.471 - WaitingForShutdownToComplete: NativePolicy:0.0.0.0:843
+14880: 08:20:30.471 - OnShutdownCompleted: NativePolicy:0.0.0.0:843
+14880: 08:20:30.471 - WaitingForShutdownToComplete: NativePolicy:0.0.0.0:943
+14880: 08:20:30.471 - OnShutdownCompleted: NativePolicy:0.0.0.0:943
+14880: 08:20:30.471 - WaitingForShutdownToComplete: TCP:0.0.0.0:4520
+14880: 08:20:30.471 - OnShutdownCompleted: TCP:0.0.0.0:4520
+14880: 08:20:30.471 - WaitingForShutdownToComplete: TCP:0.0.0.0:4530
+14880: 08:20:30.471 - OnShutdownCompleted: TCP:0.0.0.0:4530
+14880: 08:20:30.471 - WaitingForShutdownToComplete: UDP:127.0.0.1:7777
+14880: 08:20:30.471 - OnShutdownCompleted: UDP:127.0.0.1:7777
+14880: 08:20:30.471 - WaitingForShutdownToComplete: UDP:192.168.1.6:7777
+14880: 08:20:30.471 - OnShutdownCompleted: UDP:192.168.1.6:7777
+14880: 08:20:30.471 - Shutting down CLR applications...
+13648: 08:20:30.472 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+14880: 08:20:30.476 - Shutting down business logic thread pool...
+14880: 08:20:30.476 - Shutting down I/O thread pool...
+14880: 08:20:30.476 - Destroying servers
+14880: 08:20:30.476 - Destroying WebSocket Outbound Connection Manager
+14880: 08:20:30.476 - Destroying TCP Outbound Connection Manager
+14880: 08:20:30.476 - Destroying TCP inactivity timer
+14880: 08:20:30.476 - Destroying ENet timer wheel
+14880: 08:20:30.476 - Destroying ENet host
+14880: 08:20:30.476 - Destroying ENet outbound host
+14880: 08:20:30.476 - Destroying HTTP inactivity timer
+14880: 08:20:30.476 - Destroying HTTP host
+14880: 08:20:30.476 - Destroying HTTP Chunk host
+14880: 08:20:30.476 - Flushing ENET buffer allocator...
+14880: 08:20:30.477 - Flushing TCP buffer handle allocator...
+14880: 08:20:30.477 - Flushing stream socket allocator...
+14880: 08:20:30.477 - Flushing inbound datagram socket allocator...
+14880: 08:20:30.477 - Flushing outbound datagram socket allocator...
+14880: 08:20:30.477 - Destroying CLR dispatcher
+14880: 08:20:30.477 - Destroying CLR applications
+14880: 08:20:30.478 - ~CCLRApplicationCollection() - Waiting up to 10 seconds for the CLR to release all of our objects
+11560: 08:20:30.479 - Unloading Domain: ApplicationName = 'CounterPublisher', DomainId='3'
+13648: 08:20:30.480 - CManagedHost::OnDomainUnload() - 3
+13648: 08:20:30.483 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+11560: 08:20:30.489 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='2'
+13648: 08:20:30.491 - CManagedHost::OnDomainUnload() - 2
+14880: 08:20:30.492 - ~CCLRApplicationCollection() - Done. All objects released
+14880: 08:20:30.492 - ~CManagedHost() - Release default app domain
+14880: 08:20:30.492 - CManagedHost::OnDomainUnload() - 1
+14880: 08:20:30.492 - ~CManagedHost() - Waiting up to 10 seconds for CLR shutdown...
+14880: 08:20:30.492 - ~CManagedHost
+14880: 08:20:30.492 - Destroying ENet thread pool
+14880: 08:20:30.492 - Destroying Business logic thread pool
+14880: 08:20:30.492 - Destroying I/O thread pool
+14880: 08:20:30.492 - Destroying ENet buffer allocator
+14880: 08:20:30.492 - Destroying TCP buffer allocator
+14880: 08:20:30.492 - Destroying TCP socket allocator
+14880: 08:20:30.492 - Destroying ENet inbound socket allocator
+14880: 08:20:30.492 - Destroying ENet outbound socket allocator
+14880: 08:20:30.492 - Destroying shared datagram flow control data
+14880: 08:20:30.493 - Shutdown complete...
+14880: 08:20:30.493 - Service shutting down
+14880: 08:20:30.495 - Service shut down complete
+6372: 21:31:29.351 - ---
+6372: 21:31:29.351 - Service: "Photon Socket Server" starting
+6372: 21:31:29.351 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+6372: 21:31:29.353 - Will produce at most: 10 crash dumps
+6372: 21:31:29.353 - Action: run as exe
+6372: 21:31:29.354 - Server Starting...
+6372: 21:31:29.354 -    Tick count: 485429937 (wraps in: 44.0919 days)
+6372: 21:31:29.354 - Tick count 64: 485429937
+6372: 21:31:29.354 - Photon Version: 4.0.28.2962
+6372: 21:31:29.354 - PID: 12120
+6372: 21:31:29.354 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+6372: 21:31:29.355 - Will NOT log unimportant exceptions
+6372: 21:31:29.359 - Not using performance counters as they are not currently installed. Run the service with /InstallCounters to install them.
+6372: 21:31:29.359 - Shutdown timeout enabled: 30000ms
+6372: 21:31:29.360 - Starting I/O thread pool with 2 threads
+6372: 21:31:29.360 - Using Standard allocator
+6372: 21:31:29.360 - Max message size: 512000
+6372: 21:31:29.360 - Starting business logic thread pool with the following settings
+6372: 21:31:29.360 - InitialThreads: 4 threads
+6372: 21:31:29.360 - MinThreads: 4 threads
+6372: 21:31:29.360 - Thread pool is fixed size
+6372: 21:31:29.360 - Starting ENet thread pool with the following settings
+6372: 21:31:29.360 - InitialThreads: 2 threads
+6372: 21:31:29.360 - MinThreads: 2 threads
+6372: 21:31:29.360 - Thread pool is fixed size
+6372: 21:31:29.360 - OnlyDispatchTimers: False
+6372: 21:31:29.361 - S2S: flow control: Max pending writes: 50
+6372: 21:31:29.361 - S2S: flow control: Max queued buffers: 200
+6372: 21:31:29.361 - S2S: flow control: Max pending writes MUX: 500
+6372: 21:31:29.361 - S2S: flow control: Max queued buffers MUX: 2000
+6372: 21:31:29.361 - S2S: MaxInboundMessageSize: 512000
+6372: 21:31:29.361 - S2S: MaxOutboundMessageSize: 512000
+6372: 21:31:29.361 - S2S: No inactivity timeout
+6372: 21:31:29.368 - WebSocket S2S: MaxInboundMessageSize: 512000
+6372: 21:31:29.368 - WebSocket S2S: MaxOutboundMessageSize: 512000
+6372: 21:31:29.368 - WebSocket S2S: No inactivity timeout
+6372: 21:31:29.369 - Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+6372: 21:31:29.369 - Per peer bandwidth limit
+6372: 21:31:29.369 - Transmit Rate Limit: 256 KB/Sec
+6372: 21:31:29.369 - Limit period: 200ms
+6372: 21:31:29.369 - Limit per period: 52428 bytes
+6372: 21:31:29.369 - Max queued data for transmission per peer: 512000 bytes
+6372: 21:31:29.369 - Minimum retransmit timeout: 200
+6372: 21:31:29.369 - No Maximum retransmit timeout
+6372: 21:31:29.369 - Minimum ENet timeout: 5000ms
+6372: 21:31:29.369 - Maximum ENet timeout: 30000ms
+6372: 21:31:29.369 - Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+6372: 21:31:29.369 - No RTT ACK adjustment timeout
+6372: 21:31:29.369 - Outbound ENet: MaxInboundMessageSize: 512000
+6372: 21:31:29.369 - Outbound ENet: MaxOutboundMessageSize: 512000
+6372: 21:31:29.374 - GetRuntime - About to load CLR - versions available:
+6372: 21:31:29.374 - v2.0.50727
+6372: 21:31:29.374 - v4.0.30319
+6372: 21:31:29.374 - Configuration requests: "v2.0.50727"
+6372: 21:31:29.374 - About to load version: "v2.0.50727"
+6372: 21:31:29.389 - About to load runtime: PhotonHostRuntime.PhotonDomainManager from PhotonHostRuntime, Culture=neutral, PublicKeyToken=02C301B61B060C4D
+6372: 21:31:29.389 - CLRBaseDirectory set to "D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy"
+6372: 21:31:29.389 - Optimising event broadcast for 20 or more peers
+6372: 21:31:29.390 - Start: About to load CLR - versions available:
+6372: 21:31:29.390 - v2.0.50727
+6372: 21:31:29.390 - v4.0.30319
+6372: 21:31:29.390 - No preference in configuration file, will load latest.
+6372: 21:31:29.390 - About to load version: "v4.0.30319"
+6372: 21:31:29.391 - Loaded version: "v4.0.30319"
+6372: 21:31:29.496 - Photon host runtime loaded
+6372: 21:31:31.106 - License is valid.
+6372: 21:31:31.106 - Licensed for 100 concurrent connections.
+6372: 21:31:31.106 - ENet: Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+6372: 21:31:31.106 - ENet: Per peer bandwidth limit
+6372: 21:31:31.106 - ENet: Transmit Rate Limit: 256 KB/Sec
+6372: 21:31:31.106 - ENet: Limit period: 200ms
+6372: 21:31:31.106 - ENet: Limit per period: 52428 bytes
+6372: 21:31:31.106 - ENet: Max queued data for transmission per peer: 512000 bytes
+6372: 21:31:31.106 - ENet: Minimum retransmit timeout: 200
+6372: 21:31:31.106 - No Maximum retransmit timeout
+6372: 21:31:31.106 - ENet: Minimum timeout: 5000ms
+6372: 21:31:31.106 - ENet: Maximum timeout: 30000ms
+6372: 21:31:31.106 - ENet: Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+6372: 21:31:31.106 - No RTT ACK adjustment timeout
+6372: 21:31:31.106 - About to load application: SAAServer from SAAServer
+6372: 21:31:31.106 - Auto restart is enabled for application, existing connections will be terminated during restart
+6372: 21:31:31.106 - Application will restart 1000ms after the last change detected
+6372: 21:31:31.106 - Application will restart if files matching the following are changed: "dll;config"
+6372: 21:31:31.106 - Application will NOT restart if files matching the following are changed: "log4net.config"
+6372: 21:31:31.165 - Taking reference on default app domain
+6372: 21:31:31.206 - Application: "SAAServer" started in app domain: 2
+6372: 21:31:31.206 - About to load application: CounterPublisher from CounterPublisher
+6372: 21:31:31.206 - Auto restart is enabled for application, existing connections will be terminated during restart
+6372: 21:31:31.206 - Application will restart 1000ms after the last change detected
+6372: 21:31:31.206 - Application will restart if files matching the following are changed: "dll;config"
+6372: 21:31:31.206 - Application will NOT restart if files matching the following are changed: "log4net.config"
+6372: 21:31:31.257 - Taking reference on default app domain
+6372: 21:31:31.435 - Application: "CounterPublisher" started in app domain: 3
+6372: 21:31:31.435 - Adding TCP listener on: 0.0.0.0: 4530 with a listen backlog of: 150
+6372: 21:31:31.435 - TCP inactivity timeout: 10000ms
+6372: 21:31:31.435 - TCP disconnect timeout: 120000ms
+6372: 21:31:31.435 - MaxInboundMessageSize: 512000
+6372: 21:31:31.435 - MaxOutboundMessageSize: 512000
+6372: 21:31:31.435 - Forcing all applications ids to: "SAAServer"
+6372: 21:31:31.435 - Serving policy file requests from: "D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+6372: 21:31:31.435 - Adding TCP listener on: 0.0.0.0: 4520 with a listen backlog of: 150
+6372: 21:31:31.435 - TCP inactivity timeout: 5000ms
+6372: 21:31:31.435 - TCP disconnect timeout: 120000ms
+6372: 21:31:31.435 - MaxInboundMessageSize: 512000
+6372: 21:31:31.435 - MaxOutboundMessageSize: 512000
+6372: 21:31:31.435 - Forcing all applications ids to: "SAAServer"
+6372: 21:31:31.435 - MaxInboundMessageSize: 512000
+6372: 21:31:31.435 - MaxOutboundMessageSize: 512000
+6372: 21:31:31.435 - UDP address specified as: "0.0.0.0" adding listener to each available IPv4 address
+6372: 21:31:31.436 - Adding UDP listener on: 192.168.1.6: 7777 with a listen backlog of: 500
+6372: 21:31:31.436 - Adding UDP listener on: 127.0.0.1: 7777 with a listen backlog of: 500
+6372: 21:31:31.436 - Adding Policy File listener on: 0.0.0.0: 843 with a listen backlog of: 150 and serving Policy File: "D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+6372: 21:31:31.436 - TCP inactivity timeout: 1000ms
+6372: 21:31:31.436 - Adding Policy File listener on: 0.0.0.0: 943 with a listen backlog of: 150 and serving Policy File: "D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy-silverlight.xml"
+6372: 21:31:31.436 - TCP inactivity timeout: 1000ms
+6372: 21:31:31.450 - Service is running...
+6372: 21:48:46.984 - Service is stopped...
+6372: 21:48:46.984 - Server shutting down...
+6372: 21:48:46.984 - Shutdown monitoring enabled, 30000ms before process abort
+6372: 21:48:46.984 - Notifying CLR applications of shutdown...
+6372: 21:48:46.984 - RequestApplicationStop: 3
+6372: 21:48:46.987 - RequestApplicationStop: 2
+6372: 21:48:46.989 - RequestStop: defalt app domain
+6372: 21:48:46.989 - Shutting down WebSocket Outbound Connection Manager...
+6372: 21:48:46.990 - Shutting down TCP Outbound Connection Manager...
+6372: 21:48:46.990 - Shutting down ENet Outbound Connection Manager...
+6372: 21:48:46.990 - Disconnecting all outbound peers...
+6372: 21:48:46.990 - Shutting down ENet host...
+6372: 21:48:46.990 - Disconnecting all peers...
+6372: 21:48:46.990 - CUDPSocketServer::OnError() - CUDPSocketServer::OnSendToCompletionError(): 在一个非套接字上尝试了一个操作。
+6372: 21:48:46.990 - 1 disconnected
+6372: 21:48:46.990 - Shutting down socket servers...
+6372: 21:48:46.990 - Shutting down ENet thread pool...
+6372: 21:48:46.990 - Shutting down TCP inactivity timers...
+6372: 21:48:46.990 - ENet Host - Resetting all peers...
+6372: 21:48:46.990 - WaitingForShutdownToComplete: NativePolicy:0.0.0.0:843
+6372: 21:48:46.990 - OnShutdownCompleted: NativePolicy:0.0.0.0:843
+6372: 21:48:46.990 - WaitingForShutdownToComplete: NativePolicy:0.0.0.0:943
+6372: 21:48:46.990 - OnShutdownCompleted: NativePolicy:0.0.0.0:943
+6372: 21:48:46.990 - WaitingForShutdownToComplete: TCP:0.0.0.0:4520
+6372: 21:48:46.990 - OnShutdownCompleted: TCP:0.0.0.0:4520
+6372: 21:48:46.990 - WaitingForShutdownToComplete: TCP:0.0.0.0:4530
+6372: 21:48:46.990 - OnShutdownCompleted: TCP:0.0.0.0:4530
+6372: 21:48:46.990 - WaitingForShutdownToComplete: UDP:127.0.0.1:7777
+6372: 21:48:46.990 - OnShutdownCompleted: UDP:127.0.0.1:7777
+6372: 21:48:46.990 - WaitingForShutdownToComplete: UDP:192.168.1.6:7777
+6372: 21:48:46.990 - OnShutdownCompleted: UDP:192.168.1.6:7777
+6372: 21:48:46.990 - Shutting down CLR applications...
+6264: 21:48:46.991 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+6372: 21:48:46.995 - Shutting down business logic thread pool...
+6372: 21:48:46.995 - Shutting down I/O thread pool...
+6372: 21:48:46.995 - Destroying servers
+6372: 21:48:46.995 - Destroying WebSocket Outbound Connection Manager
+6372: 21:48:46.995 - Destroying TCP Outbound Connection Manager
+6372: 21:48:46.995 - Destroying TCP inactivity timer
+6372: 21:48:46.995 - Destroying ENet timer wheel
+6372: 21:48:46.995 - Destroying ENet host
+6372: 21:48:46.995 - Destroying ENet outbound host
+6372: 21:48:46.995 - Destroying HTTP inactivity timer
+6372: 21:48:46.995 - Destroying HTTP host
+6372: 21:48:46.995 - Destroying HTTP Chunk host
+6372: 21:48:46.995 - Flushing ENET buffer allocator...
+6372: 21:48:46.996 - Flushing TCP buffer handle allocator...
+6372: 21:48:46.996 - Flushing stream socket allocator...
+6372: 21:48:46.996 - Flushing inbound datagram socket allocator...
+6372: 21:48:46.997 - Flushing outbound datagram socket allocator...
+6372: 21:48:46.997 - Destroying CLR dispatcher
+6372: 21:48:46.997 - Destroying CLR applications
+6372: 21:48:46.997 - ~CCLRApplicationCollection() - Waiting up to 10 seconds for the CLR to release all of our objects
+2992: 21:48:46.999 - Unloading Domain: ApplicationName = 'CounterPublisher', DomainId='3'
+6264: 21:48:46.999 - CManagedHost::OnDomainUnload() - 3
+6264: 21:48:47.003 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+2992: 21:48:47.009 - Unloading Domain: ApplicationName = 'SAAServer', DomainId='2'
+6264: 21:48:47.011 - CManagedHost::OnDomainUnload() - 2
+6372: 21:48:47.012 - ~CCLRApplicationCollection() - Done. All objects released
+6372: 21:48:47.012 - ~CManagedHost() - Release default app domain
+6372: 21:48:47.012 - CManagedHost::OnDomainUnload() - 1
+6372: 21:48:47.012 - ~CManagedHost() - Waiting up to 10 seconds for CLR shutdown...
+6372: 21:48:47.012 - ~CManagedHost
+6372: 21:48:47.012 - Destroying ENet thread pool
+6372: 21:48:47.012 - Destroying Business logic thread pool
+6372: 21:48:47.012 - Destroying I/O thread pool
+6372: 21:48:47.012 - Destroying ENet buffer allocator
+6372: 21:48:47.012 - Destroying TCP buffer allocator
+6372: 21:48:47.012 - Destroying TCP socket allocator
+6372: 21:48:47.012 - Destroying ENet inbound socket allocator
+6372: 21:48:47.012 - Destroying ENet outbound socket allocator
+6372: 21:48:47.012 - Destroying shared datagram flow control data
+6372: 21:48:47.013 - Shutdown complete...
+6372: 21:48:47.013 - Service shutting down
+6372: 21:48:47.015 - Service shut down complete

@@ -1,0 +1,259 @@
+18852: 14:55:49.569 - ---
+18852: 14:55:49.569 - Service: "Photon Socket Server" starting
+18852: 14:55:49.570 - Config File: E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+18852: 14:55:49.573 - Will produce at most: 10 crash dumps
+18852: 14:55:49.573 - Action: run as exe
+18852: 14:55:49.573 - Server Starting...
+18852: 14:55:49.573 -    Tick count: 5374265 (wraps in: 49.6481 days)
+18852: 14:55:49.573 - Tick count 64: 5374265
+18852: 14:55:49.573 - Photon Version: 4.0.28.2962
+18852: 14:55:49.573 - PID: 21716
+18852: 14:55:49.574 - Config File: E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+18852: 14:55:49.574 - Will NOT log unimportant exceptions
+18852: 14:55:49.576 - Not using performance counters as they are not currently installed. Run the service with /InstallCounters to install them.
+18852: 14:55:49.576 - Shutdown timeout enabled: 30000ms
+18852: 14:55:49.576 - Starting I/O thread pool with 2 threads
+18852: 14:55:49.576 - Using Standard allocator
+18852: 14:55:49.576 - Max message size: 512000
+18852: 14:55:49.576 - Starting business logic thread pool with the following settings
+18852: 14:55:49.576 - InitialThreads: 4 threads
+18852: 14:55:49.576 - MinThreads: 4 threads
+18852: 14:55:49.576 - Thread pool is fixed size
+18852: 14:55:49.576 - Starting ENet thread pool with the following settings
+18852: 14:55:49.576 - InitialThreads: 2 threads
+18852: 14:55:49.576 - MinThreads: 2 threads
+18852: 14:55:49.576 - Thread pool is fixed size
+18852: 14:55:49.576 - OnlyDispatchTimers: False
+18852: 14:55:49.576 - S2S: flow control: Max pending writes: 50
+18852: 14:55:49.576 - S2S: flow control: Max queued buffers: 200
+18852: 14:55:49.576 - S2S: flow control: Max pending writes MUX: 500
+18852: 14:55:49.576 - S2S: flow control: Max queued buffers MUX: 2000
+18852: 14:55:49.576 - S2S: MaxInboundMessageSize: 512000
+18852: 14:55:49.576 - S2S: MaxOutboundMessageSize: 512000
+18852: 14:55:49.576 - S2S: No inactivity timeout
+18852: 14:55:49.585 - WebSocket S2S: MaxInboundMessageSize: 512000
+18852: 14:55:49.585 - WebSocket S2S: MaxOutboundMessageSize: 512000
+18852: 14:55:49.585 - WebSocket S2S: No inactivity timeout
+18852: 14:55:49.585 - Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+18852: 14:55:49.585 - Per peer bandwidth limit
+18852: 14:55:49.585 - Transmit Rate Limit: 256 KB/Sec
+18852: 14:55:49.585 - Limit period: 200ms
+18852: 14:55:49.585 - Limit per period: 52428 bytes
+18852: 14:55:49.585 - Max queued data for transmission per peer: 512000 bytes
+18852: 14:55:49.585 - Minimum retransmit timeout: 200
+18852: 14:55:49.585 - No Maximum retransmit timeout
+18852: 14:55:49.585 - Minimum ENet timeout: 5000ms
+18852: 14:55:49.585 - Maximum ENet timeout: 30000ms
+18852: 14:55:49.585 - Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+18852: 14:55:49.585 - No RTT ACK adjustment timeout
+18852: 14:55:49.585 - Outbound ENet: MaxInboundMessageSize: 512000
+18852: 14:55:49.585 - Outbound ENet: MaxOutboundMessageSize: 512000
+18852: 14:55:49.588 - GetRuntime - About to load CLR - versions available:
+18852: 14:55:49.588 - v2.0.50727
+18852: 14:55:49.588 - v4.0.30319
+18852: 14:55:49.588 - Configuration requests: "v2.0.50727"
+18852: 14:55:49.588 - About to load version: "v2.0.50727"
+18852: 14:55:49.600 - About to load runtime: PhotonHostRuntime.PhotonDomainManager from PhotonHostRuntime, Culture=neutral, PublicKeyToken=02C301B61B060C4D
+18852: 14:55:49.600 - CLRBaseDirectory set to "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy"
+18852: 14:55:49.600 - Optimising event broadcast for 20 or more peers
+18852: 14:55:49.601 - Start: About to load CLR - versions available:
+18852: 14:55:49.601 - v2.0.50727
+18852: 14:55:49.601 - v4.0.30319
+18852: 14:55:49.601 - No preference in configuration file, will load latest.
+18852: 14:55:49.601 - About to load version: "v4.0.30319"
+18852: 14:55:49.603 - Loaded version: "v4.0.30319"
+18852: 14:55:50.225 - Photon host runtime loaded
+18852: 14:55:52.363 - License is valid.
+18852: 14:55:52.363 - Licensed for 100 concurrent connections.
+18852: 14:55:52.363 - ENet: Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+18852: 14:55:52.363 - ENet: Per peer bandwidth limit
+18852: 14:55:52.363 - ENet: Transmit Rate Limit: 256 KB/Sec
+18852: 14:55:52.363 - ENet: Limit period: 200ms
+18852: 14:55:52.363 - ENet: Limit per period: 52428 bytes
+18852: 14:55:52.363 - ENet: Max queued data for transmission per peer: 512000 bytes
+18852: 14:55:52.363 - ENet: Minimum retransmit timeout: 200
+18852: 14:55:52.363 - No Maximum retransmit timeout
+18852: 14:55:52.363 - ENet: Minimum timeout: 5000ms
+18852: 14:55:52.363 - ENet: Maximum timeout: 30000ms
+18852: 14:55:52.363 - ENet: Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+18852: 14:55:52.363 - No RTT ACK adjustment timeout
+18852: 14:55:52.363 - About to load application: TheReallyServer from TheReallyServer
+18852: 14:55:52.363 - Auto restart is enabled for application, existing connections will be terminated during restart
+18852: 14:55:52.363 - Application will restart 1000ms after the last change detected
+18852: 14:55:52.363 - Application will restart if files matching the following are changed: "dll;config"
+18852: 14:55:52.363 - Application will NOT restart if files matching the following are changed: "log4net.config"
+18852: 14:55:52.519 - Taking reference on default app domain
+18852: 14:55:52.557 - Application: "TheReallyServer" started in app domain: 2
+18852: 14:55:52.557 - About to load application: CounterPublisher from CounterPublisher
+18852: 14:55:52.557 - Auto restart is enabled for application, existing connections will be terminated during restart
+18852: 14:55:52.557 - Application will restart 1000ms after the last change detected
+18852: 14:55:52.557 - Application will restart if files matching the following are changed: "dll;config"
+18852: 14:55:52.557 - Application will NOT restart if files matching the following are changed: "log4net.config"
+18852: 14:55:52.621 - Taking reference on default app domain
+18852: 14:55:52.676 - Application: "CounterPublisher" started in app domain: 3
+18852: 14:55:52.676 - Adding TCP listener on: 0.0.0.0: 4530 with a listen backlog of: 150
+18852: 14:55:52.676 - TCP inactivity timeout: 10000ms
+18852: 14:55:52.676 - TCP disconnect timeout: 120000ms
+18852: 14:55:52.676 - MaxInboundMessageSize: 512000
+18852: 14:55:52.676 - MaxOutboundMessageSize: 512000
+18852: 14:55:52.676 - Forcing all applications ids to: "TheReallyServer"
+18852: 14:55:52.676 - Serving policy file requests from: "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+18852: 14:55:52.677 - Adding TCP listener on: 0.0.0.0: 4520 with a listen backlog of: 150
+18852: 14:55:52.677 - TCP inactivity timeout: 5000ms
+18852: 14:55:52.677 - TCP disconnect timeout: 120000ms
+18852: 14:55:52.677 - MaxInboundMessageSize: 512000
+18852: 14:55:52.677 - MaxOutboundMessageSize: 512000
+18852: 14:55:52.677 - Forcing all applications ids to: "TheReallyServer"
+18852: 14:55:52.677 - MaxInboundMessageSize: 512000
+18852: 14:55:52.677 - MaxOutboundMessageSize: 512000
+18852: 14:55:52.677 - UDP address specified as: "0.0.0.0" adding listener to each available IPv4 address
+18852: 14:55:52.677 - Adding UDP listener on: 192.168.50.192: 8888 with a listen backlog of: 500
+18852: 14:55:52.677 - Adding UDP listener on: 127.0.0.1: 8888 with a listen backlog of: 500
+18852: 14:55:52.678 - Adding Policy File listener on: 0.0.0.0: 843 with a listen backlog of: 150 and serving Policy File: "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+18852: 14:55:52.678 - TCP inactivity timeout: 1000ms
+18852: 14:55:52.678 - Adding Policy File listener on: 0.0.0.0: 943 with a listen backlog of: 150 and serving Policy File: "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy-silverlight.xml"
+18852: 14:55:52.678 - TCP inactivity timeout: 1000ms
+18852: 14:55:52.697 - Service is running...
+17908: 15:02:11.028 - Restarting application: "TheReallyServer" due to file changes
+17908: 15:02:11.028 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 15:02:11.076 - Taking reference on default app domain
+17908: 15:02:11.107 - Application: "TheReallyServer" started in app domain: 4
+17908: 15:02:11.181 - RequestApplicationStop: 2
+17908: 15:02:11.185 - Application: "TheReallyServer" stopped in app domain: 2 (abort existing connections)
+17908: 15:02:11.185 - Application: "TheReallyServer" restart complete.
+18416: 15:02:11.185 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+20784: 15:02:11.194 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='2'
+18416: 15:02:11.194 - CManagedHost::OnDomainUnload() - 2
+17908: 15:20:59.638 - Restarting application: "TheReallyServer" due to file changes
+17908: 15:20:59.638 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 15:20:59.687 - Taking reference on default app domain
+17908: 15:20:59.719 - Application: "TheReallyServer" started in app domain: 5
+17908: 15:20:59.797 - RequestApplicationStop: 4
+17908: 15:20:59.800 - Application: "TheReallyServer" stopped in app domain: 4 (abort existing connections)
+18416: 15:20:59.800 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+17908: 15:20:59.800 - Application: "TheReallyServer" restart complete.
+20784: 15:20:59.806 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='4'
+18416: 15:20:59.806 - CManagedHost::OnDomainUnload() - 4
+17908: 15:27:21.485 - Restarting application: "TheReallyServer" due to file changes
+17908: 15:27:21.485 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 15:27:21.530 - Taking reference on default app domain
+17908: 15:27:21.558 - Application: "TheReallyServer" started in app domain: 6
+17908: 15:27:21.631 - RequestApplicationStop: 5
+17908: 15:27:21.634 - Application: "TheReallyServer" stopped in app domain: 5 (abort existing connections)
+17908: 15:27:21.634 - Application: "TheReallyServer" restart complete.
+18416: 15:27:21.634 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+20784: 15:27:21.640 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='5'
+18416: 15:27:21.641 - CManagedHost::OnDomainUnload() - 5
+17908: 15:27:25.784 - Restarting application: "TheReallyServer" due to file changes
+17908: 15:27:25.784 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 15:27:25.828 - Taking reference on default app domain
+17908: 15:27:25.860 - Application: "TheReallyServer" started in app domain: 7
+17908: 15:27:25.931 - RequestApplicationStop: 6
+17908: 15:27:25.934 - Application: "TheReallyServer" stopped in app domain: 6 (abort existing connections)
+18416: 15:27:25.934 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+17908: 15:27:25.934 - Application: "TheReallyServer" restart complete.
+20784: 15:27:25.940 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='6'
+18416: 15:27:25.940 - CManagedHost::OnDomainUnload() - 6
+17908: 15:29:30.715 - Restarting application: "TheReallyServer" due to file changes
+17908: 15:29:30.715 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 15:29:30.759 - Taking reference on default app domain
+17908: 15:29:30.787 - Application: "TheReallyServer" started in app domain: 8
+17908: 15:29:30.858 - RequestApplicationStop: 7
+17908: 15:29:30.861 - Application: "TheReallyServer" stopped in app domain: 7 (abort existing connections)
+17908: 15:29:30.861 - Application: "TheReallyServer" restart complete.
+18416: 15:29:30.861 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+20784: 15:29:30.867 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='7'
+18416: 15:29:30.867 - CManagedHost::OnDomainUnload() - 7
+17908: 15:29:40.307 - Restarting application: "TheReallyServer" due to file changes
+17908: 15:29:40.307 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 15:29:40.351 - Taking reference on default app domain
+17908: 15:29:40.380 - Application: "TheReallyServer" started in app domain: 9
+17908: 15:29:40.451 - RequestApplicationStop: 8
+17908: 15:29:40.454 - Application: "TheReallyServer" stopped in app domain: 8 (abort existing connections)
+17908: 15:29:40.454 - Application: "TheReallyServer" restart complete.
+18416: 15:29:40.454 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+20784: 15:29:40.459 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='8'
+18416: 15:29:40.460 - CManagedHost::OnDomainUnload() - 8
+17908: 16:09:55.696 - Restarting application: "TheReallyServer" due to file changes
+17908: 16:09:55.696 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 16:09:55.744 - Taking reference on default app domain
+17908: 16:09:55.774 - Application: "TheReallyServer" started in app domain: 10
+17908: 16:09:55.848 - RequestApplicationStop: 9
+17908: 16:09:55.852 - Application: "TheReallyServer" stopped in app domain: 9 (abort existing connections)
+18416: 16:09:55.852 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+17908: 16:09:55.852 - Application: "TheReallyServer" restart complete.
+20784: 16:09:55.859 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='9'
+18416: 16:09:55.860 - CManagedHost::OnDomainUnload() - 9
+17908: 16:09:59.926 - Restarting application: "TheReallyServer" due to file changes
+17908: 16:09:59.926 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 16:09:59.974 - Taking reference on default app domain
+17908: 16:10:00.003 - Application: "TheReallyServer" started in app domain: 11
+17908: 16:10:00.079 - RequestApplicationStop: 10
+17908: 16:10:00.082 - Application: "TheReallyServer" stopped in app domain: 10 (abort existing connections)
+17908: 16:10:00.082 - Application: "TheReallyServer" restart complete.
+18416: 16:10:00.082 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+20784: 16:10:00.088 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='10'
+18416: 16:10:00.089 - CManagedHost::OnDomainUnload() - 10
+17908: 16:13:19.325 - Restarting application: "TheReallyServer" due to file changes
+17908: 16:13:19.325 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 16:13:19.370 - Taking reference on default app domain
+17908: 16:13:19.400 - Application: "TheReallyServer" started in app domain: 12
+17908: 16:13:19.473 - RequestApplicationStop: 11
+17908: 16:13:19.475 - Application: "TheReallyServer" stopped in app domain: 11 (abort existing connections)
+17908: 16:13:19.475 - Application: "TheReallyServer" restart complete.
+18416: 16:13:19.475 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+20784: 16:13:19.482 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='11'
+18416: 16:13:19.482 - CManagedHost::OnDomainUnload() - 11
+17908: 16:13:32.857 - Restarting application: "TheReallyServer" due to file changes
+17908: 16:13:32.857 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 16:13:32.901 - Taking reference on default app domain
+17908: 16:13:32.930 - Application: "TheReallyServer" started in app domain: 13
+17908: 16:13:33.002 - RequestApplicationStop: 12
+18416: 16:13:33.005 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+17908: 16:13:33.005 - Application: "TheReallyServer" stopped in app domain: 12 (abort existing connections)
+17908: 16:13:33.005 - Application: "TheReallyServer" restart complete.
+20784: 16:13:33.012 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='12'
+18416: 16:13:33.012 - CManagedHost::OnDomainUnload() - 12
+17908: 16:13:50.260 - Restarting application: "TheReallyServer" due to file changes
+17908: 16:13:50.260 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 16:13:50.305 - Taking reference on default app domain
+17908: 16:13:50.334 - Application: "TheReallyServer" started in app domain: 14
+17908: 16:13:50.409 - RequestApplicationStop: 13
+17908: 16:13:50.411 - Application: "TheReallyServer" stopped in app domain: 13 (abort existing connections)
+18416: 16:13:50.411 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+17908: 16:13:50.411 - Application: "TheReallyServer" restart complete.
+20784: 16:13:50.418 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='13'
+18416: 16:13:50.418 - CManagedHost::OnDomainUnload() - 13
+17908: 17:52:40.044 - Restarting application: "TheReallyServer" due to file changes
+17908: 17:52:40.044 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 17:52:40.098 - Taking reference on default app domain
+17908: 17:52:40.129 - Application: "TheReallyServer" started in app domain: 15
+17908: 17:52:40.209 - RequestApplicationStop: 14
+17908: 17:52:40.213 - Application: "TheReallyServer" stopped in app domain: 14 (abort existing connections)
+17908: 17:52:40.213 - Application: "TheReallyServer" restart complete.
+18416: 17:52:40.213 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+20784: 17:52:40.221 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='14'
+18416: 17:52:40.221 - CManagedHost::OnDomainUnload() - 14
+17908: 17:52:44.261 - Restarting application: "TheReallyServer" due to file changes
+17908: 17:52:44.261 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 17:52:44.312 - Taking reference on default app domain
+17908: 17:52:44.348 - Application: "TheReallyServer" started in app domain: 16
+17908: 17:52:44.424 - RequestApplicationStop: 15
+17908: 17:52:44.427 - Application: "TheReallyServer" stopped in app domain: 15 (abort existing connections)
+17908: 17:52:44.427 - Application: "TheReallyServer" restart complete.
+18416: 17:52:44.427 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+20784: 17:52:44.433 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='15'
+18416: 17:52:44.434 - CManagedHost::OnDomainUnload() - 15
+17908: 17:52:49.529 - Restarting application: "TheReallyServer" due to file changes
+17908: 17:52:49.529 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 17:52:49.548 - Failed to restart application: CManagedHost::CreateApplicationInNewAppDomain() - Failed to create new application domain for : "TheReallyServer" - Can't find TheReallyServer.dll in E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer\bin or E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer\bin
+17908: 17:54:33.432 - Restarting application: "TheReallyServer" due to file changes
+17908: 17:54:33.432 - Application: "TheReallyServer" restart request (abort existing connections)
+17908: 17:54:33.478 - Taking reference on default app domain
+17908: 17:54:33.520 - Application: "TheReallyServer" started in app domain: 17
+17908: 17:54:33.596 - RequestApplicationStop: 16
+17908: 17:54:33.601 - Application: "TheReallyServer" stopped in app domain: 16 (abort existing connections)
+18416: 17:54:33.601 - CManagedHost::OnDefaultAction() - OPR_AppDomainUnload - eUnloadAppDomain
+17908: 17:54:33.601 - Application: "TheReallyServer" restart complete.
+20784: 17:54:33.608 - Unloading Domain: ApplicationName = 'TheReallyServer', DomainId='16'
+18416: 17:54:33.608 - CManagedHost::OnDomainUnload() - 16

@@ -1,0 +1,12 @@
+3660: 08:00:25.664 - ---
+3660: 08:00:25.664 - Service: "Photon Socket Server" starting
+3660: 08:00:25.664 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+3660: 08:00:25.666 - Will produce at most: 10 crash dumps
+3660: 08:00:25.666 - Service shutting down
+3660: 08:00:25.667 - Service shut down complete
+13760: 21:30:11.879 - ---
+13760: 21:30:11.879 - Service: "Photon Socket Server" starting
+13760: 21:30:11.879 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+13760: 21:30:11.881 - Will produce at most: 10 crash dumps
+13760: 21:30:11.881 - Service shutting down
+13760: 21:30:11.882 - Service shut down complete

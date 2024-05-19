@@ -1,0 +1,12 @@
+24508: 12:49:00.893 - ---
+24508: 12:49:00.893 - Service: "Photon Socket Server" starting
+24508: 12:49:00.894 - Config File: E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+24508: 12:49:00.896 - Will produce at most: 10 crash dumps
+24508: 12:49:00.896 - Service shutting down
+24508: 12:49:00.897 - Service shut down complete
+21124: 18:14:32.899 - ---
+21124: 18:14:32.899 - Service: "Photon Socket Server" starting
+21124: 18:14:32.900 - Config File: E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+21124: 18:14:32.902 - Will produce at most: 10 crash dumps
+21124: 18:14:32.903 - Service shutting down
+21124: 18:14:32.904 - Service shut down complete

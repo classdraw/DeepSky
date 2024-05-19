@@ -1,0 +1,5 @@
+﻿2018-10-03 22:54:26,274 [1] INFO  ChatRoom.MyServer - Setup ok
+2018-10-03 22:54:26,325 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=ChatRoom; AppPath=C:\photon\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\ChatRoom, Type=ChatRoom.MyServer 
+2018-10-03 22:58:37,783 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=ChatRoom
+2018-10-03 22:58:37,810 [1] INFO  ChatRoom.MyServer - TearDown ok
+2018-10-03 22:58:37,813 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=ChatRoom

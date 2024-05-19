@@ -1,0 +1,12 @@
+9696: 08:04:22.080 - ---
+9696: 08:04:22.080 - Service: "Photon Socket Server" starting
+9696: 08:04:22.080 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+9696: 08:04:22.082 - Will produce at most: 10 crash dumps
+9696: 08:04:22.082 - Service shutting down
+9696: 08:04:22.083 - Service shut down complete
+2204: 08:19:14.809 - ---
+2204: 08:19:14.809 - Service: "Photon Socket Server" starting
+2204: 08:19:14.809 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+2204: 08:19:14.810 - Will produce at most: 10 crash dumps
+2204: 08:19:14.810 - Service shutting down
+2204: 08:19:14.812 - Service shut down complete

@@ -1,0 +1,18 @@
+8076: 08:10:17.790 - ---
+8076: 08:10:17.790 - Service: "Photon Socket Server" starting
+8076: 08:10:17.790 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+8076: 08:10:17.792 - Will produce at most: 10 crash dumps
+8076: 08:10:17.792 - Service shutting down
+8076: 08:10:17.792 - Service shut down complete
+7304: 08:25:28.654 - ---
+7304: 08:25:28.654 - Service: "Photon Socket Server" starting
+7304: 08:25:28.654 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+7304: 08:25:28.656 - Will produce at most: 10 crash dumps
+7304: 08:25:28.656 - Service shutting down
+7304: 08:25:28.657 - Service shut down complete
+15676: 21:46:08.718 - ---
+15676: 21:46:08.718 - Service: "Photon Socket Server" starting
+15676: 21:46:08.719 - Config File: D:\Work\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+15676: 21:46:08.720 - Will produce at most: 10 crash dumps
+15676: 21:46:08.720 - Service shutting down
+15676: 21:46:08.721 - Service shut down complete

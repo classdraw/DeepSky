@@ -1,0 +1,1343 @@
+﻿2023-06-11 14:55:59,401 [1] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 14:55:59,411 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 15:02:11,164 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 15:02:11,173 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 15:02:11,182 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 15:02:11,183 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 15:02:11,185 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 15:20:59,779 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 15:20:59,788 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 15:20:59,798 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 15:20:59,799 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 15:20:59,800 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 15:27:21,614 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 15:27:21,623 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 15:27:21,632 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 15:27:21,633 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 15:27:21,634 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 15:27:25,915 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 15:27:25,924 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 15:27:25,932 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 15:27:25,933 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 15:27:25,933 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 15:29:30,842 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 15:29:30,851 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 15:29:30,859 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 15:29:30,860 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 15:29:30,861 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 15:29:40,435 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 15:29:40,444 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 15:29:40,452 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 15:29:40,453 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 15:29:40,453 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 16:09:55,831 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 16:09:55,840 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 16:09:55,850 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 16:09:55,851 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 16:09:55,851 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 16:10:00,063 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 16:10:00,071 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 16:10:00,080 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 16:10:00,081 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 16:10:00,081 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 16:13:19,456 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 16:13:19,465 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 16:13:19,474 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 16:13:19,475 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 16:13:19,475 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 16:13:32,985 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 16:13:32,994 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 16:13:33,003 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 16:13:33,004 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 16:13:33,004 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 16:13:50,392 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 16:13:50,401 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 16:13:50,410 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 16:13:50,411 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 16:13:50,411 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 17:52:40,190 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 17:52:40,200 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 17:52:40,211 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 17:52:40,212 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 17:52:40,213 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 17:52:44,408 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 17:52:44,417 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 17:52:44,425 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 17:52:44,426 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 17:52:44,426 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-11 17:54:33,577 [4] INFO  TheReallyServer.MyServer - Setup
+2023-06-11 17:54:33,589 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-11 17:54:33,598 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-11 17:54:33,600 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-06-11 17:54:33,600 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-22 21:03:11,743 [1] INFO  TheReallyServer.MyServer - Setup
+2023-06-22 21:03:11,758 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-22 21:03:11,809 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-06-22 21:03:11,809 [10] INFO  TheReallyServer.MyServer - new client45653674
+2023-06-22 21:03:11,821 [13] INFO  TheReallyServer.MyServer - client destroy45653674
+2023-06-22 21:04:21,629 [13] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-06-23 20:25:14,740 [1] INFO  TheReallyServer.MyServer - Setup
+2023-06-23 20:25:14,758 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-23 20:25:20,148 [11] INFO  TheReallyServer.MyServer - new client39086322
+2023-06-23 20:25:22,233 [11] INFO  TheReallyServer.MyServer - client destroy39086322
+2023-06-23 20:25:22,251 [10] INFO  TheReallyServer.MyServer - new client45653674
+2023-06-23 20:25:25,118 [14] INFO  TheReallyServer.MyServer - client destroy45653674
+2023-06-23 20:25:25,131 [11] INFO  TheReallyServer.MyServer - new client14421545
+2023-06-23 20:46:27,058 [10] INFO  TheReallyServer.MyServer - client destroy14421545
+2023-06-23 20:47:00,452 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-06-23 20:47:00,460 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-06-23 20:47:00,460 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-06-23 20:47:17,648 [1] INFO  TheReallyServer.MyServer - Setup
+2023-06-23 20:47:17,669 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-23 20:48:38,466 [7] INFO  TheReallyServer.MyServer - new client12547953
+2023-06-23 20:49:01,519 [6] INFO  TheReallyServer.MyServer - new client35320229
+2023-06-23 20:49:20,069 [7] INFO  TheReallyServer.MyServer - client destroy12547953
+2023-06-23 20:50:44,226 [6] INFO  TheReallyServer.MyServer - client destroy35320229
+2023-06-23 20:52:17,091 [4] INFO  TheReallyServer.MyServer - new client3405752
+2023-06-23 20:52:50,896 [6] INFO  TheReallyServer.MyServer - client destroy3405752
+2023-06-24 11:07:00,850 [1] INFO  TheReallyServer.MyServer - Setup
+2023-06-24 11:07:00,865 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-06-24 11:07:01,004 [11] INFO  TheReallyServer.MyServer - new client39086322
+2023-06-24 11:10:06,228 [6] INFO  TheReallyServer.MyServer - client destroy39086322
+2023-06-24 11:11:19,118 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-06-24 11:12:30,883 [15] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-07-01 11:02:49,290 [1] INFO  TheReallyServer.MyServer - Setup
+2023-07-01 11:02:49,305 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-01 11:02:49,450 [7] INFO  TheReallyServer.MyServer - new client12547953
+2023-07-01 11:03:29,366 [8] INFO  TheReallyServer.MyServer - client destroy12547953
+2023-07-01 11:04:11,603 [7] INFO  TheReallyServer.MyServer - new client28379535
+2023-07-01 11:06:30,475 [10] INFO  TheReallyServer.MyServer - client destroy28379535
+2023-07-01 11:08:28,165 [7] INFO  TheReallyServer.MyServer - new client64109423
+2023-07-01 11:09:03,664 [7] INFO  TheReallyServer.MyServer - client destroy64109423
+2023-07-01 11:09:19,642 [14] INFO  TheReallyServer.MyServer - new client56140151
+2023-07-01 11:10:14,898 [10] INFO  TheReallyServer.MyServer - client destroy56140151
+2023-07-01 11:13:54,612 [14] INFO  TheReallyServer.MyServer - new client1997173
+2023-07-01 11:15:20,059 [8] INFO  TheReallyServer.MyServer - new client36963566
+2023-07-01 11:15:37,198 [10] INFO  TheReallyServer.MyServer - client destroy1997173
+2023-07-01 11:18:06,773 [14] INFO  TheReallyServer.MyServer - client destroy36963566
+2023-07-01 12:14:34,231 [15] INFO  TheReallyServer.MyServer - Setup
+2023-07-01 12:14:34,240 [15] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-01 12:14:34,251 [15] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-01 12:14:34,252 [15] INFO  TheReallyServer.MyServer - TearDown
+2023-07-01 12:14:34,252 [15] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-01 12:14:38,696 [15] INFO  TheReallyServer.MyServer - Setup
+2023-07-01 12:14:38,706 [15] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-01 12:14:38,717 [15] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-01 12:14:38,718 [15] INFO  TheReallyServer.MyServer - TearDown
+2023-07-01 12:14:38,718 [15] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-01 12:19:44,875 [8] INFO  TheReallyServer.MyServer - new client25474675
+2023-07-01 12:23:23,032 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-07-01 12:23:41,480 [7] INFO  TheReallyServer.MyServer - client destroy25474675
+2023-07-01 12:31:57,886 [8] INFO  TheReallyServer.MyServer - new client49382823
+2023-07-01 12:32:10,278 [7] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-07-01 12:33:54,222 [7] INFO  TheReallyServer.MyServer - new client35236192
+2023-07-01 12:34:12,557 [16] INFO  TheReallyServer.MyServer - client destroy49382823
+2023-07-01 12:35:07,594 [8] INFO  TheReallyServer.MyServer - new client15225125
+2023-07-01 12:35:27,018 [10] INFO  TheReallyServer.MyServer - client destroy35236192
+2023-07-01 12:36:38,499 [13] INFO  TheReallyServer.MyServer - new client38583594
+2023-07-01 12:36:40,422 [14] INFO  TheReallyServer.MyServer - 来消息了>>>
+2023-07-01 12:36:40,479 [14] INFO  TheReallyServer.MyServer - >>123
+2023-07-01 12:36:59,790 [7] INFO  TheReallyServer.MyServer - client destroy15225125
+2023-07-01 12:39:04,542 [15] INFO  TheReallyServer.MyServer - Setup
+2023-07-01 12:39:04,556 [15] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-01 12:39:04,573 [15] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-01 12:39:04,573 [8] INFO  TheReallyServer.MyServer - client destroy38583594
+2023-07-01 12:39:04,574 [12] INFO  TheReallyServer.MyServer - TearDown
+2023-07-01 12:39:04,575 [12] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-01 12:39:11,812 [15] INFO  TheReallyServer.MyServer - Setup
+2023-07-01 12:39:11,826 [15] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-01 12:39:11,839 [15] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-01 12:39:11,841 [15] INFO  TheReallyServer.MyServer - TearDown
+2023-07-01 12:39:11,841 [15] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-01 12:40:59,793 [14] INFO  TheReallyServer.MyServer - new client41153804
+2023-07-01 12:41:02,448 [8] INFO  TheReallyServer.MyServer - 来消息了>>>
+2023-07-01 12:41:02,497 [8] INFO  TheReallyServer.MyServer - 123>>123
+2023-07-01 12:47:45,322 [4] INFO  TheReallyServer.MyServer - client destroy41153804
+2023-07-01 12:49:00,892 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-01 12:49:00,904 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-07-01 12:49:00,904 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-01 17:43:30,995 [1] INFO  TheReallyServer.MyServer - Setup
+2023-07-01 17:43:31,012 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-01 17:43:36,845 [7] INFO  TheReallyServer.MyServer - new client12547953
+2023-07-01 17:43:41,645 [14] INFO  TheReallyServer.MyServer - 来消息了>>>
+2023-07-01 17:43:41,703 [14] INFO  TheReallyServer.MyServer - 123>>123
+2023-07-01 17:46:06,766 [18] INFO  TheReallyServer.MyServer - Setup
+2023-07-01 17:46:06,784 [18] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-01 17:46:06,800 [18] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-01 17:46:06,803 [13] INFO  TheReallyServer.MyServer - client destroy12547953
+2023-07-01 17:46:06,804 [12] INFO  TheReallyServer.MyServer - TearDown
+2023-07-01 17:46:06,804 [12] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-01 17:46:15,352 [18] INFO  TheReallyServer.MyServer - Setup
+2023-07-01 17:46:15,363 [18] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-01 17:46:15,372 [18] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-01 17:46:15,375 [18] INFO  TheReallyServer.MyServer - TearDown
+2023-07-01 17:46:15,375 [18] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-01 17:46:24,225 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-07-01 17:46:27,239 [7] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 17:47:50,427 [13] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-07-01 17:57:41,997 [13] INFO  TheReallyServer.MyServer - new client62407605
+2023-07-01 17:57:44,391 [13] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 18:00:16,897 [7] INFO  TheReallyServer.MyServer - new client53052340
+2023-07-01 18:00:19,189 [15] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 18:00:37,531 [7] INFO  TheReallyServer.MyServer - client destroy62407605
+2023-07-01 18:01:21,895 [15] INFO  TheReallyServer.MyServer - new client42931033
+2023-07-01 18:01:23,800 [13] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 18:01:33,057 [15] INFO  TheReallyServer.MyServer - client destroy53052340
+2023-07-01 18:02:03,757 [6] INFO  TheReallyServer.MyServer - new client35320229
+2023-07-01 18:02:06,569 [15] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 18:02:22,088 [16] INFO  TheReallyServer.MyServer - client destroy42931033
+2023-07-01 18:02:44,372 [13] INFO  TheReallyServer.MyServer - new client463695
+2023-07-01 18:02:46,589 [14] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 18:03:02,700 [6] INFO  TheReallyServer.MyServer - client destroy35320229
+2023-07-01 18:03:56,033 [7] INFO  TheReallyServer.MyServer - new client5896758
+2023-07-01 18:03:58,068 [14] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 18:04:17,240 [13] INFO  TheReallyServer.MyServer - client destroy463695
+2023-07-01 18:04:44,776 [7] INFO  TheReallyServer.MyServer - new client60375305
+2023-07-01 18:04:46,319 [16] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 18:05:05,992 [14] INFO  TheReallyServer.MyServer - client destroy5896758
+2023-07-01 18:06:51,772 [7] INFO  TheReallyServer.MyServer - client destroy60375305
+2023-07-01 18:12:13,497 [15] INFO  TheReallyServer.MyServer - new client39053774
+2023-07-01 18:12:15,327 [13] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 18:13:37,665 [15] INFO  TheReallyServer.MyServer - new client55467396
+2023-07-01 18:13:39,208 [7] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 18:13:55,818 [16] INFO  TheReallyServer.MyServer - client destroy39053774
+2023-07-01 18:14:10,581 [15] INFO  TheReallyServer.MyServer - new client48611003
+2023-07-01 18:14:11,915 [16] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 18:14:29,317 [6] INFO  TheReallyServer.MyServer - client destroy55467396
+2023-07-01 18:14:32,946 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-01 18:14:32,948 [15] INFO  TheReallyServer.MyServer - client destroy48611003
+2023-07-01 18:14:32,950 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-07-01 18:14:32,950 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-01 21:35:48,161 [1] INFO  TheReallyServer.MyServer - Setup
+2023-07-01 21:35:48,172 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-01 21:35:56,622 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-07-01 21:36:08,844 [11] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 21:36:45,994 [15] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-07-01 21:36:49,486 [13] INFO  TheReallyServer.MyServer - new client62407605
+2023-07-01 21:36:53,819 [12] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-01 21:37:36,701 [4] INFO  TheReallyServer.MyServer - Setup
+2023-07-01 21:37:36,711 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-01 21:37:36,720 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-01 21:37:36,721 [9] INFO  TheReallyServer.MyServer - client destroy62407605
+2023-07-01 21:37:36,722 [14] INFO  TheReallyServer.MyServer - TearDown
+2023-07-01 21:37:36,722 [14] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-01 21:37:40,425 [4] INFO  TheReallyServer.MyServer - Setup
+2023-07-01 21:37:40,435 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-01 21:37:40,443 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-01 21:37:40,444 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-07-01 21:37:40,444 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-01 21:37:44,222 [4] INFO  TheReallyServer.MyServer - Setup
+2023-07-01 21:37:44,231 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-01 21:37:44,240 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-01 21:37:44,241 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-07-01 21:37:44,241 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-09 09:46:45,431 [1] INFO  TheReallyServer.MyServer - Setup
+2023-07-09 09:46:45,446 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-09 09:46:45,616 [12] INFO  TheReallyServer.MyServer - new client20974680
+2023-07-09 09:49:32,429 [10] INFO  TheReallyServer.MyServer - client destroy20974680
+2023-07-09 09:54:17,516 [15] INFO  TheReallyServer.MyServer - new client23324256
+2023-07-09 09:54:24,815 [14] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-09 10:03:16,520 [12] INFO  TheReallyServer.MyServer - client destroy23324256
+2023-07-09 10:07:41,857 [14] INFO  TheReallyServer.MyServer - new client51573736
+2023-07-09 10:07:44,619 [14] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-09 10:08:33,397 [12] INFO  TheReallyServer.MyServer - client destroy51573736
+2023-07-09 10:11:31,198 [11] INFO  TheReallyServer.MyServer - new client16492409
+2023-07-09 10:11:33,658 [15] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-09 10:12:12,709 [11] INFO  TheReallyServer.MyServer - client destroy16492409
+2023-07-09 17:33:03,179 [1] INFO  TheReallyServer.MyServer - Setup
+2023-07-09 17:33:03,190 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-09 17:38:28,096 [17] INFO  TheReallyServer.MyServer - Setup
+2023-07-09 17:38:28,106 [17] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-09 17:38:28,118 [17] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-09 17:38:28,119 [17] INFO  TheReallyServer.MyServer - TearDown
+2023-07-09 17:38:28,119 [17] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-09 17:39:01,803 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-07-09 17:40:44,759 [10] INFO  TheReallyServer.MyServer - new client45653674
+2023-07-09 17:41:06,448 [14] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-07-09 17:41:25,743 [13] INFO  TheReallyServer.MyServer - client destroy45653674
+2023-07-09 21:04:50,160 [1] INFO  TheReallyServer.MyServer - Setup
+2023-07-09 21:04:50,169 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-09 21:05:02,917 [8] INFO  TheReallyServer.MyServer - new client12036987
+2023-07-09 21:05:08,352 [13] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-09 21:05:39,133 [11] INFO  TheReallyServer.MyServer - client destroy12036987
+2023-07-15 17:11:10,187 [1] INFO  TheReallyServer.MyServer - Setup
+2023-07-15 17:11:10,197 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-15 17:11:32,462 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-07-15 17:11:58,922 [13] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-15 17:12:32,306 [11] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-07-29 16:24:31,210 [1] INFO  TheReallyServer.MyServer - Setup
+2023-07-29 16:24:31,237 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-29 16:24:31,485 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-07-29 16:24:38,123 [7] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-29 16:26:00,086 [13] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-07-29 16:38:37,125 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-29 16:38:37,128 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-07-29 16:38:37,129 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-29 17:10:17,726 [1] INFO  TheReallyServer.MyServer - Setup
+2023-07-29 17:10:17,736 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-29 18:03:35,260 [4] INFO  TheReallyServer.MyServer - Setup
+2023-07-29 18:03:35,270 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-29 18:03:35,282 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-29 18:03:35,283 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-07-29 18:03:35,283 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-29 18:03:40,446 [4] INFO  TheReallyServer.MyServer - Setup
+2023-07-29 18:03:40,458 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-29 18:03:40,472 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-29 18:03:40,474 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-07-29 18:03:40,475 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-29 18:03:44,870 [4] INFO  TheReallyServer.MyServer - Setup
+2023-07-29 18:03:44,880 [4] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-29 18:03:44,889 [4] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-29 18:03:44,890 [4] INFO  TheReallyServer.MyServer - TearDown
+2023-07-29 18:03:44,890 [4] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-29 18:03:51,132 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-29 18:03:51,138 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-07-29 18:03:51,138 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 10:04:15,305 [1] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 10:04:15,315 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 11:54:04,196 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 11:54:04,203 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 11:54:04,204 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 15:56:20,387 [1] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 15:56:20,397 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 15:58:03,695 [12] INFO  TheReallyServer.MyServer - new client63403007
+2023-07-30 15:58:07,715 [14] INFO  TheReallyServer.MyServer - 登录成功
+2023-07-30 15:58:48,917 [14] INFO  TheReallyServer.MyServer - client destroy63403007
+2023-07-30 15:58:48,918 [14] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 16:46:10,230 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 16:46:10,240 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 16:46:10,248 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 16:46:10,249 [6] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 16:46:10,250 [6] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 16:46:14,857 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 16:46:14,867 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 16:46:14,882 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 16:46:14,886 [6] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 16:46:14,886 [6] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 16:46:29,265 [14] INFO  TheReallyServer.MyServer - new client1997173
+2023-07-30 16:46:32,373 [9] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 16:47:26,446 [10] INFO  TheReallyServer.MyServer - new client45653674
+2023-07-30 16:47:38,714 [14] INFO  TheReallyServer.MyServer - client destroy1997173
+2023-07-30 16:47:38,715 [14] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 16:47:38,715 [14] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 16:47:46,938 [9] INFO  TheReallyServer.MyServer - new client55374750
+2023-07-30 16:47:49,414 [10] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 16:48:01,432 [9] INFO  TheReallyServer.MyServer - client destroy45653674
+2023-07-30 16:48:01,432 [9] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 16:49:13,440 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 16:49:13,462 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 16:49:13,483 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 16:49:13,485 [11] INFO  TheReallyServer.MyServer - client destroy55374750
+2023-07-30 16:49:13,487 [11] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 16:49:13,488 [11] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 16:49:13,490 [15] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 16:49:13,491 [15] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 16:50:53,302 [10] INFO  TheReallyServer.MyServer - new client41149443
+2023-07-30 16:50:55,553 [10] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 16:51:26,235 [9] INFO  TheReallyServer.MyServer - new client55772240
+2023-07-30 16:51:27,859 [14] INFO  TheReallyServer.MyServer - client destroy41149443
+2023-07-30 16:51:27,861 [14] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 16:51:27,862 [14] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 16:52:32,428 [10] INFO  TheReallyServer.MyServer - client destroy55772240
+2023-07-30 16:52:32,429 [10] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:07:42,031 [12] INFO  TheReallyServer.MyServer - new client17987329
+2023-07-30 17:07:44,659 [12] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:10:14,093 [12] INFO  TheReallyServer.MyServer - new client13804354
+2023-07-30 17:10:25,342 [12] INFO  TheReallyServer.MyServer - client destroy17987329
+2023-07-30 17:10:25,343 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:10:25,344 [12] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:17:00,223 [11] INFO  TheReallyServer.MyServer - new client36181605
+2023-07-30 17:17:02,440 [10] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:17:10,283 [9] INFO  TheReallyServer.MyServer - client destroy13804354
+2023-07-30 17:17:10,284 [9] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:17:44,693 [9] INFO  TheReallyServer.MyServer - new client55618390
+2023-07-30 17:18:00,498 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-07-30 17:18:07,656 [14] INFO  TheReallyServer.MyServer - client destroy36181605
+2023-07-30 17:18:07,656 [14] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:18:07,657 [14] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:18:18,824 [14] INFO  TheReallyServer.MyServer - client destroy55618390
+2023-07-30 17:18:18,827 [14] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:18:42,492 [14] INFO  TheReallyServer.MyServer - new client6590935
+2023-07-30 17:18:44,542 [11] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:18:56,889 [11] INFO  TheReallyServer.MyServer - new client28068188
+2023-07-30 17:19:05,462 [11] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-07-30 17:19:05,464 [11] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:19:15,805 [12] INFO  TheReallyServer.MyServer - client destroy6590935
+2023-07-30 17:19:15,806 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:19:15,807 [12] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:20:05,980 [13] INFO  TheReallyServer.MyServer - new client38583594
+2023-07-30 17:20:07,544 [11] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:20:24,262 [12] INFO  TheReallyServer.MyServer - client destroy28068188
+2023-07-30 17:20:24,263 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:20:46,638 [13] INFO  TheReallyServer.MyServer - new client51781231
+2023-07-30 17:21:02,916 [9] INFO  TheReallyServer.MyServer - client destroy38583594
+2023-07-30 17:21:02,916 [9] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:21:02,916 [9] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:21:06,770 [14] INFO  TheReallyServer.MyServer - new client66502754
+2023-07-30 17:21:08,457 [9] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:21:21,318 [9] INFO  TheReallyServer.MyServer - client destroy51781231
+2023-07-30 17:21:21,320 [9] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:22:17,259 [10] INFO  TheReallyServer.MyServer - new client44419000
+2023-07-30 17:22:32,440 [14] INFO  TheReallyServer.MyServer - new client30136159
+2023-07-30 17:22:38,915 [10] INFO  TheReallyServer.MyServer - client destroy66502754
+2023-07-30 17:22:38,916 [10] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:22:38,917 [10] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:22:48,901 [13] INFO  TheReallyServer.MyServer - client destroy44419000
+2023-07-30 17:22:48,901 [13] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:23:15,304 [11] INFO  TheReallyServer.MyServer - client destroy30136159
+2023-07-30 17:23:15,304 [11] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:24:07,429 [10] INFO  TheReallyServer.MyServer - new client52697953
+2023-07-30 17:24:08,704 [12] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:25:18,211 [12] INFO  TheReallyServer.MyServer - client destroy52697953
+2023-07-30 17:25:18,211 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:25:18,212 [12] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:26:03,044 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 17:26:03,054 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 17:26:03,064 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 17:26:03,065 [6] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 17:26:03,066 [6] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 17:26:07,826 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 17:26:07,835 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 17:26:07,845 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 17:26:07,847 [6] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 17:26:07,847 [6] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 17:26:29,364 [12] INFO  TheReallyServer.MyServer - new client60542136
+2023-07-30 17:26:32,200 [12] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:26:34,121 [9] INFO  TheReallyServer.MyServer - CreateRole!!!111
+2023-07-30 17:28:44,840 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 17:28:44,867 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 17:28:44,891 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 17:28:44,897 [14] INFO  TheReallyServer.MyServer - client destroy60542136
+2023-07-30 17:28:44,899 [15] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 17:28:44,899 [15] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 17:28:44,899 [14] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:28:44,901 [14] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:28:58,159 [13] INFO  TheReallyServer.MyServer - new client65849037
+2023-07-30 17:29:00,322 [9] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:30:51,782 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 17:30:51,814 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 17:30:51,840 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 17:30:51,842 [13] INFO  TheReallyServer.MyServer - client destroy65849037
+2023-07-30 17:30:51,843 [15] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 17:30:51,843 [15] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 17:30:51,843 [13] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:30:51,845 [13] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:31:05,260 [12] INFO  TheReallyServer.MyServer - new client4123756
+2023-07-30 17:31:07,609 [12] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:31:09,164 [10] INFO  TheReallyServer.MyServer - 111
+2023-07-30 17:31:58,453 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 17:31:58,479 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 17:31:58,511 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 17:31:58,520 [12] INFO  TheReallyServer.MyServer - client destroy4123756
+2023-07-30 17:31:58,522 [15] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 17:31:58,523 [15] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 17:31:58,523 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:31:58,526 [12] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:32:12,093 [11] INFO  TheReallyServer.MyServer - new client14421545
+2023-07-30 17:32:15,273 [10] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:32:19,015 [10] INFO  TheReallyServer.MyServer - 111
+2023-07-30 17:32:24,381 [12] INFO  TheReallyServer.MyServer - 111
+2023-07-30 17:33:39,286 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 17:33:39,308 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 17:33:39,334 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 17:33:39,339 [10] INFO  TheReallyServer.MyServer - client destroy14421545
+2023-07-30 17:33:39,340 [10] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:33:39,340 [15] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 17:33:39,341 [15] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 17:33:39,341 [10] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:33:50,536 [13] INFO  TheReallyServer.MyServer - new client40958450
+2023-07-30 17:33:52,549 [12] INFO  TheReallyServer.MyServer - 99999999
+2023-07-30 17:33:52,550 [12] INFO  TheReallyServer.MyServer - 777777777777
+2023-07-30 17:33:53,217 [12] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:33:55,454 [11] INFO  TheReallyServer.MyServer - 99999999
+2023-07-30 17:34:06,031 [10] INFO  TheReallyServer.MyServer - 99999999
+2023-07-30 17:35:53,090 [11] INFO  TheReallyServer.MyServer - new client35410979
+2023-07-30 17:35:54,790 [14] INFO  TheReallyServer.MyServer - 99999999
+2023-07-30 17:35:54,790 [14] INFO  TheReallyServer.MyServer - 777777777777
+2023-07-30 17:35:56,600 [10] INFO  TheReallyServer.MyServer - 99999999
+2023-07-30 17:36:06,220 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 17:36:06,242 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 17:36:06,272 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 17:36:06,279 [12] INFO  TheReallyServer.MyServer - client destroy35410979
+2023-07-30 17:36:06,279 [13] INFO  TheReallyServer.MyServer - client destroy40958450
+2023-07-30 17:36:06,282 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:36:06,282 [16] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 17:36:06,285 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 17:36:06,283 [13] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:36:06,286 [13] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:36:19,501 [14] INFO  TheReallyServer.MyServer - new client64847492
+2023-07-30 17:36:21,699 [12] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:36:23,543 [11] INFO  TheReallyServer.MyServer - >>>True
+2023-07-30 17:37:35,224 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 17:37:35,257 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 17:37:35,279 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 17:37:35,298 [14] INFO  TheReallyServer.MyServer - client destroy64847492
+2023-07-30 17:37:35,300 [14] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:37:35,301 [14] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:37:35,306 [16] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 17:37:35,307 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 17:37:55,800 [10] INFO  TheReallyServer.MyServer - new client42659827
+2023-07-30 17:37:57,265 [10] INFO  TheReallyServer.MyServer - 42659827}}}True
+2023-07-30 17:37:57,798 [10] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:37:57,811 [10] INFO  TheReallyServer.MyServer - 42659827}}}False
+2023-07-30 17:38:11,343 [12] INFO  TheReallyServer.MyServer - new client44963638
+2023-07-30 17:38:12,996 [12] INFO  TheReallyServer.MyServer - 44963638}}}True
+2023-07-30 17:38:12,999 [12] INFO  TheReallyServer.MyServer - 44963638}}}False
+2023-07-30 17:38:14,270 [10] INFO  TheReallyServer.MyServer - 44963638>>>True
+2023-07-30 17:38:29,731 [10] INFO  TheReallyServer.MyServer - client destroy42659827
+2023-07-30 17:38:29,732 [10] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:38:29,733 [10] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:38:55,589 [13] INFO  TheReallyServer.MyServer - new client45658036
+2023-07-30 17:38:57,614 [10] INFO  TheReallyServer.MyServer - 45658036}}}True
+2023-07-30 17:38:57,616 [10] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:38:57,616 [10] INFO  TheReallyServer.MyServer - 45658036}}}False
+2023-07-30 17:39:16,752 [9] INFO  TheReallyServer.MyServer - new client11867036
+2023-07-30 17:39:16,772 [14] INFO  TheReallyServer.MyServer - client destroy44963638
+2023-07-30 17:39:16,773 [14] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:39:18,460 [14] INFO  TheReallyServer.MyServer - 11867036}}}True
+2023-07-30 17:39:18,462 [14] INFO  TheReallyServer.MyServer - 11867036}}}False
+2023-07-30 17:39:20,373 [11] INFO  TheReallyServer.MyServer - 11867036>>>True
+2023-07-30 17:39:29,630 [10] INFO  TheReallyServer.MyServer - client destroy45658036
+2023-07-30 17:39:29,631 [10] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:39:29,632 [10] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:40:26,919 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 17:40:26,940 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 17:40:26,962 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 17:40:26,964 [10] INFO  TheReallyServer.MyServer - client destroy11867036
+2023-07-30 17:40:26,964 [10] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:40:26,965 [16] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 17:40:26,966 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 17:40:39,631 [14] INFO  TheReallyServer.MyServer - new client47518043
+2023-07-30 17:40:41,964 [14] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:40:44,208 [11] INFO  TheReallyServer.MyServer - 47518043>>>False
+2023-07-30 17:40:44,211 [11] INFO  TheReallyServer.MyServer - aaaa
+2023-07-30 17:40:44,212 [11] INFO  TheReallyServer.MyServer - 1111
+2023-07-30 17:40:44,213 [11] INFO  TheReallyServer.MyServer - 2222
+2023-07-30 17:40:44,215 [11] INFO  TheReallyServer.MyServer - 3333
+2023-07-30 17:40:44,216 [11] INFO  TheReallyServer.MyServer - 4444
+2023-07-30 17:40:44,260 [11] INFO  TheReallyServer.MyServer - System.InvalidOperationException: Connection must be valid and open.
+   在 MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   在 MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   在 MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 TheReallyServer.Sql.DBRoleManager.Add(RoleSqlData sqlData) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Sql\DBRoleManager.cs:行号 19
+2023-07-30 17:42:27,940 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 17:42:27,965 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 17:42:27,986 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 17:42:27,990 [14] INFO  TheReallyServer.MyServer - client destroy47518043
+2023-07-30 17:42:27,992 [16] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 17:42:27,992 [14] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:42:27,993 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 17:42:27,997 [14] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:42:40,666 [14] INFO  TheReallyServer.MyServer - new client15323864
+2023-07-30 17:42:42,789 [11] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:42:44,281 [9] INFO  TheReallyServer.MyServer - 15323864>>>False
+2023-07-30 17:42:44,285 [9] INFO  TheReallyServer.MyServer - insert into RoleModel(uid,roleName,roleIndex,roleJob) values('9fa721ab859e4899b96b92185db68db2','111',1,1);
+2023-07-30 17:42:44,300 [9] INFO  TheReallyServer.MyServer - System.InvalidOperationException: Connection must be valid and open.
+   在 MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   在 MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   在 MySql.Data.MySqlClient.MySqlCommand.CheckState()
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   在 MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   在 TheReallyServer.Sql.DBRoleManager.Add(RoleSqlData sqlData) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Sql\DBRoleManager.cs:行号 20
+2023-07-30 17:48:54,673 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 17:48:54,693 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 17:48:54,718 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 17:48:54,721 [13] INFO  TheReallyServer.MyServer - client destroy15323864
+2023-07-30 17:48:54,724 [16] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 17:48:54,724 [13] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:48:54,726 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 17:48:54,727 [13] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 17:49:12,202 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 17:49:12,223 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 17:49:12,248 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 17:49:12,250 [6] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 17:49:12,251 [6] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 17:49:28,339 [10] INFO  TheReallyServer.MyServer - new client11653293
+2023-07-30 17:49:31,242 [10] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 17:49:32,768 [14] INFO  TheReallyServer.MyServer - insert into RoleModel(uid,roleName,roleIndex,roleJob) values('4c7fd700836c431da2ea9134edf03b73','abc',1,1);
+2023-07-30 17:49:32,776 [14] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 17:53:02,302 [9] INFO  TheReallyServer.MyServer - new client17156169
+2023-07-30 17:53:19,806 [10] INFO  TheReallyServer.MyServer - client destroy11653293
+2023-07-30 17:53:19,812 [10] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 17:53:19,813 [10] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 18:00:39,990 [14] INFO  TheReallyServer.MyServer - new client23284706
+2023-07-30 18:00:42,284 [10] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 18:00:44,068 [9] INFO  TheReallyServer.MyServer - insert into RoleModel(uid,roleName,roleIndex,roleJob) values('a001ba9be3564dabb678d91a435c797e','abc784',1,1);
+2023-07-30 18:00:44,076 [9] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:00:50,257 [9] INFO  TheReallyServer.MyServer - insert into RoleModel(uid,roleName,roleIndex,roleJob) values('9969e184876a409f832dc0da9ea6d7b4','abc444',1,1);
+2023-07-30 18:00:50,262 [9] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:00:56,002 [14] INFO  TheReallyServer.MyServer - insert into RoleModel(uid,roleName,roleIndex,roleJob) values('6183f95c94024a14b6a1d78a03822f89','abc925',1,1);
+2023-07-30 18:00:56,007 [14] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:00:56,192 [13] INFO  TheReallyServer.MyServer - insert into RoleModel(uid,roleName,roleIndex,roleJob) values('051a062af2004a238ccd47c95d937eda','abc285',1,1);
+2023-07-30 18:00:56,200 [13] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:00:56,365 [12] INFO  TheReallyServer.MyServer - client destroy17156169
+2023-07-30 18:00:56,366 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 18:00:56,388 [10] INFO  TheReallyServer.MyServer - insert into RoleModel(uid,roleName,roleIndex,roleJob) values('d5b7055538254f82919b4869bf59558c','abc941',1,1);
+2023-07-30 18:00:56,396 [10] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:00:56,542 [9] INFO  TheReallyServer.MyServer - insert into RoleModel(uid,roleName,roleIndex,roleJob) values('c53f45cb8d5846afb5020b74ce8aceaf','abc247',1,1);
+2023-07-30 18:00:56,548 [9] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:00:56,742 [13] INFO  TheReallyServer.MyServer - insert into RoleModel(uid,roleName,roleIndex,roleJob) values('134d314b21f24ecdb3ea3174b4000e97','abc979',1,1);
+2023-07-30 18:00:56,748 [13] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:00:56,947 [14] INFO  TheReallyServer.MyServer - insert into RoleModel(uid,roleName,roleIndex,roleJob) values('bbdfc62b7af74f848def41bde492cba6','abc141',1,1);
+2023-07-30 18:00:56,953 [14] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:00:57,137 [11] INFO  TheReallyServer.MyServer - insert into RoleModel(uid,roleName,roleIndex,roleJob) values('1c64af92052840d9ab4e8ca8fa537d36','abc297',1,1);
+2023-07-30 18:00:57,145 [11] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:06:57,745 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 18:06:57,778 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 18:06:57,806 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 18:06:57,807 [9] INFO  TheReallyServer.MyServer - client destroy23284706
+2023-07-30 18:06:57,807 [9] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 18:06:57,807 [9] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 18:06:57,808 [16] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 18:06:57,809 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 18:07:04,494 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 18:07:04,504 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 18:07:04,513 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 18:07:04,514 [6] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 18:07:04,514 [6] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 18:07:13,271 [11] INFO  TheReallyServer.MyServer - new client14696841
+2023-07-30 18:07:15,357 [10] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 18:07:16,510 [10] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:08:12,467 [12] INFO  TheReallyServer.MyServer - client destroy14696841
+2023-07-30 18:08:12,469 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 18:08:12,470 [12] INFO  TheReallyServer.MyServer - 用户下线!!!e33c950df5614b59a07bd7fc44efaa75
+2023-07-30 18:08:33,128 [14] INFO  TheReallyServer.MyServer - new client11080923
+2023-07-30 18:08:34,768 [10] ERROR Photon.SocketServer.ApplicationBase - System.ArgumentNullException: 值不能为 null。
+参数名: value
+   在 Google.Protobuf.ProtoPreconditions.CheckNotNull[T](T value, String name)
+   在 AccountProto.SCLoginResult.set_MobilePhone(String value) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyCommon\Proto\Account.cs:行号 284
+   在 TheReallyServer.Opt.IOLoginOpt.Execute() 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Opt\IOLoginOpt.cs:行号 64
+   在 TheReallyServer.Thread.OptThreadManager.ThreadDo(Object obj) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Thread\OptThreadManager.cs:行号 40
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+2023-07-30 18:09:17,009 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 18:09:17,032 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 18:09:17,051 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 18:09:17,053 [11] INFO  TheReallyServer.MyServer - client destroy11080923
+2023-07-30 18:09:17,055 [11] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 18:09:17,057 [16] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 18:09:17,059 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 18:09:57,862 [12] INFO  TheReallyServer.MyServer - new client34262603
+2023-07-30 18:10:00,251 [11] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 18:10:17,006 [10] INFO  TheReallyServer.MyServer - new client39155797
+2023-07-30 18:10:30,711 [12] INFO  TheReallyServer.MyServer - client destroy34262603
+2023-07-30 18:10:30,712 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 18:10:30,714 [12] INFO  TheReallyServer.MyServer - 用户下线!!!d58e8d6cd8fd4f1ea84231989f17554f
+2023-07-30 18:11:05,984 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 18:11:06,008 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 18:11:06,032 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 18:11:06,033 [14] INFO  TheReallyServer.MyServer - client destroy39155797
+2023-07-30 18:11:06,035 [14] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 18:11:06,036 [16] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 18:11:06,037 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 18:11:19,620 [11] INFO  TheReallyServer.MyServer - new client47033410
+2023-07-30 18:11:21,768 [13] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 18:11:23,032 [10] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:12:41,947 [9] INFO  TheReallyServer.MyServer - new client32314305
+2023-07-30 18:12:43,610 [14] ERROR Photon.SocketServer.ApplicationBase - System.ArgumentNullException: 值不能为 null。
+参数名: value
+   在 Google.Protobuf.ProtoPreconditions.CheckNotNull[T](T value, String name)
+   在 AccountProto.SCLoginResult.set_MobilePhone(String value) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyCommon\Proto\Account.cs:行号 284
+   在 TheReallyServer.Opt.IOLoginOpt.Execute() 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Opt\IOLoginOpt.cs:行号 64
+   在 TheReallyServer.Thread.OptThreadManager.ThreadDo(Object obj) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Thread\OptThreadManager.cs:行号 40
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+2023-07-30 18:13:02,200 [13] INFO  TheReallyServer.MyServer - client destroy47033410
+2023-07-30 18:13:02,204 [13] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 18:13:02,204 [13] INFO  TheReallyServer.MyServer - 用户下线!!!d58e8d6cd8fd4f1ea84231989f17554f
+2023-07-30 18:14:37,232 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 18:14:37,259 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 18:14:37,283 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 18:14:37,283 [9] INFO  TheReallyServer.MyServer - client destroy32314305
+2023-07-30 18:14:37,284 [9] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 18:14:37,285 [16] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 18:14:37,287 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 18:15:06,212 [11] INFO  TheReallyServer.MyServer - new client10326036
+2023-07-30 18:15:08,522 [11] INFO  TheReallyServer.MyServer - >>>
+2023-07-30 18:15:08,529 [11] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 18:15:09,866 [14] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:16:56,049 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 18:16:56,071 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 18:16:56,094 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 18:16:56,099 [12] INFO  TheReallyServer.MyServer - client destroy10326036
+2023-07-30 18:16:56,101 [16] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 18:16:56,101 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 18:16:56,101 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 18:16:56,103 [12] INFO  TheReallyServer.MyServer - 用户下线!!!9a12f2fe39f0427a93d779d8fcea78d0
+2023-07-30 18:17:43,003 [12] INFO  TheReallyServer.MyServer - new client58979327
+2023-07-30 18:17:45,151 [14] INFO  TheReallyServer.MyServer - >>>
+2023-07-30 18:17:45,154 [14] ERROR Photon.SocketServer.ApplicationBase - System.ArgumentNullException: 值不能为 null。
+参数名: value
+   在 Google.Protobuf.ProtoPreconditions.CheckNotNull[T](T value, String name)
+   在 AccountProto.SCLoginResult.set_MobilePhone(String value) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyCommon\Proto\Account.cs:行号 284
+   在 TheReallyServer.Opt.IOLoginOpt.Execute() 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Opt\IOLoginOpt.cs:行号 64
+   在 TheReallyServer.Thread.OptThreadManager.ThreadDo(Object obj) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Thread\OptThreadManager.cs:行号 40
+   在 System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   在 System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   在 System.Threading.ThreadPoolWorkQueue.Dispatch()
+2023-07-30 18:18:58,565 [6] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 18:18:58,603 [6] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 18:18:58,627 [6] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 18:18:58,630 [13] INFO  TheReallyServer.MyServer - client destroy58979327
+2023-07-30 18:18:58,635 [13] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 18:18:58,636 [16] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 18:18:58,638 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 18:19:34,981 [14] INFO  TheReallyServer.MyServer - new client39712698
+2023-07-30 18:19:37,526 [12] INFO  TheReallyServer.MyServer - >>>
+2023-07-30 18:19:37,533 [12] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 18:19:39,047 [12] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 18:20:54,179 [11] INFO  TheReallyServer.MyServer - client destroy39712698
+2023-07-30 18:20:54,180 [11] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 18:20:54,181 [11] INFO  TheReallyServer.MyServer - 用户下线!!!99ed27b964b54946b787dd720665c383
+2023-07-30 19:35:42,557 [1] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 19:35:42,567 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 19:35:56,536 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-07-30 19:36:00,451 [12] INFO  TheReallyServer.MyServer - 没有角色就创建角色!!!
+2023-07-30 19:36:00,466 [12] INFO  TheReallyServer.MyServer - 登录!!!
+2023-07-30 19:36:00,471 [12] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 19:36:07,571 [12] INFO  TheReallyServer.MyServer - 创角成功!
+2023-07-30 19:37:03,168 [11] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-07-30 19:37:03,169 [11] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 19:37:03,169 [11] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-07-30 19:42:01,074 [9] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 19:42:01,084 [9] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 19:42:01,092 [9] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 19:42:01,093 [9] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 19:42:01,093 [9] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 19:42:40,654 [9] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 19:42:40,664 [9] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 19:42:40,672 [9] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 19:42:40,674 [9] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 19:42:40,674 [9] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 19:42:56,036 [11] INFO  TheReallyServer.MyServer - new client28068188
+2023-07-30 19:42:58,873 [12] INFO  TheReallyServer.MyServer - 登录!!!
+2023-07-30 19:42:58,876 [12] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 19:43:02,530 [12] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 19:43:45,226 [10] INFO  TheReallyServer.MyServer - new client45653674
+2023-07-30 19:44:01,532 [17] INFO  TheReallyServer.MyServer - new client21647132
+2023-07-30 19:44:05,370 [13] INFO  TheReallyServer.MyServer - 还未登录!
+2023-07-30 19:44:07,082 [13] INFO  TheReallyServer.MyServer - client destroy28068188
+2023-07-30 19:44:07,084 [13] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 19:44:07,086 [13] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-07-30 19:44:19,301 [13] INFO  TheReallyServer.MyServer - client destroy45653674
+2023-07-30 19:44:19,302 [13] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 19:44:59,241 [17] INFO  TheReallyServer.MyServer - new client36736776
+2023-07-30 19:45:00,933 [17] INFO  TheReallyServer.MyServer - 登录!!!
+2023-07-30 19:45:00,933 [17] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 19:45:02,547 [10] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 19:45:13,504 [10] INFO  TheReallyServer.MyServer - client destroy21647132
+2023-07-30 19:45:13,505 [10] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 19:45:58,367 [10] INFO  TheReallyServer.MyServer - new client41149443
+2023-07-30 19:46:05,685 [10] INFO  TheReallyServer.MyServer - 还未登录!
+2023-07-30 19:46:08,775 [13] INFO  TheReallyServer.MyServer - client destroy36736776
+2023-07-30 19:46:08,778 [13] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 19:46:08,779 [13] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-07-30 19:46:11,296 [12] INFO  TheReallyServer.MyServer - 还未登录!
+2023-07-30 19:46:12,816 [11] INFO  TheReallyServer.MyServer - 还未登录!
+2023-07-30 19:46:13,093 [13] INFO  TheReallyServer.MyServer - 还未登录!
+2023-07-30 19:46:13,308 [11] INFO  TheReallyServer.MyServer - 还未登录!
+2023-07-30 19:50:51,432 [10] INFO  TheReallyServer.MyServer - new client39785641
+2023-07-30 19:50:54,281 [10] INFO  TheReallyServer.MyServer - 登录!!!
+2023-07-30 19:50:54,282 [10] INFO  TheReallyServer.MyServer - 登录成功!
+2023-07-30 19:51:11,899 [13] INFO  TheReallyServer.MyServer - client destroy41149443
+2023-07-30 19:51:11,899 [13] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 19:51:29,160 [11] INFO  TheReallyServer.MyServer - client destroy39785641
+2023-07-30 19:51:29,161 [11] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 19:51:29,161 [11] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-07-30 20:00:36,769 [9] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 20:00:36,779 [9] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 20:00:36,788 [9] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 20:00:36,789 [9] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 20:00:36,789 [9] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 20:00:41,456 [9] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 20:00:41,465 [9] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 20:00:41,473 [9] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 20:00:41,475 [9] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 20:00:41,475 [9] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 20:01:01,335 [9] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 20:01:01,345 [9] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 20:01:01,353 [9] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 20:01:01,354 [9] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 20:01:01,354 [9] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 20:01:40,883 [9] INFO  TheReallyServer.MyServer - Setup
+2023-07-30 20:01:40,900 [9] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-07-30 20:01:40,921 [9] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 20:01:40,923 [9] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 20:01:40,924 [9] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-07-30 20:01:42,479 [10] INFO  TheReallyServer.MyServer - new client45523402
+2023-07-30 20:01:45,180 [10] INFO  TheReallyServer.MyServer - 登录!!!
+2023-07-30 20:01:45,185 [10] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-07-30 20:01:48,970 [11] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:02:14,257 [11] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:02:14,639 [10] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:02:14,657 [11] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:02:14,831 [10] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:02:15,038 [11] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:02:19,909 [12] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:02:20,122 [10] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:15:34,809 [11] INFO  TheReallyServer.MyServer - new client63238509
+2023-07-30 20:15:35,838 [12] INFO  TheReallyServer.MyServer - client destroy45523402
+2023-07-30 20:15:35,842 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 20:15:35,843 [12] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-07-30 20:15:36,828 [13] INFO  TheReallyServer.MyServer - 登录!!!
+2023-07-30 20:15:36,829 [13] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-07-30 20:15:38,691 [13] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:16:29,181 [12] INFO  TheReallyServer.MyServer - new client59231349
+2023-07-30 20:16:31,271 [10] INFO  TheReallyServer.MyServer - client destroy63238509
+2023-07-30 20:16:31,273 [10] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 20:16:31,274 [10] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-07-30 20:16:32,378 [12] INFO  TheReallyServer.MyServer - 登录!!!
+2023-07-30 20:16:32,378 [12] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-07-30 20:16:35,078 [11] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:16:37,906 [13] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:16:44,121 [12] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:17:15,129 [11] INFO  TheReallyServer.MyServer - client destroy59231349
+2023-07-30 20:17:15,129 [11] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 20:17:15,129 [11] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-07-30 20:22:30,047 [10] INFO  TheReallyServer.MyServer - new client10261382
+2023-07-30 20:22:31,756 [12] INFO  TheReallyServer.MyServer - 登录!!!
+2023-07-30 20:22:31,757 [12] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-07-30 20:22:33,325 [10] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:22:35,117 [10] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:22:36,918 [12] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:22:44,321 [12] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:23:30,724 [12] INFO  TheReallyServer.MyServer - client destroy10261382
+2023-07-30 20:23:30,725 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 20:23:30,725 [12] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-07-30 20:34:03,140 [11] INFO  TheReallyServer.MyServer - new client11679222
+2023-07-30 20:34:07,448 [13] INFO  TheReallyServer.MyServer - 登录!!!
+2023-07-30 20:34:07,449 [13] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-07-30 20:34:20,245 [17] INFO  TheReallyServer.MyServer - new client13726014
+2023-07-30 20:34:23,745 [17] INFO  TheReallyServer.MyServer - 原先client失效
+2023-07-30 20:34:23,747 [17] INFO  TheReallyServer.MyServer - 原先client踢下线!
+2023-07-30 20:34:23,747 [17] INFO  TheReallyServer.MyServer - 登录成功222!
+2023-07-30 20:34:27,479 [13] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:34:29,634 [17] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:34:31,644 [10] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:34:41,053 [12] INFO  TheReallyServer.MyServer - client destroy11679222
+2023-07-30 20:34:41,054 [12] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 20:34:41,056 [12] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-07-30 20:34:42,213 [13] INFO  TheReallyServer.MyServer - 还未登录!
+2023-07-30 20:35:07,255 [11] INFO  TheReallyServer.MyServer - 还未登录!
+2023-07-30 20:35:10,891 [17] INFO  TheReallyServer.MyServer - 还未登录!
+2023-07-30 20:35:39,334 [13] INFO  TheReallyServer.MyServer - client destroy13726014
+2023-07-30 20:35:39,334 [13] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 20:35:39,335 [13] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-07-30 20:35:39,337 [13] ERROR ExitGames.Threading.FailSafeBatchExecutor - System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   在 TheReallyServer.Cache.AccountCache.RemoveAccount(String uid) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Cache\AccountCache.cs:行号 31
+   在 TheReallyServer.Handler.AccountHandler.OnClientOver(MyClient client) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Handler\AccountHandler.cs:行号 24
+   在 TheReallyServer.Handler.HandlerManager.Release(MyClient client) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Handler\HandlerManager.cs:行号 29
+   在 TheReallyServer.MyClient.Release() 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\MyClient.cs:行号 56
+   在 TheReallyServer.MyClient.OnDisconnect(DisconnectReason reasonCode, String reasonDetail) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\MyClient.cs:行号 35
+   在 Photon.SocketServer.PeerBase.OnApplicationDisconnect(DisconnectReason reasonCode, String reasonDetail, Int32 rtt, Int32 rttVariance, Int32 numFailures) 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:行号 1039
+   在 Photon.SocketServer.PeerBase.<>c__DisplayClass2.<Photon.SocketServer.IManagedPeer.Application_OnDisconnect>b__1() 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:行号 874
+   在 ExitGames.Threading.FailSafeBatchExecutor.Execute(Action action) 位置 c:\(Work)\(EG)\exitgames-libs\src\Core\Threading\FailSafeBatchExecutor.cs:行号 111
+2023-07-30 20:36:23,119 [11] INFO  TheReallyServer.MyServer - new client43256217
+2023-07-30 20:36:26,078 [13] INFO  TheReallyServer.MyServer - 登录!!!
+2023-07-30 20:36:26,078 [13] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-07-30 20:36:27,546 [18] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:36:29,264 [12] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:36:31,191 [13] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:36:32,715 [17] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:37:16,724 [10] INFO  TheReallyServer.MyServer - client destroy43256217
+2023-07-30 20:37:16,724 [10] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 20:37:16,725 [10] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-07-30 20:38:02,431 [18] INFO  TheReallyServer.MyServer - new client19541127
+2023-07-30 20:38:34,209 [13] INFO  TheReallyServer.MyServer - client destroy19541127
+2023-07-30 20:38:34,209 [13] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 20:38:43,020 [17] INFO  TheReallyServer.MyServer - new client62474978
+2023-07-30 20:38:44,775 [10] INFO  TheReallyServer.MyServer - 登录!!!
+2023-07-30 20:38:44,776 [10] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-07-30 20:38:46,318 [13] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:38:47,081 [12] INFO  TheReallyServer.MyServer - 已有角色!
+2023-07-30 20:39:22,881 [11] INFO  TheReallyServer.MyServer - client destroy62474978
+2023-07-30 20:39:22,881 [11] INFO  TheReallyServer.MyServer - 离线
+2023-07-30 20:39:22,882 [11] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-07-30 20:44:48,212 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-07-30 20:44:48,218 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-07-30 20:44:48,218 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 16:27:48,396 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 16:27:48,406 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 16:27:54,687 [11] INFO  TheReallyServer.MyServer - new client39086322
+2023-08-05 16:27:58,673 [10] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-05 16:27:58,680 [10] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-08-05 16:28:56,882 [10] INFO  TheReallyServer.MyServer - client destroy39086322
+2023-08-05 16:28:56,883 [10] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 16:28:56,884 [10] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-05 16:34:01,768 [8] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 16:34:01,777 [8] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 16:34:01,786 [8] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 16:34:01,787 [8] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 16:34:01,787 [8] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 16:34:06,035 [8] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 16:34:06,045 [8] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 16:34:06,053 [8] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 16:34:06,054 [8] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 16:34:06,054 [8] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 16:34:10,453 [8] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 16:34:10,462 [8] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 16:34:10,472 [8] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 16:34:10,473 [8] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 16:34:10,473 [8] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 16:35:05,713 [8] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 16:35:05,723 [8] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 16:35:05,731 [8] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 16:35:05,732 [8] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 16:35:05,733 [8] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 16:39:22,555 [8] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 16:39:22,565 [8] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 16:39:22,573 [8] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 16:39:22,573 [8] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 16:39:22,573 [8] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 17:13:42,257 [10] INFO  TheReallyServer.MyServer - new client45653674
+2023-08-05 17:17:07,132 [13] INFO  TheReallyServer.MyServer - client destroy45653674
+2023-08-05 17:17:07,133 [13] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 17:20:53,922 [11] INFO  TheReallyServer.MyServer - new client63238509
+2023-08-05 17:22:06,723 [10] INFO  TheReallyServer.MyServer - client destroy63238509
+2023-08-05 17:22:06,723 [10] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 17:22:39,144 [10] INFO  TheReallyServer.MyServer - new client44419000
+2023-08-05 17:23:33,777 [14] INFO  TheReallyServer.MyServer - new client56140151
+2023-08-05 17:23:41,786 [10] INFO  TheReallyServer.MyServer - client destroy44419000
+2023-08-05 17:23:41,786 [10] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 17:24:21,383 [11] INFO  TheReallyServer.MyServer - client destroy56140151
+2023-08-05 17:24:21,384 [11] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 17:24:30,199 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-08-05 17:26:22,335 [11] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-08-05 17:26:22,335 [11] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 17:26:47,442 [11] INFO  TheReallyServer.MyServer - new client11679222
+2023-08-05 17:29:40,924 [15] INFO  TheReallyServer.MyServer - new client42931033
+2023-08-05 17:29:50,953 [11] INFO  TheReallyServer.MyServer - client destroy11679222
+2023-08-05 17:29:50,954 [11] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 17:31:31,163 [10] INFO  TheReallyServer.MyServer - new client28805302
+2023-08-05 17:31:37,137 [14] INFO  TheReallyServer.MyServer - client destroy42931033
+2023-08-05 17:31:37,137 [14] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 17:32:21,067 [11] INFO  TheReallyServer.MyServer - client destroy28805302
+2023-08-05 17:32:21,068 [11] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 17:35:24,512 [15] INFO  TheReallyServer.MyServer - new client39053774
+2023-08-05 17:37:01,053 [14] INFO  TheReallyServer.MyServer - client destroy39053774
+2023-08-05 17:37:01,053 [14] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 17:43:35,672 [11] INFO  TheReallyServer.MyServer - new client35410979
+2023-08-05 17:44:29,960 [13] INFO  TheReallyServer.MyServer - client destroy35410979
+2023-08-05 17:44:29,960 [13] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 17:44:46,109 [15] INFO  TheReallyServer.MyServer - new client55467396
+2023-08-05 17:45:47,584 [10] INFO  TheReallyServer.MyServer - client destroy55467396
+2023-08-05 17:45:47,584 [10] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 18:03:40,862 [15] INFO  TheReallyServer.MyServer - new client48611003
+2023-08-05 18:03:49,001 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 18:03:49,010 [10] INFO  TheReallyServer.MyServer - client destroy48611003
+2023-08-05 18:03:49,010 [10] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 18:03:49,015 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 18:03:49,016 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 18:08:06,647 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 18:08:06,684 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 18:08:06,877 [6] INFO  TheReallyServer.MyServer - new client35320229
+2023-08-05 18:08:30,918 [13] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-05 18:08:30,923 [13] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-08-05 18:09:05,355 [6] INFO  TheReallyServer.MyServer - client destroy35320229
+2023-08-05 18:09:05,357 [6] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 18:09:05,358 [6] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-05 18:09:07,730 [12] INFO  TheReallyServer.MyServer - new client20974680
+2023-08-05 18:09:12,920 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 18:09:12,925 [13] INFO  TheReallyServer.MyServer - client destroy20974680
+2023-08-05 18:09:12,926 [13] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 18:09:12,929 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 18:09:12,931 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 18:11:44,774 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 18:11:44,787 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 18:11:50,365 [14] INFO  TheReallyServer.MyServer - new client56140151
+2023-08-05 18:11:56,719 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 18:11:56,724 [13] INFO  TheReallyServer.MyServer - client destroy56140151
+2023-08-05 18:11:56,730 [13] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 18:11:56,733 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 18:11:56,735 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 18:12:53,543 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 18:12:53,565 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 18:12:53,727 [6] INFO  TheReallyServer.MyServer - new client35320229
+2023-08-05 18:12:53,727 [12] INFO  TheReallyServer.MyServer - new client20974680
+2023-08-05 18:12:53,752 [6] INFO  TheReallyServer.MyServer - client destroy35320229
+2023-08-05 18:12:53,757 [6] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 18:13:27,505 [7] INFO  TheReallyServer.MyServer - client destroy20974680
+2023-08-05 18:13:27,506 [7] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 18:15:15,279 [13] INFO  TheReallyServer.MyServer - new client51781231
+2023-08-05 18:15:46,033 [6] INFO  TheReallyServer.MyServer - new client52307948
+2023-08-05 18:16:05,348 [13] INFO  TheReallyServer.MyServer - client destroy51781231
+2023-08-05 18:16:05,349 [13] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 18:17:42,716 [10] INFO  TheReallyServer.MyServer - new client26472002
+2023-08-05 18:17:50,056 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 18:17:50,058 [10] INFO  TheReallyServer.MyServer - client destroy52307948
+2023-08-05 18:17:50,059 [10] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 18:17:50,058 [7] INFO  TheReallyServer.MyServer - client destroy26472002
+2023-08-05 18:17:50,060 [7] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 18:17:50,066 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 18:17:50,067 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 18:21:59,352 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 18:21:59,375 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 18:28:30,110 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 18:28:30,113 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 18:28:30,113 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 18:28:43,903 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 18:28:43,928 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 18:31:35,224 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 18:31:35,228 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 18:31:35,228 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 18:31:50,349 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 18:31:50,373 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 18:34:12,301 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 18:34:12,320 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 18:36:20,447 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 18:36:20,460 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 18:36:20,461 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 18:37:40,934 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 18:37:40,952 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 18:37:49,188 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 18:37:49,199 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 18:37:49,199 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 18:38:16,483 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 18:38:16,505 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-05 18:38:24,766 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-08-05 18:38:30,246 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-05 18:38:30,251 [6] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-08-05 18:38:30,253 [6] INFO  TheReallyServer.MyServer - 离线
+2023-08-05 18:38:30,254 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-05 18:38:30,255 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-05 18:38:46,572 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-05 18:38:46,584 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-06 12:08:40,808 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-06 12:08:40,818 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-06 12:08:50,775 [10] INFO  TheReallyServer.MyServer - new client45653674
+2023-08-06 12:08:59,546 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-06 12:08:59,556 [11] INFO  TheReallyServer.MyServer - client destroy45653674
+2023-08-06 12:08:59,559 [11] INFO  TheReallyServer.MyServer - 离线
+2023-08-06 12:08:59,561 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-06 12:08:59,561 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-06 12:09:19,506 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-06 12:09:19,528 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-06 12:10:34,762 [6] INFO  TheReallyServer.MyServer - new client42194754
+2023-08-06 12:10:44,915 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-06 12:10:44,924 [12] INFO  TheReallyServer.MyServer - client destroy42194754
+2023-08-06 12:10:44,928 [12] INFO  TheReallyServer.MyServer - 离线
+2023-08-06 12:10:44,929 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-06 12:10:44,930 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-06 12:11:00,061 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-06 12:11:00,080 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-06 12:11:00,282 [12] INFO  TheReallyServer.MyServer - new client20974680
+2023-08-06 12:54:44,984 [12] INFO  TheReallyServer.MyServer - client destroy20974680
+2023-08-06 12:54:44,986 [12] INFO  TheReallyServer.MyServer - 离线
+2023-08-06 12:54:47,558 [8] INFO  TheReallyServer.MyServer - new client41152873
+2023-08-06 12:54:53,923 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-06 12:54:53,925 [8] INFO  TheReallyServer.MyServer - client destroy41152873
+2023-08-06 12:54:53,925 [8] INFO  TheReallyServer.MyServer - 离线
+2023-08-06 12:54:53,929 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-06 12:54:53,931 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-06 12:55:14,237 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-06 12:55:14,257 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-06 12:58:54,930 [10] INFO  TheReallyServer.MyServer - new client48015737
+2023-08-06 12:59:00,740 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-06 12:59:00,746 [12] INFO  TheReallyServer.MyServer - client destroy48015737
+2023-08-06 12:59:00,748 [12] INFO  TheReallyServer.MyServer - 离线
+2023-08-06 12:59:00,750 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-06 12:59:00,752 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-06 12:59:19,834 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-06 12:59:19,856 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-06 13:00:55,589 [7] INFO  TheReallyServer.MyServer - new client41622463
+2023-08-06 13:01:08,336 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-06 13:01:08,342 [12] INFO  TheReallyServer.MyServer - client destroy41622463
+2023-08-06 13:01:08,344 [12] INFO  TheReallyServer.MyServer - 离线
+2023-08-06 13:01:08,346 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-06 13:01:08,347 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-06 13:01:22,032 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-06 13:01:22,042 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-06 13:02:21,367 [14] INFO  TheReallyServer.MyServer - new client56140151
+2023-08-06 13:02:27,411 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-06 13:02:27,417 [14] INFO  TheReallyServer.MyServer - client destroy56140151
+2023-08-06 13:02:27,424 [14] INFO  TheReallyServer.MyServer - 离线
+2023-08-06 13:02:27,425 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-06 13:02:27,427 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-06 13:02:42,774 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-06 13:02:42,794 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-06 13:05:25,800 [7] INFO  TheReallyServer.MyServer - new client12547953
+2023-08-06 13:05:30,594 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-06 13:05:30,602 [6] INFO  TheReallyServer.MyServer - client destroy12547953
+2023-08-06 13:05:30,604 [6] INFO  TheReallyServer.MyServer - 离线
+2023-08-06 13:05:30,606 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-06 13:05:30,606 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-06 13:05:50,016 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-06 13:05:50,040 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-19 16:16:45,439 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-19 16:16:45,451 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-19 16:16:53,088 [10] INFO  TheReallyServer.MyServer - new client45653674
+2023-08-19 16:16:58,426 [11] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-19 16:16:58,432 [11] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-08-19 16:17:37,523 [16] INFO  TheReallyServer.MyServer - client destroy45653674
+2023-08-19 16:17:37,524 [16] INFO  TheReallyServer.MyServer - 离线
+2023-08-19 16:17:37,525 [16] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-19 16:45:21,734 [8] INFO  TheReallyServer.MyServer - Setup
+2023-08-19 16:45:21,744 [8] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-19 16:45:21,753 [8] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-19 16:45:21,754 [8] INFO  TheReallyServer.MyServer - TearDown
+2023-08-19 16:45:21,755 [8] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-19 16:45:26,034 [8] INFO  TheReallyServer.MyServer - Setup
+2023-08-19 16:45:26,044 [8] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-19 16:45:26,052 [8] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-19 16:45:26,053 [8] INFO  TheReallyServer.MyServer - TearDown
+2023-08-19 16:45:26,053 [8] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-19 16:45:52,613 [16] INFO  TheReallyServer.MyServer - new client49538252
+2023-08-19 16:45:55,468 [14] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-19 16:45:55,480 [14] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-08-19 16:46:58,504 [8] INFO  TheReallyServer.MyServer - Setup
+2023-08-19 16:46:58,521 [8] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-19 16:46:58,541 [8] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-19 16:46:58,544 [14] INFO  TheReallyServer.MyServer - client destroy49538252
+2023-08-19 16:46:58,547 [13] INFO  TheReallyServer.MyServer - TearDown
+2023-08-19 16:46:58,547 [14] INFO  TheReallyServer.MyServer - 离线
+2023-08-19 16:46:58,549 [13] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-19 16:46:58,552 [14] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-19 16:46:58,627 [12] INFO  TheReallyServer.MyServer - new client20974680
+2023-08-19 16:47:09,955 [10] INFO  TheReallyServer.MyServer - new client44419000
+2023-08-19 16:47:12,301 [16] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-19 16:47:12,317 [16] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-08-19 16:47:30,029 [16] INFO  TheReallyServer.MyServer - client destroy20974680
+2023-08-19 16:47:30,031 [16] INFO  TheReallyServer.MyServer - 离线
+2023-08-19 16:48:13,390 [8] INFO  TheReallyServer.MyServer - Setup
+2023-08-19 16:48:13,416 [8] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-19 16:48:13,437 [8] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-19 16:48:13,439 [10] INFO  TheReallyServer.MyServer - client destroy44419000
+2023-08-19 16:48:13,441 [10] INFO  TheReallyServer.MyServer - 离线
+2023-08-19 16:48:13,442 [10] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-19 16:48:13,442 [13] INFO  TheReallyServer.MyServer - TearDown
+2023-08-19 16:48:13,443 [13] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-19 16:48:13,542 [14] INFO  TheReallyServer.MyServer - new client49508310
+2023-08-19 16:48:27,737 [16] INFO  TheReallyServer.MyServer - new client45725801
+2023-08-19 16:48:30,737 [16] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-19 16:48:30,755 [16] INFO  TheReallyServer.MyServer - 登录成功111!
+2023-08-19 16:48:48,110 [14] INFO  TheReallyServer.MyServer - client destroy49508310
+2023-08-19 16:48:48,111 [14] INFO  TheReallyServer.MyServer - 离线
+2023-08-19 16:48:57,259 [8] INFO  TheReallyServer.MyServer - Setup
+2023-08-19 16:48:57,279 [8] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-19 16:48:57,297 [8] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-19 16:48:57,298 [11] INFO  TheReallyServer.MyServer - client destroy45725801
+2023-08-19 16:48:57,298 [11] INFO  TheReallyServer.MyServer - 离线
+2023-08-19 16:48:57,299 [11] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-19 16:48:57,300 [13] INFO  TheReallyServer.MyServer - TearDown
+2023-08-19 16:48:57,303 [13] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-19 16:48:57,387 [12] INFO  TheReallyServer.MyServer - new client52253787
+2023-08-19 16:49:31,199 [11] INFO  TheReallyServer.MyServer - client destroy52253787
+2023-08-19 16:49:31,200 [11] INFO  TheReallyServer.MyServer - 离线
+2023-08-19 16:50:04,438 [8] INFO  TheReallyServer.MyServer - Setup
+2023-08-19 16:50:04,461 [8] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-19 16:50:04,484 [8] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-19 16:50:04,488 [8] INFO  TheReallyServer.MyServer - TearDown
+2023-08-19 16:50:04,488 [8] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-19 16:50:10,036 [12] INFO  TheReallyServer.MyServer - new client8998912
+2023-08-19 16:50:13,046 [12] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-19 16:50:13,064 [12] INFO  TheReallyServer.MyServer - 角色数量:1
+2023-08-19 16:50:13,070 [12] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-19 16:51:04,727 [16] INFO  TheReallyServer.MyServer - client destroy8998912
+2023-08-19 16:51:04,728 [16] INFO  TheReallyServer.MyServer - 离线
+2023-08-19 16:51:04,728 [16] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-19 17:14:30,378 [10] INFO  TheReallyServer.MyServer - new client22597652
+2023-08-19 17:14:32,361 [12] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-19 17:14:32,365 [12] INFO  TheReallyServer.MyServer - 角色数量:1
+2023-08-19 17:14:32,365 [12] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-19 17:15:32,689 [14] INFO  TheReallyServer.MyServer - new client26366415
+2023-08-19 17:15:34,423 [11] INFO  TheReallyServer.MyServer - 角色数量:1
+2023-08-19 17:15:34,424 [11] INFO  TheReallyServer.MyServer - 登录成功1!
+2023-08-19 17:15:54,865 [10] INFO  TheReallyServer.MyServer - client destroy22597652
+2023-08-19 17:15:54,867 [10] INFO  TheReallyServer.MyServer - 离线
+2023-08-19 17:15:54,867 [10] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-19 17:15:56,089 [11] INFO  TheReallyServer.MyServer - new client36181605
+2023-08-19 17:15:57,980 [14] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-19 17:15:57,982 [14] INFO  TheReallyServer.MyServer - 角色数量:1
+2023-08-19 17:15:57,982 [14] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-19 17:16:15,271 [11] INFO  TheReallyServer.MyServer - client destroy26366415
+2023-08-19 17:16:15,272 [11] INFO  TheReallyServer.MyServer - 离线
+2023-08-19 17:16:15,274 [11] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-19 17:19:10,383 [14] INFO  TheReallyServer.MyServer - client destroy36181605
+2023-08-19 17:19:10,383 [14] INFO  TheReallyServer.MyServer - 离线
+2023-08-19 17:19:10,384 [14] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-19 17:19:10,386 [14] ERROR ExitGames.Threading.FailSafeBatchExecutor - System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   在 TheReallyServer.Cache.AccountCache.RemoveAccount(String uid) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Cache\AccountCache.cs:行号 31
+   在 TheReallyServer.Handler.AccountHandler.OnClientOver(MyClient client) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Handler\AccountHandler.cs:行号 24
+   在 TheReallyServer.Handler.HandlerManager.Release(MyClient client) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Handler\HandlerManager.cs:行号 29
+   在 TheReallyServer.MyClient.Release() 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\MyClient.cs:行号 56
+   在 TheReallyServer.MyClient.OnDisconnect(DisconnectReason reasonCode, String reasonDetail) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\MyClient.cs:行号 35
+   在 Photon.SocketServer.PeerBase.OnApplicationDisconnect(DisconnectReason reasonCode, String reasonDetail, Int32 rtt, Int32 rttVariance, Int32 numFailures) 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:行号 1039
+   在 Photon.SocketServer.PeerBase.<>c__DisplayClass2.<Photon.SocketServer.IManagedPeer.Application_OnDisconnect>b__1() 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:行号 874
+   在 ExitGames.Threading.FailSafeBatchExecutor.Execute(Action action) 位置 c:\(Work)\(EG)\exitgames-libs\src\Core\Threading\FailSafeBatchExecutor.cs:行号 111
+2023-08-19 17:32:36,093 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-19 17:32:36,099 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-19 17:32:36,099 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-20 09:50:15,920 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-20 09:50:15,930 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-20 09:50:19,369 [11] INFO  TheReallyServer.MyServer - new client39086322
+2023-08-20 09:50:22,121 [11] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 09:50:22,144 [11] INFO  TheReallyServer.MyServer - 角色数量:1
+2023-08-20 09:50:22,152 [11] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 09:51:57,460 [15] INFO  TheReallyServer.MyServer - client destroy39086322
+2023-08-20 09:51:57,461 [15] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 09:51:57,462 [15] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 09:56:45,156 [15] INFO  TheReallyServer.MyServer - new client42931033
+2023-08-20 09:56:47,911 [13] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 09:56:47,917 [13] INFO  TheReallyServer.MyServer - 角色数量:1
+2023-08-20 09:56:47,918 [13] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 09:57:20,303 [13] INFO  TheReallyServer.MyServer - client destroy42931033
+2023-08-20 09:57:20,303 [13] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 09:57:20,303 [13] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:00:12,522 [13] INFO  TheReallyServer.MyServer - new client51781231
+2023-08-20 10:00:15,072 [11] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 10:00:15,074 [11] INFO  TheReallyServer.MyServer - 角色数量:1
+2023-08-20 10:00:15,074 [11] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 10:01:05,749 [11] INFO  TheReallyServer.MyServer - new client35567111
+2023-08-20 10:01:07,651 [13] INFO  TheReallyServer.MyServer - 角色数量:1
+2023-08-20 10:01:07,652 [13] INFO  TheReallyServer.MyServer - 登录成功1!
+2023-08-20 10:01:27,833 [13] INFO  TheReallyServer.MyServer - client destroy51781231
+2023-08-20 10:01:27,834 [13] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:01:27,836 [13] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:02:59,757 [15] INFO  TheReallyServer.MyServer - client destroy35567111
+2023-08-20 10:02:59,757 [15] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:02:59,757 [15] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:02:59,758 [15] ERROR ExitGames.Threading.FailSafeBatchExecutor - System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   在 TheReallyServer.Cache.AccountCache.RemoveAccount(String uid) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Cache\AccountCache.cs:行号 31
+   在 TheReallyServer.Handler.AccountHandler.OnClientOver(MyClient client) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Handler\AccountHandler.cs:行号 24
+   在 TheReallyServer.Handler.HandlerManager.Release(MyClient client) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Handler\HandlerManager.cs:行号 29
+   在 TheReallyServer.MyClient.Release() 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\MyClient.cs:行号 56
+   在 TheReallyServer.MyClient.OnDisconnect(DisconnectReason reasonCode, String reasonDetail) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\MyClient.cs:行号 35
+   在 Photon.SocketServer.PeerBase.OnApplicationDisconnect(DisconnectReason reasonCode, String reasonDetail, Int32 rtt, Int32 rttVariance, Int32 numFailures) 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:行号 1039
+   在 Photon.SocketServer.PeerBase.<>c__DisplayClass2.<Photon.SocketServer.IManagedPeer.Application_OnDisconnect>b__1() 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:行号 874
+   在 ExitGames.Threading.FailSafeBatchExecutor.Execute(Action action) 位置 c:\(Work)\(EG)\exitgames-libs\src\Core\Threading\FailSafeBatchExecutor.cs:行号 111
+2023-08-20 10:04:21,894 [15] INFO  TheReallyServer.MyServer - new client34138141
+2023-08-20 10:04:23,796 [14] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 10:04:23,798 [14] INFO  TheReallyServer.MyServer - 角色数量:1
+2023-08-20 10:04:23,798 [14] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 10:05:23,179 [14] INFO  TheReallyServer.MyServer - client destroy34138141
+2023-08-20 10:05:23,180 [14] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:05:23,180 [14] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:05:32,835 [10] INFO  TheReallyServer.MyServer - new client41149443
+2023-08-20 10:05:34,891 [11] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 10:05:34,893 [11] INFO  TheReallyServer.MyServer - 角色数量:1
+2023-08-20 10:05:34,893 [11] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 10:07:49,452 [14] INFO  TheReallyServer.MyServer - new client56140151
+2023-08-20 10:07:52,026 [14] INFO  TheReallyServer.MyServer - 角色数量:1
+2023-08-20 10:07:52,026 [14] INFO  TheReallyServer.MyServer - 登录成功1!
+2023-08-20 10:08:10,648 [11] INFO  TheReallyServer.MyServer - client destroy41149443
+2023-08-20 10:08:10,649 [11] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:08:10,650 [11] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:08:48,458 [13] INFO  TheReallyServer.MyServer - client destroy56140151
+2023-08-20 10:08:48,458 [13] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:08:48,459 [13] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:08:48,459 [13] ERROR ExitGames.Threading.FailSafeBatchExecutor - System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   在 TheReallyServer.Cache.AccountCache.RemoveAccount(String uid) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Cache\AccountCache.cs:行号 31
+   在 TheReallyServer.Handler.AccountHandler.OnClientOver(MyClient client) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Handler\AccountHandler.cs:行号 24
+   在 TheReallyServer.Handler.HandlerManager.Release(MyClient client) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Handler\HandlerManager.cs:行号 29
+   在 TheReallyServer.MyClient.Release() 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\MyClient.cs:行号 56
+   在 TheReallyServer.MyClient.OnDisconnect(DisconnectReason reasonCode, String reasonDetail) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\MyClient.cs:行号 35
+   在 Photon.SocketServer.PeerBase.OnApplicationDisconnect(DisconnectReason reasonCode, String reasonDetail, Int32 rtt, Int32 rttVariance, Int32 numFailures) 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:行号 1039
+   在 Photon.SocketServer.PeerBase.<>c__DisplayClass2.<Photon.SocketServer.IManagedPeer.Application_OnDisconnect>b__1() 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:行号 874
+   在 ExitGames.Threading.FailSafeBatchExecutor.Execute(Action action) 位置 c:\(Work)\(EG)\exitgames-libs\src\Core\Threading\FailSafeBatchExecutor.cs:行号 111
+2023-08-20 10:10:56,283 [13] INFO  TheReallyServer.MyServer - new client65849037
+2023-08-20 10:10:58,611 [11] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 10:10:58,612 [11] INFO  TheReallyServer.MyServer - 角色数量:1
+2023-08-20 10:10:58,613 [11] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 10:11:00,710 [11] INFO  TheReallyServer.MyServer - 创角成功!
+2023-08-20 10:11:58,004 [15] INFO  TheReallyServer.MyServer - client destroy65849037
+2023-08-20 10:11:58,005 [15] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:11:58,006 [15] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:12:09,645 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-20 10:12:09,655 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-20 10:12:09,655 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer
+2023-08-20 10:12:29,672 [1] INFO  TheReallyServer.MyServer - Setup
+2023-08-20 10:12:29,691 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=TheReallyServer; AppPath=E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\TheReallyServer, Type=TheReallyServer.MyServer 
+2023-08-20 10:12:32,424 [12] INFO  TheReallyServer.MyServer - new client20974680
+2023-08-20 10:12:38,725 [7] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 10:12:38,742 [7] INFO  TheReallyServer.MyServer - 角色数量:2
+2023-08-20 10:12:38,749 [7] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 10:20:51,247 [12] INFO  TheReallyServer.MyServer - new client52253787
+2023-08-20 10:20:54,187 [17] INFO  TheReallyServer.MyServer - 角色数量:2
+2023-08-20 10:20:54,188 [17] INFO  TheReallyServer.MyServer - 登录成功1!
+2023-08-20 10:21:13,230 [7] INFO  TheReallyServer.MyServer - client destroy20974680
+2023-08-20 10:21:13,232 [7] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:21:13,233 [7] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:23:42,779 [7] INFO  TheReallyServer.MyServer - new client31364015
+2023-08-20 10:23:44,277 [17] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 10:23:44,281 [17] INFO  TheReallyServer.MyServer - 角色数量:2
+2023-08-20 10:23:44,281 [17] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 10:24:02,821 [6] INFO  TheReallyServer.MyServer - client destroy52253787
+2023-08-20 10:24:02,821 [6] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:24:02,822 [6] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:42:07,197 [13] INFO  TheReallyServer.MyServer - new client58366981
+2023-08-20 10:42:09,924 [6] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 10:42:09,929 [6] INFO  TheReallyServer.MyServer - 角色数量:2
+2023-08-20 10:42:09,930 [6] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 10:42:29,707 [7] INFO  TheReallyServer.MyServer - client destroy31364015
+2023-08-20 10:42:29,709 [7] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:42:29,710 [7] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:42:31,033 [8] INFO  TheReallyServer.MyServer - new client14201549
+2023-08-20 10:42:32,471 [7] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 10:42:32,474 [7] INFO  TheReallyServer.MyServer - 角色数量:2
+2023-08-20 10:42:32,474 [7] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 10:42:51,241 [6] INFO  TheReallyServer.MyServer - client destroy58366981
+2023-08-20 10:42:51,242 [6] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:42:51,243 [6] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:43:22,591 [7] INFO  TheReallyServer.MyServer - new client28379535
+2023-08-20 10:43:24,348 [13] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 10:43:24,349 [13] INFO  TheReallyServer.MyServer - 角色数量:2
+2023-08-20 10:43:24,350 [13] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 10:43:40,637 [7] INFO  TheReallyServer.MyServer - client destroy14201549
+2023-08-20 10:43:40,639 [7] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:43:40,639 [7] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:44:38,067 [6] INFO  TheReallyServer.MyServer - new client35320229
+2023-08-20 10:44:43,208 [13] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 10:44:43,209 [13] INFO  TheReallyServer.MyServer - 角色数量:2
+2023-08-20 10:44:43,210 [13] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 10:44:57,483 [17] INFO  TheReallyServer.MyServer - client destroy28379535
+2023-08-20 10:44:57,484 [17] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:44:57,485 [17] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:46:18,803 [13] INFO  TheReallyServer.MyServer - client destroy35320229
+2023-08-20 10:46:18,804 [13] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:46:18,805 [13] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:46:18,810 [13] ERROR ExitGames.Threading.FailSafeBatchExecutor - System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.ContainsKey(TKey key)
+   在 TheReallyServer.Cache.AccountCache.RemoveAccount(String uid) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Cache\AccountCache.cs:行号 31
+   在 TheReallyServer.Handler.AccountHandler.OnClientOver(MyClient client) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Handler\AccountHandler.cs:行号 24
+   在 TheReallyServer.Handler.HandlerManager.Release(MyClient client) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\Handler\HandlerManager.cs:行号 29
+   在 TheReallyServer.MyClient.Release() 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\MyClient.cs:行号 56
+   在 TheReallyServer.MyClient.OnDisconnect(DisconnectReason reasonCode, String reasonDetail) 位置 E:\Git\TheReally\server\TheReallyServer\TheReallyServer\MyClient.cs:行号 35
+   在 Photon.SocketServer.PeerBase.OnApplicationDisconnect(DisconnectReason reasonCode, String reasonDetail, Int32 rtt, Int32 rttVariance, Int32 numFailures) 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:行号 1039
+   在 Photon.SocketServer.PeerBase.<>c__DisplayClass2.<Photon.SocketServer.IManagedPeer.Application_OnDisconnect>b__1() 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\PeerBase.cs:行号 874
+   在 ExitGames.Threading.FailSafeBatchExecutor.Execute(Action action) 位置 c:\(Work)\(EG)\exitgames-libs\src\Core\Threading\FailSafeBatchExecutor.cs:行号 111
+2023-08-20 10:47:01,390 [6] INFO  TheReallyServer.MyServer - new client17653682
+2023-08-20 10:47:03,053 [12] INFO  TheReallyServer.MyServer - 登录!!!
+2023-08-20 10:47:03,054 [12] INFO  TheReallyServer.MyServer - 角色数量:2
+2023-08-20 10:47:03,054 [12] INFO  TheReallyServer.MyServer - 登录成功2!
+2023-08-20 10:49:22,898 [17] INFO  TheReallyServer.MyServer - client destroy17653682
+2023-08-20 10:49:22,898 [17] INFO  TheReallyServer.MyServer - 离线
+2023-08-20 10:49:22,899 [17] INFO  TheReallyServer.MyServer - 用户下线!!!0592548004a040be88e1918a616d934d
+2023-08-20 10:49:26,253 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=TheReallyServer
+2023-08-20 10:49:26,257 [1] INFO  TheReallyServer.MyServer - TearDown
+2023-08-20 10:49:26,257 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=TheReallyServer

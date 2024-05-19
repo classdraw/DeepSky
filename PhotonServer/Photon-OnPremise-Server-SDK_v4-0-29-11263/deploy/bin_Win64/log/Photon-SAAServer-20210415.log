@@ -1,0 +1,116 @@
+14548: 07:25:55.566 - ---
+14548: 07:25:55.566 - Service: "Photon Socket Server" starting
+14548: 07:25:55.567 - Config File: E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+14548: 07:25:55.569 - Will produce at most: 10 crash dumps
+14548: 07:25:55.569 - Action: run as exe
+14548: 07:25:55.571 - Server Starting...
+14548: 07:25:55.571 -    Tick count: 1295416578 (wraps in: 34.717 days)
+14548: 07:25:55.571 - Tick count 64: 1295416578
+14548: 07:25:55.572 - Photon Version: 4.0.28.2962
+14548: 07:25:55.572 - PID: 15380
+14548: 07:25:55.572 - Config File: E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+14548: 07:25:55.573 - Will NOT log unimportant exceptions
+14548: 07:25:55.579 - Not using performance counters as they are not currently installed. Run the service with /InstallCounters to install them.
+14548: 07:25:55.580 - Shutdown timeout enabled: 30000ms
+14548: 07:25:55.581 - Starting I/O thread pool with 2 threads
+14548: 07:25:55.582 - Using Standard allocator
+14548: 07:25:55.582 - Max message size: 512000
+14548: 07:25:55.583 - Starting business logic thread pool with the following settings
+14548: 07:25:55.583 - InitialThreads: 4 threads
+14548: 07:25:55.583 - MinThreads: 4 threads
+14548: 07:25:55.583 - Thread pool is fixed size
+14548: 07:25:55.583 - Starting ENet thread pool with the following settings
+14548: 07:25:55.583 - InitialThreads: 2 threads
+14548: 07:25:55.583 - MinThreads: 2 threads
+14548: 07:25:55.583 - Thread pool is fixed size
+14548: 07:25:55.583 - OnlyDispatchTimers: False
+14548: 07:25:55.583 - S2S: flow control: Max pending writes: 50
+14548: 07:25:55.583 - S2S: flow control: Max queued buffers: 200
+14548: 07:25:55.583 - S2S: flow control: Max pending writes MUX: 500
+14548: 07:25:55.583 - S2S: flow control: Max queued buffers MUX: 2000
+14548: 07:25:55.583 - S2S: MaxInboundMessageSize: 512000
+14548: 07:25:55.583 - S2S: MaxOutboundMessageSize: 512000
+14548: 07:25:55.583 - S2S: No inactivity timeout
+14548: 07:25:55.595 - WebSocket S2S: MaxInboundMessageSize: 512000
+14548: 07:25:55.595 - WebSocket S2S: MaxOutboundMessageSize: 512000
+14548: 07:25:55.595 - WebSocket S2S: No inactivity timeout
+14548: 07:25:55.596 - Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+14548: 07:25:55.596 - Per peer bandwidth limit
+14548: 07:25:55.596 - Transmit Rate Limit: 256 KB/Sec
+14548: 07:25:55.596 - Limit period: 200ms
+14548: 07:25:55.596 - Limit per period: 52428 bytes
+14548: 07:25:55.596 - Max queued data for transmission per peer: 512000 bytes
+14548: 07:25:55.596 - Minimum retransmit timeout: 200
+14548: 07:25:55.596 - No Maximum retransmit timeout
+14548: 07:25:55.596 - Minimum ENet timeout: 5000ms
+14548: 07:25:55.596 - Maximum ENet timeout: 30000ms
+14548: 07:25:55.596 - Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+14548: 07:25:55.596 - No RTT ACK adjustment timeout
+14548: 07:25:55.596 - Outbound ENet: MaxInboundMessageSize: 512000
+14548: 07:25:55.596 - Outbound ENet: MaxOutboundMessageSize: 512000
+14548: 07:25:55.602 - GetRuntime - About to load CLR - versions available:
+14548: 07:25:55.602 - v2.0.50727
+14548: 07:25:55.602 - v4.0.30319
+14548: 07:25:55.602 - Configuration requests: "v2.0.50727"
+14548: 07:25:55.602 - About to load version: "v2.0.50727"
+14548: 07:25:55.637 - About to load runtime: PhotonHostRuntime.PhotonDomainManager from PhotonHostRuntime, Culture=neutral, PublicKeyToken=02C301B61B060C4D
+14548: 07:25:55.637 - CLRBaseDirectory set to "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy"
+14548: 07:25:55.637 - Optimising event broadcast for 20 or more peers
+14548: 07:25:55.640 - Start: About to load CLR - versions available:
+14548: 07:25:55.640 - v2.0.50727
+14548: 07:25:55.640 - v4.0.30319
+14548: 07:25:55.640 - No preference in configuration file, will load latest.
+14548: 07:25:55.640 - About to load version: "v4.0.30319"
+14548: 07:25:55.641 - Loaded version: "v4.0.30319"
+14548: 07:25:55.763 - Photon host runtime loaded
+14548: 07:25:57.421 - License is valid.
+14548: 07:25:57.421 - Licensed for 100 concurrent connections.
+14548: 07:25:57.421 - ENet: Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+14548: 07:25:57.421 - ENet: Per peer bandwidth limit
+14548: 07:25:57.421 - ENet: Transmit Rate Limit: 256 KB/Sec
+14548: 07:25:57.421 - ENet: Limit period: 200ms
+14548: 07:25:57.421 - ENet: Limit per period: 52428 bytes
+14548: 07:25:57.421 - ENet: Max queued data for transmission per peer: 512000 bytes
+14548: 07:25:57.421 - ENet: Minimum retransmit timeout: 200
+14548: 07:25:57.421 - No Maximum retransmit timeout
+14548: 07:25:57.421 - ENet: Minimum timeout: 5000ms
+14548: 07:25:57.421 - ENet: Maximum timeout: 30000ms
+14548: 07:25:57.421 - ENet: Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+14548: 07:25:57.421 - No RTT ACK adjustment timeout
+14548: 07:25:57.421 - About to load application: SAAServer from SAAServer
+14548: 07:25:57.421 - Auto restart is enabled for application, existing connections will be terminated during restart
+14548: 07:25:57.421 - Application will restart 1000ms after the last change detected
+14548: 07:25:57.421 - Application will restart if files matching the following are changed: "dll;config"
+14548: 07:25:57.421 - Application will NOT restart if files matching the following are changed: "log4net.config"
+14548: 07:25:57.495 - Taking reference on default app domain
+14548: 07:25:57.552 - Application: "SAAServer" started in app domain: 2
+14548: 07:25:57.552 - About to load application: CounterPublisher from CounterPublisher
+14548: 07:25:57.552 - Auto restart is enabled for application, existing connections will be terminated during restart
+14548: 07:25:57.552 - Application will restart 1000ms after the last change detected
+14548: 07:25:57.552 - Application will restart if files matching the following are changed: "dll;config"
+14548: 07:25:57.552 - Application will NOT restart if files matching the following are changed: "log4net.config"
+14548: 07:25:57.614 - Taking reference on default app domain
+14548: 07:25:57.660 - Application: "CounterPublisher" started in app domain: 3
+14548: 07:25:57.660 - Adding TCP listener on: 0.0.0.0: 4530 with a listen backlog of: 150
+14548: 07:25:57.660 - TCP inactivity timeout: 10000ms
+14548: 07:25:57.660 - TCP disconnect timeout: 120000ms
+14548: 07:25:57.660 - MaxInboundMessageSize: 512000
+14548: 07:25:57.660 - MaxOutboundMessageSize: 512000
+14548: 07:25:57.660 - Forcing all applications ids to: "SAAServer"
+14548: 07:25:57.661 - Serving policy file requests from: "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+14548: 07:25:57.662 - Adding TCP listener on: 0.0.0.0: 4520 with a listen backlog of: 150
+14548: 07:25:57.662 - TCP inactivity timeout: 5000ms
+14548: 07:25:57.662 - TCP disconnect timeout: 120000ms
+14548: 07:25:57.662 - MaxInboundMessageSize: 512000
+14548: 07:25:57.662 - MaxOutboundMessageSize: 512000
+14548: 07:25:57.662 - Forcing all applications ids to: "SAAServer"
+14548: 07:25:57.662 - MaxInboundMessageSize: 512000
+14548: 07:25:57.662 - MaxOutboundMessageSize: 512000
+14548: 07:25:57.662 - UDP address specified as: "0.0.0.0" adding listener to each available IPv4 address
+14548: 07:25:57.662 - Adding UDP listener on: 192.168.1.14: 7777 with a listen backlog of: 500
+14548: 07:25:57.662 - Adding UDP listener on: 127.0.0.1: 7777 with a listen backlog of: 500
+14548: 07:25:57.663 - Adding Policy File listener on: 0.0.0.0: 843 with a listen backlog of: 150 and serving Policy File: "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy.xml"
+14548: 07:25:57.663 - TCP inactivity timeout: 1000ms
+14548: 07:25:57.663 - Adding Policy File listener on: 0.0.0.0: 943 with a listen backlog of: 150 and serving Policy File: "E:\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\Policy\assets\socket-policy-silverlight.xml"
+14548: 07:25:57.663 - TCP inactivity timeout: 1000ms
+14548: 07:25:57.679 - Service is running...

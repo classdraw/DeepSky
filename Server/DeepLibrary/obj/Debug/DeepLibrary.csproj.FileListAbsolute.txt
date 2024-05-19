@@ -1,0 +1,5 @@
+E:\Git\Deep\DeepSky\Server\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\DeepServer\bin\DeepLibrary.dll
+E:\Git\Deep\DeepSky\Server\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\DeepServer\bin\DeepLibrary.pdb
+E:\Git\Deep\DeepSky\Server\DeepLibrary\obj\Debug\DeepLibrary.csproj.CoreCompileInputs.cache
+E:\Git\Deep\DeepSky\Server\DeepLibrary\obj\Debug\DeepLibrary.dll
+E:\Git\Deep\DeepSky\Server\DeepLibrary\obj\Debug\DeepLibrary.pdb

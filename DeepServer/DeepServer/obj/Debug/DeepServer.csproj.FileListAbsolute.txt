@@ -1,7 +1,0 @@
-E:\Git\Deep\DeepSky\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\DeepServer\bin\DeepServer.dll
-E:\Git\Deep\DeepSky\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\DeepServer\bin\DeepServer.pdb
-E:\Git\Deep\DeepSky\DeepServer\DeepServer\obj\Debug\DeepServer.csproj.CoreCompileInputs.cache
-E:\Git\Deep\DeepSky\DeepServer\DeepServer\obj\Debug\DeepServer.csproj.CopyComplete
-E:\Git\Deep\DeepSky\DeepServer\DeepServer\obj\Debug\DeepServer.dll
-E:\Git\Deep\DeepSky\DeepServer\DeepServer\obj\Debug\DeepServer.pdb
-E:\Git\Deep\DeepSky\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\DeepServer\bin\log4net.config

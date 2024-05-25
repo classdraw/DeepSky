@@ -159,3 +159,9 @@
 2024-05-25 18:47:45,834 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=DeepServer
 2024-05-25 18:47:45,839 [1] INFO  DeepServer.App.MyServer - 服务器关闭！！！
 2024-05-25 18:47:45,840 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=DeepServer
+2024-05-25 20:52:54,519 [1] INFO  DeepServer.App.MyServer - 服务器启动！！！
+2024-05-25 20:52:54,534 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=DeepServer; AppPath=E:\Git\Deep\DeepSky\Server\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\DeepServer, Type=DeepServer.App.MyServer 
+2024-05-25 20:52:57,598 [11] INFO  DeepServer.App.MyServer - new client39086322
+2024-05-25 20:53:52,031 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=DeepServer
+2024-05-25 20:53:52,035 [1] INFO  DeepServer.App.MyServer - 服务器关闭！！！
+2024-05-25 20:53:52,036 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=DeepServer

@@ -24,7 +24,7 @@ namespace Game.Photon{
 		private Action m_funcFail;//连接失败回调
 
         private PhotonPeer m_kPeer;//服务器连接对象
-        ConnectionProtocol m_eProtoncol=ConnectionProtocol.Udp;
+        ConnectionProtocol m_eProtoncol=ConnectionProtocol.Tcp;
     
         private string m_sServerName;
 		private string m_sServerAddress;

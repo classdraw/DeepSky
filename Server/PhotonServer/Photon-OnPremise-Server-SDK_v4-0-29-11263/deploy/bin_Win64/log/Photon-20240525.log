@@ -28,3 +28,9 @@
 24132: 18:47:45.841 - Will produce at most: 10 crash dumps
 24132: 18:47:45.841 - Service shutting down
 24132: 18:47:45.842 - Service shut down complete
+14916: 20:53:52.035 - ---
+14916: 20:53:52.035 - Service: "Photon Socket Server" starting
+14916: 20:53:52.035 - Config File: E:\Git\Deep\DeepSky\Server\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+14916: 20:53:52.038 - Will produce at most: 10 crash dumps
+14916: 20:53:52.038 - Service shutting down
+14916: 20:53:52.040 - Service shut down complete

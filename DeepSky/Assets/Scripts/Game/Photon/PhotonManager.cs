@@ -42,7 +42,7 @@ namespace Game.Photon{
 			m_iStateEnum=(int)Server_State_Enum.None;
 
             //测试
-            //TryConnect("127.0.0.1","7777","DeepServer");
+            TryConnect("127.0.0.1","7777","DeepServer");
         }
 
         public void SetCallback(Action complete,Action fail){

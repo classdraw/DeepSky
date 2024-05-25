@@ -10,6 +10,11 @@ GameSettingSystem.PlayerPrefsData={
 
 function GameSettingSystem:Init()
     -- self:bindEvents()
+    XLogger.Log("GameSettingSystem:Init");
+end
+
+function GameSettingSystem:OnStart()
+    XLogger.Log("GameSettingSystem:OnStart");
 end
 
 -- ---初始化玩家一些自定义参数

@@ -12,11 +12,14 @@ namespace DeepServer.App
     public class Global : Singleton<Global>
     {
         private HandleManager m_kHandleManager;
+        public HandleManager HandleManager { get { return m_kHandleManager; } }
         protected override void Init()
         {
             m_kHandleManager = new HandleManager();
             m_kHandleManager.Init();
         }
+
+
 
 
         /// <summary>
@@ -37,7 +40,7 @@ namespace DeepServer.App
         public DateTime GetDateTimeNow()
         {
             var sec = GetTimeStampSecond();
-            int timeZone = DataManager.GetTimeZone();
+            int timeZone = DataConfig.GetTimeZone();
             var firstDate = DtoTools.Get197011000();
             firstDate = firstDate.AddSeconds(sec);
             firstDate = firstDate.AddHours(timeZone);//当前时区1970年时间

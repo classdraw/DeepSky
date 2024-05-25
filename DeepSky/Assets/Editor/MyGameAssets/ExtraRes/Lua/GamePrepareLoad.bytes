@@ -20,9 +20,10 @@ local luaList={
     "utils.XLogger",
     "functions.init",
     "GlobalRequire",
+    "XLuaFacade",
     -- "components.Component_Base",
     -- "globalrequire",
-    -- "XLuaFacade",
+    -- 
 
     -- "consts.T_Define",--放在最后
 };

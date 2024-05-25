@@ -128,6 +128,13 @@
             "BundleID": 8
         },
         {
+            "Address": "Lua_XLuaFacade",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/XLuaFacade.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 8
+        },
+        {
             "Address": "consts_AppEvent",
             "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/consts/AppEvent.bytes",
             "AssetGUID": "",
@@ -382,7 +389,7 @@
             "UnityCRC": 0,
             "FileHash": "25bc7103a47406d3507b7f298a0f7737",
             "FileCRC": "00000000",
-            "FileSize": 8305,
+            "FileSize": 8938,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -392,7 +399,7 @@
             "UnityCRC": 0,
             "FileHash": "e3c5464f4a52f82b4d9dd23db7789ac8",
             "FileCRC": "00000000",
-            "FileSize": 2300,
+            "FileSize": 2314,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -422,7 +429,7 @@
             "UnityCRC": 0,
             "FileHash": "7a68deb76cd55399e78bdfe9c3b29b48",
             "FileCRC": "00000000",
-            "FileSize": 4605,
+            "FileSize": 4896,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -432,7 +439,7 @@
             "UnityCRC": 0,
             "FileHash": "147bea4dcd338c6fd9757d7c2f40af00",
             "FileCRC": "00000000",
-            "FileSize": 4336,
+            "FileSize": 4472,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

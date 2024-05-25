@@ -36,7 +36,9 @@ function SystemManager:StartSystem(systemType)
     if self.m_kSystems[systemType]==nil then
         self.m_kSystems[systemType]=require("system."..systemType).New(self.m_kAssetPipeLine);
         if self.m_kSystems[systemType]==nil then
-            XLogger.LogError("system."..systemType);
+            XLogger.LogError("StartSystem."..systemType);
+        else
+            self.m_kSystems[systemType]:Init();
         end
         
         self.m_kSystems[systemType]:OnStart();
@@ -49,6 +51,14 @@ function SystemManager:StopSystem(systemType)
     end
     self.m_kSystems[systemType]:OnStop();
     self.m_kSystems[systemType]=nil;
+end
+
+function SystemManager:GetSystem(systemType)
+    if self.m_kSystems[systemType]==nil then
+        XLogger.LogError("GetSystem."..systemType);
+        return nil;
+    end
+    return self.m_kSystems[systemType];
 end
 
 return SystemManager;

@@ -33,17 +33,24 @@ function App:UnInit()
 end
 
 
+function App:GetAppStateManager()
+    if self.appStateManager==nil then
+        self.appStateManager=CS.Game.Fsm.AppStateManager.GetInstance();
+    end
+    return self.appStateManager;
+end
+
 function App:Run()
-    -- XLuaFacade.EnterLogin();
+    XLuaFacade.EnterLogin();
 end
 
-function App:StartSystem(key)
-    SystemManager:GetInstance():StartSystem(key);
-end
+-- function App:StartSystem(key)
+--     SystemManager:GetInstance():StartSystem(key);
+-- end
 
-function App:StopSystem(key)
-    SystemManager:GetInstance():StopSystem(key);
-end
+-- function App:StopSystem(key)
+--     SystemManager:GetInstance():StopSystem(key);
+-- end
 
 function App:Destroy()
     -- XLogger.LogError("App:Destroy")

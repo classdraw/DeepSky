@@ -1,5 +1,5 @@
 enum_SystemType={
-    testSystem="TestSystem"
+    GameSettingSystem="GameSettingSystem"
 }
 
 EventEnum={--1~100  ui消息  101~999 model逻辑层消息

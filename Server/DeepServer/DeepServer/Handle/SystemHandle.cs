@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using Photon.SocketServer;
 using DeepLibrary.Common;
 using DeepServer.App;
+using DeepServer.Model;
 
 namespace DeepServer.Handle
 {
     /// <summary>
     /// 系统管理
     /// </summary>
-    public class SystemHandle:BaseHandle
+    public class SystemHandle:BaseHandle<SystemModule>
     {
         public override void OnClientOver(MyClient client)
         {

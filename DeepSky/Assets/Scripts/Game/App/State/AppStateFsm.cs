@@ -10,6 +10,7 @@ namespace Game.Fsm{
         {
             m_States.Add(SplashState.Index,new SplashState(this));
             m_States.Add(LuaInitState.Index,new LuaInitState(this));
+            m_States.Add(LoginState.Index,new LoginState(this));
             m_Default=m_States[SplashState.Index];
         }
 

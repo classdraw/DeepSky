@@ -142,7 +142,7 @@ MonoBehaviour:
       ActiveRuleName: EnableGroup
       Collectors:
       - CollectPath: Assets/Editor/MyGameAssets/ExtraRes/Lua
-        CollectorGUID: aa2f244f09d0bb241bdf2a6f2bfa813d
+        CollectorGUID: 
         CollectorType: 0
         AddressRuleName: AddressByFolderAndFileName
         PackRuleName: PackDirectory
@@ -155,7 +155,7 @@ MonoBehaviour:
       ActiveRuleName: EnableGroup
       Collectors:
       - CollectPath: Assets/Editor/MyGameAssets/ExtraRes/Data
-        CollectorGUID: 5b04b78640f2c954ca4d9f02343a783c
+        CollectorGUID: 
         CollectorType: 0
         AddressRuleName: AddressByFolderAndFileName
         PackRuleName: PackDirectory

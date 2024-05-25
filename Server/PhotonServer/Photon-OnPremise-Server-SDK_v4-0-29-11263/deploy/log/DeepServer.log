@@ -75,3 +75,64 @@
 2024-05-19 18:24:29,314 [16] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=DeepServer
 2024-05-19 18:24:29,315 [16] ERROR DeepServer.App.MyServer - 服务器结束！！！
 2024-05-19 18:24:29,315 [16] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=DeepServer
+2024-05-25 17:54:25,541 [1] INFO  DeepServer.App.MyServer - 服务器启动！！！
+2024-05-25 17:54:25,561 [1] ERROR Photon.SocketServer.ApplicationBase - System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 DeepServer.Handle.HandleManager.Init() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\Handle\HandleManager.cs:行号 17
+   在 DeepServer.App.Global.Init() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\App\Global.cs:行号 19
+   在 DeepServer.Utils.Singleton`1..ctor() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\Utils\Singleton.cs:行号 34
+   在 DeepServer.App.Global..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance[T]()
+   在 DeepServer.Utils.Singleton`1.GetInstance() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\Utils\Singleton.cs:行号 24
+   在 DeepServer.App.MyServer.Setup() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\App\MyServer.cs:行号 24
+   在 Photon.SocketServer.ApplicationBase.PhotonHostRuntimeInterfaces.IPhotonControl.OnPhotonRunning() 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\ApplicationBase.cs:行号 1171
+2024-05-25 17:54:25,601 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=DeepServer
+2024-05-25 17:54:25,621 [13] INFO  DeepServer.App.MyServer - new client58366981
+2024-05-25 17:54:25,623 [1] INFO  DeepServer.App.MyServer - 服务器关闭！！！
+2024-05-25 17:54:25,638 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=DeepServer
+2024-05-25 17:54:36,128 [1] INFO  DeepServer.App.MyServer - 服务器启动！！！
+2024-05-25 17:54:36,143 [1] ERROR Photon.SocketServer.ApplicationBase - System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 DeepServer.Handle.HandleManager.Init() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\Handle\HandleManager.cs:行号 17
+   在 DeepServer.App.Global.Init() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\App\Global.cs:行号 19
+   在 DeepServer.Utils.Singleton`1..ctor() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\Utils\Singleton.cs:行号 34
+   在 DeepServer.App.Global..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance[T]()
+   在 DeepServer.Utils.Singleton`1.GetInstance() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\Utils\Singleton.cs:行号 24
+   在 DeepServer.App.MyServer.Setup() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\App\MyServer.cs:行号 24
+   在 Photon.SocketServer.ApplicationBase.PhotonHostRuntimeInterfaces.IPhotonControl.OnPhotonRunning() 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\ApplicationBase.cs:行号 1171
+2024-05-25 17:54:36,161 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=DeepServer
+2024-05-25 17:54:36,170 [1] INFO  DeepServer.App.MyServer - 服务器关闭！！！
+2024-05-25 17:54:36,170 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=DeepServer
+2024-05-25 17:56:22,426 [1] INFO  DeepServer.App.MyServer - 服务器启动！！！
+2024-05-25 17:56:22,440 [1] ERROR Photon.SocketServer.ApplicationBase - System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.ArgumentException: 已添加了具有相同键的项。
+   在 System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   在 DeepServer.Handle.HandleManager.Init() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\Handle\HandleManager.cs:行号 17
+   在 DeepServer.App.Global.Init() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\App\Global.cs:行号 19
+   在 DeepServer.Utils.Singleton`1..ctor() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\Utils\Singleton.cs:行号 34
+   在 DeepServer.App.Global..ctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance[T]()
+   在 DeepServer.Utils.Singleton`1.GetInstance() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\Utils\Singleton.cs:行号 24
+   在 DeepServer.App.MyServer.Setup() 位置 E:\Git\Deep\DeepSky\Server\DeepServer\DeepServer\App\MyServer.cs:行号 24
+   在 Photon.SocketServer.ApplicationBase.PhotonHostRuntimeInterfaces.IPhotonControl.OnPhotonRunning() 位置 h:\svncontent\photon-socketserver-sdk_cloud\src\Photon.SocketServer\ApplicationBase.cs:行号 1171
+2024-05-25 17:56:22,461 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=DeepServer
+2024-05-25 17:56:22,471 [1] INFO  DeepServer.App.MyServer - 服务器关闭！！！
+2024-05-25 17:56:22,471 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=DeepServer
+2024-05-25 17:57:07,993 [1] INFO  DeepServer.App.MyServer - 服务器启动！！！
+2024-05-25 17:57:08,006 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=DeepServer; AppPath=E:\Git\Deep\DeepSky\Server\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\DeepServer, Type=DeepServer.App.MyServer 
+2024-05-25 17:57:26,366 [11] INFO  DeepServer.App.MyServer - new client39086322
+2024-05-25 17:59:24,054 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=DeepServer
+2024-05-25 17:59:24,058 [1] INFO  DeepServer.App.MyServer - 服务器关闭！！！
+2024-05-25 17:59:24,058 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=DeepServer

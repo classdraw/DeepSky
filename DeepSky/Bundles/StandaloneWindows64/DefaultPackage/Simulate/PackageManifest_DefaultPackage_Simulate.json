@@ -37,15 +37,15 @@
             "BundleID": 2
         },
         {
-            "Address": "LoginScene",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Scenes/LoginScene.unity",
+            "Address": "EmptyScene",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Scenes/EmptyScene.unity",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 3
         },
         {
-            "Address": "New Scene",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Scenes/New Scene.unity",
+            "Address": "LoginScene",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Scenes/LoginScene.unity",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 3
@@ -389,7 +389,7 @@
             "UnityCRC": 0,
             "FileHash": "25bc7103a47406d3507b7f298a0f7737",
             "FileCRC": "00000000",
-            "FileSize": 8938,
+            "FileSize": 8744,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

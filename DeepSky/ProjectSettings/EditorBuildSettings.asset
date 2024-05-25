@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Editor/MyGameAssets/GameRes/Scenes/LoginScene.unity
+    guid: 8312e51b9124a9349926f7a6344e9557
+  - enabled: 1
+    path: Assets/Editor/MyGameAssets/GameRes/Scenes/EmptyScene.unity
+    guid: 1f974bffe67f6f34b973d26442dd48eb
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 51ec8cc302a125249a174fe00c3ba2a7, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

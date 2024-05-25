@@ -12,7 +12,7 @@ public static class XLogger
     public const int LEVEL_TEST = 1;
     public const int LEVEL_DEBUG = 2;
     public const int LEVEL_LOG = 3;
-
+    public const int LEVEL_LOGIMPORT = 3;
     public const int LEVEL_WARN = 8;
 
     public const int LEVEL_SERVER = 9;
@@ -63,6 +63,14 @@ public static class XLogger
     public static void Log(string message, int layer = 1)
     {
         LogWithColor(message, Color.green, LEVEL_LOG);
+        //AddLog(message);
+    }
+
+    [Conditional("DEVELOPMENT_BUILD")]
+    [Conditional("UNITY_EDITOR")]
+    public static void LogImport(string message, int layer = 1)
+    {
+        LogWithColor(message, Color.yellow, LEVEL_LOGIMPORT);
         //AddLog(message);
     }
 

@@ -10,7 +10,7 @@
       <Collector CollectPath="Assets/Editor/MyGameAssets/GameRes/Shaders" CollectGUID="5da588b963b303f49b39e19b012905c2" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
     </Group>
     <Group GroupActiveRule="EnableGroup" GroupName="scene" GroupDesc="场景" AssetTags="">
-      <Collector CollectPath="Assets/Editor/MyGameAssets/GameRes/Scenes" CollectGUID="ec3309969819207489a2c6a4decc5353" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Editor/MyGameAssets/GameRes/Scenes" CollectGUID="ec3309969819207489a2c6a4decc5353" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
     </Group>
     <Group GroupActiveRule="EnableGroup" GroupName="ugui" GroupDesc="UI" AssetTags="">
       <Collector CollectPath="Assets/Editor/MyGameAssets/GameRes/UI" CollectGUID="c4be7637ce47e634aa7dfdb149359152" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
@@ -28,7 +28,10 @@
       <Collector CollectPath="Assets/Editor/MyGameAssets/GameRes/ZLinkData" CollectGUID="b6d61fbd0314966419a173dccf11ee73" CollectType="DependAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
     </Group>
     <Group GroupActiveRule="EnableGroup" GroupName="luaLogic" GroupDesc="lua" AssetTags="">
-      <Collector CollectPath="Assets/Editor/MyGameAssets/ExtraRes/Lua" CollectGUID="aa2f244f09d0bb241bdf2a6f2bfa813d" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/Editor/MyGameAssets/ExtraRes/Lua" CollectGUID="" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="luaData" GroupDesc="luaData" AssetTags="">
+      <Collector CollectPath="Assets/Editor/MyGameAssets/ExtraRes/Data" CollectGUID="" CollectType="MainAssetCollector" AddressRule="AddressByFolderAndFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
     </Group>
   </Package>
 </root>

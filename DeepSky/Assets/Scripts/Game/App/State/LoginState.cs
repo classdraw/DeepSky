@@ -6,6 +6,9 @@ using XLua;
 using YooAsset;
 using XEngine.Pool;
 using XEngine.Loader;
+using UnityEngine.SceneManagement;
+using Game.Scenes;
+using Game.Photon;
 
 namespace Game.Fsm
 {
@@ -20,6 +23,16 @@ namespace Game.Fsm
 
         public override void Enter(){
             XLogger.Log("LoginState Enter");
+            //var r=GameResourceManager.GetInstance().LoadResourceSync("LoginScene");
+            //SceneManager.LoadScene("LoginScene");
+        //     GameSceneManager.GetInstance().LoadSceneAsync("LoginScene",()=>{
+        //         XLogger.LogError("结束");
+        //     },(a)=>{
+        //         XLogger.LogError("进度"+a);
+        //     });
+            GameSceneManager.GetInstance().LoadSceneSync("LoginScene");
+
+            PhotonManager.CreateInstance(Global.GetInstance().transform);
             
         }
 

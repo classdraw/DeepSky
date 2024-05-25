@@ -11,7 +11,7 @@ namespace DeepServer.Handle
         private Dictionary<byte, IHandle> m_kHandles = new Dictionary<byte, IHandle>();
 
         public void Init() {
-            var accountHandle = new SystemHandle();
+            var accountHandle = new AccountHandle();
             var systemHandle = new SystemHandle();
             m_kHandles.Add(accountHandle.GetOpCode(), accountHandle);
             m_kHandles.Add(systemHandle.GetOpCode(),systemHandle);

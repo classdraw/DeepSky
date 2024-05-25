@@ -87,8 +87,8 @@ namespace Game.Scenes
         }
 
         void Update(){
-            if(m_kLastSceneHandle!=null&&m_kCurrentProgressCall!=null){
-                m_kCurrentProgressCall(m_kLastSceneHandle.Progress);
+            if(m_kCurrentSceneHandle!=null&&m_kCurrentProgressCall!=null){
+                m_kCurrentProgressCall(m_kCurrentSceneHandle.Progress);
             }
 
         }

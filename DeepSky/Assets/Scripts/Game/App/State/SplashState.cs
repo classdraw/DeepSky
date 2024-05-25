@@ -35,7 +35,6 @@ namespace Game.Fsm
             GameConsts.PlayMode=gameConfig.m_ePlayMode;
             GameConsts.PartType=gameConfig.m_ePartType;
             GameConsts.DefaultBuildPipeline=gameConfig.m_eDefaultBuildPipeline;
-            GameConsts.LinkType_Enum=gameConfig.m_eLinkTypeEnum;
         }
 
         private void OnYooAssetCallback(){

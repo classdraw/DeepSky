@@ -33,7 +33,8 @@ namespace Game.Fsm
             GameSceneManager.GetInstance().LoadSceneSync("LoginScene");
 
             PhotonManager.CreateInstance(Global.GetInstance().transform);
-            
+            //测试链接
+            PhotonManager.GetInstance().TryConnect("127.0.0.1","7777","DeepServer");
         }
 
         

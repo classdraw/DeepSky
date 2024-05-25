@@ -28,8 +28,6 @@ namespace Utilities
         public static EPlayMode PlayMode;
         public static GameConfig.EPartType PartType;
         public static EDefaultBuildPipeline DefaultBuildPipeline;
-
-        public static Server_LinkType_Enum LinkType_Enum;
         #endregion
     }
 

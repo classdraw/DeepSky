@@ -24,7 +24,7 @@ namespace Game.Photon{
 		private Action m_funcFail;//连接失败回调
 
         private PhotonPeer m_kPeer;//服务器连接对象
-        ConnectionProtocol m_eProtoncol=ConnectionProtocol.Tcp;
+        ConnectionProtocol m_eProtoncol=ConnectionProtocol.Udp;
     
         private string m_sServerName;
 		private string m_sServerAddress;
@@ -40,9 +40,7 @@ namespace Game.Photon{
 		protected override void Init(){
 			XLogger.Log("PhotonManager 初始化");
 			m_iStateEnum=(int)Server_State_Enum.None;
-
-            //测试
-            TryConnect("127.0.0.1","7777","DeepServer");
+			
         }
 
         public void SetCallback(Action complete,Action fail){
@@ -74,7 +72,7 @@ namespace Game.Photon{
 				m_bLoopUpdate=true;
 				m_IsConnecting=true;
 				TryStop();
-				m_kPeer=new PhotonPeer(this,ConnectionProtocol.Udp);
+				m_kPeer=new PhotonPeer(this,m_eProtoncol);
 				m_kPeer.Connect(m_sServerAddress,m_sServerName);
 				
 			}

@@ -22,8 +22,6 @@ public class GameConfig : MonoBehaviour
     [SerializeField]
     public EDefaultBuildPipeline m_eDefaultBuildPipeline;
     
-    [SerializeField]
-    public Server_LinkType_Enum m_eLinkTypeEnum=Server_LinkType_Enum.Tcp;
 }
 
 public enum Server_LinkType_Enum{

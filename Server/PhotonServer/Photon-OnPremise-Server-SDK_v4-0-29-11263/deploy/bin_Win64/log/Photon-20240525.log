@@ -4,3 +4,15 @@
 3916: 17:59:24.057 - Will produce at most: 10 crash dumps
 3916: 17:59:24.057 - Service shutting down
 3916: 17:59:24.058 - Service shut down complete
+21964: 18:22:02.116 - ---
+21964: 18:22:02.116 - Service: "Photon Socket Server" starting
+21964: 18:22:02.116 - Config File: E:\Git\Deep\DeepSky\Server\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+21964: 18:22:02.118 - Will produce at most: 10 crash dumps
+21964: 18:22:02.118 - Service shutting down
+21964: 18:22:02.119 - Service shut down complete
+9688: 18:24:39.131 - ---
+9688: 18:24:39.131 - Service: "Photon Socket Server" starting
+9688: 18:24:39.131 - Config File: E:\Git\Deep\DeepSky\Server\PhotonServer\Photon-OnPremise-Server-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+9688: 18:24:39.133 - Will produce at most: 10 crash dumps
+9688: 18:24:39.133 - Service shutting down
+9688: 18:24:39.135 - Service shut down complete

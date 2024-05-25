@@ -25,18 +25,21 @@ namespace Game.Fsm
             XLogger.Log("LoginState Enter");
             //var r=GameResourceManager.GetInstance().LoadResourceSync("LoginScene");
             //SceneManager.LoadScene("LoginScene");
-        //     GameSceneManager.GetInstance().LoadSceneAsync("LoginScene",()=>{
-        //         XLogger.LogError("结束");
-        //     },(a)=>{
-        //         XLogger.LogError("进度"+a);
-        //     });
-            GameSceneManager.GetInstance().LoadSceneSync("LoginScene");
+            // GameSceneManager.GetInstance().LoadSceneAsync("LoginScene",()=>{
+            //     XLogger.LogError("结束");
+            // },(a)=>{
+            //     XLogger.LogError("进度"+a);
+            // });
+            
+            GameSceneManager.GetInstance().LoadSceneAsync("LoginScene",OnSceneComplete,null);
 
+        }
+
+        private void OnSceneComplete(){
             PhotonManager.CreateInstance(Global.GetInstance().transform);
             //测试链接
             PhotonManager.GetInstance().TryConnect("127.0.0.1","7777","DeepServer");
         }
-
         
         public override void Exit(){
 

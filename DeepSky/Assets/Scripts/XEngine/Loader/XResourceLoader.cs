@@ -57,7 +57,9 @@ namespace XEngine.Loader
 #endregion
 
 #region 加载方法
-
+        public SceneHandle LoadSceneAsync(string sceneName){
+            return YooAssets.LoadSceneAsync(sceneName);
+        }
         ///同步加载一个资源
         public AssetHandle LoadAssetSyncT<T>(string assetPath)where T:UnityEngine.Object{
             return YooAssets.LoadAssetSync<T>(assetPath);

@@ -11,29 +11,19 @@ using System;
 
 namespace Game.Scenes
 {
-    public class GameSceneManager:Singleton<GameSceneManager>
+    public class GameSceneManager:MonoSingleton<GameSceneManager>
     {
-        private ResHandle m_kLastResHandle;
+        private SceneHandle m_kLastSceneHandle;
+        private SceneHandle m_kCurrentSceneHandle;
         private bool m_bIsLoad=false;
         public bool IsLoad{get{return m_bIsLoad;}}
-        public void LoadSceneSync(string sceneName){
-            if(m_bIsLoad){
-                return;
-            }
-            
-            Scene scene=SceneManager.GetActiveScene();
-            if(scene.name==sceneName){//相同场景
-                return;
-            }
-            XLogger.LogImport("同步加载场景"+sceneName);
-            m_bIsLoad=true;
-            this._TryUnLoadScene();
-            m_kLastResHandle=GameResourceManager.GetInstance().LoadResourceSync(sceneName);
-            SceneManager.LoadScene(sceneName);
-            m_bIsLoad=false;
-        }
 
-        public void LoadSceneAsync(string sceneName,Action completeCallback,Action<float> progressCallback){
+        private Action<float> m_kCurrentProgressCall;
+        private Action<float> m_kProgressCall;
+        private Action<float> m_kNextProgressCall;
+        private Action m_kNextSceneComplete;
+
+        public void LoadSceneAsync(string sceneName,Action completeCallback=null,Action<float> progressCallback=null){
             if(m_bIsLoad){
                 return;
             }
@@ -43,39 +33,64 @@ namespace Game.Scenes
             }
             XLogger.LogImport("异步加载场景"+sceneName);
             m_bIsLoad=true;
+
+            m_kProgressCall=progressCallback;
+            m_kNextSceneComplete=completeCallback;
+
             //2个场景切换 中间加一个emptyScene
-            float emptyProgress=0.3f;
-            Action<float> emptyProgressCallback=(pro)=>{
-                if(progressCallback!=null){
-                    progressCallback(pro*emptyProgress);
-                }
-            };
+            m_kLastSceneHandle=m_kCurrentSceneHandle;
 
-            Action<float> secondProgressCallback=(pro)=>{
-                if(progressCallback!=null){
-                    progressCallback(emptyProgress+pro*(1-emptyProgress));
-                }
-            };
-
-            this._TryUnLoadScene();
-            m_kLastResHandle=GameResourceManager.GetInstance().LoadResourceAsync("EmptyScene",(handle)=>{
-                emptyProgressCallback(1f);
+            m_kCurrentSceneHandle=XResourceLoader.GetInstance().LoadSceneAsync("EmptyScene");
+            m_kCurrentProgressCall=OnEmptyProgress;
+            m_kCurrentSceneHandle.Completed+=(sceneHandle)=>{
                 this._TryUnLoadScene();
-                m_kLastResHandle=GameResourceManager.GetInstance().LoadResourceAsync(sceneName,(handle)=>{
-                    secondProgressCallback(1f);
-                    SceneManager.LoadScene(sceneName);
-                    if(completeCallback!=null){
-                        completeCallback();
-                    }
-                    m_bIsLoad=false;
-                });
-            });
+
+                //2个场景切换 中间加一个emptyScene
+                m_kLastSceneHandle=sceneHandle;
+
+                m_kCurrentProgressCall=OnNextProgress;
+                m_kCurrentSceneHandle=XResourceLoader.GetInstance().LoadSceneAsync(sceneName);
+                m_kCurrentSceneHandle.Completed+=OnNextComplete;
+
+            };
+
+        }
+
+
+        private void OnEmptyProgress(float progress){
+            if(m_kProgressCall!=null){
+                m_kProgressCall(0.3f*progress);
+            }
+        }
+
+        private void OnNextProgress(float progress){
+            if(m_kProgressCall!=null){
+                m_kProgressCall(0.3f+progress*(1-0.3f));
+            }
+        }
+
+        private void OnNextComplete(SceneHandle sceneHandle){
+            this.m_kCurrentSceneHandle.Completed-=OnNextComplete;
+            this._TryUnLoadScene();
+            m_kProgressCall=null;
+            m_kCurrentProgressCall=null;
+            if(m_kNextSceneComplete!=null){
+                m_kNextSceneComplete();
+            }
+            m_bIsLoad=false;
         }
         private void _TryUnLoadScene(){
-            if(m_kLastResHandle!=null){
-                m_kLastResHandle.Dispose();
+            if(m_kLastSceneHandle!=null){
+                m_kLastSceneHandle.UnloadAsync();
             }
-            m_kLastResHandle=null;
+            m_kLastSceneHandle=null;
+        }
+
+        void Update(){
+            if(m_kLastSceneHandle!=null&&m_kCurrentProgressCall!=null){
+                m_kCurrentProgressCall(m_kLastSceneHandle.Progress);
+            }
+
         }
     }
 }

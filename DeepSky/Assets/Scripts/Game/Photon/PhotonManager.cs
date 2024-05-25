@@ -94,6 +94,7 @@ namespace Game.Photon{
 			if(m_bLoopUpdate){
 				if(m_IsConnecting||m_iStateEnum==(int)Server_State_Enum.On){
 					if(m_kPeer!=null&&!GameUtils.IS_QUIT){
+						
 						m_kPeer.Service();
 					}
 				}

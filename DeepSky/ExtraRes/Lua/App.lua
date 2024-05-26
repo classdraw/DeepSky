@@ -10,7 +10,7 @@ function  App:Init()
     SystemManager:GetInstance():Init(nil);
     UIManager:GetInstance():Init();
 
-
+    --TimeManager:GetInstance():Delete();销毁测试
     self.appStateManager=nil;
     self.audioManager=nil;
     self.resourcesManager=nil;

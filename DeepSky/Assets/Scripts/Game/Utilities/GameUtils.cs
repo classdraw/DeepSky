@@ -95,6 +95,10 @@ namespace Utilities{
         public static float GetRealStartTime(){
             return Time.realtimeSinceStartup;
         }
+
+        public static bool IsNullGameObject(GameObject obj){
+            return obj==null;
+        }
     }
 
 }

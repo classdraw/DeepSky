@@ -14,6 +14,13 @@ function UICache:dtor()
         UpdateManager:GetInstance():RemoveUpdate(self.m_kUpdateMethod);
     end
     self.m_kUpdateMethod=nil;
+
+    local cCount=#self.m_kUICtrls;
+    for idx=cCount,1,-1 do
+        local ctrl=self.m_kUICtrls[idx];
+        ctrl:Release();
+    end
+    self.m_kUICtrls={};
 end
 
 
@@ -41,15 +48,6 @@ function UICache:GetUI(uiName)
         end
     end
     return nil;
-end
-
-function UICache:ReleaseAll()
-    local cCount=#self.m_kUICtrls;
-    for idx=cCount,1,-1 do
-        local ctrl=self.m_kUICtrls[idx];
-        ctrl:Release();
-    end
-    self.m_kUICtrls={};
 end
 
 function UICache:Update()

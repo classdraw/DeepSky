@@ -57,7 +57,7 @@ public class XAnimationTween : XBaseTween {
 	void StopTimer()
 	{
 		if (timeID < 0) return;
-		XEngine.Time.TimeManager.GetInstance().RemoveFromContainerById(timeID);
+		XEngine.Time.TimeManager.GetInstance().ReleaseOneById(timeID);
 		timeID = -1;
 	}
 	

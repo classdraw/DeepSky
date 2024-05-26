@@ -18,5 +18,19 @@ function UIManager:Init()
     SystemUtils.SetUIConfig(overlayCanvas);
 end
 
+function UIManager:Release()
+    if self.m_kUIRootHandle~=nil then
+        self.m_kUIRootHandle:Dispose();
+    end
+    self.m_kUIRootHandle=nil;
+    self.m_kUIRootObj=nil;
+    if self.m_kUICache~=nil then
+        self.m_kUICache:Release();
+    end
+    self.m_kUICache:Delete();
+    self.m_kUICache=nil;
+
+    --ui清除
+end
 
 return UIManager;

@@ -9,6 +9,7 @@ using XEngine.Loader;
 using UnityEngine.SceneManagement;
 using Game.Scenes;
 using Game.Photon;
+using XEngine.Time;
 
 namespace Game.Fsm
 {
@@ -23,7 +24,7 @@ namespace Game.Fsm
 
         public override void Enter(){
             XLogger.Log("LoginState Enter");
-            //var r=GameResourceManager.GetInstance().LoadResourceSync("LoginScene");
+            
             //SceneManager.LoadScene("LoginScene");
             // GameSceneManager.GetInstance().LoadSceneAsync("LoginScene",()=>{
             //     XLogger.LogError("结束");
@@ -39,6 +40,13 @@ namespace Game.Fsm
             PhotonManager.CreateInstance(Global.GetInstance().transform);
             //测试链接
             PhotonManager.GetInstance().TryConnect("127.0.0.1","8888","DeepServer");
+            // var r=GameResourceManager.GetInstance().LoadResourceSync("Sphere");
+            // var d=r.GetGameObject();
+
+            // var t=TimeManager.GetInstance().Build(2f,()=>{
+            //     r.Dispose();
+            // });
+            // TimeManager.GetInstance().ReleaseOneById(t);
         }
         
         public override void Exit(){

@@ -79,7 +79,7 @@ MonoBehaviour:
       - CollectPath: Assets/Editor/MyGameAssets/GameRes/UI
         CollectorGUID: c4be7637ce47e634aa7dfdb149359152
         CollectorType: 0
-        AddressRuleName: AddressByFileName
+        AddressRuleName: AddressByFolderAndFileName
         PackRuleName: PackDirectory
         FilterRuleName: CollectAll
         AssetTags: 

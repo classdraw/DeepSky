@@ -9,7 +9,25 @@ using XEngine.Pool;
 [AutoCreateInstance(true)]
 public class Global:MonoSingleton<Global>
 {
-    
+    private static int targetFrameRate = 60;
+    private static float deltaTime = 1.0f / targetFrameRate;
+
+	public static int TargetFrameRate {
+		get {
+			return targetFrameRate;
+		}
+		set {
+			value = Mathf.Max (1, value);
+			targetFrameRate = value;
+			Application.targetFrameRate = value;
+			deltaTime = 1.0f / value;
+		}
+	}
+
+    public static float FixedDeltaTime()
+	{
+		return Mathf.Min (Time.deltaTime, deltaTime);
+	}
     private void OnApplicationQuit(){
         GameUtils.IS_QUIT=true;
         YooAssets.Destroy();

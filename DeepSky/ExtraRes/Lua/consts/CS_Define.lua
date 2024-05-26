@@ -10,3 +10,9 @@ GameObject = CS.UnityEngine.GameObject
 Object = CS.UnityEngine.Object
 Application = CS.UnityEngine.Application
 XFacade=CS.XFacade
+
+
+--自定义
+SystemUtils=CS.Utilities.SystemUtils
+GameUtils=CS.Utilities.GameUtils
+GameResourceManager=CS.XEngine.Loader.GameResourceManager

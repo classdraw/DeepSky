@@ -10,7 +10,7 @@ Lua_Messager=require("core.Lua_Messager");
 SelectManager=require("logic.SelectManager");
 UpdateManager=require("logic.UpdateManager");
 TimeManager=require("logic.TimeManager");
-
+UIManager=require("logic.UIManager");
 
 --系统
 BaseSystem=require("system.BaseSystem");

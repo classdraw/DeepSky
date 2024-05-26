@@ -8,7 +8,7 @@ function  App:Init()
     TimeManager:GetInstance():Init();
 
     SystemManager:GetInstance():Init(nil);
-    -- AssetManager:GetInstance():Init();
+    UIManager:GetInstance():Init();
 
 
     self.appStateManager=nil;

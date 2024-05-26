@@ -48,10 +48,17 @@ namespace XEngine.Pool
         }
 
         public GameObject GetGameObject(){
+
             return m_Object as GameObject;
         }
 
-
+        public GameObject GetGameObjectIns(){
+            var gObj=GetGameObject();
+            if(gObj!=null){
+                return GameObject.Instantiate(gObj);
+            }
+            return null;
+        }
 
         public void Dispose(){
             if(m_PoolGrain!=null){//资源释放

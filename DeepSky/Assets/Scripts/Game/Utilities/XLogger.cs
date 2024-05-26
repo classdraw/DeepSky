@@ -86,6 +86,17 @@ public static class XLogger
         UnityEngine.Debug.Log(message);
         #endif
     }
+    [Conditional("UNITY_EDITOR")]
+    public static void LogEditorError(string message)
+    {
+        LogError(message);
+    }
+
+    [Conditional("UNITY_EDITOR")]
+    public static void LogEditorWarn(string message)
+    {
+        LogWarn(message);
+    }
 
     public static void LogError(string message)
     {

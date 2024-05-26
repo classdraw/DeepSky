@@ -51,8 +51,15 @@
             "BundleID": 3
         },
         {
-            "Address": "Plane",
+            "Address": "UI_Plane",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/UI/Plane.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 4
+        },
+        {
+            "Address": "UI_UIRoot",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/UI/UIRoot.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 4
@@ -226,6 +233,20 @@
             "BundleID": 12
         },
         {
+            "Address": "logic_UICache",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/UICache.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 12
+        },
+        {
+            "Address": "logic_UIManager",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/UIManager.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 12
+        },
+        {
             "Address": "logic_UpdateManager",
             "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/UpdateManager.bytes",
             "AssetGUID": "",
@@ -261,46 +282,53 @@
             "BundleID": 13
         },
         {
+            "Address": "core_UIBaseCtrl",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/ui/core/UIBaseCtrl.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 14
+        },
+        {
             "Address": "utils_debug",
             "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/debug.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 14
+            "BundleID": 15
         },
         {
             "Address": "utils_functions",
             "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/functions.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 14
+            "BundleID": 15
         },
         {
             "Address": "utils_lc_event",
             "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/lc_event.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 14
+            "BundleID": 15
         },
         {
             "Address": "utils_lc_list",
             "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/lc_list.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 14
+            "BundleID": 15
         },
         {
             "Address": "utils_XLogger",
             "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/XLogger.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 14
+            "BundleID": 15
         },
         {
             "Address": "Data_data1",
             "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Data/data1.bytes",
             "AssetGUID": "",
             "AssetTags": [],
-            "BundleID": 15
+            "BundleID": 16
         }
     ],
     "BundleList": [
@@ -349,7 +377,7 @@
             "UnityCRC": 0,
             "FileHash": "b9fad68f0cc0a0bfb6c0daa24a9cde26",
             "FileCRC": "00000000",
-            "FileSize": 3255,
+            "FileSize": 12732,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -389,7 +417,7 @@
             "UnityCRC": 0,
             "FileHash": "25bc7103a47406d3507b7f298a0f7737",
             "FileCRC": "00000000",
-            "FileSize": 8744,
+            "FileSize": 8775,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -399,7 +427,7 @@
             "UnityCRC": 0,
             "FileHash": "e3c5464f4a52f82b4d9dd23db7789ac8",
             "FileCRC": "00000000",
-            "FileSize": 2314,
+            "FileSize": 2462,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -429,7 +457,7 @@
             "UnityCRC": 0,
             "FileHash": "7a68deb76cd55399e78bdfe9c3b29b48",
             "FileCRC": "00000000",
-            "FileSize": 4896,
+            "FileSize": 7313,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -440,6 +468,16 @@
             "FileHash": "147bea4dcd338c6fd9757d7c2f40af00",
             "FileCRC": "00000000",
             "FileSize": 4472,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_ui_core.bundle",
+            "UnityCRC": 0,
+            "FileHash": "1cf7276e1e85d270fe601a43abc40930",
+            "FileCRC": "00000000",
+            "FileSize": 476,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

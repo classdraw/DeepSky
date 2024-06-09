@@ -3,5 +3,7 @@
 [Oo]bj/
 TestData/
 ErrorLog/
+Logs/
+Build/
 .idea/
 .vs/

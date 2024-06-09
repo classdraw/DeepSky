@@ -4,6 +4,7 @@ using UnityEngine;
 using XLua;
 using System;
 using System.Text;
+using System.IO;
 
 namespace Utilities{
 	public class DisplayCutout
@@ -81,6 +82,8 @@ namespace Utilities{
 		{
 			return "0";
 		}
+
+		
 		public static bool IsPCGame()
         {
 #if UNITY_STANDALONE_WIN

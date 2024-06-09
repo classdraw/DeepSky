@@ -62,7 +62,7 @@ public static class LuaGenConfig
         typeof(UnityEngine.Resources),
         typeof(UnityEngine.Physics),
         typeof(UnityEngine.RenderSettings),
-        typeof(UnityEngine.QualitySettings),
+        // typeof(UnityEngine.QualitySettings),
         typeof(UnityEngine.GL),
         typeof(UnityEngine.SceneManagement.SceneManager),
         typeof(UnityEngine.SystemLanguage),
@@ -133,7 +133,21 @@ public static class LuaGenConfig
         // typeof(AppVersion),
         // typeof(AppConfig),
         typeof(System.Diagnostics.Stopwatch),
-        typeof(MaterialPropertyBlock),
-        typeof(Material),
+        // typeof(MaterialPropertyBlock),
+        // typeof(Material),//解开也可以  Blacklist需要添加一堆
+    };
+
+    [BlackList]
+	/// <summary>
+	/// List是个string的列表，第一个string是类型的全路径名，第二个string是成员名，如果成员是一个方法，还需要从第三个string开始，把其参数的类型全路径全列出来。
+	/// </summary>
+	public static List<List<string>> BlackList = new List<List<string>>()  {
+//		new List<string>(){"System.IO.FileInfo", "GetAccessControl", "System.Security.AccessControl.AccessControlSections"},
+
+        // new List<string>(){"UnityEngine.Material", "IsJoystickPreconfigured", "System.String"},
+		new List<string>(){"UnityEngine.Input", "IsJoystickPreconfigured", "System.String"},
+		new List<string>(){"UnityEngine.UI.Text", "OnRebuildRequested"},
+        new List<string>(){"UnityEngine.WWW","GetMovieTexture"},
+        new List<string>(){"UnityEngine.Input", "location"},
     };
 }

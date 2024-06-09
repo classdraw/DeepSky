@@ -34,7 +34,7 @@ public static class XLogger
         StringBuilder sb = new StringBuilder();
         long nowTime = DateTime.Now.Ticks / 10000;//ms
 
-#if UNITY_EDITOR
+// #if UNITY_EDITOR
         int colorInt = ((int)(color.r * 255f) << 16) | ((int)(color.g * 255f) << 8) | (int)(color.b * 255f);
         long offsetTime = lastLogTime > 0 ? nowTime - lastLogTime : 0;
 
@@ -47,52 +47,50 @@ public static class XLogger
             .Append("-->")
             .Append(message)
             .Append("</color>");
-#else
-            sb.Append(message);
-#endif
+// #else
+//             sb.Append(message);
+// #endif
 
         lastLogTime = nowTime;
-        #if UNITY_EDITOR || DEVELOPMENT_BUILD
+        // #if UNITY_EDITOR || DEVELOPMENT_BUILD
         UnityEngine.Debug.Log(sb.ToString());
-        #endif
+        // #endif
     }
 
     //public 
-    [Conditional("DEVELOPMENT_BUILD")]
-    [Conditional("UNITY_EDITOR")]
+    // [Conditional("DEVELOPMENT_BUILD")]
+    // [Conditional("UNITY_EDITOR")]
     public static void Log(string message, int layer = 1)
     {
         LogWithColor(message, Color.green, LEVEL_LOG);
         //AddLog(message);
     }
 
-    [Conditional("DEVELOPMENT_BUILD")]
-    [Conditional("UNITY_EDITOR")]
+    // [Conditional("DEVELOPMENT_BUILD")]
+    // [Conditional("UNITY_EDITOR")]
     public static void LogImport(string message, int layer = 1)
     {
         LogWithColor(message, Color.yellow, LEVEL_LOGIMPORT);
         //AddLog(message);
     }
 
-    [Conditional("DEVELOPMENT_BUILD")]
-    [Conditional("UNITY_EDITOR")]
+    // [Conditional("DEVELOPMENT_BUILD")]
+    // [Conditional("UNITY_EDITOR")]
     public static void LogDebug(string message)
     {
         if (LEVEL_DEBUG < LogLevel)
         {
             return;
         }
-        #if UNITY_EDITOR
         UnityEngine.Debug.Log(message);
-        #endif
     }
-    [Conditional("UNITY_EDITOR")]
+    // [Conditional("UNITY_EDITOR")]
     public static void LogEditorError(string message)
     {
         LogError(message);
     }
 
-    [Conditional("UNITY_EDITOR")]
+    // [Conditional("UNITY_EDITOR")]
     public static void LogEditorWarn(string message)
     {
         LogWarn(message);
@@ -104,12 +102,12 @@ public static class XLogger
         {
             return;
         }
-        #if UNITY_EDITOR
+        // #if UNITY_EDITOR
         long nowTime = DateTime.Now.Ticks / 10000;//ms
         long offsetTime = lastLogTime > 0 ? nowTime - lastLogTime : 0;
         lastLogTime = nowTime;
         UnityEngine.Debug.LogError("[" + offsetTime + "] Error:" + message);
-        #endif
+        // #endif
     }
 
     
@@ -119,20 +117,20 @@ public static class XLogger
         LogError(errorLog);
     }
 
-    [Conditional("DEVELOPMENT_BUILD")]
-    [Conditional("UNITY_EDITOR")]
+    // [Conditional("DEVELOPMENT_BUILD")]
+    // [Conditional("UNITY_EDITOR")]
     public static void LogWarn(string message, int layer = 1)
     {
         LogWithColor(message, Color.yellow, LEVEL_WARN);
     }
 
-    [Conditional("UNITY_EDITOR")]
+    // [Conditional("UNITY_EDITOR")]
     public static void LogTest(string message, int layer = 1)
     {
         LogWithColor(message, Color.magenta, LEVEL_TEST);
     }
 
-    [Conditional("UNITY_EDITOR")]
+    // [Conditional("UNITY_EDITOR")]
     public static void LogTemp(string message, int layer = 1)
     {
         Color color = new Color(0.4f,0.6f,1);

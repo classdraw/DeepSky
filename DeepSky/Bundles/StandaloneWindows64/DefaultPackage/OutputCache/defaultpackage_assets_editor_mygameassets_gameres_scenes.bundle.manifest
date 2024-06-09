@@ -1,16 +1,16 @@
 ManifestFileVersion: 0
 UnityVersion: 6000.0.0b13
-CRC: 3659682132
+CRC: 3362190834
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f91c84c2479addda0f48c0c5308bcb0d
+    Hash: 14a2c7c8c9bf2166efa6bd0887e62a96
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 01ab8bbacf36b3c44cbe30bfb4939e1e
+    Hash: e224c41dae2618bf0b0549fe898eeb1f
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 14a8f849c7e393b6c4f2c69927058cc1
+    Hash: ce7649c499dbe159809feb7d718ac103
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,9 +21,17 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 21
   Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
 - Class: 28
   Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
 - Class: 48
+  Script: {instanceID: 0}
+- Class: 65
   Script: {instanceID: 0}
 - Class: 81
   Script: {instanceID: 0}
@@ -33,6 +41,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 108
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 - Class: 157
   Script: {instanceID: 0}
 - Class: 196
@@ -41,4 +53,5 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Editor/MyGameAssets/GameRes/Scenes/EmptyScene.unity
 - Assets/Editor/MyGameAssets/GameRes/Scenes/LoginScene.unity
-Dependencies: []
+Dependencies:
+- E:/Git/Deep/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

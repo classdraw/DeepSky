@@ -29,7 +29,7 @@ public class AppDelegate : Singleton<AppDelegate>
     //参数设置 后续steam可能需要自定义一些初始化设置
     private void SetSceneParam(){
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
-
+        
 		//设置横屏
 		// Screen.orientation = ScreenOrientation.AutoRotation;
 		Screen.autorotateToLandscapeLeft = true;

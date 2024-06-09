@@ -39,7 +39,7 @@ namespace Game.Fsm
         private void OnSceneComplete(){
             PhotonManager.CreateInstance(Global.GetInstance().transform);
             //测试链接
-            PhotonManager.GetInstance().TryConnect("127.0.0.1","8888","DeepServer");
+            // PhotonManager.GetInstance().TryConnect("127.0.0.1","8888","DeepServer");
             // var r=GameResourceManager.GetInstance().LoadResourceSync("Sphere");
             // var d=r.GetGameObject();
 

@@ -80,9 +80,14 @@ namespace Game.Scenes
             m_bIsLoad=false;
         }
         private void _TryUnLoadScene(){
-            if(m_kLastSceneHandle!=null){
-                m_kLastSceneHandle.UnloadAsync();
+            try{
+                if(m_kLastSceneHandle!=null){
+                    m_kLastSceneHandle.UnloadAsync();
+                }
+            }catch{
+
             }
+            
             m_kLastSceneHandle=null;
         }
 

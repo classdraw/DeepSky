@@ -288,6 +288,7 @@ MonoBehaviour:
   m_ePlayMode: 0
   m_ePartType: 1
   m_eDefaultBuildPipeline: 0
+  ShowLogInfo: 1
 --- !u!4 &1058997158
 Transform:
   m_ObjectHideFlags: 0

@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+UnityVersion: 6000.0.0b13
+CRC: 3346845076
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9abe9ef9e71db722ce0f27b276508c53
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 06e84643df4970968b6c8d6d65006c8c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 160b2f87b4bad707f2ff65699a07e0e4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/MyGameAssets/GameRes/Bytes/New Material.mat
+Dependencies:
+- E:/Git/Deep/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

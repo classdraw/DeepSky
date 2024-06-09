@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+UnityVersion: 6000.0.0b13
+CRC: 3203453835
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b2e33a9fc97a028b38a3961973e124f0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: de38bd40d7ed5a8555a4fc6ed72683d2
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/MyGameAssets/ExtraRes/Lua/StartApp.lua.txt
+- Assets/Editor/MyGameAssets/ExtraRes/Lua/global.lua.txt
+- Assets/Editor/MyGameAssets/ExtraRes/Lua/GamePrepareLoad.lua.txt
+- Assets/Editor/MyGameAssets/ExtraRes/Lua/App.lua.txt
+- Assets/Editor/MyGameAssets/ExtraRes/Lua/GlobalRequire.lua.txt
+- Assets/Editor/MyGameAssets/ExtraRes/Lua/main.lua.txt
+- Assets/Editor/MyGameAssets/ExtraRes/Lua/XLuaFacade.lua.txt
+Dependencies: []

@@ -21,6 +21,16 @@ public class GameConfig : MonoBehaviour
 
     [SerializeField]
     public EDefaultBuildPipeline m_eDefaultBuildPipeline;
+    [SerializeField]
+    private bool ShowLogInfo;
+
+    private void Awake(){
+        if(ShowLogInfo){
+            GameObject obj=new GameObject("LogInfo");
+            obj.AddComponent<RuntimeScreeLogger>();
+            DontDestroyOnLoad(obj);
+        }
+    }
     
 }
 

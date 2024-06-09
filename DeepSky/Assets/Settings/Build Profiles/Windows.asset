@@ -20,6 +20,10 @@ MonoBehaviour:
   m_Scenes:
   - m_enabled: 1
     m_path: Assets/Scenes/Launcher.unity
+  - m_enabled: 1
+    m_path: Assets/Editor/MyGameAssets/GameRes/Scenes/EmptyScene.unity
+  - m_enabled: 1
+    m_path: Assets/Editor/MyGameAssets/GameRes/Scenes/LoginScene.unity
   references:
     version: 2
     RefIds:

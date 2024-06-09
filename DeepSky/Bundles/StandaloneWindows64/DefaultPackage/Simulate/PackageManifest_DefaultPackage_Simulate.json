@@ -93,239 +93,239 @@
             "BundleID": 7
         },
         {
-            "Address": "Lua_App",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/App.bytes",
+            "Address": "Lua_App.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/App.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 8
         },
         {
-            "Address": "Lua_GamePrepareLoad",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/GamePrepareLoad.bytes",
+            "Address": "Lua_GamePrepareLoad.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/GamePrepareLoad.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 8
         },
         {
-            "Address": "Lua_global",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/global.bytes",
+            "Address": "Lua_global.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/global.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 8
         },
         {
-            "Address": "Lua_GlobalRequire",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/GlobalRequire.bytes",
+            "Address": "Lua_GlobalRequire.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/GlobalRequire.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 8
         },
         {
-            "Address": "Lua_main",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/main.bytes",
+            "Address": "Lua_main.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/main.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 8
         },
         {
-            "Address": "Lua_StartApp",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/StartApp.bytes",
+            "Address": "Lua_StartApp.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/StartApp.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 8
         },
         {
-            "Address": "Lua_XLuaFacade",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/XLuaFacade.bytes",
+            "Address": "Lua_XLuaFacade.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/XLuaFacade.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 8
         },
         {
-            "Address": "consts_AppEvent",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/consts/AppEvent.bytes",
+            "Address": "consts_AppEvent.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/consts/AppEvent.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 9
         },
         {
-            "Address": "consts_CS_Define",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/consts/CS_Define.bytes",
+            "Address": "consts_CS_Define.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/consts/CS_Define.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 9
         },
         {
-            "Address": "consts_Enum",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/consts/Enum.bytes",
+            "Address": "consts_Enum.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/consts/Enum.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 9
         },
         {
-            "Address": "core_Lua_BaseClass",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_BaseClass.bytes",
+            "Address": "core_Lua_BaseClass.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_BaseClass.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 10
         },
         {
-            "Address": "core_Lua_LazyClass",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_LazyClass.bytes",
+            "Address": "core_Lua_LazyClass.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_LazyClass.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 10
         },
         {
-            "Address": "core_Lua_Messager",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_Messager.bytes",
+            "Address": "core_Lua_Messager.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_Messager.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 10
         },
         {
-            "Address": "core_Lua_Object",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_Object.bytes",
+            "Address": "core_Lua_Object.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_Object.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 10
         },
         {
-            "Address": "core_Lua_Singleton",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_Singleton.bytes",
+            "Address": "core_Lua_Singleton.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_Singleton.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 10
         },
         {
-            "Address": "core_Lua_Updatable",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_Updatable.bytes",
+            "Address": "core_Lua_Updatable.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_Updatable.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 10
         },
         {
-            "Address": "functions_init",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/functions/init.bytes",
+            "Address": "functions_init.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/functions/init.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 11
         },
         {
-            "Address": "logic_SelectManager",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/SelectManager.bytes",
+            "Address": "logic_SelectManager.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/SelectManager.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 12
         },
         {
-            "Address": "logic_SystemManager",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/SystemManager.bytes",
+            "Address": "logic_SystemManager.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/SystemManager.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 12
         },
         {
-            "Address": "logic_TimeManager",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/TimeManager.bytes",
+            "Address": "logic_TimeManager.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/TimeManager.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 12
         },
         {
-            "Address": "logic_UICache",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/UICache.bytes",
+            "Address": "logic_UICache.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/UICache.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 12
         },
         {
-            "Address": "logic_UIManager",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/UIManager.bytes",
+            "Address": "logic_UIManager.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/UIManager.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 12
         },
         {
-            "Address": "logic_UpdateManager",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/UpdateManager.bytes",
+            "Address": "logic_UpdateManager.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/UpdateManager.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 12
         },
         {
-            "Address": "system_BaseSystem",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/system/BaseSystem.bytes",
+            "Address": "system_BaseSystem.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/system/BaseSystem.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 13
         },
         {
-            "Address": "system_GameSettingSystem",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/system/GameSettingSystem.bytes",
+            "Address": "system_GameSettingSystem.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/system/GameSettingSystem.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 13
         },
         {
-            "Address": "system_TestSystem",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/system/TestSystem.bytes",
+            "Address": "system_TestSystem.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/system/TestSystem.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 13
         },
         {
-            "Address": "system_ValueObject",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/system/ValueObject.bytes",
+            "Address": "system_ValueObject.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/system/ValueObject.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 13
         },
         {
-            "Address": "core_UIBaseCtrl",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/ui/core/UIBaseCtrl.bytes",
+            "Address": "core_UIBaseCtrl.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/ui/core/UIBaseCtrl.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 14
         },
         {
-            "Address": "utils_debug",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/debug.bytes",
+            "Address": "utils_debug.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/debug.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 15
         },
         {
-            "Address": "utils_functions",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/functions.bytes",
+            "Address": "utils_functions.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/functions.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 15
         },
         {
-            "Address": "utils_lc_event",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/lc_event.bytes",
+            "Address": "utils_lc_event.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/lc_event.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 15
         },
         {
-            "Address": "utils_lc_list",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/lc_list.bytes",
+            "Address": "utils_lc_list.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/lc_list.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 15
         },
         {
-            "Address": "utils_XLogger",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/XLogger.bytes",
+            "Address": "utils_XLogger.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/XLogger.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 15
         },
         {
-            "Address": "Data_data1",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Data/data1.bytes",
+            "Address": "Data_data1.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Data/data1.lua.txt",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 16

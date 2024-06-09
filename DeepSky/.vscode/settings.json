@@ -56,5 +56,8 @@
         "temp/": true,
         "Temp/": true
     },
+    "files.associations": {
+        "*.txt": "lua"
+    },
     "dotnet.defaultSolution": "DeepSky.sln"
 }

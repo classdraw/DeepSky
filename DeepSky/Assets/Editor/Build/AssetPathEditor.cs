@@ -17,13 +17,13 @@ public class AssetPathEditor:Editor
     private static string[] Ignore_Dirs=new string[]{
         "Resources/Link"
     };
-
-    [MenuItem("Deep/Build/外部文件拷贝(必须点)")]
-    private static void BuildExtraInfo(){
-        Debug.LogError("BuildExtraInfo Begin");
-        CopyExtraRes();
-        Debug.LogError("BuildExtraInfo Success!!!");
-    }
+    
+    // [MenuItem("Deep/Build/外部文件拷贝(必须点)")]
+    // private static void BuildExtraInfo(){
+    //     Debug.LogError("BuildExtraInfo Begin");
+    //     CopyExtraRes();
+    //     Debug.LogError("BuildExtraInfo Success!!!");
+    // }
 
     private static void CopyExtraRes(){
         // 
@@ -75,7 +75,7 @@ public class AssetPathEditor:Editor
                 if (fileExist)
                 {
                     if(desPath.Contains(".lua")){
-                        desPath=desPath.Replace(".lua",".bytes");
+                        desPath=desPath.Replace(".lua",".lua.txt");
                     }
                     //复制文件到指定目录下                     
                     System.IO.File.Copy(item, desPath, true);

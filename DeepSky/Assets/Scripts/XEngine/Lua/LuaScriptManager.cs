@@ -156,6 +156,7 @@ public class LuaScriptManager : MonoSingleton<LuaScriptManager>{
             if(!luaPath.Contains("_")){
                 luaPath="Lua_"+luaPath;
             }
+			luaPath+=".lua";
             if(m_LoadedLuaDatas.ContainsKey(luaPath)){
                 if(m_LoadedLuaDatas[luaPath].IsEmpty()){
                     return null;

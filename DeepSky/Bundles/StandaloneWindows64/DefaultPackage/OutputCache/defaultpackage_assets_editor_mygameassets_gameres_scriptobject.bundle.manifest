@@ -1,22 +1,21 @@
 ManifestFileVersion: 0
-UnityVersion: 6000.0.0b13
-CRC: 451624336
+CRC: 3272853450
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0bbc5df2c64c8642af2595efae90e90e
+    Hash: df6f6d2dc166acecd8cd48bdc3201d90
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 5f33e3b894683c6453fec220f571ded4
+    Hash: 6b0447af830a3efed52a272edeb83ea1
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: d0991833b135917fa70f7b3fcd2a9248
+    Hash: df6f6d2dc166acecd8cd48bdc3201d90
 HashAppended: 0
 ClassTypes:
 - Class: 114
-  Script: {fileID: 11500000, guid: a480e72eae4f8b24bb326c8a44211ab1, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 5632e871d1a26224cbbb37d0656afe51, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a480e72eae4f8b24bb326c8a44211ab1, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers:

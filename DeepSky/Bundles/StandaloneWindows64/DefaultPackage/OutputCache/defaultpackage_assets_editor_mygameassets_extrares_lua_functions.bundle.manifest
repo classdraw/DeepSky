@@ -1,16 +1,15 @@
 ManifestFileVersion: 0
-UnityVersion: 6000.0.0b13
-CRC: 2792981951
+CRC: 828222151
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c605cfe3383328a2e03c5609b5d047a1
+    Hash: 19d117db9cb77881b6cc78d0e853c4a4
   TypeTreeHash:
     serializedVersion: 2
     Hash: 5ad585dd02dfb5016c0dad519eab8f49
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 2788717fcc0c4cef64f1bdee19fc2159
+    Hash: 19d117db9cb77881b6cc78d0e853c4a4
 HashAppended: 0
 ClassTypes:
 - Class: 49

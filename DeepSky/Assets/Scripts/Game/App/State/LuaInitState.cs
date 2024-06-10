@@ -43,6 +43,22 @@ namespace Game.Fsm
             // handle1.InstantiateSync(Vector3.zero, Quaternion.identity, null);
         }
 
+
+        //  private static void LoadMetadataForAOTAssemblies()
+        // {
+        //     /// 注意，补充元数据是给AOT dll补充元数据，而不是给热更新dll补充元数据。
+        //     /// 热更新dll不缺元数据，不需要补充，如果调用LoadMetadataForAOTAssembly会返回错误
+        //     /// 
+        //     HomologousImageMode mode = HomologousImageMode.SuperSet;
+        //     foreach (var aotDllName in AOTMetaAssemblyFiles)
+        //     {
+        //         byte[] dllBytes = ReadBytesFromStreamingAssets(aotDllName);
+        //         // 加载assembly对应的dll，会自动为它hook。一旦aot泛型函数的native函数不存在，用解释器版本代码
+        //         LoadImageErrorCode err = RuntimeApi.LoadMetadataForAOTAssembly(dllBytes, mode);//用来加载预先编译的程序集的元数据，这样就可以在运行时为 AOT 泛型函数生成缺失的 native 函数。
+        //         Debug.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
+        //     }
+        // }
+
         private void Test(){
             var resHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_UpdateInfo.dll");
             Assembly hotUpdate=Assembly.Load(resHandle.GetObjT<TextAsset>().bytes);
@@ -64,6 +80,15 @@ namespace Game.Fsm
                 type.GetMethod("Print").Invoke(null, null);
             }
         }
+
+        // private static void Run_InstantiateComponentByAsset()
+        // {
+        //     // 通过实例化assetbundle中的资源，还原资源上的热更新脚本
+        //     AssetBundle ab = AssetBundle.LoadFromMemory(LoadDll.ReadBytesFromStreamingAssets("prefabs"));
+        //     GameObject cube = ab.LoadAsset<GameObject>("Cube");
+        //     GameObject.Instantiate(cube);
+        // }
+
         public override void Exit(){
 
         }

@@ -28,7 +28,7 @@ namespace XEngine.Loader{
             return PoolManager.GetInstance().LoadResourceSync(assetPath,1);
         }
 
-        
+
 
     }
 

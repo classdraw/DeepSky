@@ -86,8 +86,8 @@
             "BundleID": 6
         },
         {
-            "Address": "Bytes_UpdateInfo",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/UpdateInfo.bytes",
+            "Address": "Bytes_UpdateInfo.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/UpdateInfo.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 6

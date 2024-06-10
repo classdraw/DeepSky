@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestInfo : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
+namespace UpdateInfo{
+    public class TestInfo : MonoBehaviour
     {
         
+        public static void Print()
+        {
+            Debug.LogError("测试C#热更123");
+        }
+
+        void Update()
+        {
+            
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -79,8 +79,15 @@
             "BundleID": 5
         },
         {
-            "Address": "New Material",
+            "Address": "Bytes_New Material",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/New Material.mat",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 6
+        },
+        {
+            "Address": "Bytes_UpdateInfo",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/UpdateInfo.bytes",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 6
@@ -397,7 +404,7 @@
             "UnityCRC": 0,
             "FileHash": "75842c50a6e1aa0765bbd85481419e91",
             "FileCRC": "00000000",
-            "FileSize": 3826,
+            "FileSize": 8434,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

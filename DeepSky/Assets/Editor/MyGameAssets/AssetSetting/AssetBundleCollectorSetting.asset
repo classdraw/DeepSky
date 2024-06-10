@@ -105,7 +105,7 @@ MonoBehaviour:
       - CollectPath: Assets/Editor/MyGameAssets/GameRes/Bytes
         CollectorGUID: d12dee9dae6223848af4a89272e24574
         CollectorType: 0
-        AddressRuleName: AddressByFileName
+        AddressRuleName: AddressByFolderAndFileName
         PackRuleName: PackDirectory
         FilterRuleName: CollectAll
         AssetTags: 

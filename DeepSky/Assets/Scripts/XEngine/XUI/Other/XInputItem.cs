@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+// using TMPro;
 using UnityEngine.EventSystems;
 
 namespace XEngine.UI

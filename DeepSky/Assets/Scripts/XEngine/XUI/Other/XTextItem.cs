@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+// using TMPro;
 using XEngine;
 
 namespace XEngine.UI

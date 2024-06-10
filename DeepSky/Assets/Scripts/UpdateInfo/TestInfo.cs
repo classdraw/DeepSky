@@ -8,9 +8,13 @@ namespace UpdateInfo{
         
         public static void Print()
         {
-            Debug.LogError("测试C#热更123");
+            Debug.Log("测试C#热更123");
+            
         }
-
+        private void Awake()
+        {
+            Debug.Log("TestInfo Awake");
+        }
         void Update()
         {
             

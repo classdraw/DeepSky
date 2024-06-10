@@ -1,3 +1,16 @@
 {
-	"name": "UpdateInfo"
+    "name": "UpdateInfo",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d80144afe55be644f857e016fc2f3381"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

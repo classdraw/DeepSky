@@ -3,9 +3,7 @@ using System;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
-namespace JKFrame
-{
-    public static class LogEditorJump
+public static class LogEditorJump
     {
             [UnityEditor.Callbacks.OnOpenAssetAttribute(0)]
             static bool OnOpenAsset(int instanceID, int line)
@@ -63,5 +61,4 @@ namespace JKFrame
                 return null;
             }
     }
-}
 #endif

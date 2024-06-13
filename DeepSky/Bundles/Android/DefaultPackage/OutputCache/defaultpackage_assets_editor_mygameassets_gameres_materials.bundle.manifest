@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 2578261793
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 85a9fc9b15c39bc6b28e0f5027d954b9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5e762ccb57c4caaabbb5a4199ac82c23
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 85a9fc9b15c39bc6b28e0f5027d954b9
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/MyGameAssets/GameRes/Materials/New Material1.mat
+Dependencies:
+- E:/WW/DeepSky/DeepSky/Bundles/Android/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

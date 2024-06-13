@@ -1,0 +1,23 @@
+ManifestFileVersion: 0
+CRC: 1997027817
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 637eb3d55537e90a71f69b910afe72c5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 637eb3d55537e90a71f69b910afe72c5
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/MyGameAssets/ExtraRes/Lua/system/BaseSystem.lua.txt
+- Assets/Editor/MyGameAssets/ExtraRes/Lua/system/GameSettingSystem.lua.txt
+- Assets/Editor/MyGameAssets/ExtraRes/Lua/system/TestSystem.lua.txt
+- Assets/Editor/MyGameAssets/ExtraRes/Lua/system/ValueObject.lua.txt
+Dependencies: []

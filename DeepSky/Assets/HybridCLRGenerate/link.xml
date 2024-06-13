@@ -1,13 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <linker>
+  <assembly fullname="FrameInfo">
+    <type fullname="XEngine.Loader.GameResourceManager" preserve="all" />
+    <type fullname="XEngine.Pool.ResHandle" preserve="all" />
+    <type fullname="XEngine.Utilities.Singleton`1" preserve="all" />
+    <type fullname="XEngine.Utilities.XLogger" preserve="all" />
+  </assembly>
   <assembly fullname="System">
     <type fullname="System.CodeDom.Compiler.GeneratedCodeAttribute" preserve="all" />
     <type fullname="System.ComponentModel.EditorBrowsableAttribute" preserve="all" />
     <type fullname="System.ComponentModel.EditorBrowsableState" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.CoreModule">
-    <type fullname="UnityEngine.Debug" preserve="all" />
+    <type fullname="UnityEngine.Component" preserve="all" />
+    <type fullname="UnityEngine.GameObject" preserve="all" />
     <type fullname="UnityEngine.MonoBehaviour" preserve="all" />
+    <type fullname="UnityEngine.Transform" preserve="all" />
+    <type fullname="UnityEngine.Vector3" preserve="all" />
   </assembly>
   <assembly fullname="mscorlib">
     <type fullname="System.Array" preserve="all" />

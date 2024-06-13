@@ -3,6 +3,7 @@ using XLua;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using XEngine.Utilities;
 
 public static class LuaGenConfig
 {

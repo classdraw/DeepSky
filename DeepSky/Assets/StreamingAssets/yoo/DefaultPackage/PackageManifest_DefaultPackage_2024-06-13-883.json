@@ -6,7 +6,7 @@
     "OutputNameStyle": 0,
     "BuildPipeline": "BuiltinBuildPipeline",
     "PackageName": "DefaultPackage",
-    "PackageVersion": "2024-06-13-814",
+    "PackageVersion": "2024-06-13-883",
     "AssetList": [
         {
             "Address": "Effects_Cube",
@@ -79,8 +79,29 @@
             "BundleID": 5
         },
         {
+            "Address": "Bytes_mscorlib.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/mscorlib.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 6
+        },
+        {
             "Address": "Bytes_New Material",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/New Material.mat",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 6
+        },
+        {
+            "Address": "Bytes_System.Core.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/System.Core.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 6
+        },
+        {
+            "Address": "Bytes_System.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/System.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 6
@@ -409,10 +430,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "UnityCRC": 3771236024,
-            "FileHash": "413c2943405e2ad1327b335317276b4c",
-            "FileCRC": "6bb44005",
-            "FileSize": 5887,
+            "UnityCRC": 3611255020,
+            "FileHash": "0f9b9180daedc97a29cf8150e185a5c6",
+            "FileCRC": "40442ac3",
+            "FileSize": 1173538,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": [

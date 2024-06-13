@@ -1,6 +1,7 @@
 using UnityEngine;
 using YooAsset;
 using System.IO;
+using System.Collections.Generic;
 
 namespace XEngine.Utilities
 {
@@ -34,6 +35,13 @@ namespace XEngine.Utilities
         public static EPlayMode PlayMode;
         public static Game_Package_Type PackageType;
         public static EDefaultBuildPipeline DefaultBuildPipeline;
+
+		public static List<string> AOTMetaAssemblyNames { get; } = new List<string>()
+        {
+            "mscorlib.dll",
+            "System.dll",
+            "System.Core.dll",
+        };
         #endregion
 
 #region 配置方法

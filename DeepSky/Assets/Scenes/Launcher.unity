@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5bdab1529c4984a84e187fd3c405e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ePlayMode: 1
+  m_ePlayMode: 0
   m_ePartType: 1
   m_eDefaultBuildPipeline: 0
   ShowLogInfo: 1

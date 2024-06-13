@@ -27,7 +27,7 @@ namespace Game.Fsm
             XLogger.Log("LuaInitState Enter");
             XFacade.Init();//框架初始化
             Global.CreateInstance();//游戏全局mono初始化
-            Test();
+            LoadDllTest();
 
 
             //对象池初始化
@@ -61,10 +61,14 @@ namespace Game.Fsm
         //         Debug.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
         //     }
         // }
-        private ResHandle m_ResHandle;
-        private void Test(){
-            m_ResHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_UpdateInfo.dll");
-            Assembly hotUpdate=Assembly.Load(m_ResHandle.GetObjT<TextAsset>().bytes);
+
+        private void LoadDllTest(){
+            LoadMetadataForAOTAssemblies();
+
+
+            ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_UpdateInfo.dll");
+            Assembly hotUpdate=Assembly.Load(resHandle.GetObjT<TextAsset>().bytes);
+            resHandle.Dispose();
             // //加载程序集
             // #if UNITY_EDITOR
             //     Assembly hotUpdate=System.AppDomain.CurrentDomain.GetAssemblies().First(a => a.GetName().Name == "UpdateInfo");
@@ -88,6 +92,8 @@ namespace Game.Fsm
             oo.AddComponent(type);
             GameObject.DontDestroyOnLoad(oo);
             
+
+            
         }
 
         // private static void Run_InstantiateComponentByAsset()
@@ -98,9 +104,20 @@ namespace Game.Fsm
         //     GameObject.Instantiate(cube);
         // }
 
+        
+        private void LoadMetadataForAOTAssemblies(){
+            HomologousImageMode mode = HomologousImageMode.SuperSet;
+            for(int i=0;i<GameConsts.AOTMetaAssemblyNames.Count;i++){
+                var aotDllName=GameConsts.AOTMetaAssemblyNames[i];
+                ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_"+aotDllName);
+                var bs=resHandle.GetObjT<TextAsset>().bytes;
+                LoadImageErrorCode err = RuntimeApi.LoadMetadataForAOTAssembly(bs, mode);
+                XLogger.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
+            }
+        }
+
         public override void Exit(){
-            m_ResHandle.Dispose();
-            m_ResHandle=null;
+
         }
 
         public override void Tick(){

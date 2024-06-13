@@ -2,13 +2,13 @@
     "Summary": {
         "YooVersion": "",
         "UnityVersion": "2022.3.29f1c1",
-        "BuildDate": "2024/6/13 13:35:03",
-        "BuildSeconds": 13,
+        "BuildDate": "2024/6/13 14:43:44",
+        "BuildSeconds": 6,
         "BuildTarget": 19,
         "BuildMode": 0,
         "BuildPipeline": "BuiltinBuildPipeline",
         "BuildPackageName": "DefaultPackage",
-        "BuildPackageVersion": "2024-06-13-814",
+        "BuildPackageVersion": "2024-06-13-883",
         "UniqueBundleName": true,
         "EnableAddressable": true,
         "LocationToLower": false,
@@ -20,10 +20,10 @@
         "CompressOption": 2,
         "DisableWriteTypeTree": false,
         "IgnoreTypeTreeChanges": true,
-        "AssetFileTotalCount": 51,
-        "MainAssetTotalCount": 47,
+        "AssetFileTotalCount": 54,
+        "MainAssetTotalCount": 50,
         "AllBundleTotalCount": 17,
-        "AllBundleTotalSize": 357314,
+        "AllBundleTotalSize": 1524965,
         "EncryptedBundleTotalCount": 0,
         "EncryptedBundleTotalSize": 0
     },
@@ -137,15 +137,42 @@
             "DependAssets": []
         },
         {
+            "Address": "Bytes_mscorlib.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/mscorlib.dll.bytes",
+            "AssetGUID": "c44126ec43b2aa64ab5b15f2158c01b3",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
+            "MainBundleSize": 1173538,
+            "DependAssets": []
+        },
+        {
             "Address": "Bytes_New Material",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/New Material.mat",
             "AssetGUID": "82c9ca48b0dd0d34fa5b4265ce6566b4",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "MainBundleSize": 5887,
+            "MainBundleSize": 1173538,
             "DependAssets": [
                 "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
             ]
+        },
+        {
+            "Address": "Bytes_System.Core.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/System.Core.dll.bytes",
+            "AssetGUID": "6e546e0e4f28a0a40b7df5c2c792e206",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
+            "MainBundleSize": 1173538,
+            "DependAssets": []
+        },
+        {
+            "Address": "Bytes_System.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/System.dll.bytes",
+            "AssetGUID": "7fb6160a089a65f49be52c9f9bd9c339",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
+            "MainBundleSize": 1173538,
+            "DependAssets": []
         },
         {
             "Address": "Bytes_UpdateInfo.dll",
@@ -153,7 +180,7 @@
             "AssetGUID": "535f4c6c1f65143419b1debabae9af02",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "MainBundleSize": 5887,
+            "MainBundleSize": 1173538,
             "DependAssets": []
         },
         {
@@ -574,17 +601,20 @@
         },
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "FileName": "413c2943405e2ad1327b335317276b4c.bundle",
-            "FileHash": "413c2943405e2ad1327b335317276b4c",
-            "FileCRC": "6bb44005",
-            "FileSize": 5887,
+            "FileName": "0f9b9180daedc97a29cf8150e185a5c6.bundle",
+            "FileHash": "0f9b9180daedc97a29cf8150e185a5c6",
+            "FileCRC": "40442ac3",
+            "FileSize": 1173538,
             "Encrypted": false,
             "Tags": [],
             "DependBundles": [
                 "defaultpackage_unityshaders.bundle"
             ],
             "AllBuiltinAssets": [
+                "Assets/Editor/MyGameAssets/GameRes/Bytes/mscorlib.dll.bytes",
                 "Assets/Editor/MyGameAssets/GameRes/Bytes/New Material.mat",
+                "Assets/Editor/MyGameAssets/GameRes/Bytes/System.Core.dll.bytes",
+                "Assets/Editor/MyGameAssets/GameRes/Bytes/System.dll.bytes",
                 "Assets/Editor/MyGameAssets/GameRes/Bytes/UpdateInfo.dll.bytes"
             ]
         },

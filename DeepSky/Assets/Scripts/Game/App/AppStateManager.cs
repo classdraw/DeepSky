@@ -5,6 +5,7 @@ using XEngine;
 using System;
 using XLua;
 using XEngine.Fsm;
+using XEngine.Utilities;
 
 namespace Game.Fsm{
     [LuaCallCSharp]

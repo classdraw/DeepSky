@@ -6,7 +6,7 @@ using Utilities;
 using XLua;
 using XEngine.Loader;
 using YooAsset;
-
+using XEngine.Utilities;
 
 namespace Game.Fsm
 {
@@ -33,7 +33,7 @@ namespace Game.Fsm
             var gameObj=GameObject.Find("GameConfig");
             var gameConfig=gameObj.GetComponent<GameConfig>();
             GameConsts.PlayMode=gameConfig.m_ePlayMode;
-            GameConsts.PartType=gameConfig.m_ePartType;
+            GameConsts.PackageType=(GameConsts.Game_Package_Type)((int)gameConfig.m_ePartType);
             GameConsts.DefaultBuildPipeline=gameConfig.m_eDefaultBuildPipeline;
         }
 

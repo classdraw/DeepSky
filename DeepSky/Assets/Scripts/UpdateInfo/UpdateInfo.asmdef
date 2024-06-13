@@ -2,7 +2,9 @@
     "name": "UpdateInfo",
     "rootNamespace": "",
     "references": [
-        "GUID:d80144afe55be644f857e016fc2f3381"
+        "GUID:d80144afe55be644f857e016fc2f3381",
+        "GUID:46011f5dc0f6a7e429585ede0ff0d749",
+        "GUID:e34a5702dd353724aa315fb8011f08c3"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

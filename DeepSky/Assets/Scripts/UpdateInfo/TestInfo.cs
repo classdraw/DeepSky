@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XEngine.Loader;
+using XEngine.Pool;
+using XEngine.Utilities;
 
 namespace UpdateInfo{
     public class TestInfo : MonoBehaviour
@@ -8,16 +11,23 @@ namespace UpdateInfo{
         
         public static void Print()
         {
-            Debug.Log("测试C#热更123");
-            
+            XLogger.Log("测试C#热更123");        
         }
+
+        private ResHandle resHandle;
         private void Awake()
         {
-            Debug.Log("TestInfo Awake");
+            XLogger.Log("TestInfo Awake");
+            resHandle=GameResourceManager.GetInstance().LoadResourceSync("Role_Sphere");
+            resHandle.GetGameObject().transform.SetParent(transform);
+            resHandle.GetGameObject().transform.localPosition=Vector3.zero;
         }
-        void Update()
-        {
-            
+
+        private void OnDestroy(){
+            if(resHandle!=null){
+                resHandle.Dispose();
+            }
+            resHandle=null;
         }
     }
 

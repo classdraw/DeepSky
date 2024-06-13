@@ -10,6 +10,7 @@ using UnityEngine.UI;
 using XEngine.Pool;
 using XEngine.Event;
 using Game.Define;
+using XEngine.Utilities;
 
 namespace Game.Manager{
     public class GameSettingManager : Singleton<GameSettingManager>

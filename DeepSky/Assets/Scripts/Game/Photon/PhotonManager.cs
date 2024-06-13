@@ -5,6 +5,7 @@ using XEngine;
 using ExitGames.Client.Photon;
 using System;
 using Utilities;
+using XEngine.Utilities;
 
 namespace Game.Photon{
     public class PhotonManager:MonoSingleton<PhotonManager>,IPhotonPeerListener

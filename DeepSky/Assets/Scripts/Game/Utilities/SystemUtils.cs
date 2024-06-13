@@ -5,6 +5,7 @@ using XLua;
 using System;
 using System.Text;
 using System.IO;
+using XEngine.Utilities;
 
 namespace Utilities{
 	public class DisplayCutout

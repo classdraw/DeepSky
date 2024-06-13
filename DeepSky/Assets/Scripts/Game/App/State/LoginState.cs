@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 using Game.Scenes;
 using Game.Photon;
 using XEngine.Time;
+using XEngine.Utilities;
 
 namespace Game.Fsm
 {

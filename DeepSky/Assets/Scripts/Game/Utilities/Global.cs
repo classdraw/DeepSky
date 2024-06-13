@@ -5,6 +5,8 @@ using Utilities;
 using YooAsset;
 using XEngine.Loader;
 using XEngine.Pool;
+using XEngine.Utilities;
+
 
 [AutoCreateInstance(true)]
 public class Global:MonoSingleton<Global>

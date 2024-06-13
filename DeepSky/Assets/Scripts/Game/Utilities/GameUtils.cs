@@ -5,6 +5,7 @@ using XLua;
 using Game.Config;
 using System.Collections.Generic;
 using System.Text;
+using XEngine.Utilities;
 
 namespace Utilities{
     [LuaCallCSharp]
@@ -68,24 +69,7 @@ namespace Utilities{
             }
         }
 
-        /// <summary>
-        /// 打印游戏物体自界面名称开始的路径 并拷贝到粘贴板
-        /// </summary>
-        /// <param name="obj"></param>
-        public static void PrintObjPathAndCopyToPasteBoard(GameObject obj)
-        {
-            StringBuilder sb = new StringBuilder();
-
-            FindPath(sb, obj.transform);
-
-            string text = sb.ToString();
-            XLogger.LogTest(string.Format("<color=#ffa500ff>{0}</color>", text));
-            //TextEditor te = new TextEditor();
-            //te.text = text;
-            //te.OnFocus();
-            //te.Copy();
-            sb.Remove(0, sb.Length);
-        }
+        
         public static void SetGameObjectDontDestroy(GameObject obj){
             if(obj!=null){
                 GameObject.DontDestroyOnLoad(obj);

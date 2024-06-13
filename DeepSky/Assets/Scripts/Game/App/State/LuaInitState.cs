@@ -11,6 +11,9 @@ using System.IO;
 using HybridCLR;
 using System.Reflection;
 using System.Linq;
+using UpdateInfo;
+using XEngine.Utilities;
+
 namespace Game.Fsm
 {
     [LuaCallCSharp]
@@ -81,8 +84,10 @@ namespace Game.Fsm
             }
 
             GameObject oo=new GameObject("TestInfo");
+            oo.transform.position=new Vector3(0f,2f,0f);
             oo.AddComponent(type);
             GameObject.DontDestroyOnLoad(oo);
+            
         }
 
         // private static void Run_InstantiateComponentByAsset()

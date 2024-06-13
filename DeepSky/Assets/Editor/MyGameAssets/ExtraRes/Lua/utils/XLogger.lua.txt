@@ -1,4 +1,4 @@
-local CSXLogger=CS.XLogger
+local CSXLogger=CS.XEngine.Utilities.XLogger
 
 local function getStatckInfo()
     local traceback = debug.traceback("", 2);
@@ -60,17 +60,6 @@ XLogger={
                 dump(msg);
             else
                 CSXLogger.LogTemp(LogPrefix..msg);
-            end
-        else
-            dump(msg);
-        end
-    end,
-    LogMassive=function(msg)
-        if msg then
-            if type(msg)~="string" then
-                dump(msg);
-            else
-                CSXLogger.LogMassive(LogPrefix..msg);
             end
         else
             dump(msg);

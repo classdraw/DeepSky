@@ -8,6 +8,7 @@ using XEngine.Pool;
 using UnityEngine.SceneManagement;
 using XEngine.Loader;
 using System;
+using XEngine.Utilities;
 
 namespace Game.Scenes
 {

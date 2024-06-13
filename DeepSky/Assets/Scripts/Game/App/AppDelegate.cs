@@ -1,5 +1,7 @@
 using UnityEngine;
 using Game.Fsm;
+using XEngine.Utilities;
+
 ///启动项目入口
 public class AppDelegate : Singleton<AppDelegate>
 {

@@ -32,7 +32,7 @@ MonoBehaviour:
       - CollectPath: Assets/Editor/MyGameAssets/GameRes/Effects
         CollectorGUID: d3bb8650290b1934c9ab0ebd28783476
         CollectorType: 0
-        AddressRuleName: AddressByFileName
+        AddressRuleName: AddressByFolderAndFileName
         PackRuleName: PackDirectory
         FilterRuleName: CollectAll
         AssetTags: 
@@ -40,7 +40,7 @@ MonoBehaviour:
       - CollectPath: Assets/Editor/MyGameAssets/GameRes/Role
         CollectorGUID: 0ad89818bce296d42a49f83582d7fd59
         CollectorType: 0
-        AddressRuleName: AddressByFileName
+        AddressRuleName: AddressByFolderAndFileName
         PackRuleName: PackDirectory
         FilterRuleName: CollectAll
         AssetTags: 

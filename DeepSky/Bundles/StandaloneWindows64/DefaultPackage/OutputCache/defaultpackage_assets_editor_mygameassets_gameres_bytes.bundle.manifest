@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 678988776
+CRC: 3771236024
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 412b684edeadde72d70b01fc88b6fc8f
+    Hash: 5da955936e791ca83a3a391efd496101
   TypeTreeHash:
     serializedVersion: 2
     Hash: 3185bdd192ab84891b8d9417c4ff695f
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 412b684edeadde72d70b01fc88b6fc8f
+    Hash: 5da955936e791ca83a3a391efd496101
 HashAppended: 0
 ClassTypes:
 - Class: 21
@@ -23,4 +23,4 @@ Assets:
 - Assets/Editor/MyGameAssets/GameRes/Bytes/New Material.mat
 - Assets/Editor/MyGameAssets/GameRes/Bytes/UpdateInfo.dll.bytes
 Dependencies:
-- E:/Git/Deep/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle
+- E:/WW/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

@@ -33,7 +33,8 @@ namespace Game.Fsm
             var gameObj=GameObject.Find("GameConfig");
             var gameConfig=gameObj.GetComponent<GameConfig>();
             GameConsts.PlayMode=gameConfig.m_ePlayMode;
-            GameConsts.PackageType=(GameConsts.Game_Package_Type)((int)gameConfig.m_ePartType);
+            GameConsts.PackageType=gameConfig.m_ePartType;
+            GameConsts.NetModel=gameConfig.m_eNetModel;
             GameConsts.DefaultBuildPipeline=gameConfig.m_eDefaultBuildPipeline;
         }
 

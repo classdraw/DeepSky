@@ -7,6 +7,13 @@ namespace XEngine.Utilities
 {
     public class GameConsts
     {
+		//网络启动类型
+		public enum Game_NetModel_Type{
+			Host,//自己是主机
+			Server,//自己是服务器
+			Client//自己是客户端
+		}
+		//使用的包类型
 		public enum Game_Package_Type {
 			None,
 			DefaultPackage
@@ -31,6 +38,7 @@ namespace XEngine.Utilities
         #endregion
 
         #region 内置配置
+		public static Game_NetModel_Type NetModel=Game_NetModel_Type.Host;
 
         public static EPlayMode PlayMode;
         public static Game_Package_Type PackageType;

@@ -2,28 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using YooAsset;
- 
+using XEngine.Utilities;
+using System.ComponentModel;
 
 //只是一个配置的config
 public class GameConfig : MonoBehaviour
 {
-    public enum EPartType {
-        None,
-        DefaultPackage
-    }
 
 
     [SerializeField]
     public EPlayMode m_ePlayMode;
 
     [SerializeField]
-    public EPartType m_ePartType;
+    public GameConsts.Game_Package_Type m_ePartType;
+
+    [SerializeField]
+    public GameConsts.Game_NetModel_Type m_eNetModel;
 
     [SerializeField]
     public EDefaultBuildPipeline m_eDefaultBuildPipeline;
-    [SerializeField]
-    private bool ShowLogInfo;
 
+    [SerializeField]
+    public bool ShowLogInfo;
+    
     private void Awake(){
         if(ShowLogInfo){
             GameObject obj=new GameObject("LogInfo");

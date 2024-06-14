@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3230836383
+CRC: 3518074414
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: a5a9176e8aa5708d462bb1d4ca8f1161
+    Hash: fbb4b5ef6effc3dbe64a82eefd0c2b20
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 52d98f26dac52af9a4aebe27e283fb1e
+    Hash: 173c92049fa4f46ef09f166b73c2eb70
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: a5a9176e8aa5708d462bb1d4ca8f1161
+    Hash: fbb4b5ef6effc3dbe64a82eefd0c2b20
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -24,8 +24,6 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
-- Class: 48
-  Script: {instanceID: 0}
 - Class: 135
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
@@ -33,4 +31,4 @@ Assets:
 - Assets/Editor/MyGameAssets/GameRes/Role/Sphere.prefab
 - Assets/Editor/MyGameAssets/GameRes/Role/Sphere1.prefab
 Dependencies:
-- E:/WW/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle
+- E:/WW/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_assets_editor_mygameassets_gameres_materials.bundle

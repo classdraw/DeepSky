@@ -4,6 +4,7 @@ using UnityEngine;
 using XEngine.Loader;
 using XEngine.Pool;
 using XEngine.Utilities;
+using Unity.Netcode;
 
 namespace UpdateInfo{
     public class TestInfo : MonoBehaviour
@@ -29,6 +30,7 @@ namespace UpdateInfo{
             }
             resHandle=null;
         }
+
     }
 
 }

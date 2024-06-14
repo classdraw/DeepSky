@@ -1,22 +1,22 @@
 ManifestFileVersion: 0
-CRC: 685407191
+CRC: 3369837381
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: defaultpackage_assets_editor_mygameassets_gameres_effects.bundle
       Dependencies:
-        Dependency_0: defaultpackage_unityshaders.bundle
+        Dependency_0: defaultpackage_assets_editor_mygameassets_gameres_materials.bundle
     Info_1:
       Name: defaultpackage_assets_editor_mygameassets_gameres_role.bundle
       Dependencies:
-        Dependency_0: defaultpackage_unityshaders.bundle
+        Dependency_0: defaultpackage_assets_editor_mygameassets_gameres_materials.bundle
     Info_2:
       Name: defaultpackage_unityshaders.bundle
       Dependencies: {}
     Info_3:
       Name: defaultpackage_assets_editor_mygameassets_gameres_scenes.bundle
       Dependencies:
-        Dependency_0: defaultpackage_unityshaders.bundle
+        Dependency_0: defaultpackage_assets_editor_mygameassets_gameres_materials.bundle
     Info_4:
       Name: defaultpackage_assets_editor_mygameassets_gameres_ui.bundle
       Dependencies:
@@ -26,8 +26,7 @@ AssetBundleManifest:
       Dependencies: {}
     Info_6:
       Name: defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle
-      Dependencies:
-        Dependency_0: defaultpackage_unityshaders.bundle
+      Dependencies: {}
     Info_7:
       Name: defaultpackage_assets_editor_mygameassets_gameres_materials.bundle
       Dependencies:

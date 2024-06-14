@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 1073463467
+CRC: 3699164728
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -16,7 +16,8 @@ AssetBundleManifest:
     Info_3:
       Name: defaultpackage_assets_editor_mygameassets_gameres_scenes.bundle
       Dependencies:
-        Dependency_0: defaultpackage_assets_editor_mygameassets_gameres_materials.bundle
+        Dependency_0: defaultpackage_unityshaders.bundle
+        Dependency_1: defaultpackage_assets_editor_mygameassets_gameres_materials.bundle
     Info_4:
       Name: defaultpackage_assets_editor_mygameassets_gameres_ui.bundle
       Dependencies:

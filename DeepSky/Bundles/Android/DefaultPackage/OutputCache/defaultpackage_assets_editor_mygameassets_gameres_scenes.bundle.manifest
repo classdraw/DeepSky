@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2523427298
+CRC: 260381994
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ca48f9af92ae18b1410b8ac1181618b5
+    Hash: 9acc3c60ef12d2078f3cae844ce24a9f
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 4c4c7179e72949c409bf635082b929e9
+    Hash: 4a04a875aebbbc78657196efa42c5dc8
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: ca48f9af92ae18b1410b8ac1181618b5
+    Hash: 9acc3c60ef12d2078f3cae844ce24a9f
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -46,6 +46,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
 - Class: 115
   Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
 - Class: 157
   Script: {instanceID: 0}
 - Class: 196
@@ -56,3 +58,4 @@ Assets:
 - Assets/Editor/MyGameAssets/GameRes/Scenes/LoginScene.unity
 Dependencies:
 - E:/WW/DeepSky/DeepSky/Bundles/Android/DefaultPackage/OutputCache/defaultpackage_assets_editor_mygameassets_gameres_materials.bundle
+- E:/WW/DeepSky/DeepSky/Bundles/Android/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

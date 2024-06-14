@@ -4,7 +4,7 @@
     "LocationToLower": false,
     "IncludeAssetGUID": false,
     "OutputNameStyle": 0,
-    "BuildPipeline": "BuiltinBuildPipeline",
+    "BuildPipeline": "ScriptableBuildPipeline",
     "PackageName": "DefaultPackage",
     "PackageVersion": "Simulate",
     "AssetList": [
@@ -378,7 +378,7 @@
             "UnityCRC": 0,
             "FileHash": "a8ccddf53dc7dce8d7ca6a26f8fbe5bb",
             "FileCRC": "00000000",
-            "FileSize": 12852,
+            "FileSize": 12823,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -388,7 +388,7 @@
             "UnityCRC": 0,
             "FileHash": "08d91959e08e0ceade27be069dd11d9f",
             "FileCRC": "00000000",
-            "FileSize": 24927,
+            "FileSize": 27199,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -428,7 +428,7 @@
             "UnityCRC": 0,
             "FileHash": "78921746ec6deae2a73388fa98fe2537",
             "FileCRC": "00000000",
-            "FileSize": 3825,
+            "FileSize": 3689,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

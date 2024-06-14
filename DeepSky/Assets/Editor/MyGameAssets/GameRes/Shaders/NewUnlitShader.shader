@@ -17,7 +17,6 @@ Shader "MyShader/P2_10"
                 // LightMode: <None>
             }
 
-            // Render State
             Cull Back
             Blend One Zero
             ZTest LEqual

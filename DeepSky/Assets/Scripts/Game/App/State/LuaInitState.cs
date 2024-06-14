@@ -9,9 +9,7 @@ using XEngine.Loader;
 using System;
 using System.IO;
 using HybridCLR;
-using System.Reflection;
-using System.Linq;
-using UpdateInfo;
+
 using XEngine.Utilities;
 
 namespace Game.Fsm
@@ -66,9 +64,9 @@ namespace Game.Fsm
             LoadMetadataForAOTAssemblies();
 
 
-            ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_UpdateInfo.dll");
-            Assembly hotUpdate=Assembly.Load(resHandle.GetObjT<TextAsset>().bytes);
-            resHandle.Dispose();
+            // ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_UpdateInfo.dll");
+            // Assembly hotUpdate=Assembly.Load(resHandle.GetObjT<TextAsset>().bytes);
+            // resHandle.Dispose();
             // //加载程序集
             // #if UNITY_EDITOR
             //     Assembly hotUpdate=System.AppDomain.CurrentDomain.GetAssemblies().First(a => a.GetName().Name == "UpdateInfo");
@@ -77,20 +75,20 @@ namespace Game.Fsm
             // #endif
 
             //通过反射来调用热更新代码
-            Type type = hotUpdate.GetType("UpdateInfo.TestInfo");
-            if (type == null)
-            {
-                Debug.Log("TestInfo assembly is null");
-            }
-            else
-            {
-                type.GetMethod("Print").Invoke(null, null);
-            }
+            // Type type = hotUpdate.GetType("UpdateInfo.TestInfo");
+            // if (type == null)
+            // {
+            //     Debug.Log("TestInfo assembly is null");
+            // }
+            // else
+            // {
+            //     type.GetMethod("Print").Invoke(null, null);
+            // }
 
-            GameObject oo=new GameObject("TestInfo");
-            oo.transform.position=new Vector3(0f,2f,0f);
-            oo.AddComponent(type);
-            GameObject.DontDestroyOnLoad(oo);
+            // GameObject oo=new GameObject("TestInfo");
+            // oo.transform.position=new Vector3(0f,2f,0f);
+            // oo.AddComponent(type);
+            // GameObject.DontDestroyOnLoad(oo);
             
 
             

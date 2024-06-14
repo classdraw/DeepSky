@@ -1,0 +1,101 @@
+﻿
+
+<linker>
+
+	<assembly fullname="Assembly-CSharp">
+	    <type fullname="DButton" preserve="all"/>
+		<type fullname="DDrag" preserve="all"/>
+		<type fullname="DMenu" preserve="all"/>
+		<type fullname="DMenuItem" preserve="all"/>
+		<type fullname="DRichText" preserve="all"/>
+		<type fullname="DScrollRect" preserve="all"/>
+		<type fullname="DTableView" preserve="all"/>
+		<type fullname="DToggleGroup" preserve="all"/>
+		<type fullname="LuaArrAccessAPI" preserve="all"/>
+		<type fullname="LuaArrAccess" preserve="all"/>
+		<type fullname="LuaJitArrAccess" preserve="all"/>
+		<type fullname="SkeletonAnim" preserve="all"/>
+		<type fullname="DPopup" preserve="all"/>
+		<type fullname="UIView" preserve="all"/>
+		<type fullname="UIRoot" preserve="all"/>
+		<type fullname="Tutorial.BaseClass" preserve="all"/>
+		<type fullname="Tutorial.TestEnum" preserve="all"/>
+		<type fullname="Tutorial.DerivedClass" preserve="all"/>
+		<type fullname="Tutorial.DerivedClass+TestEnumInner" preserve="all"/>
+		<type fullname="Tutorial.ICalc" preserve="all"/>
+		<type fullname="Tutorial.DerivedClassExtensions" preserve="all"/>
+		<type fullname="Utilities.GameUtils" preserve="all"/>
+		<type fullname="Utilities.SystemUtils" preserve="all"/>
+		<type fullname="Game.Fsm.AppStateManager" preserve="all"/>
+		<type fullname="Game.Fsm.LoginState" preserve="all"/>
+		<type fullname="Game.Fsm.LuaInitState" preserve="all"/>
+		<type fullname="Game.Fsm.SplashState" preserve="all"/>
+		<type fullname="UnityEngine.UI.Extensions.UILineRenderer" preserve="all"/>
+		<type fullname="XEngine.TextUtils" preserve="all"/>
+		<type fullname="XEngine.UI.XDragLimitMove" preserve="all"/>
+		<type fullname="XEngine.UI.XUIEnableDisableListener" preserve="all"/>
+		<type fullname="XEngine.Lua.LuaCSharpAgent" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.InputLegacyModule">
+	    <type fullname="UnityEngine.Input" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.CoreModule">
+	    <type fullname="UnityEngine.Application" preserve="all"/>
+		<type fullname="UnityEngine.Time" preserve="all"/>
+		<type fullname="UnityEngine.Screen" preserve="all"/>
+		<type fullname="UnityEngine.SleepTimeout" preserve="all"/>
+		<type fullname="UnityEngine.Resources" preserve="all"/>
+		<type fullname="UnityEngine.RenderSettings" preserve="all"/>
+		<type fullname="UnityEngine.GL" preserve="all"/>
+		<type fullname="UnityEngine.SceneManagement.SceneManager" preserve="all"/>
+		<type fullname="UnityEngine.SystemLanguage" preserve="all"/>
+		<type fullname="UnityEngine.Camera" preserve="all"/>
+		<type fullname="UnityEngine.PlayerPrefs" preserve="all"/>
+		<type fullname="UnityEngine.GameObject" preserve="all"/>
+		<type fullname="UnityEngine.Transform" preserve="all"/>
+		<type fullname="UnityEngine.Component" preserve="all"/>
+		<type fullname="UnityEngine.Sprite" preserve="all"/>
+		<type fullname="UnityEngine.Texture2D" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.PhysicsModule">
+	    <type fullname="UnityEngine.Physics" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.VideoModule">
+	    <type fullname="UnityEngine.Video.VideoPlayer" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.AnimationModule">
+	    <type fullname="UnityEngine.Animator" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="UnityEngine.UI">
+	    <type fullname="UnityEngine.UI.Image" preserve="all"/>
+		<type fullname="UnityEngine.UI.Text" preserve="all"/>
+		<type fullname="UnityEngine.UI.Button" preserve="all"/>
+		<type fullname="UnityEngine.UI.Toggle" preserve="all"/>
+		<type fullname="UnityEngine.UI.ToggleGroup" preserve="all"/>
+		<type fullname="UnityEngine.UI.Dropdown" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="FrameInfo">
+	    <type fullname="XEngine.Utilities.XLogger" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="System">
+	    <type fullname="System.Diagnostics.Stopwatch" preserve="all"/>
+		
+	</assembly>
+
+</linker>

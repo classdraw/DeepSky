@@ -9,7 +9,6 @@ using Utilities;
 using UnityEngine.UI;
 using XEngine.Pool;
 using XEngine.Event;
-using Game.Define;
 using XEngine.Utilities;
 
 namespace Game.Manager{

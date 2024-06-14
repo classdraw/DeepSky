@@ -4,7 +4,6 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using XEngine.Event;
-using Game.Define;
 using XEngine.Utilities;
 
 namespace XEngine.UI

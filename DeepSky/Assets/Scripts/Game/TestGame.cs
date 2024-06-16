@@ -21,10 +21,13 @@ public class TestGame : MonoBehaviour
         var netManager=obj.GetComponent<NetworkManager>();
         if(GameConsts.NetModel==GameConsts.Game_NetModel_Type.Host){
             netManager.StartHost();
+            XLogger.LogImport("StartHost");
         }else if(GameConsts.NetModel==GameConsts.Game_NetModel_Type.Server){
             netManager.StartServer();
+            XLogger.LogImport("StartServer");
         }else{
             netManager.StartClient();
+            XLogger.LogImport("StartClient");
         }
 
     }

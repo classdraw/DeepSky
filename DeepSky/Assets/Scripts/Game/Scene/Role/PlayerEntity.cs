@@ -73,8 +73,8 @@ namespace Game.Role{
             if(IsOwner){//是不是宿主
                 float h=Input.GetAxisRaw("Horizontal");
                 float v=Input.GetAxisRaw("Vertical");
-                if(h>0||v>0){
-                    Vector3 inputDir=new Vector3(h,0,v).normalized;
+                if(h!=0||v!=0){
+                    Vector3 inputDir=new Vector3(h,0,v);
                     HandleMoveServerRpc(inputDir);
                 }
                 
@@ -84,9 +84,12 @@ namespace Game.Role{
 
 
         //呼叫服务器自身的netobject
-        [ServerRpc]//是否需要验证宿主、、(RequireOwnership =true)
+        [ServerRpc(RequireOwnership =true)]//是否需要验证宿主、、
         private void HandleMoveServerRpc(Vector3 inputDir){//结尾必须ServerRpc
-            transform.Translate(Time.deltaTime*moveSpeed*inputDir);//服务器端调用
+            // XLogger.LogError(Time.deltaTime+">>"+inputDir+">>>>"+moveSpeed);
+            // transform.Translate(Time.deltaTime*moveSpeed*inputDir);//服务器端调用
+            var dir=0.02f*moveSpeed*inputDir.normalized;
+            transform.position=transform.position+dir;
         }
     }
 

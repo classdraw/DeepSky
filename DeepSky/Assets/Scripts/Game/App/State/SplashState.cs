@@ -37,6 +37,7 @@ namespace Game.Fsm
             GameConsts.PackageType=gameConfig.m_ePartType;
             GameConsts.NetModel=gameConfig.m_eNetModel;
             GameConsts.DefaultBuildPipeline=gameConfig.m_eDefaultBuildPipeline;
+            XLogger.Log("NetModel:"+gameConfig.m_eNetModel);
         }
 
         private void OnYooAssetCallback(){

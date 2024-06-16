@@ -3,13 +3,13 @@ CRC: 817010677
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e5731c19daac6e53dadb5f8ef673cc9e
+    Hash: efddd713b809407a8313726f82e3a43c
   TypeTreeHash:
     serializedVersion: 2
-    Hash: b905850fb7eeb5a29a4c3dc8790d46b2
+    Hash: 7662b38c441134f341d0905425dcda0a
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: e5731c19daac6e53dadb5f8ef673cc9e
+    Hash: efddd713b809407a8313726f82e3a43c
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,11 +17,11 @@ ClassTypes:
 - Class: 4
   Script: {instanceID: 0}
 - Class: 114
+  Script: {fileID: 11500000, guid: e651dbb3fbac04af2b8f5abf007ddc23, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 593a2fe42fa9d37498c96f9a383b6521, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 6960e84d07fb87f47956e7a81d71c4e6, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: e651dbb3fbac04af2b8f5abf007ddc23, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers:
@@ -38,4 +38,4 @@ SerializeReferenceClassIdentifiers:
 Assets:
 - Assets/Editor/MyGameAssets/GameRes/Tools/NetworkManager.prefab
 Dependencies:
-- E:/WW/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_assets_editor_mygameassets_gameres_role.bundle
+- E:/Git/Deep/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_assets_editor_mygameassets_gameres_role.bundle

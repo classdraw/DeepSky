@@ -9,7 +9,7 @@ using Unity.Netcode;
 using XEngine.Event;
 
 namespace Game.Role{
-    public class Player : NetworkBehaviour
+    public class PlayerEntity : NetworkBehaviour
     {
         public int id=123;
 

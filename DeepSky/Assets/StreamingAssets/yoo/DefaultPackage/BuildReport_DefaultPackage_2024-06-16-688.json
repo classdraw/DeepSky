@@ -2,13 +2,13 @@
     "Summary": {
         "YooVersion": "",
         "UnityVersion": "2022.3.30f1c1",
-        "BuildDate": "2024/6/14 19:58:58",
-        "BuildSeconds": 7,
+        "BuildDate": "2024/6/16 11:29:02",
+        "BuildSeconds": 9,
         "BuildTarget": 19,
         "BuildMode": 0,
         "BuildPipeline": "BuiltinBuildPipeline",
         "BuildPackageName": "DefaultPackage",
-        "BuildPackageVersion": "2024-06-14-1198",
+        "BuildPackageVersion": "2024-06-16-688",
         "UniqueBundleName": true,
         "EnableAddressable": true,
         "LocationToLower": false,
@@ -23,7 +23,7 @@
         "AssetFileTotalCount": 63,
         "MainAssetTotalCount": 55,
         "AllBundleTotalCount": 18,
-        "AllBundleTotalSize": 1716679,
+        "AllBundleTotalSize": 1716834,
         "EncryptedBundleTotalCount": 0,
         "EncryptedBundleTotalSize": 0
     },
@@ -46,7 +46,7 @@
             "AssetGUID": "62ad0d6383b7f5c41b5d7c8f65599089",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_role.bundle",
-            "MainBundleSize": 5032,
+            "MainBundleSize": 5042,
             "DependAssets": [
                 "Assets/Editor/MyGameAssets/GameRes/Materials/RoleMat.mat",
                 "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
@@ -58,7 +58,7 @@
             "AssetGUID": "9af4a572f7fc9004daacd97dd9ded894",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_role.bundle",
-            "MainBundleSize": 5032,
+            "MainBundleSize": 5042,
             "DependAssets": [
                 "Assets/Editor/MyGameAssets/GameRes/Materials/New Material1.mat",
                 "Assets/Editor/MyGameAssets/GameRes/Shaders/NewUnlitShader.shader"
@@ -70,7 +70,7 @@
             "AssetGUID": "f1729fbfdb05cc246b05b5bee66fab80",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_role.bundle",
-            "MainBundleSize": 5032,
+            "MainBundleSize": 5042,
             "DependAssets": [
                 "Assets/Editor/MyGameAssets/GameRes/Materials/New Material1.mat",
                 "Assets/Editor/MyGameAssets/GameRes/Shaders/NewUnlitShader.shader"
@@ -91,7 +91,7 @@
             "AssetGUID": "1f974bffe67f6f34b973d26442dd48eb",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_scenes.bundle",
-            "MainBundleSize": 414192,
+            "MainBundleSize": 414337,
             "DependAssets": []
         },
         {
@@ -100,7 +100,7 @@
             "AssetGUID": "746aac2e876b45b459249cf15aae8364",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_scenes.bundle",
-            "MainBundleSize": 414192,
+            "MainBundleSize": 414337,
             "DependAssets": []
         },
         {
@@ -109,7 +109,7 @@
             "AssetGUID": "8312e51b9124a9349926f7a6344e9557",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_scenes.bundle",
-            "MainBundleSize": 414192,
+            "MainBundleSize": 414337,
             "DependAssets": [
                 "Assets/Editor/MyGameAssets/GameRes/Materials/RoleMat.mat",
                 "Assets/Editor/MyGameAssets/GameRes/Role/Player.prefab",
@@ -123,7 +123,7 @@
             "AssetGUID": "99c9720ab356a0642a771bea13969a05",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_scenes.bundle",
-            "MainBundleSize": 414192,
+            "MainBundleSize": 414337,
             "DependAssets": [
                 "Packages/com.unity.render-pipelines.core/Editor/Volume/Icons/VolumeProfileAsset.png",
                 "Packages/com.unity.render-pipelines.core/Editor/Volume/Icons/Volume.png",
@@ -581,10 +581,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_role.bundle",
-            "FileName": "cb45779c0d7e728778e04ae78fef6e05.bundle",
-            "FileHash": "cb45779c0d7e728778e04ae78fef6e05",
-            "FileCRC": "4dada65a",
-            "FileSize": 5032,
+            "FileName": "46fe4069d27943b1837312a2fcda8fbe.bundle",
+            "FileHash": "46fe4069d27943b1837312a2fcda8fbe",
+            "FileCRC": "277445ad",
+            "FileSize": 5042,
             "Encrypted": false,
             "Tags": [],
             "DependBundles": [
@@ -599,9 +599,9 @@
         },
         {
             "BundleName": "defaultpackage_unityshaders.bundle",
-            "FileName": "ddbb59c7a9d3f8f50f53cdff95c7bbe0.bundle",
-            "FileHash": "ddbb59c7a9d3f8f50f53cdff95c7bbe0",
-            "FileCRC": "5c454c3c",
+            "FileName": "42d698d730fc809157af4fd6bbdf3037.bundle",
+            "FileHash": "42d698d730fc809157af4fd6bbdf3037",
+            "FileCRC": "39362860",
             "FileSize": 57691,
             "Encrypted": false,
             "Tags": [],
@@ -613,10 +613,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_scenes.bundle",
-            "FileName": "69e66079c868456285a9bcfe06485d69.bundle",
-            "FileHash": "69e66079c868456285a9bcfe06485d69",
-            "FileCRC": "756e7159",
-            "FileSize": 414192,
+            "FileName": "ac89bbdf7da668c5911477fcc5e594ff.bundle",
+            "FileHash": "ac89bbdf7da668c5911477fcc5e594ff",
+            "FileCRC": "79e7ab75",
+            "FileSize": 414337,
             "Encrypted": false,
             "Tags": [],
             "DependBundles": [
@@ -669,9 +669,9 @@
         },
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "FileName": "302d2e5d50829a070cfa0c0ca4b9fbcd.bundle",
-            "FileHash": "302d2e5d50829a070cfa0c0ca4b9fbcd",
-            "FileCRC": "6c6a71ca",
+            "FileName": "155a7a99da7e33881964141b6bbada9a.bundle",
+            "FileHash": "155a7a99da7e33881964141b6bbada9a",
+            "FileCRC": "a2f03948",
             "FileSize": 1171334,
             "Encrypted": false,
             "Tags": [],

@@ -30,4 +30,4 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Editor/MyGameAssets/GameRes/Effects/Cube.prefab
 Dependencies:
-- E:/WW/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_assets_editor_mygameassets_gameres_materials.bundle
+- E:/Git/Deep/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_assets_editor_mygameassets_gameres_materials.bundle

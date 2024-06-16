@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 2103120879
+CRC: 3208226165
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ef559e4ffbae43965f04ec44ab48f4b6
+    Hash: 6f3f42d3642f05ba1338e1e5d45c3f49
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2386cd3b0b86fb20ef53f44efb6f4731
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: ef559e4ffbae43965f04ec44ab48f4b6
+    Hash: 6f3f42d3642f05ba1338e1e5d45c3f49
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -73,5 +73,5 @@ Assets:
 - Assets/Scenes/EmptyScene.unity
 - Assets/Scenes/LoginScene.unity
 Dependencies:
-- E:/WW/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_assets_editor_mygameassets_gameres_materials.bundle
-- E:/WW/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_assets_editor_mygameassets_gameres_role.bundle
+- E:/Git/Deep/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_assets_editor_mygameassets_gameres_materials.bundle
+- E:/Git/Deep/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_assets_editor_mygameassets_gameres_role.bundle

@@ -63,4 +63,4 @@ Assets:
 - Assets/Editor/MyGameAssets/GameRes/UI/Plane.prefab
 - Assets/Editor/MyGameAssets/GameRes/UI/UIRoot.prefab
 Dependencies:
-- E:/WW/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle
+- E:/Git/Deep/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

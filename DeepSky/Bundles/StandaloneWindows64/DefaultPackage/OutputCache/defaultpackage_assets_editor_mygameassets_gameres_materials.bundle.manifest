@@ -3,13 +3,13 @@ CRC: 1825200436
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4af9d8f5a91ccb6898b40f22aabff109
+    Hash: cbe304ff6e4f60a71ce0f2f044007169
   TypeTreeHash:
     serializedVersion: 2
     Hash: 5e762ccb57c4caaabbb5a4199ac82c23
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 4af9d8f5a91ccb6898b40f22aabff109
+    Hash: cbe304ff6e4f60a71ce0f2f044007169
 HashAppended: 0
 ClassTypes:
 - Class: 21
@@ -22,4 +22,4 @@ Assets:
 - Assets/Editor/MyGameAssets/GameRes/Materials/Groud.mat
 - Assets/Editor/MyGameAssets/GameRes/Materials/New Material1.mat
 Dependencies:
-- E:/WW/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle
+- E:/Git/Deep/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_unityshaders.bundle

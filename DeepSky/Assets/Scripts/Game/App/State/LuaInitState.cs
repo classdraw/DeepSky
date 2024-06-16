@@ -61,7 +61,7 @@ namespace Game.Fsm
         // }
 
         private void LoadDllTest(){
-            LoadMetadataForAOTAssemblies();
+            Global.LoadMetadataForAOTAssemblies();
 
 
             // ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_UpdateInfo.dll");
@@ -102,17 +102,6 @@ namespace Game.Fsm
         //     GameObject.Instantiate(cube);
         // }
 
-        
-        private void LoadMetadataForAOTAssemblies(){
-            HomologousImageMode mode = HomologousImageMode.SuperSet;
-            for(int i=0;i<GameConsts.AOTMetaAssemblyNames.Count;i++){
-                var aotDllName=GameConsts.AOTMetaAssemblyNames[i];
-                ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_"+aotDllName);
-                var bs=resHandle.GetObjT<TextAsset>().bytes;
-                LoadImageErrorCode err = RuntimeApi.LoadMetadataForAOTAssembly(bs, mode);
-                XLogger.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
-            }
-        }
 
         public override void Exit(){
 

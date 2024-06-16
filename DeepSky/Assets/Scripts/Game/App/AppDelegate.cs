@@ -1,6 +1,8 @@
 using UnityEngine;
 using Game.Fsm;
 using XEngine.Utilities;
+using UnityEngine.SceneManagement;
+using Game.Scenes;
 
 ///启动项目入口
 public class AppDelegate : Singleton<AppDelegate>
@@ -20,12 +22,17 @@ public class AppDelegate : Singleton<AppDelegate>
             return;
         }
         m_Init=true;
+        StartClient();
+
+    }
+
+ 
+    private void StartClient(){
         //配置设置
         this.SetSceneParam();
         //状态切换
         this.Next();
     }
-
 
     // private GameObject m_ConfigObj;
     //参数设置 后续steam可能需要自定义一些初始化设置

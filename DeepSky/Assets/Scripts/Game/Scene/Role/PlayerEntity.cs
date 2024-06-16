@@ -17,11 +17,14 @@ namespace Game.Role{
         private Dictionary<Type,Component> m_AddComs=new Dictionary<Type,Component>();
         void Awake()
         {
-            var playerType=ReflexDelegate.GetReflexType("UpdateInfo.PlayerUpdateInfo");
-            var com=this.gameObject.AddComponent(playerType);
-            m_AddComs.Add(playerType,com);
-            this.name=id.ToString();
-            GlobalEventListener.AddListenter(GlobalEventDefine.TestPlayerChange,OnChangeSpeed);
+            if(IsClient){
+                var playerType=ReflexDelegate.GetReflexType("UpdateInfo.PlayerUpdateInfo");
+                var com=this.gameObject.AddComponent(playerType);
+                m_AddComs.Add(playerType,com);
+                this.name=id.ToString();
+                GlobalEventListener.AddListenter(GlobalEventDefine.TestPlayerChange,OnChangeSpeed);
+            }
+           
             // var testAAType=ReflexDelegate.GetReflexType("UpdateInfo.TestAA");
             // var t=Activator.CreateInstance(testAAType);
             // var mm=testAAType.GetMethod("HaHa");
@@ -42,11 +45,14 @@ namespace Game.Role{
         }
         
         public override void OnDestroy(){
-            foreach(var kvp in m_AddComs){
-                GameObject.Destroy(kvp.Value);
+            if(IsClient){
+                foreach(var kvp in m_AddComs){
+                    GameObject.Destroy(kvp.Value);
+                }
+                m_AddComs.Clear();
+                GlobalEventListener.RemoveListener(GlobalEventDefine.TestPlayerChange,OnChangeSpeed);
             }
-            m_AddComs.Clear();
-            GlobalEventListener.RemoveListener(GlobalEventDefine.TestPlayerChange,OnChangeSpeed);
+            
         }
         
         private void OnChangeSpeed(object obj){
@@ -67,15 +73,18 @@ namespace Game.Role{
             if(IsOwner){//是不是宿主
                 float h=Input.GetAxisRaw("Horizontal");
                 float v=Input.GetAxisRaw("Vertical");
-                Vector3 inputDir=new Vector3(h,0,v).normalized;
-                HandleMoveServerRpc(inputDir);
+                if(h>0||v>0){
+                    Vector3 inputDir=new Vector3(h,0,v).normalized;
+                    HandleMoveServerRpc(inputDir);
+                }
+                
             }
         }
 
 
 
         //呼叫服务器自身的netobject
-        [ServerRpc(RequireOwnership =true)]//是否需要验证宿主
+        [ServerRpc]//是否需要验证宿主、、(RequireOwnership =true)
         private void HandleMoveServerRpc(Vector3 inputDir){//结尾必须ServerRpc
             transform.Translate(Time.deltaTime*moveSpeed*inputDir);//服务器端调用
         }

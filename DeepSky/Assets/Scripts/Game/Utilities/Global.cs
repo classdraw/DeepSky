@@ -6,7 +6,9 @@ using YooAsset;
 using XEngine.Loader;
 using XEngine.Pool;
 using XEngine.Utilities;
-
+using System;
+using System.IO;
+using HybridCLR;
 
 [AutoCreateInstance(true)]
 public class Global:MonoSingleton<Global>
@@ -67,6 +69,17 @@ public class Global:MonoSingleton<Global>
         
     }
 
+
+    public static void LoadMetadataForAOTAssemblies(){
+        HomologousImageMode mode = HomologousImageMode.SuperSet;
+        for(int i=0;i<GameConsts.AOTMetaAssemblyNames.Count;i++){
+            var aotDllName=GameConsts.AOTMetaAssemblyNames[i];
+            ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_"+aotDllName);
+            var bs=resHandle.GetObjT<TextAsset>().bytes;
+            LoadImageErrorCode err = RuntimeApi.LoadMetadataForAOTAssembly(bs, mode);
+            XLogger.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
+        }
+    }
 
     /*//切场景处理
 

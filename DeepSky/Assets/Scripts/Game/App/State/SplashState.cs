@@ -7,6 +7,7 @@ using XLua;
 using XEngine.Loader;
 using YooAsset;
 using XEngine.Utilities;
+using Game.Scenes;
 
 namespace Game.Fsm
 {
@@ -40,8 +41,24 @@ namespace Game.Fsm
 
         private void OnYooAssetCallback(){
             XLogger.Log("YooAsset初始化结束");
-            //到这里位置 热更新就结束了
-            AppStateManager.GetInstance().ChangeState(LuaInitState.Index);
+            #if UNITY_SERVER
+                StartServer();
+            #else
+                //到这里位置 热更新就结束了
+                AppStateManager.GetInstance().ChangeState(LuaInitState.Index);
+            #endif
+            
+        }
+
+        private void StartServer(){
+            XFacade.Init();//框架初始化
+            Global.CreateInstance();//游戏全局mono初始化
+            
+            //对象池初始化
+            XEngine.Pool.PoolManager.GetInstance().InitConfig();
+            GameSceneManager.GetInstance().LoadSceneAsync("LoginScene",()=>{
+                XLogger.LogImport("Server Success!!!");
+            });
         }
 
         public override void Exit(){

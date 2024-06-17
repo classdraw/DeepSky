@@ -4,7 +4,7 @@
 TestData/
 ErrorLog/
 Logs/
-Build/
+BuildOut/
 HybridCLRData/
 .idea/
 .vs/

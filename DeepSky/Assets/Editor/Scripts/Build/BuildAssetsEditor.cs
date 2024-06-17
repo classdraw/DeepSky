@@ -32,7 +32,7 @@ public class BuildAssetsEditor
         string targetName=target.ToString();
         string path1=System.Environment.CurrentDirectory+"/HybridCLRData/HotUpdateDlls/"+targetName+"/UpdateInfo.dll";
         string path2=System.Environment.CurrentDirectory+"/Assets/Editor/MyGameAssets/GameRes/Bytes/UpdateInfo.dll.bytes";
-        File.Copy(path1,path2);
+        File.Copy(path1,path2,true);
         AssetDatabase.Refresh();
         AssetDatabase.SaveAssets();
         XLogger.LogImport("Create Dll Success!!!");

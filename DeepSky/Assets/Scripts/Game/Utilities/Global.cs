@@ -78,6 +78,7 @@ public class Global:MonoSingleton<Global>
             var bs=resHandle.GetObjT<TextAsset>().bytes;
             LoadImageErrorCode err = RuntimeApi.LoadMetadataForAOTAssembly(bs, mode);
             XLogger.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
+            resHandle.Dispose();
         }
     }
 

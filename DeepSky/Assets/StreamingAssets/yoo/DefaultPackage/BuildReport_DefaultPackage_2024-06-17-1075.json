@@ -2,13 +2,13 @@
     "Summary": {
         "YooVersion": "",
         "UnityVersion": "2022.3.30f1c1",
-        "BuildDate": "2024/6/17 16:51:10",
-        "BuildSeconds": 7,
+        "BuildDate": "2024/6/17 17:55:07",
+        "BuildSeconds": 3,
         "BuildTarget": 19,
         "BuildMode": 0,
         "BuildPipeline": "BuiltinBuildPipeline",
         "BuildPackageName": "DefaultPackage",
-        "BuildPackageVersion": "2024-06-17-1011",
+        "BuildPackageVersion": "2024-06-17-1075",
         "UniqueBundleName": true,
         "EnableAddressable": true,
         "LocationToLower": false,
@@ -23,7 +23,7 @@
         "AssetFileTotalCount": 57,
         "MainAssetTotalCount": 52,
         "AllBundleTotalCount": 17,
-        "AllBundleTotalSize": 1333409,
+        "AllBundleTotalSize": 1333434,
         "EncryptedBundleTotalCount": 0,
         "EncryptedBundleTotalSize": 0
     },
@@ -133,7 +133,7 @@
             "AssetGUID": "523901a2807c1a248a921541b3a429be",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "MainBundleSize": 1202246,
+            "MainBundleSize": 1202271,
             "DependAssets": []
         },
         {
@@ -142,7 +142,7 @@
             "AssetGUID": "c44126ec43b2aa64ab5b15f2158c01b3",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "MainBundleSize": 1202246,
+            "MainBundleSize": 1202271,
             "DependAssets": []
         },
         {
@@ -151,7 +151,7 @@
             "AssetGUID": "6e546e0e4f28a0a40b7df5c2c792e206",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "MainBundleSize": 1202246,
+            "MainBundleSize": 1202271,
             "DependAssets": []
         },
         {
@@ -160,7 +160,7 @@
             "AssetGUID": "7fb6160a089a65f49be52c9f9bd9c339",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "MainBundleSize": 1202246,
+            "MainBundleSize": 1202271,
             "DependAssets": []
         },
         {
@@ -169,7 +169,7 @@
             "AssetGUID": "535f4c6c1f65143419b1debabae9af02",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "MainBundleSize": 1202246,
+            "MainBundleSize": 1202271,
             "DependAssets": []
         },
         {
@@ -610,10 +610,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "FileName": "3aa52475fe51080c48ea64e124efaeca.bundle",
-            "FileHash": "3aa52475fe51080c48ea64e124efaeca",
-            "FileCRC": "acbc9397",
-            "FileSize": 1202246,
+            "FileName": "d440f7e23b678dcf9b576f487727d73c.bundle",
+            "FileHash": "d440f7e23b678dcf9b576f487727d73c",
+            "FileCRC": "cde4b813",
+            "FileSize": 1202271,
             "Encrypted": false,
             "Tags": [],
             "DependBundles": [],

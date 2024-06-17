@@ -6,7 +6,7 @@
     "OutputNameStyle": 0,
     "BuildPipeline": "BuiltinBuildPipeline",
     "PackageName": "DefaultPackage",
-    "PackageVersion": "2024-06-17-1011",
+    "PackageVersion": "2024-06-17-1075",
     "AssetList": [
         {
             "Address": "Effects_Cube",
@@ -434,10 +434,10 @@
         },
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "UnityCRC": 2816397274,
-            "FileHash": "3aa52475fe51080c48ea64e124efaeca",
-            "FileCRC": "acbc9397",
-            "FileSize": 1202246,
+            "UnityCRC": 3098631298,
+            "FileHash": "d440f7e23b678dcf9b576f487727d73c",
+            "FileCRC": "cde4b813",
+            "FileSize": 1202271,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

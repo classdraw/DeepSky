@@ -8,6 +8,7 @@ using XEngine.Utilities;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 using HybridCLR.Editor;
+using Unity.VisualScripting;
 
 public class BuildAssetsEditor
 {
@@ -58,7 +59,11 @@ public class BuildAssetsEditor
     #endregion
 
     #region  build相关操作
-    [MenuItem("Deep/Build/BuildServer", priority = 0)]
+    [MenuItem("Deep/Build/所有bundle需要手动打，手动拷贝，没加入流程！", priority = 0)]
+    public static void BuildTest(){
+
+    }
+    [MenuItem("Deep/Build/BuildServer", priority = 1)]
     public static void BuildServer(){
         string ss1 = System.Environment.CurrentDirectory+"/BuildOut";
         string projectRoot = ss1+"/Server";
@@ -90,5 +95,61 @@ public class BuildAssetsEditor
         XLogger.LogImport("Build Server Success!!!");
     }
 
+    [MenuItem("Deep/Build/BuildWindowsClient", priority = 2)]
+    public static void BuildWindowsClient(){
+        PrebuildCommand.GenerateAll();
+        CreateDllWindows();//拷贝所有dll
+        _buildClient(BuildTarget.StandaloneWindows64,".exe");
+
+        XLogger.LogImport("Build Windows Success!!!");
+    }
+
+    
+    [MenuItem("Deep/Build/BuildAndroidClient", priority = 3)]
+    public static void BuildAndroidClient(){
+        PrebuildCommand.GenerateAll();//生成dll
+        CreateDllAndroid();//拷贝所有dll
+        _buildClient(BuildTarget.Android,".apk");//构建
+
+        XLogger.LogImport("Build Android Success!!!");
+    }
+
+        
+    // [MenuItem("Deep/Build/BuildIOSClient(未测)", priority = 3)]
+    // public static void BuildIOSClient(){
+    //     PrebuildCommand.GenerateAll();
+    //     _buildClient(BuildTarget.iOS);
+
+    //     XLogger.LogImport("Build IOS Success!!!");
+    // }
+
+    private static void _buildClient(BuildTarget buildTarget,string pathEnd){
+        string targetName=buildTarget.ToString();
+
+        string ss1 = System.Environment.CurrentDirectory+"/BuildOut";
+        string projectRoot = ss1+"/Client/"+targetName;
+        if(Directory.Exists(projectRoot)){
+            Directory.Delete(projectRoot,true);
+        }
+
+        if(!Directory.Exists(projectRoot)){
+            Directory.CreateDirectory(projectRoot);
+        }
+
+        
+        List<string> sceneList = new List<string>();
+        for (int i=0; i< EditorSceneManager.sceneCountInBuildSettings; i++) {
+            string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
+            sceneList.Add(scenePath);
+        }
+        
+        BuildPlayerOptions build = new BuildPlayerOptions() {
+            scenes = sceneList.ToArray(),
+            target = buildTarget,
+            // subtarget = (int)StandaloneBuildSubtarget.Player,
+            locationPathName = $"{projectRoot}/Client"+pathEnd
+        };
+        BuildPipeline.BuildPlayer(build);
+    }
     #endregion
 }

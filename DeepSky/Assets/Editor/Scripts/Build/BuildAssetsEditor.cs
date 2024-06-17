@@ -114,6 +114,15 @@ public class BuildAssetsEditor
         XLogger.LogImport("Build Android Success!!!");
     }
 
+        [MenuItem("Deep/Build/BuildWindowsUpdate", priority = 4)]
+    public static void BuildWindowsUpdate(){
+        PrebuildCommand.GenerateAll();//生成dll
+        CreateDllWindows();//拷贝所有dll
+        //yooasset构建以及bundle拷贝
+
+        XLogger.LogImport("Build WindowsUpdate Success!!!");
+    }
+
         
     // [MenuItem("Deep/Build/BuildIOSClient(未测)", priority = 3)]
     // public static void BuildIOSClient(){

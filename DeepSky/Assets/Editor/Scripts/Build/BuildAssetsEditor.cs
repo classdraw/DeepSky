@@ -5,6 +5,8 @@ using UnityEditor;
 using HybridCLR.Editor.Commands;
 using System.IO;
 using XEngine.Utilities;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class BuildAssetsEditor
 {
@@ -33,7 +35,7 @@ public class BuildAssetsEditor
         File.Copy(path1,path2);
         AssetDatabase.Refresh();
         AssetDatabase.SaveAssets();
-        XLogger.LogImport("生成dll成功!!!");
+        XLogger.LogImport("Create Dll Success!!!");
     }
 
     #endregion
@@ -41,7 +43,29 @@ public class BuildAssetsEditor
     #region  build相关操作
     [MenuItem("Deep/Build/BuildServer", priority = 0)]
     public static void BuildServer(){
+        string ss1 = System.Environment.CurrentDirectory+"/BuildOut/";
+        if(!Directory.Exists(ss1)){
+            Directory.CreateDirectory(ss1);
+        }
 
+        HybridCLR.Editor.SettingsUtil.Enable=false;
+        string projectRoot = new DirectoryInfo(Application.dataPath).Parent.FullName+"/BuildOut/Server";
+        List<string> sceneList = new List<string>();
+        for (int i=0; i< EditorSceneManager.sceneCountInBuildSettings; i++) {
+            string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
+            sceneList.Add(scenePath);
+        }
+        
+        BuildPlayerOptions build = new BuildPlayerOptions() {
+            scenes = sceneList.ToArray(),
+            target = BuildTarget.StandaloneWindows64,
+            subtarget = (int)StandaloneBuildSubtarget.Server,
+            locationPathName = $"{projectRoot}/Server.exe"
+        };
+        BuildPipeline.BuildPlayer(build);
+
+        HybridCLR.Editor.SettingsUtil.Enable=true;
+        XLogger.LogImport("Build Server Success!!!");
     }
 
 

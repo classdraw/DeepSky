@@ -43,13 +43,18 @@ public class BuildAssetsEditor
     #region  build相关操作
     [MenuItem("Deep/Build/BuildServer", priority = 0)]
     public static void BuildServer(){
-        string ss1 = System.Environment.CurrentDirectory+"/BuildOut/";
-        if(!Directory.Exists(ss1)){
-            Directory.CreateDirectory(ss1);
+        string ss1 = System.Environment.CurrentDirectory+"/BuildOut";
+        string projectRoot = ss1+"/Server";
+        if(Directory.Exists(projectRoot)){
+            Directory.Delete(projectRoot,true);
+        }
+
+        if(!Directory.Exists(projectRoot)){
+            Directory.CreateDirectory(projectRoot);
         }
 
         HybridCLR.Editor.SettingsUtil.Enable=false;
-        string projectRoot = new DirectoryInfo(Application.dataPath).Parent.FullName+"/BuildOut/Server";
+        
         List<string> sceneList = new List<string>();
         for (int i=0; i< EditorSceneManager.sceneCountInBuildSettings; i++) {
             string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
@@ -67,7 +72,6 @@ public class BuildAssetsEditor
         HybridCLR.Editor.SettingsUtil.Enable=true;
         XLogger.LogImport("Build Server Success!!!");
     }
-
 
     #endregion
 }

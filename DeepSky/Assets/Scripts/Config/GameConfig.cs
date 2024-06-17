@@ -6,6 +6,7 @@ using XEngine.Utilities;
 using System.ComponentModel;
 
 //只是一个配置的config
+//已经废弃！！！走startConfig
 public class GameConfig : MonoBehaviour
 {
 

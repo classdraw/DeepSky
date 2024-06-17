@@ -32,7 +32,7 @@ namespace Game.Fsm
         private string GetStartConfigPath(){
             #if UNITY_SERVER
                 return "Configs/StartConfigServer";
-            #elif UNITY_WINDOWS
+            #elif UNITY_WINDOW
                 return "Configs/StartConfigWindows";
             #elif UNITY_ANDROID
                 return "Configs/StartConfigAndroid";

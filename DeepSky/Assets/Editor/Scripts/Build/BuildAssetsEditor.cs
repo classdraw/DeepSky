@@ -30,13 +30,29 @@ public class BuildAssetsEditor
     private static void _createDllByTarget(BuildTarget target){
         CompileDllCommand.CompileDll(target);
         string targetName=target.ToString();
-        string path1=System.Environment.CurrentDirectory+"/HybridCLRData/HotUpdateDlls/"+targetName+"/UpdateInfo.dll";
-        string path2=System.Environment.CurrentDirectory+"/Assets/Editor/MyGameAssets/GameRes/Bytes/UpdateInfo.dll.bytes";
+        string dllResPath=System.Environment.CurrentDirectory+"/HybridCLRData/HotUpdateDlls/"+targetName;
+        string destPath=System.Environment.CurrentDirectory+"/Assets/Editor/MyGameAssets/GameRes/Bytes/";
+        string path1=dllResPath+"/UpdateInfo.dll";
+        string path2=destPath+"UpdateInfo.dll.bytes";
         File.Copy(path1,path2,true);
+
+        string aotResPath=System.Environment.CurrentDirectory+"/HybridCLRData/AssembliesPostIl2CppStrip/"+targetName+"/";
+        for(int i=0;i<GameConsts.AOTMetaAssemblyNames.Count;i++){
+            string na=GameConsts.AOTMetaAssemblyNames[i];
+            if(File.Exists(aotResPath+na)){
+                File.Copy(aotResPath+na,destPath+na+".bytes",true);
+            }else{
+                XLogger.LogError("AOT拷贝失败"+na+" 点击Generate/AOTGenericReference生成下当前平台");
+            }
+            
+        }
+        //
+
         AssetDatabase.Refresh();
         AssetDatabase.SaveAssets();
         XLogger.LogImport("Create Dll Success!!!");
     }
+
 
     #endregion
 

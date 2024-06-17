@@ -2,13 +2,13 @@
     "Summary": {
         "YooVersion": "",
         "UnityVersion": "2022.3.30f1c1",
-        "BuildDate": "2024/6/16 16:26:42",
+        "BuildDate": "2024/6/17 16:51:10",
         "BuildSeconds": 7,
         "BuildTarget": 19,
         "BuildMode": 0,
         "BuildPipeline": "BuiltinBuildPipeline",
         "BuildPackageName": "DefaultPackage",
-        "BuildPackageVersion": "2024-06-16-986",
+        "BuildPackageVersion": "2024-06-17-1011",
         "UniqueBundleName": true,
         "EnableAddressable": true,
         "LocationToLower": false,
@@ -20,10 +20,10 @@
         "CompressOption": 2,
         "DisableWriteTypeTree": false,
         "IgnoreTypeTreeChanges": true,
-        "AssetFileTotalCount": 63,
-        "MainAssetTotalCount": 55,
-        "AllBundleTotalCount": 18,
-        "AllBundleTotalSize": 1716834,
+        "AssetFileTotalCount": 57,
+        "MainAssetTotalCount": 52,
+        "AllBundleTotalCount": 17,
+        "AllBundleTotalSize": 1333409,
         "EncryptedBundleTotalCount": 0,
         "EncryptedBundleTotalSize": 0
     },
@@ -86,51 +86,6 @@
             "DependAssets": []
         },
         {
-            "Address": "EmptyScene",
-            "AssetPath": "Assets/Scenes/EmptyScene.unity",
-            "AssetGUID": "1f974bffe67f6f34b973d26442dd48eb",
-            "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_scenes.bundle",
-            "MainBundleSize": 414337,
-            "DependAssets": []
-        },
-        {
-            "Address": "Launcher",
-            "AssetPath": "Assets/Scenes/Launcher.unity",
-            "AssetGUID": "746aac2e876b45b459249cf15aae8364",
-            "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_scenes.bundle",
-            "MainBundleSize": 414337,
-            "DependAssets": []
-        },
-        {
-            "Address": "LoginScene",
-            "AssetPath": "Assets/Scenes/LoginScene.unity",
-            "AssetGUID": "8312e51b9124a9349926f7a6344e9557",
-            "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_scenes.bundle",
-            "MainBundleSize": 414337,
-            "DependAssets": [
-                "Assets/Editor/MyGameAssets/GameRes/Materials/RoleMat.mat",
-                "Assets/Editor/MyGameAssets/GameRes/Role/Player.prefab",
-                "Assets/Editor/MyGameAssets/GameRes/Materials/Groud.mat",
-                "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
-            ]
-        },
-        {
-            "Address": "SampleScene",
-            "AssetPath": "Assets/Scenes/SampleScene.unity",
-            "AssetGUID": "99c9720ab356a0642a771bea13969a05",
-            "AssetTags": [],
-            "MainBundleName": "defaultpackage_assets_scenes.bundle",
-            "MainBundleSize": 414337,
-            "DependAssets": [
-                "Packages/com.unity.render-pipelines.core/Editor/Volume/Icons/VolumeProfileAsset.png",
-                "Packages/com.unity.render-pipelines.core/Editor/Volume/Icons/Volume.png",
-                "Assets/Settings/SampleSceneProfile.asset"
-            ]
-        },
-        {
             "Address": "UI_Plane",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/UI/Plane.prefab",
             "AssetGUID": "cebbd254156fa0046a59718313764d63",
@@ -173,12 +128,21 @@
             "DependAssets": []
         },
         {
+            "Address": "Bytes_FrameInfo.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/FrameInfo.dll.bytes",
+            "AssetGUID": "523901a2807c1a248a921541b3a429be",
+            "AssetTags": [],
+            "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
+            "MainBundleSize": 1202246,
+            "DependAssets": []
+        },
+        {
             "Address": "Bytes_mscorlib.dll",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/mscorlib.dll.bytes",
             "AssetGUID": "c44126ec43b2aa64ab5b15f2158c01b3",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "MainBundleSize": 1171334,
+            "MainBundleSize": 1202246,
             "DependAssets": []
         },
         {
@@ -187,7 +151,7 @@
             "AssetGUID": "6e546e0e4f28a0a40b7df5c2c792e206",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "MainBundleSize": 1171334,
+            "MainBundleSize": 1202246,
             "DependAssets": []
         },
         {
@@ -196,7 +160,7 @@
             "AssetGUID": "7fb6160a089a65f49be52c9f9bd9c339",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "MainBundleSize": 1171334,
+            "MainBundleSize": 1202246,
             "DependAssets": []
         },
         {
@@ -205,7 +169,7 @@
             "AssetGUID": "535f4c6c1f65143419b1debabae9af02",
             "AssetTags": [],
             "MainBundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "MainBundleSize": 1171334,
+            "MainBundleSize": 1202246,
             "DependAssets": []
         },
         {
@@ -599,9 +563,9 @@
         },
         {
             "BundleName": "defaultpackage_unityshaders.bundle",
-            "FileName": "42d698d730fc809157af4fd6bbdf3037.bundle",
-            "FileHash": "42d698d730fc809157af4fd6bbdf3037",
-            "FileCRC": "39362860",
+            "FileName": "ddbb59c7a9d3f8f50f53cdff95c7bbe0.bundle",
+            "FileHash": "ddbb59c7a9d3f8f50f53cdff95c7bbe0",
+            "FileCRC": "5c454c3c",
             "FileSize": 57691,
             "Encrypted": false,
             "Tags": [],
@@ -609,29 +573,6 @@
             "AllBuiltinAssets": [
                 "Assets/Editor/MyGameAssets/GameRes/Shaders/NewUnlitShader.shader",
                 "Packages/com.unity.render-pipelines.universal/Shaders/Lit.shader"
-            ]
-        },
-        {
-            "BundleName": "defaultpackage_assets_scenes.bundle",
-            "FileName": "ac89bbdf7da668c5911477fcc5e594ff.bundle",
-            "FileHash": "ac89bbdf7da668c5911477fcc5e594ff",
-            "FileCRC": "79e7ab75",
-            "FileSize": 414337,
-            "Encrypted": false,
-            "Tags": [],
-            "DependBundles": [
-                "defaultpackage_assets_editor_mygameassets_gameres_materials.bundle",
-                "defaultpackage_assets_editor_mygameassets_gameres_role.bundle",
-                "defaultpackage_unityshaders.bundle"
-            ],
-            "AllBuiltinAssets": [
-                "Assets/Scenes/EmptyScene.unity",
-                "Assets/Scenes/Launcher.unity",
-                "Assets/Scenes/LoginScene.unity",
-                "Assets/Scenes/SampleScene.unity",
-                "Packages/com.unity.render-pipelines.core/Editor/Volume/Icons/VolumeProfileAsset.png",
-                "Packages/com.unity.render-pipelines.core/Editor/Volume/Icons/Volume.png",
-                "Assets/Settings/SampleSceneProfile.asset"
             ]
         },
         {
@@ -669,14 +610,15 @@
         },
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
-            "FileName": "155a7a99da7e33881964141b6bbada9a.bundle",
-            "FileHash": "155a7a99da7e33881964141b6bbada9a",
-            "FileCRC": "a2f03948",
-            "FileSize": 1171334,
+            "FileName": "3aa52475fe51080c48ea64e124efaeca.bundle",
+            "FileHash": "3aa52475fe51080c48ea64e124efaeca",
+            "FileCRC": "acbc9397",
+            "FileSize": 1202246,
             "Encrypted": false,
             "Tags": [],
             "DependBundles": [],
             "AllBuiltinAssets": [
+                "Assets/Editor/MyGameAssets/GameRes/Bytes/FrameInfo.dll.bytes",
                 "Assets/Editor/MyGameAssets/GameRes/Bytes/mscorlib.dll.bytes",
                 "Assets/Editor/MyGameAssets/GameRes/Bytes/System.Core.dll.bytes",
                 "Assets/Editor/MyGameAssets/GameRes/Bytes/System.dll.bytes",

@@ -63,14 +63,6 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Assets/Scenes
-        CollectorGUID: 9c53962885c2c4f449125a979d6ad240
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
       - CollectPath: Assets/Editor/MyGameAssets/GameRes/Scenes
         CollectorGUID: ec3309969819207489a2c6a4decc5353
         CollectorType: 0

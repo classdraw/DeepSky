@@ -7,6 +7,7 @@ using System.IO;
 using XEngine.Utilities;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
+using HybridCLR.Editor;
 
 public class BuildAssetsEditor
 {
@@ -35,10 +36,10 @@ public class BuildAssetsEditor
         string path1=dllResPath+"/UpdateInfo.dll";
         string path2=destPath+"UpdateInfo.dll.bytes";
         File.Copy(path1,path2,true);
-
+        
         string aotResPath=System.Environment.CurrentDirectory+"/HybridCLRData/AssembliesPostIl2CppStrip/"+targetName+"/";
-        for(int i=0;i<GameConsts.AOTMetaAssemblyNames.Count;i++){
-            string na=GameConsts.AOTMetaAssemblyNames[i];
+        for(int i=0;i<SettingsUtil.AOTAssemblyNames.Count;i++){
+            string na=SettingsUtil.AOTAssemblyNames[i]+".dll";
             if(File.Exists(aotResPath+na)){
                 File.Copy(aotResPath+na,destPath+na+".bytes",true);
             }else{

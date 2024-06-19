@@ -1,0 +1,43 @@
+ManifestFileVersion: 0
+CRC: 273765972
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 086d458d935cb6ff0cd14b3ed3d67119
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c2d9e4518e8a89584ed66ea331e67e9c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 086d458d935cb6ff0cd14b3ed3d67119
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5d44da589b3d1e346b004825db9e5a0c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/MyGameAssets/GameRes/Role/Player.prefab
+- Assets/Editor/MyGameAssets/GameRes/Role/Sphere.prefab
+- Assets/Editor/MyGameAssets/GameRes/Role/Sphere1.prefab
+Dependencies:
+- E:/WW/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_assets_editor_mygameassets_gameres_materials.bundle

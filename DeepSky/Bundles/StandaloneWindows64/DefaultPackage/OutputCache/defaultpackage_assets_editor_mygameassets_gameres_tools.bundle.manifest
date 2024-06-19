@@ -1,0 +1,44 @@
+ManifestFileVersion: 0
+CRC: 1023913708
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 87922cd9fd906a40ac46df534f64b01e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 09944e73452b81eb062e499299c257ae
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 87922cd9fd906a40ac46df534f64b01e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 82
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 593a2fe42fa9d37498c96f9a383b6521, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6960e84d07fb87f47956e7a81d71c4e6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e651dbb3fbac04af2b8f5abf007ddc23, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Unity.Netcode.Runtime
+  ClassName: Unity.Netcode.NetworkConfig
+- AssemblyName: Unity.Netcode.Runtime
+  ClassName: Unity.Netcode.NetworkPrefab
+- AssemblyName: Unity.Netcode.Runtime
+  ClassName: Unity.Netcode.NetworkPrefabs
+- AssemblyName: Unity.Netcode.Runtime
+  ClassName: Unity.Netcode.Transports.UTP.UnityTransport/ConnectionAddressData
+- AssemblyName: Unity.Netcode.Runtime
+  ClassName: Unity.Netcode.Transports.UTP.UnityTransport/SimulatorParameters
+Assets:
+- Assets/Editor/MyGameAssets/GameRes/Tools/AudioValue.prefab
+- Assets/Editor/MyGameAssets/GameRes/Tools/NetworkManager.prefab
+Dependencies:
+- E:/WW/DeepSky/DeepSky/Bundles/StandaloneWindows64/DefaultPackage/OutputCache/defaultpackage_assets_editor_mygameassets_gameres_role.bundle

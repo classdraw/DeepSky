@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 1338316582
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 60926ac83a46aa44407cf6965c7d1671
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 60926ac83a46aa44407cf6965c7d1671
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Action1.wav
+Dependencies: []

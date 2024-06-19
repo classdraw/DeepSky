@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 2130758834
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 70697087ea89fd4eeb1182d45ee4ab78
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 70697087ea89fd4eeb1182d45ee4ab78
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Ambient4.wav
+Dependencies: []

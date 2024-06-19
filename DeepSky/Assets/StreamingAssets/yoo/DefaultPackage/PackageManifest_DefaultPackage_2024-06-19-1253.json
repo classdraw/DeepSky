@@ -1,0 +1,1060 @@
+{
+    "FileVersion": "2.0.0",
+    "EnableAddressable": true,
+    "LocationToLower": false,
+    "IncludeAssetGUID": false,
+    "OutputNameStyle": 0,
+    "BuildPipeline": "BuiltinBuildPipeline",
+    "PackageName": "DefaultPackage",
+    "PackageVersion": "2024-06-19-1253",
+    "AssetList": [
+        {
+            "Address": "Effects_Cube",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Effects/Cube.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 0
+        },
+        {
+            "Address": "Role_Player",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Role/Player.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 1
+        },
+        {
+            "Address": "Role_Sphere",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Role/Sphere.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 1
+        },
+        {
+            "Address": "Role_Sphere1",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Role/Sphere1.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 1
+        },
+        {
+            "Address": "NewUnlitShader",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Shaders/NewUnlitShader.shader",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 2
+        },
+        {
+            "Address": "UI_Plane",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/UI/Plane.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 3
+        },
+        {
+            "Address": "UI_UIRoot",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/UI/UIRoot.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 3
+        },
+        {
+            "Address": "Links",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/ScriptObject/Links.asset",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 4
+        },
+        {
+            "Address": "PoolConfig",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/ScriptObject/PoolConfig.asset",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 4
+        },
+        {
+            "Address": "Bytes_FrameInfo.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/FrameInfo.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5
+        },
+        {
+            "Address": "Bytes_mscorlib.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/mscorlib.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5
+        },
+        {
+            "Address": "Bytes_System.Core.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/System.Core.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5
+        },
+        {
+            "Address": "Bytes_System.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/System.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5
+        },
+        {
+            "Address": "Bytes_UpdateInfo.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/UpdateInfo.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5
+        },
+        {
+            "Address": "Groud",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Materials/Groud.mat",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 6
+        },
+        {
+            "Address": "New Material1",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Materials/New Material1.mat",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 6
+        },
+        {
+            "Address": "RoleMat",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Materials/RoleMat.mat",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 6
+        },
+        {
+            "Address": "Lua_App.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/App.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 7
+        },
+        {
+            "Address": "Lua_GamePrepareLoad.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/GamePrepareLoad.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 7
+        },
+        {
+            "Address": "Lua_global.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/global.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 7
+        },
+        {
+            "Address": "Lua_GlobalRequire.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/GlobalRequire.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 7
+        },
+        {
+            "Address": "Lua_main.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/main.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 7
+        },
+        {
+            "Address": "Lua_StartApp.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/StartApp.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 7
+        },
+        {
+            "Address": "Lua_XLuaFacade.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/XLuaFacade.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 7
+        },
+        {
+            "Address": "consts_AppEvent.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/consts/AppEvent.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 8
+        },
+        {
+            "Address": "consts_CS_Define.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/consts/CS_Define.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 8
+        },
+        {
+            "Address": "consts_Enum.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/consts/Enum.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 8
+        },
+        {
+            "Address": "core_Lua_BaseClass.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_BaseClass.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9
+        },
+        {
+            "Address": "core_Lua_LazyClass.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_LazyClass.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9
+        },
+        {
+            "Address": "core_Lua_Messager.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_Messager.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9
+        },
+        {
+            "Address": "core_Lua_Object.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_Object.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9
+        },
+        {
+            "Address": "core_Lua_Singleton.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_Singleton.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9
+        },
+        {
+            "Address": "core_Lua_Updatable.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/core/Lua_Updatable.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 9
+        },
+        {
+            "Address": "functions_init.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/functions/init.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 10
+        },
+        {
+            "Address": "logic_SelectManager.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/SelectManager.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 11
+        },
+        {
+            "Address": "logic_SystemManager.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/SystemManager.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 11
+        },
+        {
+            "Address": "logic_TimeManager.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/TimeManager.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 11
+        },
+        {
+            "Address": "logic_UICache.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/UICache.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 11
+        },
+        {
+            "Address": "logic_UIManager.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/UIManager.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 11
+        },
+        {
+            "Address": "logic_UpdateManager.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/logic/UpdateManager.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 11
+        },
+        {
+            "Address": "system_BaseSystem.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/system/BaseSystem.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 12
+        },
+        {
+            "Address": "system_GameSettingSystem.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/system/GameSettingSystem.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 12
+        },
+        {
+            "Address": "system_TestSystem.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/system/TestSystem.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 12
+        },
+        {
+            "Address": "system_ValueObject.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/system/ValueObject.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 12
+        },
+        {
+            "Address": "core_UIBaseCtrl.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/ui/core/UIBaseCtrl.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 13
+        },
+        {
+            "Address": "utils_debug.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/debug.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 14
+        },
+        {
+            "Address": "utils_functions.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/functions.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 14
+        },
+        {
+            "Address": "utils_lc_event.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/lc_event.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 14
+        },
+        {
+            "Address": "utils_lc_list.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/lc_list.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 14
+        },
+        {
+            "Address": "utils_XLogger.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/utils/XLogger.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 14
+        },
+        {
+            "Address": "Data_data1.lua",
+            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Data/data1.lua.txt",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 15
+        },
+        {
+            "Address": "tools_AudioValue",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/AudioValue.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 16
+        },
+        {
+            "Address": "tools_NetworkManager",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/NetworkManager.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 16
+        },
+        {
+            "Address": "audio_Action1",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Action1.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 17
+        },
+        {
+            "Address": "audio_Action2",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Action2.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 18
+        },
+        {
+            "Address": "audio_Action3",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Action3.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 19
+        },
+        {
+            "Address": "audio_Action4",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Action4.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 20
+        },
+        {
+            "Address": "audio_Action5",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Action5.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 21
+        },
+        {
+            "Address": "audio_Ambient1",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Ambient1.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 22
+        },
+        {
+            "Address": "audio_Ambient2",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Ambient2.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 23
+        },
+        {
+            "Address": "audio_Ambient3",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Ambient3.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 24
+        },
+        {
+            "Address": "audio_Ambient4",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Ambient4.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 25
+        },
+        {
+            "Address": "audio_Ambient5",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Ambient5.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 26
+        },
+        {
+            "Address": "audio_Ambient6",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Ambient6.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 27
+        },
+        {
+            "Address": "audio_Ambient7",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Ambient7.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 28
+        },
+        {
+            "Address": "audio_Ambient8",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Ambient8.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 29
+        },
+        {
+            "Address": "audio_Ambient9",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Ambient9.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 30
+        },
+        {
+            "Address": "audio_Ambient10",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Ambient10.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 31
+        },
+        {
+            "Address": "audio_DM-CGS-01",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/UI/DM-CGS-01.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 32
+        },
+        {
+            "Address": "audio_DM-CGS-02",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/UI/DM-CGS-02.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 32
+        },
+        {
+            "Address": "audio_03_Claw_03",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/03_Claw_03.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 33
+        },
+        {
+            "Address": "audio_08_Bite_04",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/08_Bite_04.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 33
+        },
+        {
+            "Address": "audio_15_Impact_flesh_02",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/15_Impact_flesh_02.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 33
+        },
+        {
+            "Address": "audio_22_Slash_04",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/22_Slash_04.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 33
+        },
+        {
+            "Address": "audio_35_Miss_Evade_02",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/35_Miss_Evade_02.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 33
+        },
+        {
+            "Address": "audio_39_Block_03",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/39_Block_03.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 33
+        },
+        {
+            "Address": "audio_51_Flee_02",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/51_Flee_02.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 33
+        },
+        {
+            "Address": "audio_55_Encounter_02",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/55_Encounter_02.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 33
+        },
+        {
+            "Address": "audio_69_Enemy_death_01",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/69_Enemy_death_01.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 33
+        },
+        {
+            "Address": "audio_77_flesh_02",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/77_flesh_02.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 33
+        },
+        {
+            "Address": "audio_02_Heal_02",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Buffs/02_Heal_02.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 34
+        },
+        {
+            "Address": "audio_16_Atk_buff_04",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Buffs/16_Atk_buff_04.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 34
+        },
+        {
+            "Address": "audio_17_Def_buff_01",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Buffs/17_Def_buff_01.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 34
+        },
+        {
+            "Address": "audio_21_Debuff_01",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Buffs/21_Debuff_01.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 34
+        },
+        {
+            "Address": "audio_30_Revive_03",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Buffs/30_Revive_03.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 34
+        },
+        {
+            "Address": "audio_39_Absorb_04",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Buffs/39_Absorb_04.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 34
+        },
+        {
+            "Address": "audio_44_Sleep_01",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Buffs/44_Sleep_01.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 34
+        },
+        {
+            "Address": "audio_48_Speed_up_02",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Buffs/48_Speed_up_02.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 34
+        },
+        {
+            "Address": "audio_04_Fire_explosion_04_medium",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/04_Fire_explosion_04_medium.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 35
+        },
+        {
+            "Address": "audio_13_Ice_explosion_01",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/13_Ice_explosion_01.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 35
+        },
+        {
+            "Address": "audio_18_Thunder_02",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/18_Thunder_02.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 35
+        },
+        {
+            "Address": "audio_22_Water_02",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/22_Water_02.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 35
+        },
+        {
+            "Address": "audio_25_Wind_01",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/25_Wind_01.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 35
+        },
+        {
+            "Address": "audio_30_Earth_02",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/30_Earth_02.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 35
+        },
+        {
+            "Address": "audio_45_Charge_05",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/45_Charge_05.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 35
+        },
+        {
+            "Address": "audio_46_Poison_01",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/46_Poison_01.wav",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 35
+        }
+    ],
+    "BundleList": [
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_effects.bundle",
+            "UnityCRC": 1585029128,
+            "FileHash": "a49b9dc3721f72769f37da63ffac608c",
+            "FileCRC": "43c86b06",
+            "FileSize": 3226,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": [
+                6,
+                2
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_role.bundle",
+            "UnityCRC": 273765972,
+            "FileHash": "46fe4069d27943b1837312a2fcda8fbe",
+            "FileCRC": "277445ad",
+            "FileSize": 5042,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": [
+                6,
+                2
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_unityshaders.bundle",
+            "UnityCRC": 3161455982,
+            "FileHash": "ddbb59c7a9d3f8f50f53cdff95c7bbe0",
+            "FileCRC": "5c454c3c",
+            "FileSize": 57691,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_ui.bundle",
+            "UnityCRC": 3005201314,
+            "FileHash": "015a1c28d7e00205d373973373f98fdd",
+            "FileCRC": "20ba5296",
+            "FileSize": 13488,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": [
+                2
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_scriptobject.bundle",
+            "UnityCRC": 3563806145,
+            "FileHash": "97cdb8e1eec27018eeb2a2be508a1859",
+            "FileCRC": "0bc1b23a",
+            "FileSize": 2487,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
+            "UnityCRC": 3948160996,
+            "FileHash": "5c490adbe7f1e831f5b387b045ef0e90",
+            "FileCRC": "4de1de91",
+            "FileSize": 1208492,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_materials.bundle",
+            "UnityCRC": 1825200436,
+            "FileHash": "33ea9c55bb7e2fa964e5fb499876ca3d",
+            "FileCRC": "ec74eb85",
+            "FileSize": 3207,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": [
+                2
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua.bundle",
+            "UnityCRC": 4146325420,
+            "FileHash": "42bf62fc1a5d368097c8f91f48dce07c",
+            "FileCRC": "e709de95",
+            "FileSize": 5123,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_consts.bundle",
+            "UnityCRC": 2336895815,
+            "FileHash": "15694114786f2c3bfc8cfc485cd523e2",
+            "FileCRC": "33403aff",
+            "FileSize": 2787,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_core.bundle",
+            "UnityCRC": 3380319715,
+            "FileHash": "60a339cb6c541504bad6bb5a70aba78a",
+            "FileCRC": "f54bab27",
+            "FileSize": 5058,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_functions.bundle",
+            "UnityCRC": 4089101612,
+            "FileHash": "f82f89e0e0711f502f77243fc8b1cb78",
+            "FileCRC": "d70d83bd",
+            "FileSize": 1300,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_logic.bundle",
+            "UnityCRC": 1874925131,
+            "FileHash": "8417ce2d88d7f90f33141152eb2a8654",
+            "FileCRC": "4cb66f33",
+            "FileSize": 3621,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_system.bundle",
+            "UnityCRC": 2343510999,
+            "FileHash": "76f61e707991f1f1a537a282a1a7a89c",
+            "FileCRC": "05079d3f",
+            "FileSize": 3240,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_ui_core.bundle",
+            "UnityCRC": 2810659753,
+            "FileHash": "5d833e659cae25c47f7b46c0b2fab4aa",
+            "FileCRC": "d4d136d2",
+            "FileSize": 1454,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_utils.bundle",
+            "UnityCRC": 3666898020,
+            "FileHash": "4e1d32f01296c4926d2d503dd3d565ef",
+            "FileCRC": "1058444c",
+            "FileSize": 18067,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_data.bundle",
+            "UnityCRC": 2183085692,
+            "FileHash": "7d4881f8b6e47bceacfb4b9936341725",
+            "FileCRC": "11c4471d",
+            "FileSize": 1261,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_tools.bundle",
+            "UnityCRC": 1023913708,
+            "FileHash": "781cff0fc2744207223596543fb1f021",
+            "FileCRC": "06ef627d",
+            "FileSize": 5209,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": [
+                6,
+                1,
+                2
+            ]
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_action1.bundle",
+            "UnityCRC": 1338316582,
+            "FileHash": "2c69253bc67b793c7dbeda4db866ec8b",
+            "FileCRC": "31daa366",
+            "FileSize": 6057105,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_action2.bundle",
+            "UnityCRC": 1666813833,
+            "FileHash": "f7fd0469087bb9c81de770d1b590c0e3",
+            "FileCRC": "1d84d5fc",
+            "FileSize": 5422615,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_action3.bundle",
+            "UnityCRC": 3928379163,
+            "FileHash": "a2c68730d95799de4ba9e24ada7badcb",
+            "FileCRC": "c46fec4a",
+            "FileSize": 4691758,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_action4.bundle",
+            "UnityCRC": 2286296898,
+            "FileHash": "d5edb589d258a877b522e916a259de0b",
+            "FileCRC": "6b6c2354",
+            "FileSize": 5905709,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_action5.bundle",
+            "UnityCRC": 2140340978,
+            "FileHash": "43f40de8b91da2bf608cd1d34b13ce54",
+            "FileCRC": "5e7f8c64",
+            "FileSize": 5810992,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_ambient1.bundle",
+            "UnityCRC": 259060944,
+            "FileHash": "0e15862e92ba391693d9f16ebc7fd073",
+            "FileCRC": "f03f2aa0",
+            "FileSize": 11135284,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_ambient2.bundle",
+            "UnityCRC": 4087367770,
+            "FileHash": "0e939603311a48b246936adf80dde401",
+            "FileCRC": "0844dafd",
+            "FileSize": 13203918,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_ambient3.bundle",
+            "UnityCRC": 1397106270,
+            "FileHash": "287fa1f0f1f87780a019232db3c74c3c",
+            "FileCRC": "eef2ca51",
+            "FileSize": 10212458,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_ambient4.bundle",
+            "UnityCRC": 2130758834,
+            "FileHash": "100d139fd157592912f4e3f151c38b96",
+            "FileCRC": "5f191ce0",
+            "FileSize": 11945796,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_ambient5.bundle",
+            "UnityCRC": 1221285220,
+            "FileHash": "30016808486f9a3fa350e703ae2127d8",
+            "FileCRC": "c03bf6cb",
+            "FileSize": 12803843,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_ambient6.bundle",
+            "UnityCRC": 2867634110,
+            "FileHash": "8576327c8c0a75ba867998c5b7d9be48",
+            "FileCRC": "c1b15923",
+            "FileSize": 10322928,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_ambient7.bundle",
+            "UnityCRC": 3817211892,
+            "FileHash": "8f7584ac9f610820a0aa573c86d222e2",
+            "FileCRC": "5465601b",
+            "FileSize": 11445955,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_ambient8.bundle",
+            "UnityCRC": 599516786,
+            "FileHash": "7bdbd76f24539b3fe2c43251f54b2c20",
+            "FileCRC": "b726e3ce",
+            "FileSize": 9682593,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_ambient9.bundle",
+            "UnityCRC": 1519183752,
+            "FileHash": "74eff3c0a3345c646ad9e5441ce9a124",
+            "FileCRC": "447e2830",
+            "FileSize": 10272462,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_ambient10.bundle",
+            "UnityCRC": 861380472,
+            "FileHash": "0b592f7bcde67c209c6eff490ac9d579",
+            "FileCRC": "a8c9798f",
+            "FileSize": 8991204,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_ui.bundle",
+            "UnityCRC": 99184873,
+            "FileHash": "96f8eb084ae4bfd1a440b964ca88164a",
+            "FileCRC": "652389e7",
+            "FileSize": 16604,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_effect_battle.bundle",
+            "UnityCRC": 3114293564,
+            "FileHash": "53843e25f8025e16a062520a9a7225f0",
+            "FileCRC": "c678283b",
+            "FileSize": 509305,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_effect_buffs.bundle",
+            "UnityCRC": 3999530473,
+            "FileHash": "9eabb0aac489677f9cf93eb484f8da83",
+            "FileCRC": "4dcc2177",
+            "FileSize": 1082409,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_effect_magic.bundle",
+            "UnityCRC": 3124733093,
+            "FileHash": "512cab14b99ce7b8f70c8f0dd30bef2a",
+            "FileCRC": "3d82638d",
+            "FileSize": 760347,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 3114293564
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 476200ca754bd935705626f6df4c1c7b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 476200ca754bd935705626f6df4c1c7b
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/39_Block_03.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/08_Bite_04.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/77_flesh_02.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/22_Slash_04.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/15_Impact_flesh_02.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/69_Enemy_death_01.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/51_Flee_02.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/35_Miss_Evade_02.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/03_Claw_03.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle/55_Encounter_02.wav
+Dependencies: []

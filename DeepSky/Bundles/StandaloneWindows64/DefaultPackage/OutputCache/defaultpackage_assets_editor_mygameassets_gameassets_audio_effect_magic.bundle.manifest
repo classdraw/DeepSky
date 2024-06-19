@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 3124733093
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d059d8b56baaa1b17e397dfd99b2a85f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a2ca7bdbd1871f7131daf57de908e0c
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: d059d8b56baaa1b17e397dfd99b2a85f
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/04_Fire_explosion_04_medium.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/13_Ice_explosion_01.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/45_Charge_05.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/25_Wind_01.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/30_Earth_02.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/18_Thunder_02.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/22_Water_02.wav
+- Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic/46_Poison_01.wav
+Dependencies: []

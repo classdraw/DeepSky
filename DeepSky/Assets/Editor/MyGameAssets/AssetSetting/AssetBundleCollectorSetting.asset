@@ -184,7 +184,7 @@ MonoBehaviour:
         CollectorGUID: c6b1a7b537634e943af7e20d808a054b
         CollectorType: 0
         AddressRuleName: AddressByGroupAndFileName
-        PackRuleName: PackDirectory
+        PackRuleName: PackSeparately
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 

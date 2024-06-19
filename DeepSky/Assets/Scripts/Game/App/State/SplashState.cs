@@ -39,7 +39,7 @@ namespace Game.Fsm
             #elif UNITY_IOS
                 return "Configs/StartConfigIos";
             #endif
-            // return "Configs/StartConfigWindows";
+            return "Configs/StartConfigWindows";
         }
 
         //基础配置初始化

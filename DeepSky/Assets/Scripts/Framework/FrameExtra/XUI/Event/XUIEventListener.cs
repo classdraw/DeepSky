@@ -107,7 +107,8 @@ namespace XEngine.UI
                 this.last_onclick = UnityEngine.Time.unscaledTime;
                 if (useDefaultSound)
                 {
-                    XEngine.Audio.AudioManager.Instance.PlayUISound("ClickBtn",null,false,false,useResourceSound);
+                    //jyytest
+                    // XEngine.Audio.AudioManager.Instance.PlayUISound("ClickBtn",null,false,false,useResourceSound);
                 }
                 this.onClick(this.gameObject);
             }

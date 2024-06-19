@@ -7,6 +7,7 @@ using XEngine.Loader;
 using XEngine.Pool;
 using System.Diagnostics;
 using XEngine.Utilities;
+using XEngine.Audio;
 
 ///框架代理类 一些框架内代理方法由这边抛出
 public static class XFacade
@@ -16,6 +17,7 @@ public static class XFacade
         XLogger.Log("XFacade Init");
         m_Root=new GameObject("XEngine");
         GameObject.DontDestroyOnLoad(m_Root);
+        AudioManager.CreateInstance(m_Root.transform);
         XResourceLoader.CreateInstance(m_Root.transform);
         TimeManager.CreateInstance(m_Root.transform);
         PoolManager.CreateInstance(m_Root.transform);
@@ -23,6 +25,7 @@ public static class XFacade
 
     
     public static void Tick(){
+        AudioManager.GetInstance().Tick();
         XResourceLoader.GetInstance().Tick();
         TimeManager.GetInstance().Tick();
         PoolManager.GetInstance().Tick();

@@ -6,5 +6,6 @@ ErrorLog/
 Logs/
 BuildOut/
 HybridCLRData/
+GameAssets/
 .idea/
 .vs/

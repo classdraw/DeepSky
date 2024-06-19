@@ -287,7 +287,12 @@ namespace XEngine.Pool
         }
 
         private float _getOneDestroyCount(){
-            return m_ConfigData.m_OneDestroyCount;
+            if(IsGameObject){
+                return m_ConfigData.m_OneDestroyCount;
+            }else{
+                return m_ConfigData.m_OneNotGameObjectDesCount;
+            }
+            
         }
         private bool _getIsActiveOpt(){
             return m_ConfigData.m_IsActiveOpt;

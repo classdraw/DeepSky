@@ -27,9 +27,10 @@ namespace Ami.BroAudio.Data
 		public Transition DefaultBGMTransition = FactorySettings.DefaultBGMTransition;
 		public float DefaultBGMTransitionTime = FactorySettings.DefaultBGMTransitionTime;
 
-#if UNITY_EDITOR
+
 		public void ResetToFactorySettings()
 		{
+			#if UNITY_EDITOR
 			CombFilteringPreventionInSeconds = FactorySettings.CombFilteringPreventionInSeconds;
 			LogCombFilteringWarning = true;
 			DefaultFadeInEase = FactorySettings.DefaultFadeInEase;
@@ -42,8 +43,9 @@ namespace Ami.BroAudio.Data
 			AlwaysPlayMusicAsBGM = true;
 			DefaultBGMTransition = FactorySettings.DefaultBGMTransition;
 			DefaultBGMTransitionTime = FactorySettings.DefaultBGMTransitionTime;
+			#endif
 		}
-#endif
+
         public class FactorySettings
 		{
 			public const float CombFilteringPreventionInSeconds = 0.04f;

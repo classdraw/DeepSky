@@ -280,10 +280,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5986848700769291287, guid: bc167543835742746a1840ce53386fed, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 76947bd9f66d67241a6a8b139ee2c617, type: 2}
     - target: {fileID: 6692302661053291888, guid: bc167543835742746a1840ce53386fed, type: 3}
       propertyPath: m_Name
       value: Collectible (1)
@@ -580,6 +576,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7395334062242179690, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 7395334062395905248, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -676,6 +676,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: Music
       objectReference: {fileID: 0}
+    - target: {fileID: 7395334063186755674, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -843,6 +847,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7395334062242179690, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 7395334062395905248, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -939,6 +947,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: Ambience
       objectReference: {fileID: 0}
+    - target: {fileID: 7395334063186755674, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1301,7 +1313,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1439,6 +1451,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: <color=#4EC9B0>BroAudio</color>.<color=#DCDCAA>Play</color>(<size=20>collectibles</size>)
       objectReference: {fileID: 0}
+    - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 221247487175567480, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_Name
       value: CollectiblesUI
@@ -1527,6 +1543,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: with Sequence
       objectReference: {fileID: 0}
+    - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 8279492738536436155, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: _methodTexts.Array.data[0].Parameters.Array.data[0]
       value: collectibles
@@ -1593,10 +1613,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5986848700769291287, guid: bc167543835742746a1840ce53386fed, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 76947bd9f66d67241a6a8b139ee2c617, type: 2}
     - target: {fileID: 6692302661053291888, guid: bc167543835742746a1840ce53386fed, type: 3}
       propertyPath: m_Name
       value: Collectible (4)
@@ -1695,6 +1711,10 @@ PrefabInstance:
       value: <color=#4EC9B0>BroAudio</color>.<color=#DCDCAA>Play</color>(<size=20>followTarget</size>)
       objectReference: {fileID: 0}
     - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
+    - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 4
       objectReference: {fileID: 0}
@@ -1770,6 +1790,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 8279492738536436155, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: _methodTexts.Array.data[0].Parameters.Array.data[0]
       value: followTarget
@@ -1949,6 +1973,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: <color=#4EC9B0>BroAudio</color>.<color=#DCDCAA>Play</color>(<size=20>soundTrack</size>).<color=#DCDCAA>AsBGM</color>().<color=#DCDCAA>SetTransition</color>(<size=20>Transition.CrossFade</size>)
       objectReference: {fileID: 0}
+    - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 221247487175567480, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_Name
       value: API_BGM
@@ -2049,6 +2077,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: with Sequence
       objectReference: {fileID: 0}
+    - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 8279492738536436155, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: _methodTexts.Array.size
       value: 3
@@ -2131,6 +2163,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7395334062242179690, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 7395334062395905248, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2227,6 +2263,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: VoiceOver
       objectReference: {fileID: 0}
+    - target: {fileID: 7395334063186755674, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2678,7 +2718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &412630535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3145,6 +3185,10 @@ PrefabInstance:
       value: The whole tunnel is in <color=#6699DD>AudioReverbZone</color>
       objectReference: {fileID: 0}
     - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
+    - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 3
       objectReference: {fileID: 0}
@@ -3273,6 +3317,10 @@ PrefabInstance:
       value: 0.3019608
       objectReference: {fileID: 0}
     - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
+    - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 3
       objectReference: {fileID: 0}
@@ -3379,10 +3427,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6942765082297010831, guid: c6be7ba18328f3b43aa9606c8877513b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 76947bd9f66d67241a6a8b139ee2c617, type: 2}
     - target: {fileID: 7455839309157724435, guid: c6be7ba18328f3b43aa9606c8877513b, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -3644,6 +3688,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7395334062242179690, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 7395334062395905248, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3740,6 +3788,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: SFX
       objectReference: {fileID: 0}
+    - target: {fileID: 7395334063186755674, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4179,7 +4231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 76947bd9f66d67241a6a8b139ee2c617, type: 2}
+  - {fileID: 2100000, guid: eb391b1d3f1c096498977f515828ac15, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4469,7 +4521,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_FontSize: 54
     m_FontStyle: 0
     m_BestFit: 0
@@ -4880,7 +4932,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -5287,6 +5339,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7395334062242179690, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 7395334062395905248, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5383,6 +5439,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 7395334063186755674, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5412,7 +5472,7 @@ PrefabInstance:
     - target: {fileID: 5065725002031950962, guid: b952f0861cf9b6948b7862f5f984c6ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 76947bd9f66d67241a6a8b139ee2c617, type: 2}
+      objectReference: {fileID: 2100000, guid: eb391b1d3f1c096498977f515828ac15, type: 2}
     - target: {fileID: 7172610313820586188, guid: b952f0861cf9b6948b7862f5f984c6ec, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5530,6 +5590,10 @@ PrefabInstance:
       value: <color=#4EC9B0>BroAudio</color>.<color=#DCDCAA>SetVolume</color>(<size=20>audioType</size>,
         <size=20>volume</size>)
       objectReference: {fileID: 0}
+    - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 221247487175567480, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_Name
       value: API_Volume
@@ -5642,6 +5706,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: the audioType is the asset tag that set in LibraryManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 26
@@ -5931,6 +5999,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: <color=#4EC9B0>BroAudio</color>.<color=#DCDCAA>Play</color>(<size=20>explosion</size>).<color=#DCDCAA>AsDominator</color>().<color=#DCDCAA>LowPassOthers</color>(<size=20>frequency</size>)
       objectReference: {fileID: 0}
+    - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 221247487175567480, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_Name
       value: API_Dominator
@@ -6068,6 +6140,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 22
@@ -6397,10 +6473,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5986848700769291287, guid: bc167543835742746a1840ce53386fed, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 76947bd9f66d67241a6a8b139ee2c617, type: 2}
     - target: {fileID: 6692302661053291888, guid: bc167543835742746a1840ce53386fed, type: 3}
       propertyPath: m_Name
       value: Collectible (2)
@@ -7231,7 +7303,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 76947bd9f66d67241a6a8b139ee2c617, type: 2}
+  - {fileID: 2100000, guid: eb391b1d3f1c096498977f515828ac15, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7985,6 +8057,10 @@ PrefabInstance:
         fadeTime)</size>)
       objectReference: {fileID: 0}
     - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
+    - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 5
       objectReference: {fileID: 0}
@@ -8084,6 +8160,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 8279492738536436155, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: _isWebGLSupported
       value: 0
@@ -8158,10 +8238,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5986848700769291287, guid: bc167543835742746a1840ce53386fed, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 76947bd9f66d67241a6a8b139ee2c617, type: 2}
     - target: {fileID: 6692302661053291888, guid: bc167543835742746a1840ce53386fed, type: 3}
       propertyPath: m_Name
       value: Collectible (3)
@@ -8500,7 +8576,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6510980715547664422, guid: 1fb00677c5274bf48867e1402459086d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1941270589}
+      addedObject: {fileID: 1941270594}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6510980715547664423, guid: 1fb00677c5274bf48867e1402459086d, type: 3}
       insertIndex: -1
@@ -8647,7 +8723,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 76947bd9f66d67241a6a8b139ee2c617, type: 2}
+  - {fileID: 2100000, guid: eb391b1d3f1c096498977f515828ac15, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10337,6 +10413,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
+    - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 4
       objectReference: {fileID: 0}
@@ -10449,6 +10529,10 @@ PrefabInstance:
       value: press [Tab] to see how it's implemented
       objectReference: {fileID: 0}
     - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
+    - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 23
       objectReference: {fileID: 0}
@@ -10480,7 +10564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1620487537
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10707,7 +10791,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_FontSize: 175
     m_FontStyle: 0
     m_BestFit: 0
@@ -11375,7 +11459,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_FontSize: 29
     m_FontStyle: 2
     m_BestFit: 0
@@ -11512,7 +11596,7 @@ PrefabInstance:
     - target: {fileID: 987508677773556871, guid: d079cd0e6137a44b58864c3a91ad119a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 76947bd9f66d67241a6a8b139ee2c617, type: 2}
+      objectReference: {fileID: 2100000, guid: eb391b1d3f1c096498977f515828ac15, type: 2}
     - target: {fileID: 1696014694992928748, guid: d079cd0e6137a44b58864c3a91ad119a, type: 3}
       propertyPath: m_Name
       value: Robot Kyle
@@ -12200,7 +12284,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_FontSize: 33
     m_FontStyle: 0
     m_BestFit: 0
@@ -12374,11 +12458,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1941270593}
   m_SourcePrefab: {fileID: 100100000, guid: 1fb00677c5274bf48867e1402459086d, type: 3}
---- !u!4 &1941270589 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6510980715547664422, guid: 1fb00677c5274bf48867e1402459086d, type: 3}
-  m_PrefabInstance: {fileID: 1941270588}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1941270590 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6510980715547664426, guid: 1fb00677c5274bf48867e1402459086d, type: 3}
@@ -12441,6 +12520,11 @@ MonoBehaviour:
   _instruction: {fileID: 206604767}
   _showingTime: 1
   _lookAtPlayer: 1
+--- !u!4 &1941270594 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6510980715547664422, guid: 1fb00677c5274bf48867e1402459086d, type: 3}
+  m_PrefabInstance: {fileID: 1941270588}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2029291533
 GameObject:
   m_ObjectHideFlags: 0
@@ -12559,6 +12643,10 @@ PrefabInstance:
       value: <color=#4EC9B0>BroAudio</color>.<color=#DCDCAA>Play</color>(<size=20>torch</size>)
       objectReference: {fileID: 0}
     - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
+    - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 3
       objectReference: {fileID: 0}
@@ -12654,6 +12742,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: with SeamlessLoop
       objectReference: {fileID: 0}
+    - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 1
@@ -13268,7 +13360,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
@@ -13353,10 +13445,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5986848700769291287, guid: bc167543835742746a1840ce53386fed, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 76947bd9f66d67241a6a8b139ee2c617, type: 2}
     - target: {fileID: 6183983155231903471, guid: bc167543835742746a1840ce53386fed, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -13386,6 +13474,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2064316945}
     m_Modifications:
+    - target: {fileID: 221247486566169817, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 221247487175567480, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
       propertyPath: m_Name
       value: API_Play_Footsteps
@@ -13474,6 +13566,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -15
       objectReference: {fileID: 0}
+    - target: {fileID: 2876047257477730843, guid: 8ccad4cee309fb14e862e5c5630fc805, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -13928,6 +14024,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7395334062242179690, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     - target: {fileID: 7395334062395905248, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -14032,6 +14132,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7395334063186755674, guid: 18395a74e8e7d7d449484d9b34681536, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 4cf2a5ba759f4464ebcfd5afcdb5660d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14097,10 +14201,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5986848700769291287, guid: bc167543835742746a1840ce53386fed, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 76947bd9f66d67241a6a8b139ee2c617, type: 2}
     - target: {fileID: 6692302661053291888, guid: bc167543835742746a1840ce53386fed, type: 3}
       propertyPath: m_Name
       value: Collectible

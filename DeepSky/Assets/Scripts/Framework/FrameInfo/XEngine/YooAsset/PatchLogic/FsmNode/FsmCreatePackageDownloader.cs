@@ -40,7 +40,8 @@ namespace XEngine.YooAsset.Patch
             {
                 // 发现新更新文件后，挂起流程系统
                 // 注意：开发者需要在下载前检测磁盘空间不足
-                XLogger.Log("正常下载显示上限下线!");
+                XLogger.Log("存在下载，开始下载!");
+                XLogger.Log("下载数量:"+downloader.TotalDownloadCount+" 下载bytes大小:"+downloader.TotalDownloadBytes);
                 //int totalDownloadCount = downloader.TotalDownloadCount;
                 //long totalDownloadBytes = downloader.TotalDownloadBytes;
                 //PatchEventDefine.FoundUpdateFiles.SendEventMessage(totalDownloadCount, totalDownloadBytes);

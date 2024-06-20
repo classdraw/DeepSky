@@ -8,6 +8,7 @@ using XEngine.Utilities;
 using UnityEngine.SceneManagement;
 using System;
 using XEngine.Event;
+using XEngine.Audio;
 public class TestGame : MonoBehaviour
 {
     
@@ -15,7 +16,7 @@ public class TestGame : MonoBehaviour
     ResHandle m_NetResHandle;
     void Start()
     {
-        m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("Tools_NetworkManager");
+        m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
         var obj=m_NetResHandle.GetGameObject();
         GameObject.DontDestroyOnLoad(obj);
         var netManager=obj.GetComponent<NetworkManager>();
@@ -37,6 +38,23 @@ public class TestGame : MonoBehaviour
             GlobalEventListener.DispatchEvent(GlobalEventDefine.TestPlayerChange,new TestABC(){
                 id=123,speed=5.5f
             });
+        }
+
+        if(Input.GetKeyDown(KeyCode.H)){
+            int rand=UnityEngine.Random.Range(1,6);
+            AudioManager.GetInstance().PlayAudioBG("audio_Action"+rand,-1f,2f,2f);
+        }else if(Input.GetKeyDown(KeyCode.J)){
+
+            AudioManager.GetInstance().PlayAudioEffect("audio_04_Fire_explosion_04_medium",false,Audio_Type_Enum.Audio2D,(ss)=>{
+                XLogger.LogError("结束1");
+            });
+        }else if(Input.GetKeyDown(KeyCode.K)){
+
+            AudioManager.GetInstance().PlayAudioEffect("audio_04_Fire_explosion_04_medium",true,Audio_Type_Enum.Audio2D,(ss)=>{
+                XLogger.LogError("结束2");
+            });
+        }else if(Input.GetKeyDown(KeyCode.L)){
+            XEngine.Audio.AudioManager.Instance.PlayAudioUI("audio_DM-CGS-01",false,false);
         }
     }
 

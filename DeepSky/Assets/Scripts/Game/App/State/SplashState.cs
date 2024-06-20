@@ -29,15 +29,33 @@ namespace Game.Fsm
             
         }
 
+        private string GetStartConfigPath(){
+            #if UNITY_SERVER
+                return "Configs/StartConfigServer";
+            #elif UNITY_WINDOW
+                return "Configs/StartConfigWindows";
+            #elif UNITY_ANDROID
+                return "Configs/StartConfigAndroid";
+            #elif UNITY_IOS
+                return "Configs/StartConfigIos";
+            #endif
+            return "Configs/StartConfigWindows";
+        }
+
         //基础配置初始化
         private void InitGameConfig(){
-            var gameObj=GameObject.Find("GameConfig");
-            var gameConfig=gameObj.GetComponent<GameConfig>();
-            GameConsts.PlayMode=gameConfig.m_ePlayMode;
-            GameConsts.PackageType=gameConfig.m_ePartType;
-            GameConsts.NetModel=gameConfig.m_eNetModel;
-            GameConsts.DefaultBuildPipeline=gameConfig.m_eDefaultBuildPipeline;
-            XLogger.Log("NetModel:"+gameConfig.m_eNetModel);
+            var startConfig=Resources.Load<StartConfig>(GetStartConfigPath());
+            GameConsts.PlayMode=startConfig.m_ePlayMode;
+            GameConsts.PackageType=startConfig.m_ePartType;
+            GameConsts.NetModel=startConfig.m_eNetModel;
+            GameConsts.DefaultBuildPipeline=startConfig.m_eDefaultBuildPipeline;
+            XLogger.Log("NetModel:"+startConfig.m_eNetModel);
+
+            if(startConfig.ShowLogInfo){
+                GameObject obj=new GameObject("LogInfo");
+                obj.AddComponent<RuntimeScreeLogger>();
+                GameObject.DontDestroyOnLoad(obj);
+            }
         }
 
         private void OnYooAssetCallback(){

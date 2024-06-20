@@ -45,10 +45,6 @@ public class AppDelegate : Singleton<AppDelegate>
 		Screen.autorotateToLandscapeRight = true;
 		Screen.autorotateToPortrait = false;
 		Screen.autorotateToPortraitUpsideDown = false;
-
-        // m_ConfigObj=new GameObject("config");
-        // var com=m_ConfigObj.AddComponent<WinParamCom>();
-        // com.Init(this.Next);
     }
 
     private void Next(){

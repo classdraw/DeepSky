@@ -63,14 +63,6 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Assets/Scenes
-        CollectorGUID: 9c53962885c2c4f449125a979d6ad240
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
       - CollectPath: Assets/Editor/MyGameAssets/GameRes/Scenes
         CollectorGUID: ec3309969819207489a2c6a4decc5353
         CollectorType: 0
@@ -178,7 +170,52 @@ MonoBehaviour:
       - CollectPath: Assets/Editor/MyGameAssets/GameRes/Tools
         CollectorGUID: aab4da3bc5e795648827739a527a7797
         CollectorType: 0
-        AddressRuleName: AddressByFolderAndFileName
+        AddressRuleName: AddressByGroupAndFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: audio
+      GroupDesc: "\u97F3\u6548"
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/Editor/MyGameAssets/GameAssets/Audio/Bg
+        CollectorGUID: c6b1a7b537634e943af7e20d808a054b
+        CollectorType: 0
+        AddressRuleName: AddressByGroupAndFileName
+        PackRuleName: PackSeparately
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/Editor/MyGameAssets/GameAssets/Audio/UI
+        CollectorGUID: ad849560608b15b4996ab53204e0846b
+        CollectorType: 0
+        AddressRuleName: AddressByGroupAndFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle
+        CollectorGUID: 5b9ebdcf485731d49b30ee8bd28667af
+        CollectorType: 0
+        AddressRuleName: AddressByGroupAndFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Buffs
+        CollectorGUID: 113f04f80c642794599d2cd203e9b0b1
+        CollectorType: 0
+        AddressRuleName: AddressByGroupAndFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic
+        CollectorGUID: 5c5b5cdb32ec3664e8656cd2c80d6352
+        CollectorType: 0
+        AddressRuleName: AddressByGroupAndFileName
         PackRuleName: PackDirectory
         FilterRuleName: CollectAll
         AssetTags: 

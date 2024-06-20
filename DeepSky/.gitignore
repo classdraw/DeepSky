@@ -4,7 +4,8 @@
 TestData/
 ErrorLog/
 Logs/
-Build/
+BuildOut/
 HybridCLRData/
+GameAssets/
 .idea/
 .vs/

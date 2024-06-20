@@ -96,7 +96,7 @@ namespace XEngine.Audio{
             int count=m_AudioCtrls.Count;
             for(int i=0;i<m_AudioCtrls.Count;i++){
                 var audioCtrl=m_AudioCtrls[i];
-                if(audioCtrl==null){
+                if(audioCtrl==null||!audioCtrl.IsValid()){
                     m_AudioCtrls.RemoveAt(i);
                     i--;
                     count--;
@@ -112,11 +112,11 @@ namespace XEngine.Audio{
         #region 生命周期方法
         protected override void Init(){
             BGAudioCtrl=m_AudioCtrlPools.Get<SimpleAudioCtrl>();
-            BGAudioCtrl.AudioSource=this.gameObject.AddComponent<AudioSource>();
+            BGAudioCtrl.SelfAudioSource=this.gameObject.AddComponent<AudioSource>();
             BGAudioCtrl.Loop=true;
 
             UIAudioCtrl=m_AudioCtrlPools.Get<SimpleAudioCtrl>();
-            UIAudioCtrl.AudioSource=this.gameObject.AddComponent<AudioSource>();
+            UIAudioCtrl.SelfAudioSource=this.gameObject.AddComponent<AudioSource>();
             UIAudioCtrl.Loop=false;
         }
 
@@ -145,16 +145,25 @@ namespace XEngine.Audio{
             m_AudioCtrls.Clear();
         }
 
-        private void SetAudioEffect(AudioCtrl audioCtrl){
+        private void SetAudioEffect(AudioCtrl audioCtrl,GameObject obj=null,Vector3 point=default(Vector3)){
             audioCtrl.Mute=IsMute;
             audioCtrl.Volume=EffectVolume*GlobalVolume;
-            audioCtrl.Build3D();
+            audioCtrl.Build3D(obj,point);
         }
 
         public void Tick(){
             int count=m_AudioCtrls.Count;
             for(int i=0;i<count;i++){
                 var audioCtrl=m_AudioCtrls[i];
+                if(audioCtrl==null||!audioCtrl.IsValid()){
+                    m_AudioCtrls.RemoveAt(i);
+                    if(audioCtrl!=null){
+                        m_AudioCtrlPools.Release(audioCtrl);
+                    }
+                    i--;
+                    count--;
+                    continue;
+                }
                 if(audioCtrl.IsOver()){
                     audioCtrl.Callback();//非循环effect音效播放结束回调
                     m_AudioCtrls.RemoveAt(i);
@@ -171,6 +180,7 @@ namespace XEngine.Audio{
 
         #region 外抛方法集
         private static Coroutine m_FadeCoroutine;
+        //播放背景音乐
         public void PlayAudioBG(string path,float volume=-1,float fadeOutTime=0,float fadeInTime=0){
             if(m_FadeCoroutine!=null){
                 StopCoroutine(m_FadeCoroutine);
@@ -183,20 +193,33 @@ namespace XEngine.Audio{
             m_FadeCoroutine=StartCoroutine(DoVolumeFade(path,fadeInTime,fadeOutTime));
         }
 
-        public int PlayAudioEffect(string path,bool isLoop,Audio_Type_Enum audio_Type_Enum,Action<string> callback=null){
+        //播放2d音效
+        public int PlayAudio2DEffect(string path,bool isLoop,Action<string> callback=null){
             var audioCtrl=m_AudioCtrlPools.Get<SimpleAudioCtrl>();
-            audioCtrl.Init(AudioManager.GetNextId(),path,isLoop,audio_Type_Enum,callback,null);
+            audioCtrl.Init(AudioManager.GetNextId(),path,isLoop,Audio_Type_Enum.Audio2D,callback);
             SetAudioEffect(audioCtrl);
             audioCtrl.Play();
             m_AudioCtrls.Add(audioCtrl);
             return audioCtrl.ID;
         }
 
+        //在某个点播放3d音效
+        public int PlayAudio3DEffect(string path,bool isLoop,GameObject obj,Vector3 point,Action<string> callback=null){
+            var audioCtrl=m_AudioCtrlPools.Get<SimpleAudioCtrl>();
+            audioCtrl.Init(AudioManager.GetNextId(),path,isLoop,Audio_Type_Enum.Audio3D,callback);
+            SetAudioEffect(audioCtrl,obj,point);
+            audioCtrl.Play();
+            m_AudioCtrls.Add(audioCtrl);
+            return audioCtrl.ID;
+        }
+
+        //在某个gameobject上播放3d音效
+
         public int PlayAudioUI(string path,bool isLoop=false,bool needNew=false){
             AudioCtrl audioCtrl;
             if(needNew){
                 audioCtrl=m_AudioCtrlPools.Get<SimpleAudioCtrl>();
-                audioCtrl.Init(AudioManager.GetNextId(),path,isLoop,Audio_Type_Enum.AudioUI,null,null);
+                audioCtrl.Init(AudioManager.GetNextId(),path,isLoop,Audio_Type_Enum.AudioUI,null);
                 SetAudioEffect(audioCtrl);
                 m_AudioCtrls.Add(audioCtrl);
             }else{

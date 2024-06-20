@@ -10,21 +10,23 @@ namespace XEngine.Audio{
     {
         private ResHandle m_ResHandle;
         protected override void AfterInit(){
-            if(m_UseAudioSource==null){
+            if(SelfAudioSource==null){
                 m_ResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_AudioValue");
-                m_UseAudioSource=m_ResHandle.GetGameObject().GetComponent<AudioSource>();
-                m_UseAudioSource.transform.parent=AudioManager.GetInstance().transform;
-                m_UseAudioSource.clip=m_ClipHandle.GetObjT<AudioClip>();
+                SelfAudioSource=m_ResHandle.GetGameObject().GetComponent<AudioSource>();
+                SelfAudioSource.transform.parent=AudioManager.GetInstance().transform;
+                SelfAudioSource.clip=m_ClipHandle.GetObjT<AudioClip>();
             }else{
-                m_UseAudioSource.clip=m_ClipHandle.GetObjT<AudioClip>();
+                SelfAudioSource.clip=m_ClipHandle.GetObjT<AudioClip>();
             }
+
+            
         }
 
         public override void Release()
         {
-            if(m_UseAudioSource!=null){
-                m_UseAudioSource.Stop();
-                m_UseAudioSource=null;
+            if(SelfAudioSource!=null){
+                SelfAudioSource.Stop();
+                SelfAudioSource=null;
             }
             if(m_ResHandle!=null){
                 m_ResHandle.Dispose();
@@ -45,61 +47,68 @@ namespace XEngine.Audio{
         
         public override float Volume{
             get{
-                return m_UseAudioSource.volume;
+                return SelfAudioSource.volume;
             }
             set{
-                if(m_UseAudioSource!=null){
-                    m_UseAudioSource.volume=value;
+                if(SelfAudioSource!=null){
+                    SelfAudioSource.volume=value;
                 }
             }
         }
 
         public override bool Mute{
             get{
-                if(m_UseAudioSource==null){
+                if(SelfAudioSource==null){
                     return false;
                 }
-                return m_UseAudioSource.mute;                
+                return SelfAudioSource.mute;                
             }set{
-                if(m_UseAudioSource){
-                    m_UseAudioSource.mute=value;
+                if(SelfAudioSource){
+                    SelfAudioSource.mute=value;
                 }
                 
             }
         }
 
         public override void Pause(){
-            m_UseAudioSource.Pause();
+            SelfAudioSource.Pause();
         } 
         public override void UnPause(){
-            m_UseAudioSource.UnPause();
+            SelfAudioSource.UnPause();
         } 
 
-        public override void Build3D(){
+        public override void Build3D(GameObject obj,Vector3 point){
             if(Is3D()){
-                if(m_UseAudioSource){
-                    m_UseAudioSource.spatialBlend=1f;
+                if(SelfAudioSource){
+                    SelfAudioSource.spatialBlend=1f;
+                    if(obj){
+                        SelfAudioSource.transform.parent=obj.transform;
+                        SelfAudioSource.transform.localPosition=Vector3.zero;
+                    }else{
+                        SelfAudioSource.transform.position=point;
+                    }
                 }
+                
             }
         }
 
         public override void Play(){
-            if(m_UseAudioSource!=null){
-                m_UseAudioSource.Play();
+            if(SelfAudioSource!=null){
+                SelfAudioSource.Play();
             }
         }
         public override bool IsOver(){
-            if(!m_Loop&&!m_UseAudioSource.isPlaying){
+            if(!m_Loop&&!SelfAudioSource.isPlaying){
                 return true;
             }
             return false;
         }
         
         public override void CheckClip(string path){
-            if(m_UseAudioSource==null){
+            if(SelfAudioSource==null){
                 return;
             }
-            m_UseAudioSource.clip=null;
+            SelfAudioSource.clip=null;
             if(m_ResHandle!=null){
                 m_ResHandle.Dispose();
             }
@@ -107,8 +116,8 @@ namespace XEngine.Audio{
             
 
             m_ResHandle=GameResourceManager.GetInstance().LoadResourceSync(path);
-            m_UseAudioSource.clip=m_ResHandle.GetObjT<AudioClip>();
-            m_UseAudioSource.loop=m_Loop;//背景一直循环
+            SelfAudioSource.clip=m_ResHandle.GetObjT<AudioClip>();
+            SelfAudioSource.loop=m_Loop;//背景一直循环
         }
     }
 

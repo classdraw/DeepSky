@@ -24,25 +24,26 @@ namespace XEngine.Audio{
         public bool Loop{get=>m_Loop;set{m_Loop=value;}}
         protected Audio_Type_Enum m_AudioTypeEnum;
         protected AudioSource m_UseAudioSource;
-        public AudioSource AudioSource{get{return m_UseAudioSource;}set{m_UseAudioSource=value;}}
-        public virtual void Init(int id,string path,bool loop,Audio_Type_Enum audio_Type_Enum,Action<string> action){
+        public AudioSource SelfAudioSource{get{return m_UseAudioSource;}set{m_UseAudioSource=value;}}
+
+
+
+        public void Init3D(int id,string path,bool loop,Action<string> action){
             ID=id;
             m_Path=path;
             m_Loop=loop;
             m_Action=action;
-            m_AudioTypeEnum=audio_Type_Enum;
-            m_UseAudioSource=null;
+            m_AudioTypeEnum=Audio_Type_Enum.Audio3D;
             m_ClipHandle=GameResourceManager.GetInstance().LoadResourceSync(m_Path);
             this.AfterInit();
         }
-
-        public void Init(int id,string path,bool loop,Audio_Type_Enum audio_Type_Enum,Action<string> action,AudioSource audioSource){
+        //ui以及2d用到
+        public void Init(int id,string path,bool loop,Audio_Type_Enum audio_Type_Enum,Action<string> action){
             ID=id;
             m_Path=path;
             m_Loop=loop;
             m_Action=action;
             m_AudioTypeEnum=audio_Type_Enum;
-            m_UseAudioSource=audioSource;
             m_ClipHandle=GameResourceManager.GetInstance().LoadResourceSync(m_Path);
             this.AfterInit();
         }
@@ -82,9 +83,9 @@ namespace XEngine.Audio{
         public virtual void Release()
         {
             
-            if(m_UseAudioSource!=null){
-                m_UseAudioSource.Stop();
-                m_UseAudioSource=null;
+            if(SelfAudioSource!=null){
+                SelfAudioSource.Stop();
+                SelfAudioSource=null;
             }
 
             if(m_ClipHandle!=null){
@@ -125,14 +126,16 @@ namespace XEngine.Audio{
         public virtual void UnPause(){
 
         } 
-        public virtual void Build3D(){
+        public virtual void Build3D(GameObject obj,Vector3 point){
 
         }
 
         public virtual bool IsOver(){
             return false;
         }
-
+        public virtual bool IsValid(){
+            return SelfAudioSource!=null;
+        }
     }
 
 }

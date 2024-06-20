@@ -45,13 +45,17 @@ public class TestGame : MonoBehaviour
             AudioManager.GetInstance().PlayAudioBG("audio_Action"+rand,-1f,2f,2f);
         }else if(Input.GetKeyDown(KeyCode.J)){
 
-            AudioManager.GetInstance().PlayAudioEffect("audio_04_Fire_explosion_04_medium",false,Audio_Type_Enum.Audio2D,(ss)=>{
+            AudioManager.GetInstance().PlayAudio2DEffect("audio_04_Fire_explosion_04_medium",false,(ss)=>{
                 XLogger.LogError("结束1");
             });
         }else if(Input.GetKeyDown(KeyCode.K)){
-
-            AudioManager.GetInstance().PlayAudioEffect("audio_04_Fire_explosion_04_medium",true,Audio_Type_Enum.Audio2D,(ss)=>{
-                XLogger.LogError("结束2");
+            AudioManager.GetInstance().PlayAudio3DEffect("audio_04_Fire_explosion_04_medium",false,null,new Vector3(0,0,0),(ss)=>{
+                XLogger.LogError("结束3d11");
+            });
+            GameObject obj=new GameObject("3333");
+            
+            AudioManager.GetInstance().PlayAudio3DEffect("audio_04_Fire_explosion_04_medium",false,obj,new Vector3(0,0,0),(ss)=>{
+                XLogger.LogError("结束3d22");
             });
         }else if(Input.GetKeyDown(KeyCode.L)){
             XEngine.Audio.AudioManager.Instance.PlayAudioUI("audio_DM-CGS-01",false,false);

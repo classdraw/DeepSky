@@ -4,7 +4,7 @@ using Unity.Netcode;
 using UnityEngine;
 using XEngine.Utilities;
 
-namespace XEngine.Netcode{
+namespace XEngine.Net{
     public class NetManager : NetworkManager
     {
         private static NetManager m_Instance;

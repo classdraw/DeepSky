@@ -7,15 +7,9 @@ using XEngine.Pool;
 using XEngine.Loader;
 
 namespace XEngine.Server{
-    [AutoCreateInstance(true)]
-    public class ServerGlobal : MonoSingleton<ServerGlobal>
+    public class ServerGlobal : MonoBehaviour
     {
-        ResHandle m_NetResHandle;
-        protected override void Init(){
-            m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
-            var obj=m_NetResHandle.GetGameObject();
-        }
-
+        
     }
 
 }

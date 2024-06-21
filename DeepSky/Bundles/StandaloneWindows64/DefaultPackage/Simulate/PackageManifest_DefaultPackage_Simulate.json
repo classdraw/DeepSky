@@ -380,6 +380,13 @@
             "BundleID": 16
         },
         {
+            "Address": "tools_ServerInfo",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/ServerInfo.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 16
+        },
+        {
             "Address": "audio_Action1",
             "AssetPath": "Assets/Editor/MyGameAssets/GameAssets/Audio/Bg/Action1.wav",
             "AssetGUID": "",
@@ -847,7 +854,7 @@
             "UnityCRC": 0,
             "FileHash": "70ba5a13704f209e234e4027dbf2a4f6",
             "FileCRC": "00000000",
-            "FileSize": 6107,
+            "FileSize": 7955,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

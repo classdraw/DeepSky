@@ -6,6 +6,7 @@ using XEngine.Netcode;
 using XEngine.Utilities;
 
 namespace XEngine.Server{
+    [AutoCreateInstance(true)]
     public class ClientsManager : MonoSingleton<ClientsManager>
     {
         public GameObject m_PlayerPrefab;
@@ -21,7 +22,7 @@ namespace XEngine.Server{
         }
 
         public void Build(){
-            
+
         }
     }
 }

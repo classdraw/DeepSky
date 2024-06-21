@@ -1,11 +1,10 @@
 {
-    "name": "FrameInfo",
+    "name": "Common",
     "rootNamespace": "",
     "references": [
-        "GUID:e34a5702dd353724aa315fb8011f08c3",
-        "GUID:111d4e39aeddad44898002abada9c174",
         "GUID:3b8ed52f1b5c64994af4c4e0aa4b6c4b",
-        "GUID:1491147abca9d7d4bb7105af628b223e"
+        "GUID:1491147abca9d7d4bb7105af628b223e",
+        "GUID:46011f5dc0f6a7e429585ede0ff0d749"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

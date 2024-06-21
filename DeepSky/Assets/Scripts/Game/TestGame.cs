@@ -10,6 +10,8 @@ using System;
 using XEngine.Event;
 using XEngine.Audio;
 using XEngine.Netcode;
+using XEngine.Utilities;
+
 public class TestGame : MonoBehaviour
 {
     
@@ -20,7 +22,15 @@ public class TestGame : MonoBehaviour
         m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
         var obj=m_NetResHandle.GetGameObject();
         GameObject.DontDestroyOnLoad(obj);
+        // if(GameConsts.NetModel==GameConsts.Game_NetModel_Type.Host||
+        //     GameConsts.NetModel==GameConsts.Game_NetModel_Type.Server){
+                
+        //         XEngine.Server.ClientsManager.CreateInstance(XFacade);
+        // }
+
         NetManager.GetInstance().InitSelf();
+
+        
     }
 
     void Update(){

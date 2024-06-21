@@ -28,6 +28,15 @@ namespace XEngine.Netcode{
         void Awake(){
             m_Instance=this;
         }
+        //动态创建物理 并且绑定
+        public NetworkObject SpawnObject(ulong clientId,GameObject prefab,Vector3 position){
+            //todo 后续增加网络对象对象池
+            NetworkObject networkObject=Instantiate(prefab).GetComponent<NetworkObject>();
+            networkObject.transform.position=position;
+            networkObject.SpawnWithOwnership(clientId);
+            // networkObject.NetworkShow(clientId);
+            return networkObject;
+        }
     }
 
 }

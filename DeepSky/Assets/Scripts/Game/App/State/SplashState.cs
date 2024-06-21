@@ -79,7 +79,7 @@ namespace Game.Fsm
             //对象池初始化
             XEngine.Pool.PoolManager.GetInstance().InitConfig();
             GameSceneManager.GetInstance().LoadSceneAsync("ServerScene",()=>{
-                XLogger.LogImport("Server Success!!!");
+                XLogger.LogImport("Server Over!!!");
             });
         }
 

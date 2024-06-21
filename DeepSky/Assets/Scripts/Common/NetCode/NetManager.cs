@@ -11,8 +11,11 @@ namespace XEngine.Netcode{
         public static NetManager GetInstance(){
             return m_Instance;
         }
-
-        public void InitSelf(){
+        public void InitServer(){
+            this.StartServer();
+            XLogger.LogImport("StartServer");
+        }
+        public void InitClient(){
             if(GameConsts.NetModel==GameConsts.Game_NetModel_Type.Host){
                 this.StartHost();
                 XLogger.LogImport("StartHost");

@@ -6,15 +6,19 @@ using System.Text;
 namespace XEngine.Event{
     public class GlobalEventDefine
     {
-        public const int UI_Launch_Progress = 1;//登陆页面进度
-        public const int LanguageChange=2;//语言切换
-        public const int OnPointerClick=3;//ui点击
-        public const int AudioVolumeChange=4;//音量变化事件
+        public const int LuaPreLoadProgress = 1;//Lua预加载进度
+        public const int YooAssetsUpdateProgress=2;//热更新进度
+        public const int LanguageChange=3;//语言切换
+
+
+
+        public const int OnPointerClick=10;//ui点击
+        public const int AudioVolumeChange=11;//音量变化事件
 
         //设置界面的一些逻辑通知
-        public const int MuteChange=10;//禁音发生变化
+        public const int MuteChange=20;//禁音发生变化
 
-        public const int TestPlayerChange=11;//
+        public const int TestPlayerChange=21;//
     }
 
 }

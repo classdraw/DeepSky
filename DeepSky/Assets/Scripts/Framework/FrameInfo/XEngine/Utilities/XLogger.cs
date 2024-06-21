@@ -2,6 +2,7 @@ using System;
 using System.Text;
 using UnityEngine;
 using System.Diagnostics;
+using JetBrains.Annotations;
 
 namespace XEngine.Utilities{
     public static class XLogger
@@ -70,7 +71,9 @@ namespace XEngine.Utilities{
         // [Conditional("UNITY_EDITOR")]
         public static void LogImport(string message, int layer = 1)
         {
-            LogWithColor(message, Color.yellow, LEVEL_LOGIMPORT);
+            // Color color = new Color(0.1f,0.8f,0.8f);
+            Color color = new Color(0.8f,0.1f,0.8f);
+            LogWithColor(message, color, LEVEL_LOGIMPORT);
             //AddLog(message);
         }
 
@@ -136,6 +139,14 @@ namespace XEngine.Utilities{
             Color color = new Color(0.4f,0.6f,1);
             LogWithColor(message, color, LEVEL_TEMP);
         }
+
+        //服务器日志输出
+        // [Conditional("UNITY_SERVER")]
+        // [Conditional("UNITY_EDITOR")]
+        public static void LogServer(string message, int layer = 1)
+        {
+            LogWithColor("Server:"+message, Color.yellow, LEVEL_SERVER);
+        } 
 
 
     #endregion

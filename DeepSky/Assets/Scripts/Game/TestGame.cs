@@ -1,36 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Netcode;
 using UnityEngine;
-using XEngine.Loader;
-using XEngine.Pool;
-
-using UnityEngine.SceneManagement;
-using System;
-using XEngine.Event;
-using XEngine.Audio;
-using XEngine.Netcode;
-using XEngine.Utilities;
+using XEngine.Server;
 
 public class TestGame : MonoBehaviour
 {
     
-    
-    ResHandle m_NetResHandle;
     void Start()
     {
-        m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
-        var obj=m_NetResHandle.GetGameObject();
-        GameObject.DontDestroyOnLoad(obj);
-        // if(GameConsts.NetModel==GameConsts.Game_NetModel_Type.Host||
-        //     GameConsts.NetModel==GameConsts.Game_NetModel_Type.Server){
-                
-        //         XEngine.Server.ClientsManager.CreateInstance(XFacade);
-        // }
-
-        NetManager.GetInstance().InitSelf();
-
-        
+        ServerFacade.GetInstance().InitClient();
     }
 
     void Update(){

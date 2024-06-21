@@ -9,6 +9,7 @@ using YooAsset;
 using XEngine.Utilities;
 using Game.Scenes;
 using Unity.VisualScripting;
+using XEngine.Server;
 
 namespace Game.Fsm
 {
@@ -79,6 +80,7 @@ namespace Game.Fsm
             //对象池初始化
             XEngine.Pool.PoolManager.GetInstance().InitConfig();
             GameSceneManager.GetInstance().LoadSceneAsync("ServerScene",()=>{
+                ServerFacade.GetInstance().InitServer();
                 XLogger.LogImport("Server Over!!!");
             });
         }

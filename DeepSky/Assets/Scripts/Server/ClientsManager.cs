@@ -7,22 +7,18 @@ using XEngine.Utilities;
 
 namespace XEngine.Server{
     [AutoCreateInstance(true)]
-    public class ClientsManager : MonoSingleton<ClientsManager>
+    public class ClientsManager : MonoBehaviour
     {
         public GameObject m_PlayerPrefab;
-
-        protected override void Init(){
-            // DontDestroyOnLoad(gameObject);
-            NetManager.GetInstance().OnClientConnectedCallback+=OnClientConnectedCallback;
-        }
 
         private void OnClientConnectedCallback(ulong clientId){
             //todo 后续预制体走配置 坐标走地图配置
             NetManager.GetInstance().SpawnObject(clientId,m_PlayerPrefab,Vector3.zero);
         }
 
-        public void Build(){
-
+        public void Init(){
+            // DontDestroyOnLoad(gameObject);
+            NetManager.GetInstance().OnClientConnectedCallback+=OnClientConnectedCallback;
         }
     }
 }

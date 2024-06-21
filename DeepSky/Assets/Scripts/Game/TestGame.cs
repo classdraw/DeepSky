@@ -4,11 +4,12 @@ using Unity.Netcode;
 using UnityEngine;
 using XEngine.Loader;
 using XEngine.Pool;
-using XEngine.Utilities;
+
 using UnityEngine.SceneManagement;
 using System;
 using XEngine.Event;
 using XEngine.Audio;
+using XEngine.Netcode;
 public class TestGame : MonoBehaviour
 {
     
@@ -19,18 +20,7 @@ public class TestGame : MonoBehaviour
         m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
         var obj=m_NetResHandle.GetGameObject();
         GameObject.DontDestroyOnLoad(obj);
-        var netManager=obj.GetComponent<NetworkManager>();
-        if(GameConsts.NetModel==GameConsts.Game_NetModel_Type.Host){
-            netManager.StartHost();
-            XLogger.LogImport("StartHost");
-        }else if(GameConsts.NetModel==GameConsts.Game_NetModel_Type.Server){
-            netManager.StartServer();
-            XLogger.LogImport("StartServer");
-        }else{
-            netManager.StartClient();
-            XLogger.LogImport("StartClient");
-        }
-
+        NetManager.GetInstance().InitSelf();
     }
 
     void Update(){

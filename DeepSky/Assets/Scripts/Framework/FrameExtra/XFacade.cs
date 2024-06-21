@@ -13,6 +13,7 @@ using XEngine.Audio;
 public static class XFacade
 {
     private static GameObject m_Root;
+    
     public static void Init(){
         XLogger.Log("XFacade Init");
         m_Root=new GameObject("XEngine");

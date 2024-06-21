@@ -8,6 +8,7 @@ using XEngine.Loader;
 using YooAsset;
 using XEngine.Utilities;
 using Game.Scenes;
+using Unity.VisualScripting;
 
 namespace Game.Fsm
 {
@@ -23,10 +24,7 @@ namespace Game.Fsm
             XLogger.Log("SplashState Enter");
             InitGameConfig();
             //这里打开loadui
-            
-            XResourceLoader.BeginInitYooAsset(this.OnYooAssetCallback);
-            
-            
+            XResourceLoader.BeginInitYooAsset(this.OnYooAssetCallback);    
         }
 
         private string GetStartConfigPath(){
@@ -60,12 +58,17 @@ namespace Game.Fsm
 
         private void OnYooAssetCallback(){
             XLogger.Log("YooAsset初始化结束");
-            #if UNITY_SERVER
+            if(GameConsts.NetModel==GameConsts.Game_NetModel_Type.Server){
                 StartServer();
-            #else
-                //到这里位置 热更新就结束了
-                AppStateManager.GetInstance().ChangeState(LuaInitState.Index);
-            #endif
+            }else{
+                #if UNITY_SERVER
+                    StartServer();
+                #else
+                    //到这里位置 热更新就结束了
+                    AppStateManager.GetInstance().ChangeState(LuaInitState.Index);
+                #endif
+            }
+
             
         }
 
@@ -75,7 +78,7 @@ namespace Game.Fsm
             
             //对象池初始化
             XEngine.Pool.PoolManager.GetInstance().InitConfig();
-            GameSceneManager.GetInstance().LoadSceneAsync("LoginScene",()=>{
+            GameSceneManager.GetInstance().LoadSceneAsync("ServerScene",()=>{
                 XLogger.LogImport("Server Success!!!");
             });
         }

@@ -147,7 +147,7 @@ public class LuaScriptManager : MonoSingleton<LuaScriptManager>{
 	}
 
     //后续看情况删除
-	private Dictionary<string,ResHandle> m_LoadedLuaDatas=new Dictionary<string, ResHandle>();
+	private Dictionary<string,byte[]> m_LoadedLuaDatas=new Dictionary<string, byte[]>();
     // private List<string> m_LoadLuaList=new List<string>();
 
     protected override void Init(){
@@ -159,20 +159,19 @@ public class LuaScriptManager : MonoSingleton<LuaScriptManager>{
             }
 			luaPath+=".lua";
             if(m_LoadedLuaDatas.ContainsKey(luaPath)){
-                if(m_LoadedLuaDatas[luaPath].IsEmpty()){
+                if(m_LoadedLuaDatas[luaPath]==null){
                     return null;
                 }
-				var text1= m_LoadedLuaDatas[luaPath].GetObjT<TextAsset>();
-				return text1.bytes;
+				return m_LoadedLuaDatas[luaPath];
 			}
             ResHandle resHandle=null;
             resHandle=GameResourceManager.GetInstance().LoadResourceSyncLua(luaPath);
-            m_LoadedLuaDatas.Add(luaPath,resHandle);
-            if(m_LoadedLuaDatas[luaPath].IsEmpty()){
+            m_LoadedLuaDatas.Add(luaPath,resHandle.GetObjT<TextAsset>().bytes);
+			resHandle.Dispose();
+            if(m_LoadedLuaDatas[luaPath]==null){
                 return null;
             }
-            var text= m_LoadedLuaDatas[luaPath].GetObjT<TextAsset>();
-			return text.bytes;
+			return m_LoadedLuaDatas[luaPath];
         });
 
         

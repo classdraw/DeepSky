@@ -24,7 +24,7 @@ public class UI_Loading : MonoBehaviour
 
     private void OnYooAssetUpdateProgress(object obj){
         YooAssetsUpdateData updateData=(YooAssetsUpdateData)obj;
-        (m_UIGroup.GetUI(0) as Text).text="MB:"+(updateData.currentDownloadBytes/1048576)+"MB / "+(updateData.totalDownloadBytes/1048576)+"MB";
+        (m_UIGroup.GetUI(0) as Text).text="MB:"+(updateData.currentDownloadBytes/1048576f).ToString("f2")+"MB / "+(updateData.totalDownloadBytes/1048576f).ToString("f2")+"MB";
         (m_UIGroup.GetUI(1) as Text).text="Progress:"+((float)updateData.currentDownloadCount/updateData.totalDownloadCount*100).ToString("f2")+"%";
     }
 }

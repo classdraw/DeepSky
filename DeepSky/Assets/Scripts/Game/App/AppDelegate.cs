@@ -23,7 +23,6 @@ public class AppDelegate : Singleton<AppDelegate>
         }
         m_Init=true;
         StartClient();
-
     }
 
  

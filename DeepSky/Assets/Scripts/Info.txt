@@ -1,0 +1,14 @@
+1.Common 为通用类,前后端都可以用到.
+2.Config 为配置,游戏配置启动项配置都在这个里面.
+3.Framework 为框架.
+    (1)FrameInfo(AOT类,供热更新代码UpdateInfo使用).
+    (2)FrameExtra,额外的框架拓展,不需要UpdateInfo使用.
+4.Game 业务逻辑相关
+    (1)App 为整个游戏启动项的状态机逻辑,和一些热更代码处理.
+    (2)Manager 一些业务项逻辑项的管理类.
+    (3)Photon 光子服务器链接类,服务器event和request都在这个里面.
+    (4)Scene 场景相关类,实体/场景表现等等.
+    (5)Utilities 工具类集合.
+5.Server 只有UnityServer的代码,客户端不需要跑.会加标签 UNITY_SERVER || SERVER_EDITOR_TEST.
+6.UpdateInfo 用于华佗热更的代码集,外面访问里面需要反射,里面访问外面需要程序集引用.
+7.XLua xlua相关

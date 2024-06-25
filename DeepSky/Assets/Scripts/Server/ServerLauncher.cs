@@ -15,6 +15,34 @@ namespace XEngine.Server{
 
         private ResHandle m_ServerHandle;
         private ResHandle m_NetResHandle;
+
+        public void UnInit(){
+            StopConnected();
+            _clearServerCache();
+
+        }
+
+        public void StopConnected(){
+            if(m_NetResHandle!=null){
+                m_NetResHandle.Dispose();
+                m_NetResHandle=null;
+            }
+        }
+
+
+        //只有host以及server才有这些对象
+        private void _clearServerCache(){
+            if(m_ClientManager!=null){
+                m_ClientManager.UnInit();
+                m_ClientManager=null;
+            }
+            if(m_ServerHandle!=null){
+                m_ServerHandle.Dispose();
+                m_ServerHandle=null;
+            }
+            m_ServerGlobal=null;
+        }
+
         //只有服务器会调用
         public void InitServer(){
 

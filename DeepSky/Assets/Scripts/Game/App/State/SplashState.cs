@@ -81,7 +81,7 @@ namespace Game.Fsm
             XEngine.Pool.PoolManager.GetInstance().InitConfig();
             GameSceneManager.GetInstance().LoadSceneAsync("ServerScene",()=>{
                 ServerFacade.GetInstance().InitServer();
-                XLogger.Log("Server Over!!!");
+                XLogger.Log("Server Success!!!");
             });
         }
 

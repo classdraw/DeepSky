@@ -38,5 +38,7 @@ namespace XEngine.Pool
         public float m_GrainLifeTime=30f;//单个池子存活时间
         public int m_PoolMaxCount=30;//单个池上限
         public bool m_IsActiveOpt=true;//是否active处理
+        public bool m_ForceDestroy=false;//直接销毁 不丢入池中
+        
     }
 }

@@ -54,11 +54,23 @@ namespace XEngine.Pool
         }
 
         public void Dispose(ResHandle resHandle){
-            this._filterPassPool(resHandle,true);
-            m_UseHandles.Remove(resHandle);
-            m_Handles.Add(resHandle);
-            UseCount--;
-            PoolCount++;
+            if(_getForceDestroy()){
+                if(resHandle.GetObj()!=null&&IsGameObject){
+                    GameObject.Destroy(resHandle.GetGameObject());
+                }
+
+                UseCount--;
+                m_UseHandles.Remove(resHandle);
+                m_Handles.Remove(resHandle);
+                PoolManager.ReleaseEmptyResHandle(resHandle);
+            }else{
+                this._filterPassPool(resHandle,true);
+                m_UseHandles.Remove(resHandle);
+                m_Handles.Add(resHandle);
+                UseCount--;
+                PoolCount++;
+            }
+            
         }
 
         public void ReleaseInPoolHandle(ResHandle resHandle){
@@ -277,7 +289,9 @@ namespace XEngine.Pool
         public float m_fGrainLifeTime;
         public bool IsOver{get{return m_fGrainLifeTime<=0;}}
         public float m_fGameObjectLifeTime;
-
+        private bool _getForceDestroy(){
+            return m_ConfigData.m_ForceDestroy;
+        }
         private float _getGrainLifeTime(){
             return m_ConfigData.m_GrainLifeTime;
         }

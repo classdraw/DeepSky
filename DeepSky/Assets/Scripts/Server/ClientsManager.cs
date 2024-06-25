@@ -13,6 +13,29 @@ namespace XEngine.Server{
     {
         public GameObject m_PlayerPrefab;
 
+
+        public void Init(){
+            // DontDestroyOnLoad(gameObject);
+           registerEvent();
+           
+        }
+
+        public void UnInit(){
+            unregisterEvent();
+
+        }
+
+        private void registerEvent(){
+            NetManager.GetInstance().OnClientConnectedCallback+=OnClientConnectedCallback;
+            NetManager.GetInstance().OnClientDisconnectCallback+=OnClientDisconnectCallback;
+        }
+        private void unregisterEvent(){
+            NetManager.GetInstance().OnClientConnectedCallback-=OnClientConnectedCallback;
+            NetManager.GetInstance().OnClientDisconnectCallback-=OnClientDisconnectCallback;
+        }
+
+        #region 链接等内置方法
+        
         //每个客户端链接成功后回调
         private void OnClientConnectedCallback(ulong clientId){
             XLogger.LogServer("一个客户端进入=>"+clientId);
@@ -20,10 +43,10 @@ namespace XEngine.Server{
             NetManager.GetInstance().SpawnObject(clientId,m_PlayerPrefab,Vector3.zero);
         }
 
-        public void Init(){
-            // DontDestroyOnLoad(gameObject);
-            NetManager.GetInstance().OnClientConnectedCallback+=OnClientConnectedCallback;
+        private void OnClientDisconnectCallback(ulong clientId){
+            XLogger.LogServer("一个客户端离开=>"+clientId);
         }
+        #endregion
     }
 }
 

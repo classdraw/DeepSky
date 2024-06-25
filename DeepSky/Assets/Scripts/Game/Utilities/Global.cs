@@ -63,6 +63,8 @@ public class Global:MonoSingleton<Global>
         //测试服务器断开 卸载流程
         // if(Input.GetKeyDown(KeyCode.L)){
         //     XEngine.Server.ServerFacade.GetInstance().UnInit();
+        // }else if(Input.GetKeyDown(KeyCode.K)){
+        //     XEngine.Server.ServerFacade.GetInstance().InitClient();
         // }
     }
 

@@ -59,6 +59,11 @@ public class Global:MonoSingleton<Global>
         //     });
         //     m_objs.Add(hhh);
         // }
+
+        //测试服务器断开 卸载流程
+        // if(Input.GetKeyDown(KeyCode.L)){
+        //     XEngine.Server.ServerFacade.GetInstance().UnInit();
+        // }
     }
 
     protected override void Init(){

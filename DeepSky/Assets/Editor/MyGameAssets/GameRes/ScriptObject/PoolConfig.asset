@@ -16,19 +16,33 @@ MonoBehaviour:
     m_Path: default
     m_GameObjectLifeTime: 30
     m_OneDestroyCount: 3
+    m_OneNotGameObjectDesCount: 5
     m_GrainLifeTime: 30
     m_PoolMaxCount: 30
     m_IsActiveOpt: 1
+    m_ForceDestroy: 0
   m_Configs:
   - m_Path: Cube
     m_GameObjectLifeTime: 30
     m_OneDestroyCount: 3
+    m_OneNotGameObjectDesCount: 5
     m_GrainLifeTime: 30
     m_PoolMaxCount: 30
     m_IsActiveOpt: 1
+    m_ForceDestroy: 0
   - m_Path: Sphere
     m_GameObjectLifeTime: 30
     m_OneDestroyCount: 3
+    m_OneNotGameObjectDesCount: 5
     m_GrainLifeTime: 30
     m_PoolMaxCount: 30
     m_IsActiveOpt: 1
+    m_ForceDestroy: 0
+  - m_Path: tools_NetworkManager
+    m_GameObjectLifeTime: 30
+    m_OneDestroyCount: 3
+    m_OneNotGameObjectDesCount: 5
+    m_GrainLifeTime: 30
+    m_PoolMaxCount: 30
+    m_IsActiveOpt: 1
+    m_ForceDestroy: 1

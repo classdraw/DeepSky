@@ -63,7 +63,6 @@ namespace XEngine.Server{
 
         //只有client和host会调用这个方法
         public void InitClient(){
-            Application.targetFrameRate=60;
             m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
             var obj1=m_NetResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj1);

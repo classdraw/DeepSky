@@ -100,3 +100,6 @@ function Ctrl:OnRelease()end
 function Ctrl:OnDALPush(data)end
 
 return Ctrl;
+
+--          创建开始                                    关闭开始                                 丢UI缓存池等销毁调用Release
+---生命周期  Build->OpenWindow->OnOpenWindow->_bindDAL->CloseWindow->_unbindDAL->OnCloseWindow->Release

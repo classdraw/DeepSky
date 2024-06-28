@@ -22,7 +22,10 @@ public class AppDelegate : Singleton<AppDelegate>
             return;
         }
         m_Init=true;
-        StartClient();
+        if(SceneManager.GetActiveScene().name.Equals("Launcher")){
+            StartClient();
+        }
+        
     }
 
  

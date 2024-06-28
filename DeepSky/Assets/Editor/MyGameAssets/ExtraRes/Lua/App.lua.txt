@@ -6,7 +6,6 @@ local Event = AppEvent.Event;
 function  App:Init()
     UpdateManager:GetInstance():Init();
     TimeManager:GetInstance():Init();
-
     SystemManager:GetInstance():Init(nil);
     UIManager:GetInstance():Init();
 
@@ -41,6 +40,7 @@ function App:GetAppStateManager()
 end
 
 function App:Run()
+    UIManager:GetInstance():Open(UIConfigData.UI_Login);
     XLuaFacade.EnterLogin();
 end
 

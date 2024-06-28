@@ -21,10 +21,11 @@ namespace XLua.CSObjectWrap
         {
 			ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			System.Type type = typeof(UIRoot);
-			Utils.BeginObjectRegister(type, L, translator, 0, 3, 2, 1);
+			Utils.BeginObjectRegister(type, L, translator, 0, 4, 2, 1);
 			
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "DestroyAllView", _m_DestroyAllView);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "GetUIHierarchyLayer", _m_GetUIHierarchyLayer);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "GetUIHierarchyLayerLua", _m_GetUIHierarchyLayerLua);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "AddInstantPopupLayer", _m_AddInstantPopupLayer);
 			
 			
@@ -120,6 +121,35 @@ namespace XLua.CSObjectWrap
                     UIRoot.UIHierarchy _type;translator.Get(L, 2, out _type);
                     
                         var gen_ret = gen_to_be_invoked.GetUIHierarchyLayer( _type );
+                        translator.Push(L, gen_ret);
+                    
+                    
+                    
+                    return 1;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_GetUIHierarchyLayerLua(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                UIRoot gen_to_be_invoked = (UIRoot)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    int _t = LuaAPI.xlua_tointeger(L, 2);
+                    
+                        var gen_ret = gen_to_be_invoked.GetUIHierarchyLayerLua( _t );
                         translator.Push(L, gen_ret);
                     
                     

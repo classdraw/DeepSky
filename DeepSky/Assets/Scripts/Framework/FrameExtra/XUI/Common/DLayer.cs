@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 ///层基类  一个层控制器
 
+[XLua.LuaCallCSharp]
 public class DLayer:MonoBehaviour{
     protected virtual void Awake() {
         var ts = this.gameObject.GetOrAddComponent<RectTransform> ();

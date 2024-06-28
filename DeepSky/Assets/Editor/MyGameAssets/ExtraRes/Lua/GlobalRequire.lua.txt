@@ -1,4 +1,5 @@
 require ("consts.Enum");
+require ("coreui.UIConfig");
 local BaseClass=require("core.Lua_BaseClass");
 Singleton=require("core.Lua_Singleton");
 Object=require("core.Lua_Object");

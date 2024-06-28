@@ -31,8 +31,9 @@ namespace XLua.CSObjectWrap
 			Utils.EndObjectRegister(type, L, translator, null, null,
 			    null, null, null);
 
-		    Utils.BeginClassRegister(type, L, __CreateInstance, 22, 0, 0);
-			Utils.RegisterFunc(L, Utils.CLS_IDX, "IsLogNone", _m_IsLogNone_xlua_st_);
+		    Utils.BeginClassRegister(type, L, __CreateInstance, 24, 0, 0);
+			Utils.RegisterFunc(L, Utils.CLS_IDX, "SetLogLevel", _m_SetLogLevel_xlua_st_);
+            Utils.RegisterFunc(L, Utils.CLS_IDX, "IsDumpLua", _m_IsDumpLua_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "Log", _m_Log_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "LogImport", _m_LogImport_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "LogDebug", _m_LogDebug_xlua_st_);
@@ -43,6 +44,7 @@ namespace XLua.CSObjectWrap
             Utils.RegisterFunc(L, Utils.CLS_IDX, "LogWarn", _m_LogWarn_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "LogTest", _m_LogTest_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "LogTemp", _m_LogTemp_xlua_st_);
+            Utils.RegisterFunc(L, Utils.CLS_IDX, "LogServer", _m_LogServer_xlua_st_);
             
 			
             Utils.RegisterObject(L, translator, Utils.CLS_IDX, "LEVEL_ALL", XEngine.Utilities.XLogger.LEVEL_ALL);
@@ -76,7 +78,31 @@ namespace XLua.CSObjectWrap
         
         
         [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-        static int _m_IsLogNone_xlua_st_(RealStatePtr L)
+        static int _m_SetLogLevel_xlua_st_(RealStatePtr L)
+        {
+		    try {
+            
+            
+            
+                
+                {
+                    int _level = LuaAPI.xlua_tointeger(L, 1);
+                    
+                    XEngine.Utilities.XLogger.SetLogLevel( _level );
+                    
+                    
+                    
+                    return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_IsDumpLua_xlua_st_(RealStatePtr L)
         {
 		    try {
             
@@ -85,7 +111,7 @@ namespace XLua.CSObjectWrap
                 
                 {
                     
-                        var gen_ret = XEngine.Utilities.XLogger.IsLogNone(  );
+                        var gen_ret = XEngine.Utilities.XLogger.IsDumpLua(  );
                         LuaAPI.lua_pushboolean(L, gen_ret);
                     
                     
@@ -414,6 +440,45 @@ namespace XLua.CSObjectWrap
             }
             
             return LuaAPI.luaL_error(L, "invalid arguments to XEngine.Utilities.XLogger.LogTemp!");
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_LogServer_xlua_st_(RealStatePtr L)
+        {
+		    try {
+            
+            
+            
+			    int gen_param_count = LuaAPI.lua_gettop(L);
+            
+                if(gen_param_count == 2&& (LuaAPI.lua_isnil(L, 1) || LuaAPI.lua_type(L, 1) == LuaTypes.LUA_TSTRING)&& LuaTypes.LUA_TNUMBER == LuaAPI.lua_type(L, 2)) 
+                {
+                    string _message = LuaAPI.lua_tostring(L, 1);
+                    int _layer = LuaAPI.xlua_tointeger(L, 2);
+                    
+                    XEngine.Utilities.XLogger.LogServer( _message, _layer );
+                    
+                    
+                    
+                    return 0;
+                }
+                if(gen_param_count == 1&& (LuaAPI.lua_isnil(L, 1) || LuaAPI.lua_type(L, 1) == LuaTypes.LUA_TSTRING)) 
+                {
+                    string _message = LuaAPI.lua_tostring(L, 1);
+                    
+                    XEngine.Utilities.XLogger.LogServer( _message );
+                    
+                    
+                    
+                    return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+            return LuaAPI.luaL_error(L, "invalid arguments to XEngine.Utilities.XLogger.LogServer!");
             
         }
         

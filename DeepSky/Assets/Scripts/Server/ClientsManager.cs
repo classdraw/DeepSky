@@ -38,13 +38,13 @@ namespace XEngine.Server{
         
         //每个客户端链接成功后回调
         private void OnClientConnectedCallback(ulong clientId){
-            XLogger.LogServer("一个客户端进入=>"+clientId);
+            XLogger.LogServer("ClientEnter=>"+clientId);
             //todo 后续预制体走配置 坐标走地图配置
             NetManager.GetInstance().SpawnObject(clientId,m_PlayerPrefab,Vector3.zero);
         }
 
         private void OnClientDisconnectCallback(ulong clientId){
-            XLogger.LogServer("一个客户端离开=>"+clientId);
+            XLogger.LogServer("ClientExit=>"+clientId);
         }
         #endregion
     }

@@ -1,0 +1,29 @@
+--------这个代码最好脚本自己生成
+local UI_LoginView = BaseClass("UI_LoginView", require("coreui.UIBaseView"))
+
+function UI_LoginView:ctor()
+
+end
+
+function UI_LoginView:dtor()
+
+end
+
+--代码测试
+function UI_LoginView:Build(obj)
+    -- UI_LoginView.super
+    UI_LoginView.super:Build(obj);
+    self:InitView();
+end
+
+function UI_LoginView:Release()
+    UI_LoginView.super:Release();
+end
+
+--这个方法需要工具生成
+function UI_LoginView:InitView()
+    self.btn_Image=self.m_UIGroup:GetUI(0);--生成好后  Ctrl可以直接  self.view.btn_Image访问
+    --后续根据命名 可能生成一些额外的自定义代码  比如回调啥的
+end
+
+return UI_LoginView;

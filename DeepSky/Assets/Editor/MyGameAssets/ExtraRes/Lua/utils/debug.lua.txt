@@ -106,8 +106,8 @@ function dump(value,nesting,desciption,error)
         print("value=nil");
         return nil;
     end
-    local isNone=CS.XLogger.IsLogNone();
-    if isNone==true then
+    local isDump=CS.XEngine.Utilities.XLogger.IsDumpLua();
+    if isDump==false then
         return nil;
     end
     local type = type

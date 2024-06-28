@@ -48,6 +48,7 @@ namespace Game.Fsm
             GameConsts.PackageType=startConfig.m_ePartType;
             GameConsts.NetModel=startConfig.m_eNetModel;
             GameConsts.DefaultBuildPipeline=startConfig.m_eDefaultBuildPipeline;
+            XLogger.SetLogLevel(startConfig.LogLevel);
             XLogger.Log("NetModel:"+startConfig.m_eNetModel);
 
             if(startConfig.ShowLogInfo){

@@ -13,16 +13,16 @@ public class UIRoot : UIBehaviour
 {
 	public enum UIHierarchy
 	{     
-        Normal, //舞台UI内容
-		Interaction, //交互框
-		Popup,  //弹出层
+        Normal=0, //舞台UI内容
+		Interaction=1, //交互框
+		Popup=2,  //弹出层
         //Special,//特殊层级
-        Tips,	//提示条
-        Toast,  //
-        Alert,  //对话框
-        Loading, //加载界面        
-        Busy,	//忙碌的菊花		
-		Disable,//屏蔽点击
+        Tips=3,	//提示条
+        Toast=4,  //
+        Alert=5,  //对话框
+        Loading=6, //加载界面        
+        Busy=7,	//忙碌的菊花		
+		Disable=8,//屏蔽点击
     }
 
     public enum PopupLayerHierarchy{
@@ -101,6 +101,11 @@ public class UIRoot : UIBehaviour
 	public DLayer GetUIHierarchyLayer(UIHierarchy type)
 	{
 		return hierarchys [type];
+	}
+
+	public DLayer GetUIHierarchyLayerLua(int t)
+	{
+		return hierarchys [(UIHierarchy)t];
 	}
 
 	public PopupLayer AddInstantPopupLayer(string name)

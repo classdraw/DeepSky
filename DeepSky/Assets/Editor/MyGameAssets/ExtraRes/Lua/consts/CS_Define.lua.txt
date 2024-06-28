@@ -6,7 +6,7 @@ EmptyTable = {}
 
 --常用
 Global=CS.Global
-GameObject = CS.UnityEngine.GameObject
+GameObject = CS.UnityEngine.GameObjectfan
 Object = CS.UnityEngine.Object
 Application = CS.UnityEngine.Application
 XFacade=CS.XFacade
@@ -16,3 +16,4 @@ XFacade=CS.XFacade
 SystemUtils=CS.Utilities.SystemUtils
 GameUtils=CS.Utilities.GameUtils
 GameResourceManager=CS.XEngine.Loader.GameResourceManager
+ResHandle=CS.XEngine.Pool.ResHandle

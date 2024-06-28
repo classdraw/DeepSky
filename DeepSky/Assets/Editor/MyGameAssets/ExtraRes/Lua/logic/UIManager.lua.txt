@@ -7,15 +7,18 @@ end
 
 function UIManager:Init()
     self.m_kUIs={};
-    self.m_kUIRootHandle=GameResourceManager.GetInstance():LoadResourceSync("UI_UIRoot");
-    self.m_kUIRootObj=self.m_kUIRootHandle:GetGameObject();
-    GameUtils.SetGameObjectDontDestroy(self.m_kUIRootObj);
+    self.m_kUIRootHandle=GameResourceManager.GetInstance():LoadResourceSync("UI_CanvasRoot");
+    self.m_kUICanvasObj=self.m_kUIRootHandle:GetGameObject();
+    GameUtils.SetGameObjectDontDestroy(self.m_kUICanvasObj);
+    self.m_kRoot=self.m_kUICanvasObj.transform:Find("Canvas/UIRoot"):GetComponent("UIRoot");
 
-    local cacheRoot=self.m_kUIRootObj.transform:Find("RootCanvas/Cache");
-    self.m_kUICache=require("logic.UICache").New(cacheRoot);
+    local cacheRoot=self.m_kUICanvasObj.transform:Find("Canvas/Cache");
+    self.m_kUICache=require("coreui.UICache").New(cacheRoot);
 
-    local overlayCanvas=self.m_kUIRootObj.transform:Find("RootCanvas"):GetComponent("Canvas");
+    local overlayCanvas=self.m_kUICanvasObj.transform:Find("Canvas"):GetComponent("Canvas");
     SystemUtils.SetUIConfig(overlayCanvas);
+
+    self.m_OpenUIs={};--所有打开的ui键值对
 end
 
 function UIManager:Release()
@@ -23,14 +26,54 @@ function UIManager:Release()
         self.m_kUIRootHandle:Dispose();
     end
     self.m_kUIRootHandle=nil;
-    self.m_kUIRootObj=nil;
+    self.m_kUICanvasObj=nil;
+    self.m_kRoot=nil;
     if self.m_kUICache~=nil then
-        self.m_kUICache:Release();
+        self.m_kUICache:Delete();
     end
-    self.m_kUICache:Delete();
     self.m_kUICache=nil;
 
     --ui清除
+end
+
+--uiData为UIConfig的UIConfigData table数据
+function UIManager:Open(uiData,param,layer)--layer==UIHierarchy
+    --没有数据return
+    if uiData==nil then
+        return false;
+    end
+    local ctrl=self.m_OpenUIs[uiData.uiName];
+    if ctrl~=nil then
+        ctrl:UpdateWindow(param);
+        return;
+    end
+
+    ctrl=self.m_kUICache:GetCtrl(uiData.path.."Ctrl");
+    if ctrl~=nil then
+        ctrl:Build(uiData);
+    end
+
+    if layer==nil then
+        layer=0;
+    end
+    local dlayer=self.m_kRoot:GetUIHierarchyLayerLua(layer);
+    dlayer:AddChild(ctrl:GetViewObj());
+
+    ctrl:OpenWindow(param);
+    self.m_OpenUIs[uiData.uiName]=ctrl;
+end
+
+function UIManager:Close(uiData)
+    if uiData==nil then
+        return false;
+    end
+    local ctrl=self.m_OpenUIs[uiData.uiName];
+    if ctrl~=nil then
+        ctrl:CloseWindow();
+        --需要丢入cache 等待回收
+        self.m_kUICache:AddUI(ctrl);--鸟方法细节还没写好 还没测试 先放着
+        self.m_OpenUIs[uiData.uiName]=nil;
+    end
 end
 
 return UIManager;

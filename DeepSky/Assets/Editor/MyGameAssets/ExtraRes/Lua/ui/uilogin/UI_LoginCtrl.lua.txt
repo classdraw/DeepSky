@@ -1,0 +1,31 @@
+local UI_LoginCtrl = BaseClass("UI_LoginCtrl", require("coreui.UIBaseCtrl"))
+
+--ui初始化 需要绑定数据管道一些配置 等等 父类读取
+UI_LoginCtrl.ExtraConfig={
+    LoginData="AAA",
+};
+
+function UI_LoginCtrl:ctor()
+
+end
+
+function UI_LoginCtrl:dtor()
+
+end
+
+function UI_LoginCtrl:OnOpenWindow(param)
+    --这里写逻辑 vm绑定好了  数据管道也绑定好了
+    XLogger.LogError(">>>>"..self:GetView().btn_Image.name);
+end
+
+
+function UI_LoginCtrl:OnDALPush(data)
+    if data==nil then
+        return;
+    end
+    if data.name=="LoginData" then
+        --数据更新处理
+    end
+end
+
+return UI_LoginCtrl;

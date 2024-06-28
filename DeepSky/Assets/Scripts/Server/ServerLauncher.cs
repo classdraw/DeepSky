@@ -6,7 +6,7 @@ using XEngine.Net;
 using XEngine.Pool;
 using XEngine.Utilities;
 using XEngine.Loader;
-
+using Game.Scenes;
 namespace XEngine.Server{
     public class ServerFacade : Singleton<ServerFacade>
     {
@@ -57,7 +57,6 @@ namespace XEngine.Server{
             GameObject.DontDestroyOnLoad(obj);
             m_ClientManager=obj.GetComponent<ClientsManager>();
             m_ClientManager.Init();
-
             NetManager.GetInstance().InitServer();
         }
 

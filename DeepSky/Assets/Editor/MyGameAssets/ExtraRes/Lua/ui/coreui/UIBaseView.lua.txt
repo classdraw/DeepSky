@@ -1,0 +1,24 @@
+local View=Class("UIBaseView")
+function View:ctor()
+    
+end
+
+function View:dtor()
+
+end
+
+function View:Build(obj)
+    self.m_Obj=obj;
+    self.m_UIGroup=obj:GetComponent("XUIGroup");
+end
+
+function View:Release()
+    self.m_Obj=nil;
+    self.m_UIGroup=nil;
+end
+
+function View:InitView()
+
+end
+
+return View;

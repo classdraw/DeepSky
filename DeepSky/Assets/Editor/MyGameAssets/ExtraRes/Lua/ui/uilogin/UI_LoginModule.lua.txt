@@ -1,0 +1,11 @@
+local UI_LoginModule = BaseClass("UI_LoginModule", require("coreui.UIBaseModule"))
+
+function UI_LoginModule:ctor()
+
+end
+
+function UI_LoginModule:dtor()
+
+end
+
+return UI_LoginModule;

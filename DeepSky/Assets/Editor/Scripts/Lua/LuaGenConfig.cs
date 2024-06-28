@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using XEngine.Utilities;
-
+using XEngine.Pool;
+using XEngine.UI;
 public static class LuaGenConfig
 {
 	[CSObjectWrapEditor.GenPath]
@@ -80,8 +81,8 @@ public static class LuaGenConfig
         // typeof(ComponentExtensions),
         // typeof(UGUIExtensions),
         typeof(Animator),
-
-
+        typeof(DModal),
+        typeof(DLayer),
         typeof(Image),
         typeof(Sprite),
         typeof(Texture2D),
@@ -96,37 +97,37 @@ public static class LuaGenConfig
         // typeof(XKernel),
         typeof(XLogger),
         //
-        // typeof(XUIDataList),
-        // typeof(XUISpec),
-        // typeof(XClickParam),
-        // typeof(XToggleParam),
-        // typeof(XDragParam),
-        // typeof(SkeleonParam),
+        typeof(XUIDataList),
+        typeof(XUISpec),
+        typeof(XClickParam),
+        typeof(XToggleParam),
+        typeof(XDragParam),
+        typeof(SkeleonParam),
         // //
-        // typeof(XTransformUtil),
-        // typeof(XTween),
+        typeof(XTransformUtil),
+        typeof(XTween),
         // typeof(TweenCallback),
         // typeof(TweenCallback<float>),
         // //
-        // typeof(XBaseComponent),
-        // typeof(XUIGroup),
-        // typeof(XList),
-        // typeof(XRingList),
-        // typeof(XDragContainer),
-        // typeof(XInputItem),
-        // typeof(XTextItem),
-        // typeof(XDropDown),
-        // typeof(XSwitchButton),
-        // typeof(XLuaComponent),
-        //
+        typeof(XBaseComponent),
+        typeof(XUIGroup),
+        typeof(XList),
+        typeof(XRingList),
+        typeof(XDragContainer),
+        typeof(XInputItem),
+        typeof(XTextItem),
+        typeof(XDropDown),
+        typeof(XSwitchButton),
+        typeof(XLuaComponent),
+        
         // typeof(UIManager),
-        // typeof(XUIPathConfig),
-        // typeof(XFacade),
+        typeof(XUIPathConfig),
+        typeof(XFacade),
         // typeof(XKeyValueVO),
         // typeof(XStrKeyValueVO),
         // typeof(XKeyIntValueFloatVO),
-        //
-        // typeof(XBaseTween),
+        
+        typeof(XBaseTween),
         
         // //
         // typeof(UIScaleCtrl),
@@ -136,6 +137,7 @@ public static class LuaGenConfig
         typeof(System.Diagnostics.Stopwatch),
         // typeof(MaterialPropertyBlock),
         // typeof(Material),//解开也可以  Blacklist需要添加一堆
+        typeof(ResHandle)
     };
 
     [BlackList]

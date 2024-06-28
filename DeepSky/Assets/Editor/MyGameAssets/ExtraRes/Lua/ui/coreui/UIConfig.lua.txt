@@ -1,0 +1,3 @@
+UIConfigData={
+    UI_Login={uiName="UI_Login",path="uilogin_UI_Login"}
+}

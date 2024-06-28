@@ -21,8 +21,12 @@ namespace XEngine.Utilities{
         public const int LEVEL_NONE = 20;
         private static int LogLevel=XLogger.LEVEL_ALL;
 
-        public static bool IsLogNone(){
-            return LogLevel<=10;
+        public static void SetLogLevel(int level){
+            LogLevel=level;
+        }
+        public static bool IsDumpLua(){
+            // return LogLevel<=10;
+            return true;
         }
     #region 打印方法
         private static void LogWithColor(string message, Color color,int level)

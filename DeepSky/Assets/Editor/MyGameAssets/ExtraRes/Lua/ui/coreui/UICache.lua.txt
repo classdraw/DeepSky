@@ -3,7 +3,9 @@ local UICache = BaseClass("UICache")
 local CacheTime=60;
 ---可以丢入到updatemanager更新处理逻辑
 function UICache:ctor(rootTran)
-    self.m_kUICtrls={};--key value
+    self.m_kUICtrls={};--key value 准备小销毁的ctrl 此时和view强绑定关系
+    self.m_kCtrlPools={};--所有ctrl的数据池  只是ctrl的table
+
     self.m_kRootTran=rootTran;
     self.m_kUpdateMethod=handler(self,self.Update);
     UpdateManager:GetInstance():AddUpdate(self.m_kUpdateMethod);
@@ -59,6 +61,18 @@ function UICache:Update()
             ctrl:Release();
             table.remove(self.m_kUICtrls,idx);
         end
+    end
+end
+
+function UICache:GetCtrl(uiCtrlPath)
+    local poolList=self.m_kCtrlPools[uiCtrlPath];
+    if poolList==nil or #poolList==0 then
+        local ctrl=require(uiCtrlPath).New();
+        return ctrl;
+    else
+        local ctrl=poolList[1];
+        table.remove(poolList,1);
+        return ctrl;
     end
 end
 

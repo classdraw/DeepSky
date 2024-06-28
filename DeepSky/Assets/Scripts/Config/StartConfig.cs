@@ -21,4 +21,6 @@ public class StartConfig : ScriptableObject
 
 
     public bool ShowLogInfo=true;
+
+    public int LogLevel=-1;
 }

@@ -58,6 +58,12 @@ namespace XLua.CSObjectWrap
             translator.DelayWrapLoader(typeof(SkeletonAnim), SkeletonAnimWrap.__Register);
         
         
+            translator.DelayWrapLoader(typeof(XFacade), XFacadeWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(DLayer), DLayerWrap.__Register);
+        
+        
             translator.DelayWrapLoader(typeof(DPopup), DPopupWrap.__Register);
         
         
@@ -168,16 +174,19 @@ namespace XLua.CSObjectWrap
         
             translator.DelayWrapLoader(typeof(UnityEngine.Component), UnityEngineComponentWrap.__Register);
         
-        
-            translator.DelayWrapLoader(typeof(UnityEngine.Animator), UnityEngineAnimatorWrap.__Register);
-        
-        
-            translator.DelayWrapLoader(typeof(UnityEngine.UI.Image), UnityEngineUIImageWrap.__Register);
-        
         }
         
         static void wrapInit1(LuaEnv luaenv, ObjectTranslator translator)
         {
+        
+            translator.DelayWrapLoader(typeof(UnityEngine.Animator), UnityEngineAnimatorWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(DModal), DModalWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(UnityEngine.UI.Image), UnityEngineUIImageWrap.__Register);
+        
         
             translator.DelayWrapLoader(typeof(UnityEngine.Sprite), UnityEngineSpriteWrap.__Register);
         
@@ -203,7 +212,70 @@ namespace XLua.CSObjectWrap
             translator.DelayWrapLoader(typeof(XEngine.Utilities.XLogger), XEngineUtilitiesXLoggerWrap.__Register);
         
         
+            translator.DelayWrapLoader(typeof(XEngine.UI.XUIDataList), XEngineUIXUIDataListWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XUISpec), XEngineUIXUISpecWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XClickParam), XEngineUIXClickParamWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XToggleParam), XEngineUIXToggleParamWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XDragParam), XEngineUIXDragParamWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(SkeleonParam), SkeleonParamWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XTransformUtil), XEngineUIXTransformUtilWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XTween), XEngineUIXTweenWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XBaseComponent), XEngineUIXBaseComponentWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XUIGroup), XEngineUIXUIGroupWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XList), XEngineUIXListWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XRingList), XEngineUIXRingListWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XDragContainer), XEngineUIXDragContainerWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XInputItem), XEngineUIXInputItemWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XTextItem), XEngineUIXTextItemWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XDropDown), XEngineUIXDropDownWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XSwitchButton), XEngineUIXSwitchButtonWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XLuaComponent), XEngineUIXLuaComponentWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XUIPathConfig), XUIPathConfigWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.UI.XBaseTween), XEngineUIXBaseTweenWrap.__Register);
+        
+        
             translator.DelayWrapLoader(typeof(System.Diagnostics.Stopwatch), SystemDiagnosticsStopwatchWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(XEngine.Pool.ResHandle), XEnginePoolResHandleWrap.__Register);
         
         
         

@@ -10,6 +10,7 @@ using XEngine.Utilities;
 using XEngine.Audio;
 
 ///框架代理类 一些框架内代理方法由这边抛出
+[XLua.LuaCallCSharp]
 public static class XFacade
 {
     private static GameObject m_Root;
@@ -69,4 +70,20 @@ public static class XFacade
     {
         UnityEngine.Profiling.Profiler.EndSample();
     }
+
+
+
+    #region 框架内的方法外抛
+    // public static ResHandle LoadResourceSync(string assetPath,int poolIndex=0){
+    //     return GameResourceManager.GetInstance().LoadResourceSync(assetPath,poolIndex);
+    // }
+    // //异步
+    // public static ResHandle LoadResourceAsync(string assetPath,System.Action<ResHandle> callback,int poolIndex=0){
+    //     return GameResourceManager.GetInstance().LoadResourceAsync(assetPath,callback,poolIndex);
+    // }
+
+    // public static void Dispose(ResHandle resHandle){
+    //     resHandle.Dispose();
+    // }
+    #endregion
 }

@@ -33,7 +33,9 @@ function UI_LoginModule:ctor(t)
 end
 
 function UI_LoginModule:submit()
-
+	-- self.account.username = self.username
+	-- self.account.email = self.email
+	-- self.account.remember = self.remember
 end
 
 return {Account,UI_LoginModule};

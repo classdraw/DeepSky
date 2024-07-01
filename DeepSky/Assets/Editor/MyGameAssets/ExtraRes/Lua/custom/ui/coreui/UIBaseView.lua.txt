@@ -11,4 +11,17 @@ function View:Init()
 
 end
 
+function View:Release()
+    if self.namelist~=nil then
+        local count=self.namelist.Count-1;
+        for idx=0,count do
+            local na=self.namelist[idx];
+            self.na=nil;
+        end
+    end
+    self.namelist=nil;
+    self.target=nil;
+    self.group=nil;
+end
+
 return View;

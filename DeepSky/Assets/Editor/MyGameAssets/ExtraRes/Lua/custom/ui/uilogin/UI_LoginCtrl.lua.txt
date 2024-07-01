@@ -77,8 +77,6 @@ end
 --module清除  绑定清除
 function UI_LoginCtrl:OnRelease()
 
-
-
     --self.m_Module  release???
     self.m_Module=nil;
     self:GetCom():BindingContext().DataContext =nil;

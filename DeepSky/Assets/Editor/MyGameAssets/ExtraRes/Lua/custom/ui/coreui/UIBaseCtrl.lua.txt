@@ -26,36 +26,9 @@ function Ctrl:Build(uiData)--这里uiData就是UIConfigData数据
     --模型组件和lua组件数据绑定
     self.m_Com=self.m_Obj:GetComponent("LoxoLuaBehaviour");
     self.m_Com:Bind(self,self.m_View);--view层里面塞入ui对象 ctrl层塞入逻辑
-
+    self.m_View:Init();
     --创建model数据层
     self:InitModel();
-    -- if self.m_Module==nil then
-    --     self.m_Module=require(self.uiData.path.."Module").New();
-    -- end
-
-    -- self.m_View:Init();
-    
-
-    -- --1new一个view
-    -- if self.m_View==nil then
-    --     self.m_View=require(self.uiData.path.."View").New();
-    -- end
-
-    -- --2创建一个模型gameobject
-    -- self.m_ResHandle=GameResourceManager.GetInstance():LoadResourceSync("UI_"..self.uiData.uiName);
-    -- if self.m_ResHandle==nil or self.m_ResHandle:GetObj()==nil then
-    --     XLogger.LogError(self.uiData.uiName.."Ctrl:Build Error!!!");
-    --     return;
-    -- end
-    
-    -- --3模型与view层绑定
-    -- self.m_View:Build(self.m_ResHandle:GetGameObject());
-    -- --4module层与view 交互绑定
-    -- if self.m_Module==nil then
-    --     self.m_Module=require(self.uiData.path.."Module").New();
-    -- end
-    
-    --5todo ctrl控制module和view 的vm绑定 走曹磊那套
 
 end
 
@@ -97,16 +70,18 @@ function Ctrl:Release()
     --1需要解绑  不置空，因为需要复用
     self.m_Com:UnBind();
     self.m_Com=nil;
-
+    if self.m_View~=nil then
+        self.m_View:Release();
+    end
     self.m_View=nil;
-    -- self.m_Module:Release();
-    -- self.m_View:Release();
+
     --2资源层卸载
     if self.m_ResHandle~=nil then
         self.m_ResHandle:Dispose();
     end
     self.m_ResHandle=nil;
-    --3
+    self.m_Obj=nil;
+    self.uiData=nil;
 end
 
 function Ctrl:_bindDAL()

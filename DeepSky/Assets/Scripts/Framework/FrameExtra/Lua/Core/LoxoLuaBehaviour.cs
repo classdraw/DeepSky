@@ -29,8 +29,11 @@ namespace XEngine.Lua{
         public void Bind(LuaTable luaTableCtrl,LuaTable luaTableView){
             m_Metatable=luaTableCtrl;
 
+            var list=new List<string>();
+
             luaTableView.Set("target",this);
             luaTableView.Set("group",this.GetComponent<XUIGroup>());
+            luaTableView.Set("namelist",list);
             if (variables != null && variables.Variables != null)
             {
                 foreach (var variable in variables.Variables)
@@ -39,6 +42,7 @@ namespace XEngine.Lua{
                     if (string.IsNullOrEmpty(name))
                         continue;
 
+                    list.Add(name);
                     luaTableView.Set(name, variable.GetValue());
                 }
             }

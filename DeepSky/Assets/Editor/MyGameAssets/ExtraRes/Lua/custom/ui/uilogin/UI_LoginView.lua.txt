@@ -10,7 +10,7 @@ function UI_LoginView:dtor()
 end
 
 function UI_LoginView:Init()
-    
+
 end
 
 return UI_LoginView;

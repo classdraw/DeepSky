@@ -35,12 +35,7 @@ end
 
 function UI_LoginCtrl:InitModel()
 
-    local context = LoxoContext.GetApplicationContext();
-    local container = context:GetContainer();
 
-    --初始化Lua的数据绑定服务，一般建议在游戏的C#启动脚本创建
-	local bundle = LuaBindingServiceBundle(container)
-	bundle:Start();
 
 
     --初始化Account子视图模型
@@ -81,12 +76,7 @@ end
 
 --module清除  绑定清除
 function UI_LoginCtrl:OnRelease()
-    local context = LoxoContext.GetApplicationContext();
-    local container = context:GetContainer();
 
-    --初始化Lua的数据绑定服务，一般建议在游戏的C#启动脚本创建
-	local bundle = LuaBindingServiceBundle(container)
-	bundle:Stop();
 
 
     --self.m_Module  release???

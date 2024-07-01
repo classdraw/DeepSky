@@ -19,23 +19,11 @@ function UIManager:Init()
     SystemUtils.SetUIConfig(overlayCanvas);
 
     self.m_OpenUIs={};--所有打开的ui键值对
-
-
-    local context = LoxoContext.GetApplicationContext();
-    local container = context:GetContainer();
-
-    --初始化Lua的数据绑定服务，一般建议在游戏的C#启动脚本创建
-	local bundle = LuaBindingServiceBundle(container)
-	bundle:Start();
+    self:_startBind();
 end
 
 function UIManager:Release()
-    local context = LoxoContext.GetApplicationContext();
-    local container = context:GetContainer();
-
-    --初始化Lua的数据绑定服务，一般建议在游戏的C#启动脚本创建
-	local bundle = LuaBindingServiceBundle(container)
-	bundle:Stop();
+    self:_stopBind();
 
 
     if self.m_kUIRootHandle~=nil then
@@ -50,6 +38,7 @@ function UIManager:Release()
     self.m_kUICache=nil;
 
     --ui清除
+    
 end
 
 --uiData为UIConfig的UIConfigData table数据
@@ -94,6 +83,24 @@ function UIManager:Close(uiData)
         self.m_kUICache:AddUI(ctrl);--鸟方法细节还没写好 还没测试 先放着
         self.m_OpenUIs[uiData.uiName]=nil;
     end
+end
+
+
+function UIManager:_startBind()
+    local context = LoxoContext.GetApplicationContext();
+    local container = context:GetContainer();
+
+    --初始化Lua的数据绑定服务，一般建议在游戏的C#启动脚本创建
+	self.m_Bundle = LuaBindingServiceBundle(container)
+	self.m_Bundle:Start();
+end
+
+
+function UIManager:_stopBind()
+    if self.m_Bundle~=nil then
+        self.m_Bundle:Stop();
+    end
+    self.m_Bundle=nil;
 end
 
 return UIManager;

@@ -17,3 +17,9 @@ SystemUtils=CS.Utilities.SystemUtils
 GameUtils=CS.Utilities.GameUtils
 GameResourceManager=CS.XEngine.Loader.GameResourceManager
 ResHandle=CS.XEngine.Pool.ResHandle
+
+--loxodonFramework
+-- LoxoContext = CS.Loxodon.Framework.Contexts.Context
+-- LuaBindingServiceBundle = CS.Loxodon.Framework.Binding.LuaBindingServiceBundle
+-- local ObservableObject = require("framework.ObservableObject")
+-- local ObservableDictionary = require("framework.ObservableDictionary")

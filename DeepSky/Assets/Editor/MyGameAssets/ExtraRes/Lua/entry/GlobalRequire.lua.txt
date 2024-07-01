@@ -16,6 +16,10 @@ UIManager=require("logic.UIManager");
 --系统
 BaseSystem=require("system.BaseSystem");
 SystemManager=require("logic.SystemManager");
+
+ObservableObject = require("loxoframework.ObservableObject");
+ObservableDictionary = require("loxoframework.ObservableDictionary")
+
 -- AssetManager=require("logic.AssetManager");
 
 

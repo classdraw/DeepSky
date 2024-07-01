@@ -68,7 +68,6 @@ function DatabindingViewModel:ctor(t)
 		self.email = ""
 		self.errors = ObservableDictionary()
 	end
-	
 end
 
 function DatabindingViewModel:submit()

@@ -3,7 +3,8 @@
 <linker>
 
 	<assembly fullname="Assembly-CSharp">
-	    <type fullname="DButton" preserve="all"/>
+	    <type fullname="Loxodon.Framework.UnityObjectExtensions" preserve="all"/>
+		<type fullname="DButton" preserve="all"/>
 		<type fullname="DDrag" preserve="all"/>
 		<type fullname="DMenu" preserve="all"/>
 		<type fullname="DMenuItem" preserve="all"/>
@@ -36,7 +37,19 @@
 		<type fullname="XEngine.TextUtils" preserve="all"/>
 		<type fullname="XEngine.UI.XDragLimitMove" preserve="all"/>
 		<type fullname="XEngine.UI.XUIEnableDisableListener" preserve="all"/>
+		<type fullname="XEngine.Lua.LoxoLuaBehaviour" preserve="all"/>
 		<type fullname="XEngine.Lua.LuaCSharpAgent" preserve="all"/>
+		<type fullname="Loxodon.Framework.UnityObjectExtensions" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.LuaBehaviour" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.LuaUIView" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.LuaView" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.LuaWindow" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.Animations.GenericUIAnimation" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.Animations.LuaUIAnimation" preserve="all"/>
+		<type fullname="Loxodon.Framework.Binding.Lua.LuaBehaviourBindingExtension" preserve="all"/>
+		<type fullname="Loxodon.Framework.Binding.Lua.LuaGameObjectBindingExtension" preserve="all"/>
+		<type fullname="Loxodon.Framework.Binding.Builder.LuaBindingBuilder" preserve="all"/>
+		<type fullname="Loxodon.Framework.Binding.Builder.LuaBindingSet" preserve="all"/>
 		<type fullname="DModal" preserve="all"/>
 		<type fullname="XEngine.UI.XUIDataList" preserve="all"/>
 		<type fullname="XEngine.UI.XUISpec" preserve="all"/>
@@ -58,6 +71,7 @@
 		<type fullname="XEngine.UI.XLuaComponent" preserve="all"/>
 		<type fullname="XUIPathConfig" preserve="all"/>
 		<type fullname="XEngine.UI.XBaseTween" preserve="all"/>
+		<type fullname="Loxodon.Framework.Asynchronous.ILuaTask" preserve="all"/>
 		
 	</assembly>
 
@@ -119,6 +133,41 @@
 
 	<assembly fullname="System">
 	    <type fullname="System.Diagnostics.Stopwatch" preserve="all"/>
+		<type fullname="System.Collections.Specialized.NotifyCollectionChangedEventArgs" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="Loxodon.Framework">
+	    <type fullname="Loxodon.Framework.Execution.Executors" preserve="all"/>
+		<type fullname="Loxodon.Framework.Contexts.Context" preserve="all"/>
+		<type fullname="Loxodon.Framework.Contexts.ApplicationContext" preserve="all"/>
+		<type fullname="Loxodon.Framework.Contexts.PlayerContext" preserve="all"/>
+		<type fullname="Loxodon.Framework.Prefs.Preferences" preserve="all"/>
+		<type fullname="Loxodon.Framework.Localizations.ILocalization" preserve="all"/>
+		<type fullname="Loxodon.Framework.Localizations.Localization" preserve="all"/>
+		<type fullname="Loxodon.Framework.Messaging.Messenger" preserve="all"/>
+		<type fullname="Loxodon.Framework.Commands.SimpleCommand" preserve="all"/>
+		<type fullname="Loxodon.Framework.Asynchronous.AsyncResult" preserve="all"/>
+		<type fullname="Loxodon.Framework.Asynchronous.AsyncResult`1[Loxodon.Framework.ViewModels.IViewModel]" preserve="all"/>
+		<type fullname="Loxodon.Framework.Observables.ObservableDictionary`2[System.Object,System.Object]" preserve="all"/>
+		<type fullname="Loxodon.Framework.Observables.ObservableList`1[System.Object]" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.ITransition" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.WindowContainer" preserve="all"/>
+		<type fullname="Loxodon.Framework.Asynchronous.ProgressResult`2[System.Single,Loxodon.Framework.Views.IWindow]" preserve="all"/>
+		<type fullname="Loxodon.Framework.Asynchronous.ProgressResult`2[System.Single,Loxodon.Framework.Views.IView]" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.IView" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.IWindow" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.Window" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.IWindowManager" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.WindowManager" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.IUIViewLocator" preserve="all"/>
+		<type fullname="Loxodon.Framework.Views.DefaultUIViewLocator" preserve="all"/>
+		<type fullname="Loxodon.Framework.Asynchronous.CoroutineAwaiterExtensions" preserve="all"/>
+		
+	</assembly>
+
+	<assembly fullname="mscorlib">
+	    <type fullname="System.Type" preserve="all"/>
 		
 	</assembly>
 

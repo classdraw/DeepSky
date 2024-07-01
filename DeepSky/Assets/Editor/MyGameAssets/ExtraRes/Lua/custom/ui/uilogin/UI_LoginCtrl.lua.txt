@@ -1,9 +1,10 @@
 local UI_LoginCtrl = BaseClass("UI_LoginCtrl", require("coreui.UIBaseCtrl"))
 
 --ui初始化 需要绑定数据管道一些配置 等等 父类读取
-UI_LoginCtrl.ExtraConfig={
-    LoginData="AAA",
-};
+-- UI_LoginCtrl.ExtraConfig={
+--     LoginData="AAA",
+-- };
+local moduleList=require("uilogin.UI_LoginModule");
 
 function UI_LoginCtrl:ctor()
 
@@ -16,6 +17,8 @@ end
 function UI_LoginCtrl:OnOpenWindow(param)
     --这里写逻辑 vm绑定好了  数据管道也绑定好了
     -- XLogger.LogError(">>>>"..self:GetView().btn_Image.name);
+    -- local ObservableObject = require("framework.ObservableObject")
+    -- local ObservableDictionary = require("framework.ObservableDictionary")
 
     
 end
@@ -29,5 +32,73 @@ function UI_LoginCtrl:OnDALPush(data)
         --数据更新处理
     end
 end
+
+function UI_LoginCtrl:InitModel()
+
+    local context = LoxoContext.GetApplicationContext();
+    local container = context:GetContainer();
+
+    --初始化Lua的数据绑定服务，一般建议在游戏的C#启动脚本创建
+	local bundle = LuaBindingServiceBundle(container)
+	bundle:Start();
+
+
+    --初始化Account子视图模型
+	local account = moduleList[1]({
+        id = 1,
+        username = "test",
+        password = "test",
+        email = "jyy.qq@gmail.com",
+    });
+
+    self.m_Module=moduleList[2]({
+        account = account,
+        username = "",
+        email = "",
+        remember = true,
+        errors = ObservableDictionary()
+    });
+    -- XLogger.LogError(self:GetCom());
+    self:GetCom():BindingContext().DataContext = self.m_Module
+
+    --进行数据绑定
+	local bindingSet = self:GetCom():CreateBindingSet();
+    bindingSet:Bind(self:GetView().txt_name):For("text"):To("account.username"):OneWay()
+    bindingSet:Bind(self:GetView().txt_pwd):For("text"):To("account.password"):OneWay()
+
+    bindingSet:Build()
+
+    self.m_Module.account.username="888888888888888888";
+    self.m_Module.account.password="777777777777777";
+
+
+
+    -- self:OnRelease();
+
+    -- self.m_Module.account.username="888888888888888888";
+    -- self.m_Module.account.password="777777777777777";
+end
+
+--module清除  绑定清除
+function UI_LoginCtrl:OnRelease()
+    local context = LoxoContext.GetApplicationContext();
+    local container = context:GetContainer();
+
+    --初始化Lua的数据绑定服务，一般建议在游戏的C#启动脚本创建
+	local bundle = LuaBindingServiceBundle(container)
+	bundle:Stop();
+
+
+    --self.m_Module  release???
+    self.m_Module=nil;
+    self:GetCom():BindingContext().DataContext =nil;
+    local cc=self:GetCom():GetComponent("BindingContextLifecycle");
+    if cc~=nil then
+        GameObject.Destroy(cc);
+    end 
+
+end
+
+
 
 return UI_LoginCtrl;

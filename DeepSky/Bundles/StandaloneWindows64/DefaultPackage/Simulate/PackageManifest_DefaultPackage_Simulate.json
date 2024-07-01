@@ -366,13 +366,6 @@
             "BundleID": 14
         },
         {
-            "Address": "coreui_UIBaseModule.lua",
-            "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/custom/ui/coreui/UIBaseModule.lua.txt",
-            "AssetGUID": "",
-            "AssetTags": [],
-            "BundleID": 14
-        },
-        {
             "Address": "coreui_UIBaseView.lua",
             "AssetPath": "Assets/Editor/MyGameAssets/ExtraRes/Lua/custom/ui/coreui/UIBaseView.lua.txt",
             "AssetGUID": "",
@@ -766,7 +759,7 @@
             "UnityCRC": 0,
             "FileHash": "cd37d6fa2cd2609b32ea9066e6946877",
             "FileCRC": "00000000",
-            "FileSize": 27305,
+            "FileSize": 37155,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -806,7 +799,7 @@
             "UnityCRC": 0,
             "FileHash": "b1a488840e63547bac0270aec41df0a0",
             "FileCRC": "00000000",
-            "FileSize": 8940,
+            "FileSize": 9077,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -816,7 +809,7 @@
             "UnityCRC": 0,
             "FileHash": "7636a1c3fb3d710f30e4edbdb5b7b51c",
             "FileCRC": "00000000",
-            "FileSize": 2813,
+            "FileSize": 2804,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -866,7 +859,7 @@
             "UnityCRC": 0,
             "FileHash": "ef83ebbc93a8fdba96f6c48fdf47b6c5",
             "FileCRC": "00000000",
-            "FileSize": 7102,
+            "FileSize": 7177,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -876,7 +869,7 @@
             "UnityCRC": 0,
             "FileHash": "ce8e0add91f0ca80991b0f28448ed572",
             "FileCRC": "00000000",
-            "FileSize": 5311,
+            "FileSize": 6231,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -886,7 +879,7 @@
             "UnityCRC": 0,
             "FileHash": "127c9c446dc5291a627fa42d6d268ca5",
             "FileCRC": "00000000",
-            "FileSize": 1567,
+            "FileSize": 4015,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

@@ -57,7 +57,11 @@ function UIManager:Open(uiData,param,layer)--layer==UIHierarchy
         layer=0;
     end
     local dlayer=self.m_kRoot:GetUIHierarchyLayerLua(layer);
-    dlayer:AddChild(ctrl:GetViewObj());
+    local viewUIObj=ctrl:GetObj();
+    if viewUIObj~=nil then
+        dlayer:AddChild(viewUIObj);
+    end
+    
 
     ctrl:OpenWindow(param);
     self.m_OpenUIs[uiData.uiName]=ctrl;

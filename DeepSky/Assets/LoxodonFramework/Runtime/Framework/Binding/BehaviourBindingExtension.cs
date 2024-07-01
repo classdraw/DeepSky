@@ -73,6 +73,15 @@ namespace Loxodon.Framework.Binding
             return new BindingSet<TBehaviour, TSource>(context, behaviour);
         }
 
+        public static void RemoveBindingContext(this Behaviour behaviour){
+            if (behaviour == null || behaviour.gameObject == null)
+                return;
+
+            BindingContextLifecycle bindingContextLifecycle = behaviour.GetComponent<BindingContextLifecycle>();
+            if(bindingContextLifecycle!=null){
+                GameObject.Destroy(bindingContextLifecycle);
+            }
+        }
         public static BindingSet<TBehaviour, TSource> CreateBindingSet<TBehaviour, TSource>(this TBehaviour behaviour, TSource dataContext) where TBehaviour : Behaviour
         {
             IBindingContext context = behaviour.BindingContext();

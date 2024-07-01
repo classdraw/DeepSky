@@ -1,11 +1,39 @@
-local UI_LoginModule = BaseClass("UI_LoginModule", require("coreui.UIBaseModule"))
 
-function UI_LoginModule:ctor()
+---
+--创建一个Account子视图模型
+--@module Account
+local Account = class("Account",ObservableObject)
+
+function Account:ctor(t)
+	--执行父类ObservableObject的构造函数，这个重要，否则无法监听数据改变
+	Account.base(self).ctor(self,t)
+	if not (t and type(t)=="table") then
+		self.id = 0
+        self.username = ""
+		self.Password = ""
+        self.email = ""
+	end
+end
+
+
+
+local UI_LoginModule = class("UI_LoginModule",ObservableObject)
+
+function UI_LoginModule:ctor(t)
+	--执行父类ObservableObject的构造函数，这个重要，否则无法监听数据改变
+	UI_LoginModule.base(self).ctor(self,t)
+	
+	if not (t and type(t)=="table") then
+		self.account = Account()
+		self.remember = false
+		self.username = ""
+		self.email = ""
+        self.errors = ObservableDictionary()
+	end
+end
+
+function UI_LoginModule:submit()
 
 end
 
-function UI_LoginModule:dtor()
-
-end
-
-return UI_LoginModule;
+return {Account,UI_LoginModule};

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using XEngine.Utilities;
 using XEngine.Pool;
 using XEngine.UI;
+using XEngine.Lua;
 public static class LuaGenConfig
 {
 	[CSObjectWrapEditor.GenPath]
@@ -51,6 +52,8 @@ public static class LuaGenConfig
         // typeof(UnityEngine.Events.UnityAction<MobileJoystick>),
         // typeof(UnityEngine.Events.UnityAction<MobileJoystick, Vector2>),
         // typeof(UnityEngine.Events.UnityAction<MobileJoystick, bool>),
+    
+        typeof(Func<MonoBehaviour,Loxodon.Framework.Asynchronous.ILuaTask>),
     };
 
     [LuaCallCSharp]
@@ -137,7 +140,9 @@ public static class LuaGenConfig
         typeof(System.Diagnostics.Stopwatch),
         // typeof(MaterialPropertyBlock),
         // typeof(Material),//解开也可以  Blacklist需要添加一堆
-        typeof(ResHandle)
+        typeof(ResHandle),
+        typeof(LoxoLuaBehaviour),
+        typeof(Loxodon.Framework.Asynchronous.ILuaTask),
     };
 
     [BlackList]

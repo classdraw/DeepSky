@@ -6,7 +6,7 @@ EmptyTable = {}
 
 --常用
 Global=CS.Global
-GameObject = CS.UnityEngine.GameObjectfan
+GameObject = CS.UnityEngine.GameObject
 Object = CS.UnityEngine.Object
 Application = CS.UnityEngine.Application
 XFacade=CS.XFacade
@@ -19,7 +19,7 @@ GameResourceManager=CS.XEngine.Loader.GameResourceManager
 ResHandle=CS.XEngine.Pool.ResHandle
 
 --loxodonFramework
--- LoxoContext = CS.Loxodon.Framework.Contexts.Context
--- LuaBindingServiceBundle = CS.Loxodon.Framework.Binding.LuaBindingServiceBundle
+LoxoContext = CS.Loxodon.Framework.Contexts.Context
+LuaBindingServiceBundle = CS.Loxodon.Framework.Binding.LuaBindingServiceBundle
 -- local ObservableObject = require("loxoframework.ObservableObject")
 -- local ObservableDictionary = require("loxoframework.ObservableDictionary")

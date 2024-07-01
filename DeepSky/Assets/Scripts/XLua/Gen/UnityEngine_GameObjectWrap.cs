@@ -10,7 +10,7 @@ using LuaCSFunction = XLua.LuaDLL.lua_CSFunction;
 
 using XLua;
 using System.Collections.Generic;
-
+using Loxodon.Framework.Binding.Lua;
 
 namespace XLua.CSObjectWrap
 {
@@ -21,7 +21,7 @@ namespace XLua.CSObjectWrap
         {
 			ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
 			System.Type type = typeof(UnityEngine.GameObject);
-			Utils.BeginObjectRegister(type, L, translator, 0, 16, 9, 3);
+			Utils.BeginObjectRegister(type, L, translator, 0, 23, 9, 3);
 			
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "GetComponent", _m_GetComponent);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "GetComponentInChildren", _m_GetComponentInChildren);
@@ -39,6 +39,13 @@ namespace XLua.CSObjectWrap
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "GetComponentIndex", _m_GetComponentIndex);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "SetActive", _m_SetActive);
 			Utils.RegisterFunc(L, Utils.METHOD_IDX, "CompareTag", _m_CompareTag);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "BindingContext", _m_BindingContext);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "CreateBindingSet", _m_CreateBindingSet);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "SetDataContext", _m_SetDataContext);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "AddBinding", _m_AddBinding);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "AddBindings", _m_AddBindings);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "ClearBindings", _m_ClearBindings);
+			Utils.RegisterFunc(L, Utils.METHOD_IDX, "ClearAllBindings", _m_ClearAllBindings);
 			
 			
 			Utils.RegisterFunc(L, Utils.GETTER_IDX, "transform", _g_get_transform);
@@ -1024,6 +1031,255 @@ namespace XLua.CSObjectWrap
                     
                     
                     return 1;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_BindingContext(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                UnityEngine.GameObject gen_to_be_invoked = (UnityEngine.GameObject)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    
+                        var gen_ret = gen_to_be_invoked.BindingContext(  );
+                        translator.PushAny(L, gen_ret);
+                    
+                    
+                    
+                    return 1;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_CreateBindingSet(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                UnityEngine.GameObject gen_to_be_invoked = (UnityEngine.GameObject)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    
+                        var gen_ret = gen_to_be_invoked.CreateBindingSet(  );
+                        translator.Push(L, gen_ret);
+                    
+                    
+                    
+                    return 1;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_SetDataContext(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                UnityEngine.GameObject gen_to_be_invoked = (UnityEngine.GameObject)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    object _dataContext = translator.GetObject(L, 2, typeof(object));
+                    
+                    gen_to_be_invoked.SetDataContext( _dataContext );
+                    
+                    
+                    
+                    return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_AddBinding(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                UnityEngine.GameObject gen_to_be_invoked = (UnityEngine.GameObject)translator.FastGetCSObj(L, 1);
+            
+            
+			    int gen_param_count = LuaAPI.lua_gettop(L);
+            
+                if(gen_param_count == 2&& translator.Assignable<Loxodon.Framework.Binding.BindingDescription>(L, 2)) 
+                {
+                    Loxodon.Framework.Binding.BindingDescription _bindingDescription = (Loxodon.Framework.Binding.BindingDescription)translator.GetObject(L, 2, typeof(Loxodon.Framework.Binding.BindingDescription));
+                    
+                    gen_to_be_invoked.AddBinding( _bindingDescription );
+                    
+                    
+                    
+                    return 0;
+                }
+                if(gen_param_count == 4&& translator.Assignable<object>(L, 2)&& translator.Assignable<Loxodon.Framework.Binding.BindingDescription>(L, 3)&& translator.Assignable<object>(L, 4)) 
+                {
+                    object _target = translator.GetObject(L, 2, typeof(object));
+                    Loxodon.Framework.Binding.BindingDescription _bindingDescription = (Loxodon.Framework.Binding.BindingDescription)translator.GetObject(L, 3, typeof(Loxodon.Framework.Binding.BindingDescription));
+                    object _key = translator.GetObject(L, 4, typeof(object));
+                    
+                    gen_to_be_invoked.AddBinding( _target, _bindingDescription, _key );
+                    
+                    
+                    
+                    return 0;
+                }
+                if(gen_param_count == 3&& translator.Assignable<object>(L, 2)&& translator.Assignable<Loxodon.Framework.Binding.BindingDescription>(L, 3)) 
+                {
+                    object _target = translator.GetObject(L, 2, typeof(object));
+                    Loxodon.Framework.Binding.BindingDescription _bindingDescription = (Loxodon.Framework.Binding.BindingDescription)translator.GetObject(L, 3, typeof(Loxodon.Framework.Binding.BindingDescription));
+                    
+                    gen_to_be_invoked.AddBinding( _target, _bindingDescription );
+                    
+                    
+                    
+                    return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+            return LuaAPI.luaL_error(L, "invalid arguments to UnityEngine.GameObject.AddBinding!");
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_AddBindings(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                UnityEngine.GameObject gen_to_be_invoked = (UnityEngine.GameObject)translator.FastGetCSObj(L, 1);
+            
+            
+			    int gen_param_count = LuaAPI.lua_gettop(L);
+            
+                if(gen_param_count == 2&& translator.Assignable<System.Collections.Generic.IEnumerable<Loxodon.Framework.Binding.BindingDescription>>(L, 2)) 
+                {
+                    System.Collections.Generic.IEnumerable<Loxodon.Framework.Binding.BindingDescription> _bindingDescriptions = (System.Collections.Generic.IEnumerable<Loxodon.Framework.Binding.BindingDescription>)translator.GetObject(L, 2, typeof(System.Collections.Generic.IEnumerable<Loxodon.Framework.Binding.BindingDescription>));
+                    
+                    gen_to_be_invoked.AddBindings( _bindingDescriptions );
+                    
+                    
+                    
+                    return 0;
+                }
+                if(gen_param_count == 4&& translator.Assignable<object>(L, 2)&& translator.Assignable<System.Collections.Generic.IEnumerable<Loxodon.Framework.Binding.BindingDescription>>(L, 3)&& translator.Assignable<object>(L, 4)) 
+                {
+                    object _target = translator.GetObject(L, 2, typeof(object));
+                    System.Collections.Generic.IEnumerable<Loxodon.Framework.Binding.BindingDescription> _bindingDescriptions = (System.Collections.Generic.IEnumerable<Loxodon.Framework.Binding.BindingDescription>)translator.GetObject(L, 3, typeof(System.Collections.Generic.IEnumerable<Loxodon.Framework.Binding.BindingDescription>));
+                    object _key = translator.GetObject(L, 4, typeof(object));
+                    
+                    gen_to_be_invoked.AddBindings( _target, _bindingDescriptions, _key );
+                    
+                    
+                    
+                    return 0;
+                }
+                if(gen_param_count == 3&& translator.Assignable<object>(L, 2)&& translator.Assignable<System.Collections.Generic.IEnumerable<Loxodon.Framework.Binding.BindingDescription>>(L, 3)) 
+                {
+                    object _target = translator.GetObject(L, 2, typeof(object));
+                    System.Collections.Generic.IEnumerable<Loxodon.Framework.Binding.BindingDescription> _bindingDescriptions = (System.Collections.Generic.IEnumerable<Loxodon.Framework.Binding.BindingDescription>)translator.GetObject(L, 3, typeof(System.Collections.Generic.IEnumerable<Loxodon.Framework.Binding.BindingDescription>));
+                    
+                    gen_to_be_invoked.AddBindings( _target, _bindingDescriptions );
+                    
+                    
+                    
+                    return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+            return LuaAPI.luaL_error(L, "invalid arguments to UnityEngine.GameObject.AddBindings!");
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_ClearBindings(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                UnityEngine.GameObject gen_to_be_invoked = (UnityEngine.GameObject)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    object _key = translator.GetObject(L, 2, typeof(object));
+                    
+                    gen_to_be_invoked.ClearBindings( _key );
+                    
+                    
+                    
+                    return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_ClearAllBindings(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+                UnityEngine.GameObject gen_to_be_invoked = (UnityEngine.GameObject)translator.FastGetCSObj(L, 1);
+            
+            
+                
+                {
+                    
+                    gen_to_be_invoked.ClearAllBindings(  );
+                    
+                    
+                    
+                    return 0;
                 }
                 
             } catch(System.Exception gen_e) {

@@ -19,8 +19,8 @@ local luaList={
     --lua预备加载模块
     "utils.XLogger",
     "functions.init",
-    "GlobalRequire",
-    "XLuaFacade",
+    "entry.GlobalRequire",
+    "entry.XLuaFacade",
     -- "components.Component_Base",
     -- "globalrequire",
     -- 

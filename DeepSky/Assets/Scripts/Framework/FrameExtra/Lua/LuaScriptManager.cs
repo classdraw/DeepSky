@@ -198,7 +198,7 @@ public class LuaScriptManager : MonoSingleton<LuaScriptManager>{
 	{
         try
         {
-        	m_LuaEnv.DoString("require 'main'");
+        	m_LuaEnv.DoString("require 'entry.main'");
 
 			// // 重要：初始化LuaCSharpArr
         	LuaArrAccessAPI.RegisterPinFunc(m_LuaEnv.L);

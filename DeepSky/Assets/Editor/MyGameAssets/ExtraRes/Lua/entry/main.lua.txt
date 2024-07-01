@@ -1,6 +1,6 @@
 require("consts.CS_Define")--CS代码引用文件
-require("GamePrepareLoad");
-require("StartApp");
+require("entry.GamePrepareLoad");
+require("entry.StartApp");
 local function StartApp()
     XLogger.Log("StartApp");
     InitGame();

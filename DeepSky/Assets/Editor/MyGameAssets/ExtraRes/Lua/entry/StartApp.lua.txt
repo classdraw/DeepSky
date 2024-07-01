@@ -17,7 +17,7 @@ printW = printW or function(...) end
 
 function InitGame()
     -- XLogger=require("utils.XLogger").New();
-    App = require("App").New()
+    App = require("entry.App").New()
     App:Init();
     -- --初始化游戏
     XLogger.Log("StartApp.InitGame");

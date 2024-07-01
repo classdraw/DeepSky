@@ -141,8 +141,40 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Assets/Editor/MyGameAssets/ExtraRes/Lua
-        CollectorGUID: 
+      - CollectPath: Assets/Editor/MyGameAssets/ExtraRes/Lua/entry
+        CollectorGUID: 1196ac1f4f9215f40b62c34701b87888
+        CollectorType: 0
+        AddressRuleName: AddressByFolderAndFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/Editor/MyGameAssets/ExtraRes/Lua/config
+        CollectorGUID: 92cebc79e607ab24bb08b109c8dbabed
+        CollectorType: 0
+        AddressRuleName: AddressByFolderAndFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/Editor/MyGameAssets/ExtraRes/Lua/currency
+        CollectorGUID: f7252a9fb1b29c948a9046692fd31c6a
+        CollectorType: 0
+        AddressRuleName: AddressByFolderAndFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/Editor/MyGameAssets/ExtraRes/Lua/custom
+        CollectorGUID: 61c8d74d15fe37f4daf639f63572ac67
+        CollectorType: 0
+        AddressRuleName: AddressByFolderAndFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/Editor/MyGameAssets/ExtraRes/Lua/extra
+        CollectorGUID: 033c3ce0d6bf61b4e8d64ce525c10930
         CollectorType: 0
         AddressRuleName: AddressByFolderAndFileName
         PackRuleName: PackDirectory

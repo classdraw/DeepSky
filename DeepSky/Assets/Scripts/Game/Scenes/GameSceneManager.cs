@@ -35,6 +35,7 @@ namespace Game.Scenes
             if(scene.name==sceneName){//相同场景
                 return;
             }
+            
             m_kProgressCall=progressCallback;
             m_kNextSceneComplete=completeCallback;
             m_NextSceneName=sceneName;
@@ -83,11 +84,14 @@ namespace Game.Scenes
             m_AsyncOperation=SceneManager.LoadSceneAsync(m_NextSceneName,LoadSceneMode.Single);
         }
         private void OnNextComplete(){
+            m_LoadPro=0;
+            
+            m_AsyncOperation=null;
+            m_kProgressCall=null;
+            
             if(m_kNextSceneComplete!=null){
                 m_kNextSceneComplete();
             }
-            m_AsyncOperation=null;
-            m_kProgressCall=null;
             m_kNextSceneComplete=null;
         }
         // private void OnNextComplete(SceneHandle sceneHandle){
@@ -117,13 +121,13 @@ namespace Game.Scenes
                 if(!m_AsyncOperation.isDone){
                     if(m_LoadPro==1){
                         OnEmptyProgress(m_AsyncOperation.progress);
-                    }else{
+                    }else if(m_LoadPro==2){
                         OnNextProgress(m_AsyncOperation.progress);
                     }
                 }else{
                     if(m_LoadPro==1){
                         OnEmptyComplete();
-                    }else{
+                    }else if(m_LoadPro==2){
                         OnNextComplete();
                     }
                 }//

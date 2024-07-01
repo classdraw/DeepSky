@@ -58,6 +58,8 @@ namespace XEngine.Server{
             m_ClientManager=obj.GetComponent<ClientsManager>();
             m_ClientManager.Init();
             NetManager.GetInstance().InitServer();
+
+            
         }
 
         //只有client和host会调用这个方法

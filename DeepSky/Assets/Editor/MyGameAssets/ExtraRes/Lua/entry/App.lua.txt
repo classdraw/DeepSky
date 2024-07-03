@@ -1,5 +1,5 @@
 --应用程序 一些常用方法的入口
-local App = Class("App");
+local App = BaseClass("App");
 local AppEvent = require("consts.AppEvent")
 local Event = AppEvent.Event;
 

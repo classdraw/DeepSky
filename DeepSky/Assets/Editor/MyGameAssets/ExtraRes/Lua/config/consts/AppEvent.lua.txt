@@ -11,9 +11,8 @@ local event={
     ON_TRIGGER_EXIT="ON_TRIGGER_EXIT",--离开场景触发器
 };
 
-local Event = Class("Event",require("system.ValueObject"))
+local Event = BaseClass("Event",require("system.ValueObject"))
 function Event:ctor(name, msg)
-    Event.super.ctor(self)
     self.name = name
     self.msg = msg
 end
@@ -27,10 +26,9 @@ end
 event.Event = Event
 
 --[[Begin ReceiveDataEvent]]
-local ReceiveDataEvent = Class("ReceiveDataEvent",Event)
+local ReceiveDataEvent = BaseClass("ReceiveDataEvent",Event)
 
 function ReceiveDataEvent:ctor(msgId, msg)
-    ReceiveDataEvent.super.ctor(self,msgId) --特殊处理这个消息名称 优化消息发送
     self.msg =msg;
 end
 

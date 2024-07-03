@@ -93,6 +93,7 @@ end
 @param #object super 父类或者创建对象实例的函数
 @return table
 ]]
+---@class class
 function class(classname,super)
 	assert(type(classname) == "string" and #classname > 0)
 	

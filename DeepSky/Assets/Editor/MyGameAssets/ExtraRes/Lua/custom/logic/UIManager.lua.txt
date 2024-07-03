@@ -13,6 +13,7 @@ function UIManager:Init()
     self.m_kRoot=self.m_kUICanvasObj.transform:Find("Canvas/UIRoot"):GetComponent("UIRoot");
 
     local cacheRoot=self.m_kUICanvasObj.transform:Find("Canvas/Cache");
+    ---@type UICache
     self.m_kUICache=require("coreui.UICache").New(cacheRoot);
 
     local overlayCanvas=self.m_kUICanvasObj.transform:Find("Canvas"):GetComponent("Canvas");
@@ -47,6 +48,7 @@ function UIManager:Open(uiData,param,layer)--layer==UIHierarchy
     if uiData==nil then
         return false;
     end
+    ---@type UIBaseCtrl
     local ctrl=self.m_OpenUIs[uiData.uiName];
     if ctrl~=nil then
         ctrl:UpdateWindow(param);

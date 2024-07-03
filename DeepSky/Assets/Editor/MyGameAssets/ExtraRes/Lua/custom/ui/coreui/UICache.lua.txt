@@ -1,4 +1,5 @@
 ---uicache保存ui
+---@class UICache : BaseClass
 local UICache = BaseClass("UICache")
 local CacheTime=60;
 ---可以丢入到updatemanager更新处理逻辑
@@ -26,7 +27,7 @@ function UICache:dtor()
 end
 
 
-
+---@param uiCtrl UIBaseCtrl
 function UICache:AddUI(uiCtrl)
     local time=GameUtils:GetRealStartTime();
     --显示层父节点处理
@@ -40,6 +41,7 @@ function UICache:AddUI(uiCtrl)
     uiCtrl.m_fCacheTime=time;
 end
 
+---@return UIBaseCtrl
 function UICache:GetUI(uiName)
     local cCount=#self.m_kUICtrls;
     for idx=1,cCount do
@@ -64,6 +66,7 @@ function UICache:Update()
     end
 end
 
+---@return UIBaseCtrl
 function UICache:GetCtrl(uiCtrlPath)
     local poolList=self.m_kCtrlPools[uiCtrlPath];
     if poolList==nil or #poolList==0 then

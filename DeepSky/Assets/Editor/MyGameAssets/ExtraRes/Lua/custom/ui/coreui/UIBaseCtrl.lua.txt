@@ -1,3 +1,4 @@
+---@class UIBaseCtrl : BaseClass
 local Ctrl=BaseClass("UIBaseCtrl")
 function Ctrl:ctor()
     self.m_View=nil;

@@ -6,6 +6,7 @@ ClassType={
 }
 
 function BaseClass(classname,super)
+    ---@class BaseClass
     local cls={
         __cname=classname,
         __ctype=ClassType.class,

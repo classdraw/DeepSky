@@ -1,4 +1,4 @@
-local View=Class("UIBaseView")
+local View=BaseClass("UIBaseView")
 function View:ctor()
     
 end

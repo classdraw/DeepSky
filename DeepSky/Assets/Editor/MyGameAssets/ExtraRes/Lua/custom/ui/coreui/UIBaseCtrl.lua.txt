@@ -1,4 +1,4 @@
-local Ctrl=Class("UIBaseCtrl")
+local Ctrl=BaseClass("UIBaseCtrl")
 function Ctrl:ctor()
     self.m_View=nil;
     self.m_ResHandle=nil;

@@ -14,7 +14,7 @@ namespace XEngine.YooAsset.Patch
 
         }
 
-        public override void Enter()
+        public override void Enter(params object[]objs)
         {
             m_Fsm.TryChangeState(FsmClearPackageCache.Index);
         }

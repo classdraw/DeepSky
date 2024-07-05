@@ -16,7 +16,7 @@ namespace XEngine.YooAsset.Patch
         }
 
 
-        public override void Enter()
+        public override void Enter(params object[]objs)
         {
             CoroutineManager.GetInstance().StartCoroutine(UpdateManifest());
         }

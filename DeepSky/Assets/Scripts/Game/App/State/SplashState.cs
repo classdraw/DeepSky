@@ -21,7 +21,7 @@ namespace Game.Fsm
         public SplashState(BaseFsm fsm):base(fsm){
 
         }
-        public override void Enter(){
+        public override void Enter(params object[]objs){
             XLogger.Log("SplashState Enter");
             InitGameConfig();
             //这里打开loadui

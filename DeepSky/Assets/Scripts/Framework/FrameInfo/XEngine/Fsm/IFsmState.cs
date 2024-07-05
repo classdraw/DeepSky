@@ -7,7 +7,7 @@ namespace XEngine.Fsm
     /// </summary>
     public interface IFsmState
     {
-        void Enter();//进入
+        void Enter(params object[]objs);//进入
         void Exit();//退出
         void Tick();//遍历
         void Release();//销毁
@@ -22,7 +22,7 @@ namespace XEngine.Fsm
         public BaseFsmState(BaseFsm fsm) {
             m_Fsm = fsm;
         }
-        public virtual void Enter() { }//进入
+        public virtual void Enter(params object[]objs) { }//进入
         public virtual void Exit() { }//退出
         public virtual void Tick() { }//遍历
         public virtual void Release() { }//销毁

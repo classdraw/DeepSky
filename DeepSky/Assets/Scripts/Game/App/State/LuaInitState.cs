@@ -21,7 +21,7 @@ namespace Game.Fsm
         public LuaInitState(BaseFsm fsm):base(fsm){
 
         }
-        public override void Enter(){
+        public override void Enter(params object[]objs){
             XLogger.Log("LuaInitState Enter");
             XFacade.Init();//框架初始化
             Global.CreateInstance();//游戏全局mono初始化

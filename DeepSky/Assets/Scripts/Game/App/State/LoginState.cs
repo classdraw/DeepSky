@@ -23,7 +23,7 @@ namespace Game.Fsm
 
         }
 
-        public override void Enter(){
+        public override void Enter(params object[]objs){
             XLogger.Log("LoginState Enter");
             
             //SceneManager.LoadScene("LoginScene");

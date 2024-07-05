@@ -16,7 +16,7 @@ namespace XEngine.YooAsset.Patch
         public FsmInitPackage(BaseFsm fsm):base(fsm) { 
         
         }
-        public override void Enter()
+        public override void Enter(params object[]objs)
         {
             CoroutineManager.GetInstance().StartCoroutine(InitPackage());
         }

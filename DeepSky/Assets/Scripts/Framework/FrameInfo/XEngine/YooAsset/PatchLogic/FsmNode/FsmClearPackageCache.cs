@@ -14,7 +14,7 @@ namespace XEngine.YooAsset.Patch
 
         }
 
-        public override void Enter()
+        public override void Enter(params object[]objs)
         {
             var packageName = (string)m_Fsm.GetBlackboardValue("PackageName");
             var package = YooAssets.GetPackage(packageName);

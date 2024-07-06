@@ -66,6 +66,8 @@ namespace Loxodon.Framework.Views.Variables
 
         public static implicit operator List<Variable>(VariableArray array)
         {
+            if (array == null)
+                return null;
             return array.variables;
         }
 

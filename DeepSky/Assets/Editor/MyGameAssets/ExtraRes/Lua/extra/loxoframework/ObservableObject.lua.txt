@@ -27,6 +27,7 @@ require("loxoframework.System")
 ---
 --模块
 --@module ObservableObject
+---@class ObservableObject
 local M=class("ObservableObject")
 
 --[[--

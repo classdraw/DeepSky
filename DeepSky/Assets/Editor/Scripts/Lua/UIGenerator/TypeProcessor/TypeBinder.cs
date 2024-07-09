@@ -4,6 +4,7 @@ using Unity.Plastic.Antlr3.Runtime.Misc;
 
 namespace UIGenerator
 {
+    //后续可以改成走ScriptableObject的配置
     public class TypeBinder
     {
         private List<DataBindingArgs> _dataBindingArgsList;

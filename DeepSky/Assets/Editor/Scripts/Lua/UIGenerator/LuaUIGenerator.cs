@@ -32,12 +32,12 @@ namespace UIGenerator
             List<ComponentInfo> componentInfos = LoadComponentInfos(target,typeGenerator);
 
             LoxoLuaBehaviourGenerator loxoLuaBehaviourGenerator = new LoxoLuaBehaviourGenerator();
-            LoxoLuaBehaviour window = loxoLuaBehaviourGenerator.Generate(target,componentInfos);
-            EditorUtility.SetDirty(window);
+            loxoLuaBehaviourGenerator.Generate(target,componentInfos);
+            EditorUtility.SetDirty(target);
             AssetDatabase.SaveAssets();
 
             //lua scripts
-            string uiName = window.name.Replace("UI_", string.Empty);
+            string uiName = target.name.Replace("UI_", string.Empty);
             string scriptsDir = $"{UIScriptsDir}/{uiName}";
             if (!Directory.Exists(scriptsDir))
                 Directory.CreateDirectory(scriptsDir);

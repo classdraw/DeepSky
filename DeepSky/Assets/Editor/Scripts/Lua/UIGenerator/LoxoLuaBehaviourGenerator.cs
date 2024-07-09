@@ -12,7 +12,7 @@ namespace UIGenerator
     public class LoxoLuaBehaviourGenerator
     {
         //解析控件名，然后将控件填充到Variables中
-        public LoxoLuaBehaviour Generate(GameObject target,List<ComponentInfo> componentInfos)
+        public void Generate(GameObject target,List<ComponentInfo> componentInfos)
         {
             LoxoLuaBehaviour window = target.GetComponent<LoxoLuaBehaviour>();
             if (window == null)
@@ -51,8 +51,6 @@ namespace UIGenerator
 
                 variables.Add(variable);
             }
-            
-            return window;
         }
     }
 }

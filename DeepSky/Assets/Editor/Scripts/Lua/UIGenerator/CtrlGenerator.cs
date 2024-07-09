@@ -7,7 +7,7 @@ namespace UIGenerator
 {
     public class CtrlGenerator
     {
-        public string Generate(string uiName,List<LuaUIGenerator.ComponentInfo> componentInfos)
+        public string Generate(string uiName,List<ComponentInfo> componentInfos)
         {
             _uiName = uiName;
             _componentInfos = componentInfos;
@@ -16,7 +16,7 @@ namespace UIGenerator
 
         #region fields
         private string _uiName;
-        private List<LuaUIGenerator.ComponentInfo> _componentInfos;
+        private List<ComponentInfo> _componentInfos;
         #endregion
         
         private string GenerateLuaStr()
@@ -35,17 +35,26 @@ namespace UIGenerator
             foreach (var componentInfo in _componentInfos)
             {
                 string componentName = componentInfo.name;
-                if (componentInfo.type == typeof(Text))
+                TypeBinder typeBinder = componentInfo.typeBinder;
+                
+                //dataBinding
+                var dataBindingArgsList = typeBinder.GetDataBindingArgsList();
+                foreach (var bindingArgs in dataBindingArgsList)
                 {
-                    bindingStr += string.Format(OneWayBindTemp,componentName,"text",componentName);
+                    string moduleMemberName = componentName + bindingArgs.ModuleMemberSuffix;
+                    if (bindingArgs.IsOneWay)
+                        bindingStr += string.Format(OneWayBindTemp,componentName,bindingArgs.ComponentMember
+                            ,moduleMemberName);
+                    else
+                        bindingStr += string.Format(TwoWayBindTemp,componentName,bindingArgs.ComponentMember
+                            ,bindingArgs.ModuleMemberChangeEvent,moduleMemberName);
                 }
-                else if (componentInfo.type == typeof(Button))
+                
+                //EventBinding
+                var eventBindingBindingArgsList = typeBinder.GetEventBindingArgsList();
+                foreach (var bindingArgs in eventBindingBindingArgsList)
                 {
-                    bindingStr += string.Format(OneWayBindTemp,componentName,"onClick",$"ctrl.On{componentName}Click");
-                }
-                else
-                {
-                    throw new Exception($"Component绑定未定义类型 ： {componentInfo.type}");
+                    bindingStr += string.Format(OneWayBindTemp,componentName,bindingArgs.ComponentEvent,$"ctrl.On{componentName}{bindingArgs.CtrlEventSuffix}");
                 }
             }
 
@@ -61,9 +70,12 @@ namespace UIGenerator
             foreach (var componentInfo in _componentInfos)
             {
                 string componentName = componentInfo.name;
-                if (componentInfo.type == typeof(Button))
+                TypeBinder typeBinder = componentInfo.typeBinder;
+                
+                var eventBindingBindingArgsList = typeBinder.GetEventBindingArgsList();
+                foreach (var bindingArgs in eventBindingBindingArgsList)
                 {
-                    functionStr += string.Format(FunctionTemp, $"On{componentName}Click");
+                    functionStr += string.Format(FunctionTemp, $"On{componentName}{bindingArgs.CtrlEventSuffix}({bindingArgs.CtrlEventParams})");
                 }
             }
 
@@ -73,7 +85,7 @@ namespace UIGenerator
         private const string OneWayBindTemp = "\tbindingSet:Bind(self:GetView().{0}):For('{1}'):To('{2}'):OneWay()\n";
         private const string TwoWayBindTemp = "\tbindingSet:Bind(self:GetView().{0}):For('{1}', '{2}'):To('{3}'):TwoWay()\n";
 
-        private const string FunctionTemp = "\nfunction Ctrl:{0}()\nend\n";
+        private const string FunctionTemp = "\nfunction Ctrl:{0}\nend\n";
         
         //0:uiName 1:数据绑定 
         private const string Template = @"---@class UI_{0}Ctrl : UIBaseCtrl

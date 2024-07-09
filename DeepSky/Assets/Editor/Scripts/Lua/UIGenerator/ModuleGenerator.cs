@@ -6,7 +6,7 @@ namespace UIGenerator
 {
     public class ModuleGenerator
     {
-        public string Generate(string uiName,List<LuaUIGenerator.ComponentInfo> componentInfos)
+        public string Generate(string uiName,List<ComponentInfo> componentInfos)
         {
             _componentInfos = componentInfos;
             _uiName = uiName;
@@ -16,7 +16,7 @@ namespace UIGenerator
         #region fields
 
         private string _uiName;
-        private List<LuaUIGenerator.ComponentInfo> _componentInfos;
+        private List<ComponentInfo> _componentInfos;
 
         #endregion
         
@@ -34,10 +34,16 @@ namespace UIGenerator
             
             foreach (var componentInfo in _componentInfos)
             {
-                if (componentInfo.type == typeof(Text))
+                TypeBinder typeBinder = componentInfo.typeBinder;
+                
+                //Module只进行数据绑定
+                var dataBindingList = typeBinder.GetDataBindingArgsList();
+                foreach (var dataBindingArgs in dataBindingList)
                 {
-                    string defaultValueStr = GetDefaultValueString(typeof(string));
-                    ret += string.Format(ValueSetTemp, componentInfo.name, defaultValueStr);
+                    Type memberType = dataBindingArgs.ModuleMemberType;
+                    string defaultValueStr = GetDefaultValueString(memberType);
+                    string moduleMemberName = componentInfo.name + dataBindingArgs.ModuleMemberSuffix;
+                    ret += string.Format(ValueSetTemp, moduleMemberName, defaultValueStr);
                 }
             }
 
@@ -50,7 +56,7 @@ namespace UIGenerator
             if (valueType == typeof(int) || valueType == typeof(float))
                 valueString = "0";
             else if (valueType == typeof(bool))
-                valueString = "false";
+                valueString = "true";
             else if (valueType == typeof(string))
                 valueString = "\"\"";
             else

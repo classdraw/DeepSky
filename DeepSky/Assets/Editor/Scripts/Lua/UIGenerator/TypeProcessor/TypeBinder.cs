@@ -4,7 +4,7 @@ using Unity.Plastic.Antlr3.Runtime.Misc;
 
 namespace UIGenerator
 {
-    //后续可以改成走ScriptableObject的配置
+    //后续在编辑器面板上编辑这里的对象，可以开关对应的Args是否生成
     public class TypeBinder
     {
         private List<DataBindingArgs> _dataBindingArgsList;
@@ -12,27 +12,31 @@ namespace UIGenerator
         
         public List<DataBindingArgs> GetDataBindingArgsList()
         {
-            if (_dataBindingArgsList == null)
-                _dataBindingArgsList = GenerateDataBindingArgsList();
             return _dataBindingArgsList;
         }
         
         public List<EventBindingArgs> GetEventBindingArgsList()
         {
-            if (_eventBindingArgsList == null)
-                _eventBindingArgsList = GenerateEventBindingArgsList();
             return _eventBindingArgsList;
         }
 
-        
-        protected virtual List<DataBindingArgs> GenerateDataBindingArgsList()
+        public void SetDataBindingArgsList(List<DataBindingArgs> list)
         {
-            return new List<DataBindingArgs>();//empty list
+            _dataBindingArgsList = list;
         }
         
-        protected virtual List<EventBindingArgs> GenerateEventBindingArgsList()
+        public void SetEventBindingArgsList(List<EventBindingArgs> list)
         {
-            return new ListStack<EventBindingArgs>();//empty list
+            _eventBindingArgsList = list;
         }
+        // protected virtual List<DataBindingArgs> GenerateDataBindingArgsList()
+        // {
+        //     return new List<DataBindingArgs>();//empty list
+        // }
+        //
+        // protected virtual List<EventBindingArgs> GenerateEventBindingArgsList()
+        // {
+        //     return new ListStack<EventBindingArgs>();//empty list
+        // }
     }
 }

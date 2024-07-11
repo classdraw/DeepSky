@@ -12,14 +12,14 @@ namespace XEngine.UI
     public class XComponentUtil
     {
         private static Material m_GrayMat= null;
-        private static ResHandle m_GrayHandler=null;
+
 
         static private Material GetGrayMaterial()
         {
             if (m_GrayMat == null)
             {
-                m_GrayHandler = GameResourceManager.GetInstance().LoadResourceSync("Shader/UI/UIGray.shader");//.LoadShader("Shader/UI/UIGray.shader");
-                m_GrayMat = new Material(m_GrayHandler.GetObjT<Shader>());
+                var shader = ConfigManager.GetInstance().GetShader("Shader/UI/UIGray.shader");//.LoadShader("Shader/UI/UIGray.shader");
+                m_GrayMat = new Material(shader);
             }
             return m_GrayMat;
         }

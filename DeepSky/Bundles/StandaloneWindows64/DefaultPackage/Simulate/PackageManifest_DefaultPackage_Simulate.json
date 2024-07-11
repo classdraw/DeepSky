@@ -65,11 +65,25 @@
             "BundleID": 3
         },
         {
+            "Address": "UI_UI_Test",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/UI/UI_Test.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 3
+        },
+        {
             "Address": "UI_UIRoot",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/UI/UIRoot.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 3
+        },
+        {
+            "Address": "AudioClipConfig",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/ScriptObject/AudioClipConfig.asset",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 4
         },
         {
             "Address": "Links",
@@ -81,6 +95,13 @@
         {
             "Address": "PoolConfig",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/ScriptObject/PoolConfig.asset",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 4
+        },
+        {
+            "Address": "ShaderConfig",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/ScriptObject/ShaderConfig.asset",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 4
@@ -759,7 +780,7 @@
             "UnityCRC": 0,
             "FileHash": "cd37d6fa2cd2609b32ea9066e6946877",
             "FileCRC": "00000000",
-            "FileSize": 37635,
+            "FileSize": 49267,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -769,7 +790,7 @@
             "UnityCRC": 0,
             "FileHash": "ec596ae63e29b0fda7108eb32128c303",
             "FileCRC": "00000000",
-            "FileSize": 2030,
+            "FileSize": 2967,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -819,7 +840,7 @@
             "UnityCRC": 0,
             "FileHash": "4decf6032ef82110021e47f60b056c07",
             "FileCRC": "00000000",
-            "FileSize": 11499,
+            "FileSize": 11524,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -859,7 +880,7 @@
             "UnityCRC": 0,
             "FileHash": "ef83ebbc93a8fdba96f6c48fdf47b6c5",
             "FileCRC": "00000000",
-            "FileSize": 7686,
+            "FileSize": 7733,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -869,7 +890,7 @@
             "UnityCRC": 0,
             "FileHash": "ce8e0add91f0ca80991b0f28448ed572",
             "FileCRC": "00000000",
-            "FileSize": 5655,
+            "FileSize": 5829,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -889,7 +910,7 @@
             "UnityCRC": 0,
             "FileHash": "f3f1332fc2fde3300494e3d8d6e4ad25",
             "FileCRC": "00000000",
-            "FileSize": 33911,
+            "FileSize": 33956,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

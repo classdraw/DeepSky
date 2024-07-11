@@ -21,6 +21,7 @@
 		<type fullname="DPopup" preserve="all"/>
 		<type fullname="UIView" preserve="all"/>
 		<type fullname="UIRoot" preserve="all"/>
+		<type fullname="ConfigManager" preserve="all"/>
 		<type fullname="Tutorial.BaseClass" preserve="all"/>
 		<type fullname="Tutorial.TestEnum" preserve="all"/>
 		<type fullname="Tutorial.DerivedClass" preserve="all"/>

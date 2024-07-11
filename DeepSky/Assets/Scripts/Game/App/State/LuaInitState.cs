@@ -30,7 +30,10 @@ namespace Game.Fsm
 
             //对象池初始化
             PoolManager.GetInstance().InitConfig();
-            LuaScriptManager.GetInstance().InitGame();
+            ConfigManager.GetInstance().InitConfig(()=>{
+                LuaScriptManager.GetInstance().InitGame();
+            });
+            
             // var b=GameResourceManager.GetInstance().LoadResourceSync("main");
             // Debug.LogError("11111111111");
 

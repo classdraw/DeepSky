@@ -11,7 +11,6 @@ namespace UnityEngine.UI.Extensions
     {
         MaskableGraphic mGraphic;
         Material mat;
-        private XEngine.Pool.ResHandle m_kResHandle;
         private Material m_kMaterial;
         int XCropProperty, YCropProperty;
         public float XCrop = 0f;
@@ -33,10 +32,12 @@ namespace UnityEngine.UI.Extensions
             {
                 if (mGraphic.material == null || mGraphic.material.name == "Default UI Material")
                 {
-                    m_kResHandle=XEngine.Loader.GameResourceManager.GetInstance().LoadResourceSync("Shaders/UI/UIImageCrop.shader");
-                    m_kMaterial=new Material(m_kResHandle.GetObjT<Shader>());
-                    //Applying default material with UI Image Crop shader
-                    mGraphic.material =m_kMaterial;
+                    var shader = ConfigManager.GetInstance().GetShader("Shaders/UI/UIImageCrop.shader");
+                    if (shader!=null) {
+                        m_kMaterial = new Material(shader);
+                        //Applying default material with UI Image Crop shader
+                        mGraphic.material = m_kMaterial;
+                    }
                 }
                 mat = mGraphic.material;
             }
@@ -77,10 +78,6 @@ namespace UnityEngine.UI.Extensions
                 GameObject.Destroy(m_kMaterial);
 
             m_kMaterial=null;
-            if(m_kResHandle!=null){
-                m_kResHandle.Dispose();
-            }
-            m_kResHandle=null;
             
         }
     }

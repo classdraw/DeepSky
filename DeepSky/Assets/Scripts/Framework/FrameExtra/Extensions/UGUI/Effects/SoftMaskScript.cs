@@ -36,7 +36,6 @@ namespace UnityEngine.UI.Extensions
 
         Vector2 maskOffset = Vector2.zero;
         Vector2 maskScale = Vector2.one;
-        private XEngine.Pool.ResHandle m_kResHandle1;
         // Use this for initialization
         void Start()
         {
@@ -48,9 +47,11 @@ namespace UnityEngine.UI.Extensions
             var text = GetComponent<Text>();
             if (text != null)
             {
-                m_kResHandle1=XEngine.Loader.GameResourceManager.GetInstance().LoadResourceSync("Shaders/UI/UIAdditive.shader");
-                mat = new Material(m_kResHandle1.GetObjT<Shader>());
-                text.material = mat;
+                var shader = ConfigManager.GetInstance().GetShader("Shaders/UI/UIAdditive.shader");
+                if (shader!=null) {
+                    mat = new Material(shader);
+                    text.material = mat;
+                }
                 cachedCanvas = text.canvas;
                 cachedCanvasTransform = cachedCanvas.transform;
                 // For some reason, having the mask control on the parent and disabled stops the mouse interacting
@@ -65,9 +66,12 @@ namespace UnityEngine.UI.Extensions
             var graphic = GetComponent<Graphic>();
             if (graphic != null)
             {
-                m_kResHandle1=XEngine.Loader.GameResourceManager.GetInstance().LoadResourceSync("Shaders/UI/SoftMaskShader.shader");
-                mat = new Material(m_kResHandle1.GetObjT<Shader>());
-                graphic.material = mat;
+                var shader = ConfigManager.GetInstance().GetShader("Shaders/UI/SoftMaskShader.shader");
+                if (shader!=null) {
+                    mat = new Material(shader);
+                    graphic.material = mat;
+                }
+                
                 cachedCanvas = graphic.canvas;
                 cachedCanvasTransform = cachedCanvas.transform;
             }
@@ -78,10 +82,6 @@ namespace UnityEngine.UI.Extensions
                 GameObject.Destroy(mat);
             }
             mat=null;
-            if(m_kResHandle1!=null){
-                m_kResHandle1.Dispose();
-            }
-            m_kResHandle1=null;
         }
 
         void Update()

@@ -10,7 +10,6 @@ namespace UnityEngine.UI.Extensions
     public class UIMultiplyEffect : MonoBehaviour
     {
         MaskableGraphic mGraphic;
-        private XEngine.Pool.ResHandle m_kResHandle;
         private Material m_kMaterial;
 
         // Use this for initialization
@@ -26,10 +25,13 @@ namespace UnityEngine.UI.Extensions
             {
                 if (mGraphic.material == null || mGraphic.material.name == "Default UI Material")
                 {
-                    //Applying default material with UI Image Crop shader
-                    m_kResHandle=XEngine.Loader.GameResourceManager.GetInstance().LoadResourceSync("Shaders/UI/UIMultiply.shader");
-                    m_kMaterial=new Material(m_kResHandle.GetObjT<Shader>());
-                    mGraphic.material = m_kMaterial;
+                    var shader = ConfigManager.GetInstance().GetShader("Shaders/UI/UIMultiply.shader");
+                    if (shader!=null) {
+                        //Applying default material with UI Image Crop shader
+                        m_kMaterial = new Material(shader);
+                        mGraphic.material = m_kMaterial;
+                    }
+                    
                 }
             }
             else
@@ -47,10 +49,6 @@ namespace UnityEngine.UI.Extensions
                 GameObject.Destroy(m_kMaterial);
 
             m_kMaterial=null;
-            if(m_kResHandle!=null){
-                m_kResHandle.Dispose();
-            }
-            m_kResHandle=null;
             
         }
     }

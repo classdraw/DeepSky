@@ -93,8 +93,9 @@ namespace XLua.CSObjectWrap
             
                 
                 {
+                    object[] _objs = translator.GetParams<object>(L, 2);
                     
-                    gen_to_be_invoked.Enter(  );
+                    gen_to_be_invoked.Enter( _objs );
                     
                     
                     

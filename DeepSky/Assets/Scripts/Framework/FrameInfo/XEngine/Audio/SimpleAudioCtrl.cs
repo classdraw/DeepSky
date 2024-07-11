@@ -109,14 +109,14 @@ namespace XEngine.Audio{
                 return;
             }
             SelfAudioSource.clip=null;
-            if(m_ResHandle!=null){
-                m_ResHandle.Dispose();
+            if(m_ClipHandle!=null){
+                m_ClipHandle.Dispose();
             }
-            m_ResHandle=null;
+            m_ClipHandle=null;
             
 
-            m_ResHandle=GameResourceManager.GetInstance().LoadResourceSync(path);
-            SelfAudioSource.clip=m_ResHandle.GetObjT<AudioClip>();
+            m_ClipHandle=GameResourceManager.GetInstance().LoadResourceSync(path);
+            SelfAudioSource.clip=m_ClipHandle.GetObjT<AudioClip>();
             SelfAudioSource.loop=m_Loop;//背景一直循环
         }
     }

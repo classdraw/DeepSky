@@ -18,7 +18,7 @@ namespace XEngine.UI
         {
             if (m_GrayMat == null)
             {
-                var shader = ConfigManager.GetInstance().GetShader("Shader/UI/UIGray.shader");//.LoadShader("Shader/UI/UIGray.shader");
+                var shader = XEngine.Config.ConfigManager.GetInstance().GetShader("Shader/UI/UIGray.shader");//.LoadShader("Shader/UI/UIGray.shader");
                 m_GrayMat = new Material(shader);
             }
             return m_GrayMat;

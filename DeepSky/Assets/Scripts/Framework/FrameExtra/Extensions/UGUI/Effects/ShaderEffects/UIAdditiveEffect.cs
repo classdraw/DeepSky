@@ -26,7 +26,7 @@ namespace UnityEngine.UI.Extensions
                 if (mGraphic.material == null || mGraphic.material.name == "Default UI Material")
                 {
                     //Applying default material with UI Image Crop shader
-                    var shader=ConfigManager.GetInstance().GetShader("Shaders/UI/UIAdditive.shader");
+                    var shader=XEngine.Config.ConfigManager.GetInstance().GetShader("Shaders/UI/UIAdditive.shader");
                     if (shader!=null) {
                         m_kMaterial = new Material(shader);
                         mGraphic.material = m_kMaterial;

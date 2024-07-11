@@ -8,10 +8,10 @@ using XEngine.Audio;
 using XEngine.Loader;
 using XEngine.Pool;
 
+namespace XEngine.Config{
 /// <summary>
 /// 配置文件加载管理器
 /// </summary>
-[XLua.LuaCallCSharp]
 public class ConfigManager : Singleton<ConfigManager>
 {
     private ShaderConfig m_ShaderConfig;
@@ -58,5 +58,8 @@ public class ConfigManager : Singleton<ConfigManager>
         XLogger.LogError("GetAudioClip " + audioName + " Error!!!");
         return null;
     }
+
+}
+
 
 }

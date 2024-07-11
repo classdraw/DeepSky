@@ -47,7 +47,7 @@ namespace UnityEngine.UI.Extensions
             var text = GetComponent<Text>();
             if (text != null)
             {
-                var shader = ConfigManager.GetInstance().GetShader("Shaders/UI/UIAdditive.shader");
+                var shader = XEngine.Config.ConfigManager.GetInstance().GetShader("Shaders/UI/UIAdditive.shader");
                 if (shader!=null) {
                     mat = new Material(shader);
                     text.material = mat;
@@ -66,7 +66,7 @@ namespace UnityEngine.UI.Extensions
             var graphic = GetComponent<Graphic>();
             if (graphic != null)
             {
-                var shader = ConfigManager.GetInstance().GetShader("Shaders/UI/SoftMaskShader.shader");
+                var shader = XEngine.Config.ConfigManager.GetInstance().GetShader("Shaders/UI/SoftMaskShader.shader");
                 if (shader!=null) {
                     mat = new Material(shader);
                     graphic.material = mat;

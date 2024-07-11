@@ -30,7 +30,7 @@ namespace Game.Fsm
 
             //对象池初始化
             PoolManager.GetInstance().InitConfig();
-            ConfigManager.GetInstance().InitConfig(()=>{
+            XEngine.Config.ConfigManager.GetInstance().InitConfig(()=>{
                 LuaScriptManager.GetInstance().InitGame();
             });
             

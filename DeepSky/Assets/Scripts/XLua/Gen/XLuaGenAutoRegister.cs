@@ -73,9 +73,6 @@ namespace XLua.CSObjectWrap
             translator.DelayWrapLoader(typeof(UIRoot), UIRootWrap.__Register);
         
         
-            translator.DelayWrapLoader(typeof(ConfigManager), ConfigManagerWrap.__Register);
-        
-        
             translator.DelayWrapLoader(typeof(Tutorial.BaseClass), TutorialBaseClassWrap.__Register);
         
         
@@ -174,13 +171,13 @@ namespace XLua.CSObjectWrap
         
             translator.DelayWrapLoader(typeof(UnityEngine.Screen), UnityEngineScreenWrap.__Register);
         
+        
+            translator.DelayWrapLoader(typeof(UnityEngine.SleepTimeout), UnityEngineSleepTimeoutWrap.__Register);
+        
         }
         
         static void wrapInit1(LuaEnv luaenv, ObjectTranslator translator)
         {
-        
-            translator.DelayWrapLoader(typeof(UnityEngine.SleepTimeout), UnityEngineSleepTimeoutWrap.__Register);
-        
         
             translator.DelayWrapLoader(typeof(UnityEngine.Resources), UnityEngineResourcesWrap.__Register);
         
@@ -331,13 +328,13 @@ namespace XLua.CSObjectWrap
         
             translator.DelayWrapLoader(typeof(Loxodon.Framework.Contexts.PlayerContext), LoxodonFrameworkContextsPlayerContextWrap.__Register);
         
+        
+            translator.DelayWrapLoader(typeof(Loxodon.Framework.Prefs.Preferences), LoxodonFrameworkPrefsPreferencesWrap.__Register);
+        
         }
         
         static void wrapInit2(LuaEnv luaenv, ObjectTranslator translator)
         {
-        
-            translator.DelayWrapLoader(typeof(Loxodon.Framework.Prefs.Preferences), LoxodonFrameworkPrefsPreferencesWrap.__Register);
-        
         
             translator.DelayWrapLoader(typeof(Loxodon.Framework.Localizations.ILocalization), LoxodonFrameworkLocalizationsILocalizationWrap.__Register);
         

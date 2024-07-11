@@ -48,7 +48,7 @@ namespace UnityEngine.UI.Extensions
             {
                 if (blendMethod == BlendMethod.ColorDodge)
                 {
-                    var shader = ConfigManager.GetInstance().GetShader("Shaders/UI/UIColorDodge.shader");
+                    var shader = XEngine.Config.ConfigManager.GetInstance().GetShader("Shaders/UI/UIColorDodge.shader");
                     if (shader!=null) {
                         if (colorDodgeMat == null)
                         {
@@ -66,7 +66,7 @@ namespace UnityEngine.UI.Extensions
                         DstBlendProperty = Shader.PropertyToID("_DstBlend");
                         SrcAlphaBlendProperty = Shader.PropertyToID("_SrcAlphaBlend");
                         DstAlphaBlendProperty = Shader.PropertyToID("_DstAlphaBlend");
-                        var shader = ConfigManager.GetInstance().GetShader("Shaders/UI/UIBlend.shader");
+                        var shader = XEngine.Config.ConfigManager.GetInstance().GetShader("Shaders/UI/UIBlend.shader");
                         if (shader!=null) {
                             blendMat = new Material(shader);
                         }

@@ -1,5 +1,5 @@
 --------这个代码最好脚本自己生成
-local UI_LoginView = BaseClass("UI_LoginView", require("coreui.UIBaseView"))
+local UI_LoginView = BaseClass("UI_LoginView", UIBaseView)
 
 function UI_LoginView:ctor()
 

@@ -8,6 +8,7 @@ List=require("utils.lc_list")
 lc_event=require("utils.lc_event");
 
 Lua_Messager=require("core.Lua_Messager");
+SceneManager=require("logic.SceneManager");
 SelectManager=require("logic.SelectManager");
 UpdateManager=require("logic.UpdateManager");
 TimeManager=require("logic.TimeManager");
@@ -20,6 +21,9 @@ SystemManager=require("logic.SystemManager");
 ObservableObject = require("loxoframework.ObservableObject");
 ObservableDictionary = require("loxoframework.ObservableDictionary")
 
+UIBaseCtrl=require("coreui.UIBaseCtrl")
+UIBaseView=require("coreui.UIBaseView")
+BaseSceneCtrl=require("scenes.BaseSceneCtrl")
 -- AssetManager=require("logic.AssetManager");
 
 

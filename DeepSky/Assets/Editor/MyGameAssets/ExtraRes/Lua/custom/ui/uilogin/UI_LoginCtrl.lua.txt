@@ -1,4 +1,4 @@
-local UI_LoginCtrl = BaseClass("UI_LoginCtrl", require("coreui.UIBaseCtrl"))
+local UI_LoginCtrl = BaseClass("UI_LoginCtrl", UIBaseCtrl)
 
 --ui初始化 需要绑定数据管道一些配置 等等 父类读取
 -- UI_LoginCtrl.ExtraConfig={

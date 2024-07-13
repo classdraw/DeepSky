@@ -32,9 +32,6 @@ namespace Game.Fsm
             // },(a)=>{
             //     XLogger.LogError("进度"+a);
             // });
-            
-            GameSceneManager.GetInstance().LoadSceneAsync("LoginScene",OnSceneComplete,null);
-
         }
 
         private void OnSceneComplete(){

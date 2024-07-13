@@ -1,0 +1,24 @@
+local GameSceneCtrl = BaseClass("GameSceneCtrl", BaseSceneCtrl)
+
+function GameSceneCtrl:ctor()
+    
+end
+
+function GameSceneCtrl:dtor()
+
+end
+
+function GameSceneCtrl:Init(param)
+
+end
+
+function GameSceneCtrl:OnLoadComplete()
+--todo 后续走场景管理器 场景配置有这个场景的主要UI
+
+end
+
+function GameSceneCtrl:GetName()
+    return "GameScene";
+end
+
+return GameSceneCtrl;

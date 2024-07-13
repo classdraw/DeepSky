@@ -39,8 +39,14 @@ function App:GetAppStateManager()
     return self.appStateManager;
 end
 
+function App:GetGameSceneManager()
+    if self.gameSceneManager==nil then
+        self.gameSceneManager=CS.Game.Scenes.GameSceneManager.GetInstance();
+    end
+    return self.gameSceneManager;
+end
+
 function App:Run()
-    UIManager:GetInstance():Open(UIConfigData.UI_Login);
     XLuaFacade.EnterLogin();
 end
 

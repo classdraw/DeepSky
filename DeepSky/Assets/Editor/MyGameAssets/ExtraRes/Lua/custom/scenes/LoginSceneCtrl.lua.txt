@@ -1,0 +1,23 @@
+local LoginSceneCtrl = BaseClass("LoginSceneCtrl", BaseSceneCtrl)
+
+function LoginSceneCtrl:ctor()
+    
+end
+
+function LoginSceneCtrl:dtor()
+
+end
+
+function LoginSceneCtrl:Init(param)
+
+end
+
+function LoginSceneCtrl:OnLoadComplete()
+    UIManager:GetInstance():Open(UIConfigData.UI_Login);
+end
+
+function LoginSceneCtrl:GetName()
+    return "LoginScene";
+end
+
+return LoginSceneCtrl;

@@ -1,0 +1,27 @@
+---@class BaseSceneCtrl : BaseClass
+local Ctrl = BaseClass("BaseSceneCtrl")
+function Ctrl:ctor()
+    
+end
+
+function Ctrl:dtor()
+
+end
+
+function Ctrl:Init(param)
+
+end
+
+function Ctrl:OnLoadComplete()
+
+end
+
+function Ctrl:Release()
+
+end
+
+function Ctrl:GetName()
+    return nil;
+end
+
+return Ctrl;

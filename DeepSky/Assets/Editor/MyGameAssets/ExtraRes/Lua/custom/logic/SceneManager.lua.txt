@@ -1,0 +1,50 @@
+local SceneManager = BaseClass("SceneManager",Singleton)
+
+function SceneManager:ctor()
+    self.m_LastSceneName=nil;
+    self.m_Loading=false;
+    self.m_CurrentScene=nil;
+    GlobalEventListener.AddListenter(GlobalEventDefine.SceneLoadedComplete,handler(self,self.OnSceneLoadedComplete));
+end
+
+function SceneManager:dtor()
+    self.m_LastSceneName=nil;
+    self.m_Loading=false;
+    if self.m_CurrentScene~=nil then
+        self.m_CurrentScene:Release();
+    end
+    self.m_CurrentScene=nil;
+    GlobalEventListener.RemoveListener(GlobalEventDefine.SceneLoadedComplete,handler(self,self.OnSceneLoadedComplete));
+end
+
+function SceneManager:GoToScene(sceneName,callback,param)
+    if self.m_Loading==true then
+        return;
+    end
+    if self.m_CurrentScene~=nil and self.m_CurrentScene:GetName()==sceneName then
+        return;
+    end
+    self.m_LastSceneName=nil;
+    self.m_Loading=true;
+    if self.m_CurrentScene~=nil then
+        self.m_LastSceneName=self.m_CurrentScene:GetName();
+        self.m_CurrentScene:Release();
+    end
+    self.m_CurrentScene=nil;
+
+    -- UIManager:GetInstance():Open(UIConfigData.UI_Loading);
+    self.m_CurrentScene=require("scenes."..sceneName.."Ctrl").New();
+    self.m_CurrentScene:Init(param);
+    
+    App:GetGameSceneManager():LoadSceneAsync(self.m_CurrentScene:GetName(),callback);--这个callback也是回调
+end
+
+function SceneManager:OnSceneLoadedComplete(val)
+    -- UIManager:GetInstance():Close(UIConfigData.UI_Loading);
+    self.m_CurrentScene:OnLoadComplete();
+
+        
+    self.m_Loading=false;
+end
+
+return SceneManager;

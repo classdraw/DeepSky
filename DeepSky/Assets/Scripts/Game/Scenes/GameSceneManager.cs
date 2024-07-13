@@ -10,6 +10,7 @@ using XEngine.Loader;
 using System;
 using XEngine.Utilities;
 using System.Drawing.Printing;
+using XEngine.Event;
 
 namespace Game.Scenes
 {
@@ -93,6 +94,8 @@ namespace Game.Scenes
                 m_kNextSceneComplete();
             }
             m_kNextSceneComplete=null;
+
+            GlobalEventListener.DispatchEvent(GlobalEventDefine.SceneLoadedComplete);
         }
         // private void OnNextComplete(SceneHandle sceneHandle){
         //     this.m_kCurrentSceneHandle.Completed-=OnNextComplete;

@@ -7,4 +7,6 @@ XLuaFacade = {
 function XLuaFacade.EnterLogin()
     -- LS_NetworkManager:GetInstance():Init();
     App:GetAppStateManager():ChangeState(CS.Game.Fsm.LoginState.Index);
+    SceneManager:GetInstance():GoToScene("LoginScene");
+
 end

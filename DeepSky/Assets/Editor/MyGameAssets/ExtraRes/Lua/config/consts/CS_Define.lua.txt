@@ -13,6 +13,8 @@ XFacade=CS.XFacade
 
 
 --自定义
+GlobalEventListener=CS.XEngine.Event.GlobalEventListener
+GlobalEventDefine=CS.XEngine.Event.GlobalEventDefine
 SystemUtils=CS.Utilities.SystemUtils
 GameUtils=CS.Utilities.GameUtils
 GameResourceManager=CS.XEngine.Loader.GameResourceManager

@@ -9,7 +9,7 @@ namespace XEngine.Event{
         public const int LuaPreLoadProgress = 1;//Lua预加载进度
         public const int YooAssetsUpdateProgress=2;//热更新进度
         public const int LanguageChange=3;//语言切换
-
+        public const int SceneLoadedComplete=4;//场景加载结束
 
 
         public const int OnPointerClick=10;//ui点击
@@ -19,6 +19,7 @@ namespace XEngine.Event{
         public const int MuteChange=20;//禁音发生变化
 
         public const int TestPlayerChange=21;//
+        
     }
 
 }

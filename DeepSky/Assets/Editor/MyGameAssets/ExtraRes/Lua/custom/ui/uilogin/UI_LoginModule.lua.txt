@@ -22,14 +22,19 @@ local UI_LoginModule = class("UI_LoginModule",ObservableObject)
 function UI_LoginModule:ctor(t)
 	--执行父类ObservableObject的构造函数，这个重要，否则无法监听数据改变
 	UI_LoginModule.base(self).ctor(self,t)
-	
+
 	if not (t and type(t)=="table") then
-		self.account = Account()
-		self.remember = false
 		self.username = ""
-		self.email = ""
-        self.errors = ObservableDictionary()
+		self.Password = ""
 	end
+	
+	-- if not (t and type(t)=="table") then
+	-- 	self.account = Account()
+	-- 	self.remember = false
+	-- 	self.username = ""
+	-- 	self.email = ""
+    --     self.errors = ObservableDictionary()
+	-- end
 end
 
 function UI_LoginModule:submit()

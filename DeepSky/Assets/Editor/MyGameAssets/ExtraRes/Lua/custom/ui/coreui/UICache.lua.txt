@@ -5,7 +5,6 @@ local CacheTime=60;
 ---可以丢入到updatemanager更新处理逻辑
 function UICache:ctor(rootTran)
     self.m_kUICtrls={};--key value 准备小销毁的ctrl 此时和view强绑定关系
-    self.m_kCtrlPools={};--所有ctrl的数据池  只是ctrl的table
 
     self.m_kRootTran=rootTran;
     self.m_kUpdateMethod=handler(self,self.Update);
@@ -34,6 +33,7 @@ function UICache:AddUI(uiCtrl)
     local view=uiCtrl:GetView();
     if view~=nil then
         view.transform:SetParent(self.m_kRootTran);
+        view.transform.localScale=Vector3(0,0,0);
     end
     --逻辑层塞入
     table.insert(self.m_kUICtrls,uiCtrl);
@@ -59,7 +59,11 @@ function UICache:Update()
     local cCount=#self.m_kUICtrls;
     for idx=cCount,1,-1 do
         local ctrl=self.m_kUICtrls[idx];
-        if time-ctrl.m_fCacheTime>=CacheTime then
+        local cacheTime=ctrl:GetUIData().cacheTime;
+        if cacheTime==nil then
+            cacheTime=CacheTime;
+        end
+        if cacheTime~=-1 and time-ctrl.m_fCacheTime>=cacheTime then
             ctrl:Release();
             table.remove(self.m_kUICtrls,idx);
         end
@@ -67,15 +71,24 @@ function UICache:Update()
 end
 
 ---@return UIBaseCtrl
-function UICache:GetCtrl(uiCtrlPath)
-    local poolList=self.m_kCtrlPools[uiCtrlPath];
-    if poolList==nil or #poolList==0 then
+function UICache:GetCtrl(uiData)
+    local findCtrl=nil;
+    local cCount=#self.m_kUICtrls;
+    for idx=cCount,1,-1 do
+        local cc=self.m_kUICtrls[idx];
+        if cc:GetUIName()==uiData.uiName then
+            findCtrl=cc;
+            table.remove(self.m_kUICtrls,idx);
+            break;
+        end
+    end
+
+    if findCtrl==nil then
+        local uiCtrlPath=uiData.path.."Ctrl";
         local ctrl=require(uiCtrlPath).New();
         return ctrl;
     else
-        local ctrl=poolList[1];
-        table.remove(poolList,1);
-        return ctrl;
+        return findCtrl;
     end
 end
 

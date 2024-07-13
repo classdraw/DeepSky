@@ -12,25 +12,43 @@ end
 --构建接口 需要创建view 创建模型以及绑定
 function Ctrl:Build(uiData)--这里uiData就是UIConfigData数据
     self.uiData=uiData;
-    --创建模型
-    self.m_ResHandle=GameResourceManager.GetInstance():LoadResourceSync("UI_"..self.uiData.uiName);
-    if self.m_ResHandle==nil or self.m_ResHandle:GetObj()==nil then
-        XLogger.LogError(self.uiData.uiName.."Ctrl:Build Error!!!");
-        return;
-    end
-    -- self.m_ResHandle:GetGameObject().name="11111111";
-    self.m_Obj=self.m_ResHandle:GetGameObject();
+    self.m_Init=false;
+    if self.m_ResHandle~=nil then
 
-    if self.m_View==nil then
-        self.m_View=require(self.uiData.path.."View").New();
-    end
-    --模型组件和lua组件数据绑定
-    self.m_Com=self.m_Obj:GetComponent("LoxoLuaBehaviour");
-    self.m_Com:Bind(self,self.m_View);--view层里面塞入ui对象 ctrl层塞入逻辑
-    self.m_View:Init();
-    --创建model数据层
-    self:InitModel();
+    else
+        --创建模型
+        self.m_ResHandle=GameResourceManager.GetInstance():LoadResourceSync("UI_"..self.uiData.uiName);
+        if self.m_ResHandle==nil or self.m_ResHandle:GetObj()==nil then
+            XLogger.LogError(self.uiData.uiName.."Ctrl:Build Error!!!");
+            return;
+        end
+        -- self.m_ResHandle:GetGameObject().name="11111111";
+        self.m_Obj=self.m_ResHandle:GetGameObject();
 
+        if self.m_View==nil then
+            self.m_View=require(self.uiData.path.."View").New();
+        end
+        --模型组件和lua组件数据绑定
+        self.m_Com=self.m_Obj:GetComponent("LoxoLuaBehaviour");
+        self.m_Com:Bind(self,self.m_View);--view层里面塞入ui对象 ctrl层塞入逻辑
+        self.m_View:Init();
+
+        --创建model数据层
+        self:InitModel();
+    end
+
+    
+
+    self.m_Init=true;
+
+end
+
+function Ctrl:IsInit()
+    return self.m_Init~=nil and self.m_Init==true;
+end
+
+function Ctrl:GetViewUIGroup()
+    return self.m_View.group;
 end
 
 function Ctrl:GetView()
@@ -52,7 +70,6 @@ end
 function Ctrl:OpenWindow(param)
     --数据管道dal绑定丢这里  
     self:OnOpenWindow(param);
-    self:_bindDAL();
 end
 
 function Ctrl:UpdateWindow(param)
@@ -61,7 +78,6 @@ function Ctrl:UpdateWindow(param)
 end
 
 function Ctrl:CloseWindow()
-    self:_unbindDAL();
     --数据管道dal绑定丢这里  
     self:OnCloseWindow();
 end
@@ -85,28 +101,11 @@ function Ctrl:Release()
     self.uiData=nil;
 end
 
-function Ctrl:_bindDAL()
-    if self.ExtraConfig~=nil then
-
-    end
-    --绑定好 数据需要提前刷一次
-    self:OnDALPush(nil);
-end
-
-function Ctrl:_unbindDAL()
-    if self.ExtraConfig~=nil then
-
-    end
-end
-
-
-
 ---下面的方法才可以继承
 function Ctrl:OnOpenWindow(param)end
 function Ctrl:OnUpdateWindow(param)end
 function Ctrl:OnCloseWindow()end
 function Ctrl:OnRelease()end
-function Ctrl:OnDALPush(data)end
 function Ctrl:InitModel()end
 
 function Ctrl:awake()end

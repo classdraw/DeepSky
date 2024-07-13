@@ -33,6 +33,7 @@ function UIManager:Release()
     self.m_kUIRootHandle=nil;
     self.m_kUICanvasObj=nil;
     self.m_kRoot=nil;
+    SystemUtils.SetUIConfig(nil);
     if self.m_kUICache~=nil then
         self.m_kUICache:Delete();
     end
@@ -51,11 +52,15 @@ function UIManager:Open(uiData,param,layer)--layer==UIHierarchy
     ---@type UIBaseCtrl
     local ctrl=self.m_OpenUIs[uiData.uiName];
     if ctrl~=nil then
-        ctrl:UpdateWindow(param);
+        if ctrl:IsInit()==true then--目前都同步 防止异步处理 连续打开
+            ctrl:UpdateWindow(param);
+        else
+            XLogger.LogError("不可以连续重复打开界面"..uiData.uiName);
+        end
         return;
     end
 
-    ctrl=self.m_kUICache:GetCtrl(uiData.path.."Ctrl");
+    ctrl=self.m_kUICache:GetCtrl(uiData);
     if ctrl~=nil then
         ctrl:Build(uiData);
     end
@@ -67,9 +72,9 @@ function UIManager:Open(uiData,param,layer)--layer==UIHierarchy
     local viewUIObj=ctrl:GetObj();
     if viewUIObj~=nil then
         dlayer:AddChild(viewUIObj);
+        viewUIObj.transform.localScale=Vector3(1,1,1);
     end
     
-
     ctrl:OpenWindow(param);
     self.m_OpenUIs[uiData.uiName]=ctrl;
 end

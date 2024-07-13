@@ -38,33 +38,33 @@ function UI_LoginCtrl:InitModel()
 
 
 
-    --初始化Account子视图模型
-	local account = moduleList[1]({
-        id = 1,
-        username = "test",
-        password = "test",
-        email = "jyy.qq@gmail.com",
-    });
+    -- --初始化Account子视图模型
+	-- local account = moduleList[1]({
+    --     id = 1,
+    --     username = "test",
+    --     password = "test",
+    --     email = "jyy.qq@gmail.com",
+    -- });
 
-    self.m_Module=moduleList[2]({
-        account = account,
-        username = "",
-        email = "",
-        remember = true,
-        errors = ObservableDictionary()
-    });
-    -- XLogger.LogError(self:GetCom());
-    self:GetCom():BindingContext().DataContext = self.m_Module
+    -- self.m_Module=moduleList[2]({
+    --     account = account,
+    --     username = "",
+    --     email = "",
+    --     remember = true,
+    --     errors = ObservableDictionary()
+    -- });
+    -- -- XLogger.LogError(self:GetCom());
+    -- self:GetCom():BindingContext().DataContext = self.m_Module
 
-    --进行数据绑定
-	local bindingSet = self:GetCom():CreateBindingSet();
-    bindingSet:Bind(self:GetView().txt_name):For("text"):To("account.username"):OneWay()
-    bindingSet:Bind(self:GetView().txt_pwd):For("text"):To("account.password"):OneWay()
+    -- --进行数据绑定
+	-- local bindingSet = self:GetCom():CreateBindingSet();
+    -- bindingSet:Bind(self:GetView().txt_name):For("text"):To("account.username"):OneWay()
+    -- bindingSet:Bind(self:GetView().txt_pwd):For("text"):To("account.password"):OneWay()
 
-    bindingSet:Build()
+    -- bindingSet:Build()
 
-    self.m_Module.account.username="888888888888888888";
-    self.m_Module.account.password="777777777777777";
+    -- self.m_Module.account.username="888888888888888888";
+    -- self.m_Module.account.password="777777777777777";
 
 
 
@@ -78,12 +78,12 @@ end
 function UI_LoginCtrl:OnRelease()
 
     --self.m_Module  release???
-    self.m_Module=nil;
-    self:GetCom():BindingContext().DataContext =nil;
-    local cc=self:GetCom():GetComponent("BindingContextLifecycle");
-    if cc~=nil then
-        GameObject.Destroy(cc);
-    end 
+    -- self.m_Module=nil;
+    -- self:GetCom():BindingContext().DataContext =nil;
+    -- local cc=self:GetCom():GetComponent("BindingContextLifecycle");
+    -- if cc~=nil then
+    --     GameObject.Destroy(cc);
+    -- end 
 
 end
 

@@ -10,3 +10,7 @@ function XLuaFacade.EnterLogin()
     SceneManager:GetInstance():GoToScene("LoginScene");
 
 end
+
+function XLuaFacade.EnterGame()
+    SceneManager:GetInstance():GoToScene("GameScene");
+end

@@ -72,12 +72,15 @@ namespace Game.Scenes
             if(m_kProgressCall!=null){
                 m_kProgressCall(0.3f*progress);
             }
+
+            GlobalEventListener.DispatchEvent(GlobalEventDefine.SceneLoadProgress,0.3f*progress);
         }
 
         private void OnNextProgress(float progress){
             if(m_kProgressCall!=null){
                 m_kProgressCall(0.3f+progress*(1-0.3f));
             }
+            GlobalEventListener.DispatchEvent(GlobalEventDefine.SceneLoadProgress,0.3f+progress*(1-0.3f));
         }
 
         private void OnEmptyComplete(){
@@ -94,7 +97,7 @@ namespace Game.Scenes
                 m_kNextSceneComplete();
             }
             m_kNextSceneComplete=null;
-
+            GlobalEventListener.DispatchEvent(GlobalEventDefine.SceneLoadProgress,1f);
             GlobalEventListener.DispatchEvent(GlobalEventDefine.SceneLoadedComplete);
         }
         // private void OnNextComplete(SceneHandle sceneHandle){

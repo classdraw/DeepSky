@@ -23,6 +23,8 @@ function View:Release()
     self.namelist=nil;
     self.target=nil;
     self.group=nil;
+    self.transform=nil;
+    self.gameObject=nil;
 end
 
 return View;

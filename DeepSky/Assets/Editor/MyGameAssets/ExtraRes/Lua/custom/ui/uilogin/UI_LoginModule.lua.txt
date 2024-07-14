@@ -25,7 +25,7 @@ function UI_LoginModule:ctor(t)
 
 	if not (t and type(t)=="table") then
 		self.username = ""
-		self.Password = ""
+		self.password = ""
 	end
 	
 	-- if not (t and type(t)=="table") then

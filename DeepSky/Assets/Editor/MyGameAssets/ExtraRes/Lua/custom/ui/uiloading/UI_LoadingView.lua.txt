@@ -1,0 +1,16 @@
+--------这个代码最好脚本自己生成
+local UI_LoadingView = BaseClass("UI_LoadingView", UIBaseView)
+
+function UI_LoadingView:ctor()
+
+end
+
+function UI_LoadingView:dtor()
+
+end
+
+function UI_LoadingView:Init()
+
+end
+
+return UI_LoadingView;

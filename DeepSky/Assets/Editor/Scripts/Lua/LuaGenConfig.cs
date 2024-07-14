@@ -15,12 +15,12 @@ public static class LuaGenConfig
     [CSharpCallLua]
     public static List<Type> CSharpCallLuaList = new List<Type>()
     {
-        // typeof(Action<XClickParam>),
-        // typeof(Func<XToggleParam, bool>),
-		// typeof(Action<XDragParam>),
+        typeof(Action<XClickParam>),
+        typeof(Func<XToggleParam, bool>),
+		typeof(Action<XDragParam>),
         typeof(Action<float,float>),
         typeof(Action<float>),
-		// typeof(Action<IXToggle>),
+		typeof(Action<IXToggle>),
         typeof(Func<int,object>),
         typeof(Action),
         typeof(Action<int>),

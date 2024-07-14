@@ -12,10 +12,15 @@ function GameSceneCtrl:Init(param)
 
 end
 
-function GameSceneCtrl:OnLoadComplete()
+function GameSceneCtrl:OnEnter()
 --todo 后续走场景管理器 场景配置有这个场景的主要UI
 
 end
+
+function GameSceneCtrl:OnExit()
+
+end
+
 
 function GameSceneCtrl:GetName()
     return "GameScene";

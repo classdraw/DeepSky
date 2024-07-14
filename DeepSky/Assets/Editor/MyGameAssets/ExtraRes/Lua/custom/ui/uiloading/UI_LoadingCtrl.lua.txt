@@ -1,0 +1,30 @@
+local UI_LoadingCtrl = BaseClass("UI_LoadingCtrl", UIBaseCtrl)
+
+function UI_LoadingCtrl:ctor()
+    self.m_LoadHandle=handler(self,self.OnSceneLoadProgress);
+end
+
+function UI_LoadingCtrl:dtor()
+    self.m_LoadHandle=nil;
+end
+
+function UI_LoadingCtrl:OnOpenWindow(param)
+    
+    GlobalEventListener.AddListenter(GlobalEventDefine.SceneLoadProgress,self.m_LoadHandle);
+end
+
+function UI_LoadingCtrl:OnCloseWindow()
+    GlobalEventListener.RemoveListener(GlobalEventDefine.SceneLoadProgress,self.m_LoadHandle);
+end
+
+function UI_LoadingCtrl:OnSceneLoadProgress(val)
+    self:GetView().txt_Progress.text=string.format("%.2f", val).."%";
+end
+--module清除  绑定清除
+function UI_LoadingCtrl:OnRelease()
+
+end
+
+
+
+return UI_LoadingCtrl;

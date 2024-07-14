@@ -1,3 +1,4 @@
 UIConfigData={
-    UI_Login={uiName="UI_Login",path="uilogin_UI_Login"}
+    UI_Loading={uiName="UI_Loading",path="uiloading_UI_Loading",cacheTime=-1},
+    UI_Login={uiName="UI_Login",path="uilogin_UI_Login",cacheTime=10}
 }

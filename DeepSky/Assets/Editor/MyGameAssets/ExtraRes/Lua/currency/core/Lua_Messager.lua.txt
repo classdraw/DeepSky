@@ -197,7 +197,7 @@ function Lua_Messager:_dispatchSelfNoGC(eventName,data)
             end
 
             if not status then
-                XLogger.LogError("dispatchSelfNoGC Error!!!");
+                XLogger.LogError("dispatchSelfNoGC Error!!!"..errorMsg);
             end
         end
     end

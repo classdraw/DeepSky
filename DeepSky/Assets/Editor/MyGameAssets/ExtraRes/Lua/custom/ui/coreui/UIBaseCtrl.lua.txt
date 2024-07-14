@@ -67,6 +67,10 @@ function Ctrl:GetUIName()
     return self.uiData.uiName;
 end
 
+function Ctrl:GetUIData()
+    return self.uiData;
+end
+
 function Ctrl:OpenWindow(param)
     --数据管道dal绑定丢这里  
     self:OnOpenWindow(param);

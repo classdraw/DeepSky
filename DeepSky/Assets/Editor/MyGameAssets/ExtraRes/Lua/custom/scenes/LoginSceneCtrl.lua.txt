@@ -12,8 +12,13 @@ function LoginSceneCtrl:Init(param)
 
 end
 
-function LoginSceneCtrl:OnLoadComplete()
+function LoginSceneCtrl:OnEnter()
     UIManager:GetInstance():Open(UIConfigData.UI_Login);
+end
+
+    
+function LoginSceneCtrl:OnExit()
+    
 end
 
 function LoginSceneCtrl:GetName()

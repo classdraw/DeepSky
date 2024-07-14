@@ -12,7 +12,11 @@ function Ctrl:Init(param)
 
 end
 
-function Ctrl:OnLoadComplete()
+function Ctrl:OnEnter()
+
+end
+
+function Ctrl:OnExit()
 
 end
 

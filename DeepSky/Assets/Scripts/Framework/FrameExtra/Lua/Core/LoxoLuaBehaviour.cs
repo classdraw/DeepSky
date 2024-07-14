@@ -34,6 +34,8 @@ namespace XEngine.Lua{
             luaTableView.Set("target",this);
             luaTableView.Set("group",this.GetComponent<XUIGroup>());
             luaTableView.Set("namelist",list);
+            luaTableView.Set("transform",transform);
+            luaTableView.Set("gameObject",gameObject);
             if (variables != null && variables.Variables != null)
             {
                 foreach (var variable in variables.Variables)

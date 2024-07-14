@@ -28,11 +28,12 @@ function SceneManager:GoToScene(sceneName,callback,param)
     self.m_Loading=true;
     if self.m_CurrentScene~=nil then
         self.m_LastSceneName=self.m_CurrentScene:GetName();
+        self.m_CurrentScene:OnExit();
         self.m_CurrentScene:Release();
     end
     self.m_CurrentScene=nil;
 
-    -- UIManager:GetInstance():Open(UIConfigData.UI_Loading);
+    UIManager:GetInstance():Open(UIConfigData.UI_Loading);
     self.m_CurrentScene=require("scenes."..sceneName.."Ctrl").New();
     self.m_CurrentScene:Init(param);
     
@@ -40,10 +41,8 @@ function SceneManager:GoToScene(sceneName,callback,param)
 end
 
 function SceneManager:OnSceneLoadedComplete(val)
-    -- UIManager:GetInstance():Close(UIConfigData.UI_Loading);
-    self.m_CurrentScene:OnLoadComplete();
-
-        
+    UIManager:GetInstance():Close(UIConfigData.UI_Loading);
+    self.m_CurrentScene:OnEnter();
     self.m_Loading=false;
 end
 

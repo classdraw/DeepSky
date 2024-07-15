@@ -74,7 +74,7 @@ namespace Game.Role{
                 float h=Input.GetAxisRaw("Horizontal");
                 float v=Input.GetAxisRaw("Vertical");
                 if(h!=0||v!=0){
-                    Vector3 inputDir=new Vector3(h,0,v);
+                    Vector3 inputDir=new Vector3(h,0f,v);
                     HandleMoveServerRpc(inputDir);
                 }
                 
@@ -88,7 +88,7 @@ namespace Game.Role{
         private void HandleMoveServerRpc(Vector3 inputDir){//结尾必须ServerRpc
             // XLogger.LogError(Time.deltaTime+">>"+inputDir+">>>>"+moveSpeed);
             // transform.Translate(Time.deltaTime*moveSpeed*inputDir);//服务器端调用
-            var dir=0.02f*moveSpeed*inputDir.normalized;
+            var dir=0.02f*moveSpeed*(inputDir.normalized);
             transform.position=transform.position+dir;
         }
     }

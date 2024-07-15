@@ -8,10 +8,10 @@ public class TestManager : MonoBehaviour
     private GameObject m_TestPrefab;
     void Start(){
 
-    // #if UNITY_SERVER
-    if(NetManager.GetInstance().IsServer){
-        NetManager.GetInstance().SpawnObject(NetManager.ServerClientId,m_TestPrefab,Vector3.zero);
-    }
-    // #endif
+        // #if UNITY_SERVER
+        if(NetManager.GetInstance().IsServer){
+            NetManager.GetInstance().SpawnObject(NetManager.ServerClientId,m_TestPrefab,Vector3.zero);
+        }
+        // #endif
     }
 }

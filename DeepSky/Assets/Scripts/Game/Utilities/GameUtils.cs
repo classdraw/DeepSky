@@ -83,6 +83,8 @@ namespace Utilities{
         public static bool IsNullGameObject(GameObject obj){
             return obj==null;
         }
+
+        
     }
 
 }

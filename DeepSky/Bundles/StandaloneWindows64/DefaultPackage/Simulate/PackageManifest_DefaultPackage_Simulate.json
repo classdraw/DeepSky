@@ -16,15 +16,15 @@
             "BundleID": 0
         },
         {
-            "Address": "Role_Cube",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Role/Cube.prefab",
+            "Address": "Role_Player",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Role/Player.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 1
         },
         {
-            "Address": "Role_Player",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Role/Player.prefab",
+            "Address": "Role_ServerTest",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Role/ServerTest.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 1
@@ -823,7 +823,7 @@
             "UnityCRC": 0,
             "FileHash": "a17e5c11c79846d49c634f9110fbdecc",
             "FileCRC": "00000000",
-            "FileSize": 13632,
+            "FileSize": 13638,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

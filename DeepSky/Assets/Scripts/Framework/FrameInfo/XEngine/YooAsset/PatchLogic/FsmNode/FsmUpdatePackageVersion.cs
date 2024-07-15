@@ -32,7 +32,7 @@ namespace XEngine.YooAsset.Patch
             yield return operation;
             if (operation.Status != EOperationStatus.Succeed)
             {
-                XLogger.LogError("FsmUpdatePackageVersion Error!!!");
+                XLogger.LogError("FsmUpdatePackageVersion Error!!!"+operation.Error);
                 yield break;
             }
             else { 

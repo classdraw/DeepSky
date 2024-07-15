@@ -22,9 +22,9 @@ function Ctrl:Build(uiData)--这里uiData就是UIConfigData数据
             XLogger.LogError(self.uiData.uiName.."Ctrl:Build Error!!!");
             return;
         end
-        -- self.m_ResHandle:GetGameObject().name="11111111";
+        
         self.m_Obj=self.m_ResHandle:GetGameObject();
-
+        self.m_Obj.name=self:GetUIName();
         if self.m_View==nil then
             self.m_View=require(self.uiData.path.."View").New();
         end

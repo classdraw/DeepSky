@@ -83,7 +83,6 @@ end
 
 --module清除  绑定清除
 function UI_LoginCtrl:OnRelease()
-    XLogger.LogError("1111111111111");
     --self.m_Module  release???
     self.m_Module=nil;
     self:GetCom():BindingContext().DataContext =nil;

@@ -811,7 +811,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_effects.bundle",
             "UnityCRC": 0,
-            "FileHash": "c8833fe830d74643553ae4e0123ddefb",
+            "FileHash": "c3f5e73c96ee4ff3b7410aeeeecca616",
             "FileCRC": "00000000",
             "FileSize": 3094,
             "Encrypted": false,
@@ -821,9 +821,9 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_role.bundle",
             "UnityCRC": 0,
-            "FileHash": "133336903836182f1c4bb6ba30ba9802",
+            "FileHash": "a17e5c11c79846d49c634f9110fbdecc",
             "FileCRC": "00000000",
-            "FileSize": 16090,
+            "FileSize": 16440,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -831,7 +831,7 @@
         {
             "BundleName": "defaultpackage_unityshaders.bundle",
             "UnityCRC": 0,
-            "FileHash": "fb82293786afa71a48aa1e33013a16be",
+            "FileHash": "daa352be03acfc5026bcc214611a17c2",
             "FileCRC": "00000000",
             "FileSize": 12823,
             "Encrypted": false,
@@ -841,7 +841,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_ui.bundle",
             "UnityCRC": 0,
-            "FileHash": "b9fad68f0cc0a0bfb6c0daa24a9cde26",
+            "FileHash": "cd37d6fa2cd2609b32ea9066e6946877",
             "FileCRC": "00000000",
             "FileSize": 83852,
             "Encrypted": false,
@@ -851,7 +851,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_scriptobject.bundle",
             "UnityCRC": 0,
-            "FileHash": "75fed8feb11b076b82c1a33de8aea6af",
+            "FileHash": "ec596ae63e29b0fda7108eb32128c303",
             "FileCRC": "00000000",
             "FileSize": 2999,
             "Encrypted": false,
@@ -861,7 +861,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_bytes.bundle",
             "UnityCRC": 0,
-            "FileHash": "75842c50a6e1aa0765bbd85481419e91",
+            "FileHash": "e713afed6c78d867d9833af02eb0a795",
             "FileCRC": "00000000",
             "FileSize": 3340288,
             "Encrypted": false,
@@ -871,9 +871,9 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_materials.bundle",
             "UnityCRC": 0,
-            "FileHash": "53f2b0dbbd8f792c72e994f798dc9f18",
+            "FileHash": "d6c94652603e39b91dd55b9c90417918",
             "FileCRC": "00000000",
-            "FileSize": 11376,
+            "FileSize": 11240,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -881,7 +881,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_entry.bundle",
             "UnityCRC": 0,
-            "FileHash": "1c3e1f82b2f82e25f5e3ff96d4b08047",
+            "FileHash": "b1a488840e63547bac0270aec41df0a0",
             "FileCRC": "00000000",
             "FileSize": 9555,
             "Encrypted": false,
@@ -891,7 +891,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_config_consts.bundle",
             "UnityCRC": 0,
-            "FileHash": "4046f1214763acc69f14473e71c4d7e8",
+            "FileHash": "7636a1c3fb3d710f30e4edbdb5b7b51c",
             "FileCRC": "00000000",
             "FileSize": 2799,
             "Encrypted": false,
@@ -901,7 +901,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_currency_core.bundle",
             "UnityCRC": 0,
-            "FileHash": "9dd7f7f795641720afad1593c21fb3f2",
+            "FileHash": "4decf6032ef82110021e47f60b056c07",
             "FileCRC": "00000000",
             "FileSize": 11534,
             "Encrypted": false,
@@ -911,7 +911,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_currency_functions.bundle",
             "UnityCRC": 0,
-            "FileHash": "6e36b50be14d7b11e77079c2219df91d",
+            "FileHash": "7061225a1547a1b83c3938549cbdd132",
             "FileCRC": "00000000",
             "FileSize": 72,
             "Encrypted": false,
@@ -921,7 +921,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_currency_system.bundle",
             "UnityCRC": 0,
-            "FileHash": "f632c7d374c3c953cf5b6336c0fdec3a",
+            "FileHash": "88782cf273a63efe1bd44f4adf6b2baa",
             "FileCRC": "00000000",
             "FileSize": 4472,
             "Encrypted": false,
@@ -931,7 +931,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_currency_utils.bundle",
             "UnityCRC": 0,
-            "FileHash": "a30838299d5c951a7934d5f9fad78d5d",
+            "FileHash": "937ae5b5f4052c360c36da3b36058f69",
             "FileCRC": "00000000",
             "FileSize": 50246,
             "Encrypted": false,
@@ -941,7 +941,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_custom_logic.bundle",
             "UnityCRC": 0,
-            "FileHash": "a2d6d40e20362809795586eedb2b5c57",
+            "FileHash": "ef83ebbc93a8fdba96f6c48fdf47b6c5",
             "FileCRC": "00000000",
             "FileSize": 9647,
             "Encrypted": false,
@@ -951,7 +951,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_custom_scenes.bundle",
             "UnityCRC": 0,
-            "FileHash": "74616b9fd550cc212f6c65de688426d6",
+            "FileHash": "e6cd0510cac1c8fe993665d9d4d69be1",
             "FileCRC": "00000000",
             "FileSize": 1228,
             "Encrypted": false,
@@ -961,9 +961,9 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_custom_ui_coreui.bundle",
             "UnityCRC": 0,
-            "FileHash": "34acb5f2f20123af3a4fa3c108f0583c",
+            "FileHash": "ce8e0add91f0ca80991b0f28448ed572",
             "FileCRC": "00000000",
-            "FileSize": 6389,
+            "FileSize": 6378,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -971,7 +971,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_custom_ui_uiloading.bundle",
             "UnityCRC": 0,
-            "FileHash": "e54481454e685bd79186bb463a225e7a",
+            "FileHash": "0b782d32d68c67960004e3b40a616762",
             "FileCRC": "00000000",
             "FileSize": 1029,
             "Encrypted": false,
@@ -981,9 +981,9 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_custom_ui_uilogin.bundle",
             "UnityCRC": 0,
-            "FileHash": "8a95aa265f9e2f8f91f5af946ccf7241",
+            "FileHash": "127c9c446dc5291a627fa42d6d268ca5",
             "FileCRC": "00000000",
-            "FileSize": 4373,
+            "FileSize": 4333,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -991,7 +991,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_lua_extra_loxoframework.bundle",
             "UnityCRC": 0,
-            "FileHash": "24441669bbeb7d8c99afa2ba9b95cf7f",
+            "FileHash": "f3f1332fc2fde3300494e3d8d6e4ad25",
             "FileCRC": "00000000",
             "FileSize": 33956,
             "Encrypted": false,
@@ -1001,7 +1001,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_extrares_data.bundle",
             "UnityCRC": 0,
-            "FileHash": "8a6ef262734a18f99abbcfd225ed6c27",
+            "FileHash": "ee05c05d5f493a3a65002fe49519825c",
             "FileCRC": "00000000",
             "FileSize": 32,
             "Encrypted": false,
@@ -1011,7 +1011,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_tools.bundle",
             "UnityCRC": 0,
-            "FileHash": "7afcf3736c8847af0468445fd8672420",
+            "FileHash": "70ba5a13704f209e234e4027dbf2a4f6",
             "FileCRC": "00000000",
             "FileSize": 7948,
             "Encrypted": false,
@@ -1021,7 +1021,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_action1.bundle",
             "UnityCRC": 0,
-            "FileHash": "3a19ecdb68e41ae294962db61d679f28",
+            "FileHash": "9f0627fb82bb3136f7f006c9ad2cfb07",
             "FileCRC": "00000000",
             "FileSize": 18237778,
             "Encrypted": false,
@@ -1031,7 +1031,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_bg_ambient1.bundle",
             "UnityCRC": 0,
-            "FileHash": "d37faf16e3738f6f565f2cb799e602ae",
+            "FileHash": "ca4433b1e9b7dabac7e4be4230c62097",
             "FileCRC": "00000000",
             "FileSize": 35079130,
             "Encrypted": false,
@@ -1041,7 +1041,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_ui.bundle",
             "UnityCRC": 0,
-            "FileHash": "f35e234da0fa61eb58769773b9970007",
+            "FileHash": "0e0fa038438b20ebe4f5c14d7c2bb536",
             "FileCRC": "00000000",
             "FileSize": 153200,
             "Encrypted": false,
@@ -1051,7 +1051,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_effect_battle.bundle",
             "UnityCRC": 0,
-            "FileHash": "ca00fc8f665bff8444b56ed1f5688836",
+            "FileHash": "6f1459dd615a4575e8f01f90b4620ff9",
             "FileCRC": "00000000",
             "FileSize": 4240960,
             "Encrypted": false,
@@ -1061,7 +1061,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_effect_buffs.bundle",
             "UnityCRC": 0,
-            "FileHash": "f54179c183b55ddbfe5907f505f3ef51",
+            "FileHash": "eef9d72a85d1e6d13230d737933394e8",
             "FileCRC": "00000000",
             "FileSize": 8120288,
             "Encrypted": false,
@@ -1071,7 +1071,7 @@
         {
             "BundleName": "defaultpackage_assets_editor_mygameassets_gameassets_audio_effect_magic.bundle",
             "UnityCRC": 0,
-            "FileHash": "ae9180f31c5b3dd1e8b98a7bf49e3114",
+            "FileHash": "3bebe943c608cb3042ba75eae12e4e7b",
             "FileCRC": "00000000",
             "FileSize": 5827088,
             "Encrypted": false,

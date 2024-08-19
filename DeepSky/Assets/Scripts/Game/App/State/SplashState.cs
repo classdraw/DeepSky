@@ -48,14 +48,26 @@ namespace Game.Fsm
             GameConsts.PackageType=startConfig.m_ePartType;
             GameConsts.NetModel=startConfig.m_eNetModel;
             GameConsts.DefaultBuildPipeline=startConfig.m_eDefaultBuildPipeline;
+
             XLogger.SetLogLevel(startConfig.LogLevel);
             XLogger.Log("NetModel:"+startConfig.m_eNetModel);
+    
+            CreateInfo(startConfig);
+            
+        }
 
-            if(startConfig.ShowLogInfo){
-                GameObject obj=new GameObject("LogInfo");
-                obj.AddComponent<RuntimeScreeLogger>();
-                GameObject.DontDestroyOnLoad(obj);
+        private void CreateInfo(StartConfig startConfig){
+            GameObject obj=null;
+            obj=GameObject.Instantiate(Resources.Load("ObjectInfo"))as GameObject;
+            GameObject.DontDestroyOnLoad(obj);
+            if(!startConfig.ShowLogInfo){
+                obj.GetComponent<RuntimeScreeLogger>().enabled=false;
             }
+
+            if(!startConfig.ShowFPS){
+
+            }
+
         }
 
         private void OnYooAssetCallback(){

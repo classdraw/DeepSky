@@ -21,6 +21,7 @@ local luaList={
     "functions.init",
     "entry.GlobalRequire",
     "entry.XLuaFacade",
+
     -- "components.Component_Base",
     -- "globalrequire",
     -- 

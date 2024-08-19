@@ -20,7 +20,8 @@ public class StartConfig : ScriptableObject
     public EDefaultBuildPipeline m_eDefaultBuildPipeline;
 
 
-    public bool ShowLogInfo=true;
+    public bool ShowLogInfo=true;//显示日志信息
+    public bool ShowFPS=true;//显示FPS信息
 
     public int LogLevel=-1;
 }

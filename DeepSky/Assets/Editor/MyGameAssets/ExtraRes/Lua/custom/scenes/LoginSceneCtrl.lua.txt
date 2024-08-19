@@ -1,5 +1,4 @@
 local LoginSceneCtrl = BaseClass("LoginSceneCtrl", BaseSceneCtrl)
-
 function LoginSceneCtrl:ctor()
     
 end
@@ -14,6 +13,8 @@ end
 
 function LoginSceneCtrl:OnEnter()
     UIManager:GetInstance():Open(UIConfigData.UI_Login);
+    --这里需要初始化一些网络信息打印工具（客户端用的）
+
 end
 
     

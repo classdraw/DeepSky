@@ -49,6 +49,7 @@ namespace Game.Fsm
             GameConsts.NetModel=startConfig.m_eNetModel;
             GameConsts.DefaultBuildPipeline=startConfig.m_eDefaultBuildPipeline;
 
+
             XLogger.SetLogLevel(startConfig.LogLevel);
             XLogger.Log("NetModel:"+startConfig.m_eNetModel);
     
@@ -57,15 +58,17 @@ namespace Game.Fsm
         }
 
         private void CreateInfo(StartConfig startConfig){
-            GameObject obj=null;
-            obj=GameObject.Instantiate(Resources.Load("ObjectInfo"))as GameObject;
-            GameObject.DontDestroyOnLoad(obj);
-            if(!startConfig.ShowLogInfo){
-                obj.GetComponent<RuntimeScreeLogger>().enabled=false;
+
+            if(startConfig.ShowLogInfo){
+                GameObject gameObject=new GameObject("LogInfo");
+                GameObject.DontDestroyOnLoad(gameObject);
+                gameObject.AddComponent<RuntimeScreeLogger>();
             }
 
-            if(!startConfig.ShowFPS){
-
+            if(startConfig.ShowClientInfo){
+                GameObject gameObject=new GameObject("ClientInfo");
+                GameObject.DontDestroyOnLoad(gameObject);
+                gameObject.AddComponent<ClientInfo>();
             }
 
         }

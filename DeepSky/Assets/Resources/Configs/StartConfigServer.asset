@@ -17,3 +17,5 @@ MonoBehaviour:
   m_eNetModel: 1
   m_eDefaultBuildPipeline: 0
   ShowLogInfo: 1
+  ShowClientInfo: 0
+  LogLevel: -1

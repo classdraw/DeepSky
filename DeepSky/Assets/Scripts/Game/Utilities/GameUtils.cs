@@ -11,6 +11,8 @@ namespace Utilities{
     [LuaCallCSharp]
     public static class GameUtils
     {
+        
+
         public static bool IS_QUIT=false;
         private static Dictionary<int, float> elipsisWidth = null;
         public static float GetElipsisTextHorIsOverflow(Font font,int fontSize) {

@@ -21,7 +21,7 @@ public class StartConfig : ScriptableObject
 
 
     public bool ShowLogInfo=true;//显示日志信息
-    public bool ShowFPS=true;//显示FPS信息
+    public bool ShowClientInfo=true;//显示FPS信息
 
     public int LogLevel=-1;
 }

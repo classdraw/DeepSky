@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
 using UnityEngine;
 using XEngine.Utilities;
 
@@ -11,6 +12,9 @@ namespace XEngine.Net{
         public static NetManager GetInstance(){
             return m_Instance;
         }
+
+
+        public UnityTransport SelfUnityTransport{get;private set;}
         public void InitServer(){
             this.StartServer();
             XLogger.LogImport("StartServer");
@@ -30,6 +34,7 @@ namespace XEngine.Net{
 
         void Awake(){
             m_Instance=this;
+            SelfUnityTransport=this.GetComponent<UnityTransport>();
         }
         //动态创建物理 并且绑定
         public NetworkObject SpawnObject(ulong clientId,GameObject prefab,Vector3 position){

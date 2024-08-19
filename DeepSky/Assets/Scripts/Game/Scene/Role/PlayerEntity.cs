@@ -11,10 +11,22 @@ using XEngine.Event;
 namespace Game.Role{
     public class PlayerEntity : NetworkBehaviour
     {
+        public static PlayerEntity LocalPlayer{get;private set;}
         public int id=123;
 
         public float moveSpeed=3f;
         private Dictionary<Type,Component> m_AddComs=new Dictionary<Type,Component>();
+
+        public override void OnNetworkSpawn()
+        {
+            base.OnNetworkSpawn();
+//不是服务器
+#if !UNITY_SERVER
+            if(IsOwner&&IsClient){
+                LocalPlayer=this;
+            }
+#endif
+        }
         void Awake()
         {
             if(IsClient){

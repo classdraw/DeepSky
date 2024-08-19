@@ -50,6 +50,9 @@ public class AppDelegate : Singleton<AppDelegate>
     }
 
     private void Next(){
-        AppStateManager.GetInstance().ChangeState(SplashState.Index);
+        if(SceneManager.GetActiveScene().name.Equals("Launcher")){
+            AppStateManager.GetInstance().ChangeState(SplashState.Index);
+        }
+        
     }
 }

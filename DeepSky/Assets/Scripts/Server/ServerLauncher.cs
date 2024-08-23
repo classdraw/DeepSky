@@ -10,8 +10,9 @@ using Game.Scenes;
 namespace XEngine.Server{
     public class ServerFacade : Singleton<ServerFacade>
     {
-        private ServerGlobal m_ServerGlobal;
-        private ClientsManager m_ClientManager;
+        private ServerGlobal serverGlobal;
+        private ClientsManager clientManager;
+        private ServerAOIManager serverAOIManager;
 
         private ResHandle m_ServerHandle;
         private ResHandle m_NetResHandle;
@@ -32,15 +33,24 @@ namespace XEngine.Server{
 
         //只有host以及server才有这些对象
         private void _clearServerCache(){
-            if(m_ClientManager!=null){
-                m_ClientManager.UnInit();
-                m_ClientManager=null;
+            if(serverAOIManager!=null){
+                serverAOIManager.UnInit();
+                serverAOIManager=null;
+            }
+
+            if(clientManager!=null){
+                clientManager.UnInit();
+                clientManager=null;
             }
             if(m_ServerHandle!=null){
                 m_ServerHandle.Dispose();
                 m_ServerHandle=null;
             }
-            m_ServerGlobal=null;
+            if(serverGlobal!=null){
+                serverGlobal.UnInit();
+                serverGlobal=null;
+            }
+
         }
 
         //只有服务器会调用
@@ -55,8 +65,15 @@ namespace XEngine.Server{
             m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ServerInfo");
             var obj=m_ServerHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj);
-            m_ClientManager=obj.GetComponent<ClientsManager>();
-            m_ClientManager.Init();
+
+            serverGlobal=obj.GetComponent<ServerGlobal>();
+            serverGlobal.Init();
+
+            clientManager=obj.GetComponent<ClientsManager>();
+            clientManager.Init();
+            
+            serverAOIManager=obj.GetComponent<ServerAOIManager>();
+            serverAOIManager.Init();
             NetManager.GetInstance().InitServer();
 
             
@@ -74,16 +91,22 @@ namespace XEngine.Server{
                 m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ServerInfo");
                 var obj=m_ServerHandle.GetGameObject();
                 GameObject.DontDestroyOnLoad(obj);
-                m_ClientManager=obj.GetComponent<ClientsManager>();
-                m_ClientManager.Init();
-                m_ServerGlobal=obj.GetComponent<ServerGlobal>();
+                
+                serverGlobal=obj.GetComponent<ServerGlobal>();
+                serverGlobal.Init();
+
+                clientManager=obj.GetComponent<ClientsManager>();
+                clientManager.Init();
+
+                serverAOIManager=obj.GetComponent<ServerAOIManager>();
+                serverAOIManager.Init();
             }
             NetManager.GetInstance().InitClient();
         }
 
         public ClientsManager GetClientsManager(){
             if(GameConsts.IsHost()||GameConsts.IsServer()){
-                return m_ClientManager;
+                return clientManager;
             }else{
                 XLogger.LogError("GetClientsManager Error!!!");//client不应该访问这个
                 return null;
@@ -92,9 +115,18 @@ namespace XEngine.Server{
 
         public ServerGlobal GetServerGlobal(){
             if(GameConsts.IsHost()||GameConsts.IsServer()){
-                return m_ServerGlobal;
+                return serverGlobal;
             }else{
                 XLogger.LogError("GetServerGlobal Error!!!");//client不应该访问这个
+                return null;
+            }
+        }
+
+        public ServerAOIManager GetServerAOIManager(){
+            if(GameConsts.IsHost()||GameConsts.IsServer()){
+                return serverAOIManager;
+            }else{
+                XLogger.LogError("GetServerAOIManager Error!!!");//client不应该访问这个
                 return null;
             }
         }

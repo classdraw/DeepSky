@@ -18,6 +18,9 @@ namespace XEngine.Event{
         public const int MuteChange=20;//禁音发生变化
 
         public const int TestPlayerChange=21;//
+
+
+        public const int ServerInitOver=100;//所有服务器初始化结束
         
     }
 

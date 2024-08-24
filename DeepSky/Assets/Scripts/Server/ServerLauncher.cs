@@ -7,6 +7,7 @@ using XEngine.Pool;
 using XEngine.Utilities;
 using XEngine.Loader;
 using Game.Scenes;
+using XEngine.Event;
 namespace XEngine.Server{
     public class ServerFacade : Singleton<ServerFacade>
     {
@@ -74,6 +75,8 @@ namespace XEngine.Server{
             
             serverAOIManager=obj.GetComponent<ServerAOIManager>();
             serverAOIManager.Init();
+
+            GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerInitOver);
             NetManager.GetInstance().InitServer();
 
             
@@ -100,6 +103,8 @@ namespace XEngine.Server{
 
                 serverAOIManager=obj.GetComponent<ServerAOIManager>();
                 serverAOIManager.Init();
+                
+                GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerInitOver);
             }
             NetManager.GetInstance().InitClient();
         }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 using XEngine.Net;
+using XEngine.Server;
+using XEngine.Utilities;
 
 public class TestServerObj : NetworkBehaviour
 {
@@ -11,9 +13,9 @@ public class TestServerObj : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
-        if(NetManager.GetInstance().IsServer){
-
+        if(GameConsts.HasServer()){
             Instance=this;
+            XEngine.Server.ServerFacade.GetInstance().GetServerAOIManager().InitServer(NetworkObject,Vector2Int.zero);
         }
 
     }
@@ -32,8 +34,13 @@ public class TestServerObj : NetworkBehaviour
     }
 
     private void HandleMove(Vector3 inputDir){
-            
+        
+        var oldIntPos=ServerAOIManager.ConvertWorldPositionToCoord(transform.position);
         var dir=0.02f*m_MoveSpeed*(inputDir.normalized);
         transform.position=transform.position+dir;
+        var newIntPos=ServerAOIManager.ConvertWorldPositionToCoord(transform.position);
+        if(newIntPos!=oldIntPos){
+            ServerFacade.GetInstance().GetServerAOIManager().UpdateServerChunkCoord(NetworkObject,oldIntPos,newIntPos);
+        }
     }
 }

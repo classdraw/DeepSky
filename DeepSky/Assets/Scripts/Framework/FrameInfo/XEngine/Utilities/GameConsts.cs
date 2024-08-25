@@ -54,6 +54,10 @@ namespace XEngine.Utilities
         #endregion
 
 #region 配置方法
+
+		public static bool HasServer(){
+			return IsServer()||IsHost();
+		}
 		public static bool IsServer(){
 			return NetModel==GameConsts.Game_NetModel_Type.Server;
 		}

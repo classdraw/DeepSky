@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using XEngine.Reflex;
 using System;
 using XEngine.Utilities;
 using Unity.Netcode;
 using XEngine.Event;
+using XEngine.Net;
+using XEngine.Server;
 
 namespace Game.Role{
     public class PlayerEntity : NetworkBehaviour
@@ -26,6 +27,11 @@ namespace Game.Role{
                 LocalPlayer=this;
             }
 #endif
+
+            if(GameConsts.HasServer()){
+                //var intPos=XEngine.Server.ServerAOIManager.ConvertWorldPositionToCoord(this.transform.position);
+                XEngine.Server.ServerFacade.GetInstance().GetServerAOIManager().InitClient(OwnerClientId,Vector2Int.zero);
+            }
         }
         void Awake()
         {
@@ -100,8 +106,16 @@ namespace Game.Role{
         private void HandleMoveServerRpc(Vector3 inputDir){//结尾必须ServerRpc
             // XLogger.LogError(Time.deltaTime+">>"+inputDir+">>>>"+moveSpeed);
             // transform.Translate(Time.deltaTime*moveSpeed*inputDir);//服务器端调用
+
+            var oldIntPos=ServerAOIManager.ConvertWorldPositionToCoord(transform.position);
             var dir=0.02f*moveSpeed*(inputDir.normalized);
             transform.position=transform.position+dir;
+            var newIntPos=ServerAOIManager.ConvertWorldPositionToCoord(transform.position);
+            //aoi相关
+            if(newIntPos!=oldIntPos){
+                ServerFacade.GetInstance().GetServerAOIManager().UpdateClientChunkCoord(OwnerClientId,oldIntPos,newIntPos);
+            }
+            
         }
     }
 

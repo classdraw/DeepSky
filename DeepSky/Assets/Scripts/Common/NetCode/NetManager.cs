@@ -42,7 +42,10 @@ namespace XEngine.Net{
             NetworkObject networkObject=Instantiate(prefab).GetComponent<NetworkObject>();
             networkObject.transform.position=position;
             networkObject.SpawnWithOwnership(clientId);
+            // networkObject.ChangeOwnership(clientId);
             // networkObject.NetworkShow(clientId);
+
+            // var t1=NetManager.GetInstance().SpawnManager.OwnershipToObjectsTable;
             return networkObject;
         }
     }

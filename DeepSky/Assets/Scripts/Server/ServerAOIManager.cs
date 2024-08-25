@@ -71,6 +71,9 @@ namespace XEngine.Server{
             if(oldCoord==newCoord){
                 return;
             }
+            if(!chunkClientDic.ContainsKey(newCoord)){
+                chunkClientDic.Add(newCoord,new HashSet<ulong>());
+            }
             //旧的地图块移除
             RemoveClient(clientId,oldCoord);
 
@@ -124,9 +127,7 @@ namespace XEngine.Server{
 
             }
 
-            if(!chunkClientDic.ContainsKey(newCoord)){
-                chunkClientDic.Add(newCoord,new HashSet<ulong>());
-            }
+
 
             chunkClientDic[newCoord].Add(clientId);
         }
@@ -250,6 +251,10 @@ namespace XEngine.Server{
             if(!IsValid()||clientA==clientB){
                 return;
             }
+            // Debug.LogError("333333333333>>>"+NetManager.GetInstance().GetHashCode());
+            // var t1=NetManager.GetInstance().SpawnManager.OwnershipToObjectsTable;
+            // var t2=NetManager.GetInstance().SpawnManager.GetClientOwnedObjects(clientA);
+            // var t3=NetManager.GetInstance().SpawnManager.GetClientOwnedObjects(clientB);
             bool flaga=NetManager.GetInstance().SpawnManager.OwnershipToObjectsTable.TryGetValue(clientA,out Dictionary<ulong,NetworkObject> dictA);
             bool flagb=NetManager.GetInstance().SpawnManager.OwnershipToObjectsTable.TryGetValue(clientB,out Dictionary<ulong,NetworkObject> dictB);
             if(flaga&&flagb){
@@ -332,7 +337,8 @@ namespace XEngine.Server{
 
 
         private void ShowAndHideForServerObject(NetworkObject serverObj,Vector2Int hideChunkCoord,Vector2Int showChunkCoord){
-
+            //这里不需要处理服务器对象之间aoi
+            //服务器对象所有都是互相可见
             ShowClientsForServerObject(serverObj,showChunkCoord);
             HideClientsForServerObject(serverObj,hideChunkCoord);
         }

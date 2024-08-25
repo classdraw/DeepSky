@@ -110,7 +110,7 @@ namespace XEngine.Server{
         }
 
         public ClientsManager GetClientsManager(){
-            if(GameConsts.IsHost()||GameConsts.IsServer()){
+            if(GameConsts.HasServer()){
                 return clientManager;
             }else{
                 XLogger.LogError("GetClientsManager Error!!!");//client不应该访问这个
@@ -119,7 +119,7 @@ namespace XEngine.Server{
         }
 
         public ServerGlobal GetServerGlobal(){
-            if(GameConsts.IsHost()||GameConsts.IsServer()){
+            if(GameConsts.HasServer()){
                 return serverGlobal;
             }else{
                 XLogger.LogError("GetServerGlobal Error!!!");//client不应该访问这个
@@ -128,7 +128,7 @@ namespace XEngine.Server{
         }
 
         public ServerAOIManager GetServerAOIManager(){
-            if(GameConsts.IsHost()||GameConsts.IsServer()){
+            if(GameConsts.HasServer()){
                 return serverAOIManager;
             }else{
                 XLogger.LogError("GetServerAOIManager Error!!!");//client不应该访问这个

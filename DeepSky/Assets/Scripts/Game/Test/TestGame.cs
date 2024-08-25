@@ -1,12 +1,15 @@
 using UnityEngine;
 using XEngine.Server;
+using XEngine.Utilities;
 
 public class TestGame : MonoBehaviour
 {
     
     void Start()
     {
-        ServerFacade.GetInstance().InitClient();
+        if(GameConsts.IsClient()||GameConsts.IsHost()){
+            ServerFacade.GetInstance().InitClient();
+        }
     }
 
     void Update(){

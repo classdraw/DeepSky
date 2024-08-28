@@ -66,7 +66,7 @@ MonoBehaviour:
       - CollectPath: Assets/Editor/MyGameAssets/GameRes/Scenes
         CollectorGUID: ec3309969819207489a2c6a4decc5353
         CollectorType: 0
-        AddressRuleName: AddressByFileName
+        AddressRuleName: AddressByFolderAndFileName
         PackRuleName: PackDirectory
         FilterRuleName: CollectAll
         AssetTags: 

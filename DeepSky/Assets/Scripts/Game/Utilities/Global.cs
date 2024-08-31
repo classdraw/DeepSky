@@ -81,7 +81,7 @@ public class Global:MonoSingleton<Global>
         HomologousImageMode mode = HomologousImageMode.SuperSet;
         for(int i=0;i<GameConsts.AOTMetaAssemblyNames.Count;i++){
             var aotDllName=GameConsts.AOTMetaAssemblyNames[i];
-            ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_"+aotDllName);
+            ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("bytes_"+aotDllName);
             var bs=resHandle.GetObjT<TextAsset>().bytes;
             LoadImageErrorCode err = RuntimeApi.LoadMetadataForAOTAssembly(bs, mode);
             XLogger.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");

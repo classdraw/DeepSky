@@ -212,7 +212,7 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Assets/Editor/MyGameAssets/GameAssets/Audio/Bg
+      - CollectPath: Assets/Editor/MyGameAssets/GameRes/Audio/Bg
         CollectorGUID: c6b1a7b537634e943af7e20d808a054b
         CollectorType: 0
         AddressRuleName: AddressByGroupAndFileName
@@ -220,32 +220,16 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
-      - CollectPath: Assets/Editor/MyGameAssets/GameAssets/Audio/UI
+      - CollectPath: Assets/Editor/MyGameAssets/GameRes/Audio/Effect
+        CollectorGUID: 94000ee84fecde545ba4e4c4fe08f724
+        CollectorType: 0
+        AddressRuleName: AddressByGroupAndFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/Editor/MyGameAssets/GameRes/Audio/UI
         CollectorGUID: ad849560608b15b4996ab53204e0846b
-        CollectorType: 0
-        AddressRuleName: AddressByGroupAndFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
-      - CollectPath: Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Battle
-        CollectorGUID: 5b9ebdcf485731d49b30ee8bd28667af
-        CollectorType: 0
-        AddressRuleName: AddressByGroupAndFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
-      - CollectPath: Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Buffs
-        CollectorGUID: 113f04f80c642794599d2cd203e9b0b1
-        CollectorType: 0
-        AddressRuleName: AddressByGroupAndFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
-      - CollectPath: Assets/Editor/MyGameAssets/GameAssets/Audio/Effect/Magic
-        CollectorGUID: 5c5b5cdb32ec3664e8656cd2c80d6352
         CollectorType: 0
         AddressRuleName: AddressByGroupAndFileName
         PackRuleName: PackDirectory

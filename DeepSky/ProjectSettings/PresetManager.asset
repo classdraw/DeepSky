@@ -4,4 +4,18 @@
 PresetManager:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_DefaultPresets: {}
+  m_DefaultPresets:
+  - first:
+      m_NativeTypeID: 1020
+      m_ManagedTypePPtr: {fileID: 0}
+      m_ManagedTypeFallback: 
+    second:
+    - m_Preset: {fileID: 2655988077585873504, guid: 34a00c9a1e921634dad6a2ddea64ad06, type: 2}
+      m_Filter: glob:"Editor/MyGameAssets/GameRes/Audio/Effect/**.wav"
+      m_Disabled: 0
+    - m_Preset: {fileID: 2655988077585873504, guid: feeafc4fe7859414c97dbf11fa26ccdc, type: 2}
+      m_Filter: glob:"Editor/MyGameAssets/GameRes/Audio/Bg/**.wav"
+      m_Disabled: 0
+    - m_Preset: {fileID: 2655988077585873504, guid: 34a00c9a1e921634dad6a2ddea64ad06, type: 2}
+      m_Filter: glob:"Editor/MyGameAssets/GameRes/Audio/UI/**.wav"
+      m_Disabled: 0

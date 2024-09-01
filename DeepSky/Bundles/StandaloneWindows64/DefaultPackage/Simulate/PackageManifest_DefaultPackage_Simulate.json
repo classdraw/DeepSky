@@ -16,6 +16,13 @@
             "BundleID": 0
         },
         {
+            "Address": "CharacterPlayer",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Role/CharacterPlayer.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 1
+        },
+        {
             "Address": "Player",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Role/Player.prefab",
             "AssetGUID": "",
@@ -12030,7 +12037,7 @@
             "UnityCRC": 0,
             "FileHash": "133336903836182f1c4bb6ba30ba9802",
             "FileCRC": "00000000",
-            "FileSize": 14115,
+            "FileSize": 18318,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

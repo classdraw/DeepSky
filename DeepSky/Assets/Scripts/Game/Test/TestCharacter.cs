@@ -30,8 +30,7 @@ public class TestCharacter : MonoBehaviour
         transform.localRotation*=Quaternion.Euler(0,mousePos*m_fRoVelocity,0f);
         if(h!=0||v!=0){
             if(m_vPlayer!=null){
-                m_vPlayer.SimpleMove(transform.forward*v*m_fVelocity);
-                m_vPlayer.SimpleMove(transform.right*h*m_fVelocity);
+                m_vPlayer.SimpleMove((transform.forward*v+transform.right*h)*m_fVelocity);
             }
 
         }

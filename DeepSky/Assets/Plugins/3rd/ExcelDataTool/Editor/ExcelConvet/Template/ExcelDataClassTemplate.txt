@@ -1,0 +1,23 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
+using XEngine.Define;
+
+/// <summary>
+/// Auto Generate Class!!!
+/// </summary>
+[System.Serializable]
+public class {0} : Excel_ItemData
+{
+{2}
+}
+
+/// <summary>
+/// Auto Generate Class!!!
+/// </summary>
+public class {1} : Excel_TableData<{0}>
+{
+
+}

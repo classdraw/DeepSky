@@ -697,14 +697,26 @@ namespace UnityEngine.Rendering.Universal
             }
 
             // Pass 1: Edge detection
+            // RenderingUtils.Blit(cmd, source, pixelRect,
+            //     m_EdgeColorTexture, RenderBufferLoadAction.DontCare, RenderBufferStoreAction.Store,
+            //     stencil, RenderBufferLoadAction.DontCare, RenderBufferStoreAction.Store,
+            //     ClearFlag.ColorStencil, Color.clear,  // implicit depth=1.0f stencil=0x0
+            //     material, 0);
+                //jyy1
             RenderingUtils.Blit(cmd, source, pixelRect,
                 m_EdgeColorTexture, RenderBufferLoadAction.DontCare, RenderBufferStoreAction.Store,
-                stencil, RenderBufferLoadAction.DontCare, RenderBufferStoreAction.Store,
+                stencil, RenderBufferLoadAction.DontCare, RenderBufferStoreAction.DontCare,
                 ClearFlag.ColorStencil, Color.clear,  // implicit depth=1.0f stencil=0x0
                 material, 0);
 
             // Pass 2: Blend weights
-            RenderingUtils.Blit(cmd, m_EdgeColorTexture, pixelRect, m_BlendTexture, RenderBufferLoadAction.DontCare, RenderBufferStoreAction.Store, ClearFlag.Color, Color.clear, material, 1);
+            // RenderingUtils.Blit(cmd, m_EdgeColorTexture, pixelRect, m_BlendTexture, 
+            // RenderBufferLoadAction.DontCare, RenderBufferStoreAction.Store, 
+            // ClearFlag.Color, Color.clear, material, 1);
+            //jyy1
+            RenderingUtils.Blit(cmd, m_EdgeColorTexture, pixelRect, m_BlendTexture, 
+            RenderBufferLoadAction.DontCare, RenderBufferStoreAction.DontCare, 
+            ClearFlag.Color, Color.clear, material, 1);
 
             // Pass 3: Neighborhood blending
             cmd.SetGlobalTexture(ShaderConstants._BlendTexture, m_BlendTexture.nameID);

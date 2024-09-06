@@ -376,6 +376,7 @@ namespace ShaderStrippingAndPrefiltering
             {
                 AOMethod = ScreenSpaceAmbientOcclusionSettings.AOMethodOptions.BlueNoise,
                 Downsample = false,
+                DownsampleSize=4,
                 AfterOpaque = false,
                 Source = ScreenSpaceAmbientOcclusionSettings.DepthSource.DepthNormals,
                 NormalSamples = ScreenSpaceAmbientOcclusionSettings.NormalQuality.Medium,
@@ -399,6 +400,7 @@ namespace ShaderStrippingAndPrefiltering
             {
                 AOMethod = ScreenSpaceAmbientOcclusionSettings.AOMethodOptions.InterleavedGradient,
                 Downsample = false,
+                DownsampleSize =4,
                 AfterOpaque = false,
                 Source = ScreenSpaceAmbientOcclusionSettings.DepthSource.Depth,
                 NormalSamples = ScreenSpaceAmbientOcclusionSettings.NormalQuality.Medium,

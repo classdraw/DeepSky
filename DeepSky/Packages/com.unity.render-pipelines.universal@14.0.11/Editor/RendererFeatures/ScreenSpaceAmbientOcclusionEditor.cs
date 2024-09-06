@@ -10,6 +10,7 @@ namespace UnityEditor.Rendering.Universal
         #region Serialized Properties
         private SerializedProperty m_AOMethod;
         private SerializedProperty m_Downsample;
+        private SerializedProperty m_DownsampleSize;
         private SerializedProperty m_AfterOpaque;
         private SerializedProperty m_Source;
         private SerializedProperty m_NormalQuality;
@@ -60,6 +61,7 @@ namespace UnityEditor.Rendering.Universal
             public static GUIContent Source = EditorGUIUtility.TrTextContent("Source", "The source of the normal vector values.\nDepth Normals: the feature uses the values generated in the Depth Normal prepass.\nDepth: the feature reconstructs the normal values using the depth buffer.\nIn the Deferred rendering path, the feature uses the G-buffer normals texture.");
             public static GUIContent NormalQuality = new GUIContent("Normal Quality", "The number of depth texture samples that Unity takes when computing the normals. Low:1 sample, Medium: 5 samples, High: 9 samples.");
             public static GUIContent Downsample = EditorGUIUtility.TrTextContent("Downsample", "With this option enabled, Unity downsamples the SSAO effect texture to improve performance. Each dimension of the texture is reduced by a factor of 2.");
+            public static GUIContent DownsampleSize = EditorGUIUtility.TrTextContent("DownsampleSize", "The size of downsample value.");
             public static GUIContent AfterOpaque = EditorGUIUtility.TrTextContent("After Opaque", "With this option enabled, Unity calculates and apply SSAO after the opaque pass to improve performance on mobile platforms with tiled-based GPU architectures. This is not physically correct.");
             public static GUIContent BlurQuality = EditorGUIUtility.TrTextContent("Blur Quality", "High: Bilateral, Medium: Gaussian. Low: Kawase (Single Pass).");
             public static GUIContent Samples = EditorGUIUtility.TrTextContent("Samples", "The number of samples that Unity takes when calculating the obscurance value. Low:4 samples, Medium: 8 samples, High: 12 samples.");
@@ -80,6 +82,7 @@ namespace UnityEditor.Rendering.Universal
             m_Source = settings.FindPropertyRelative("Source");
             m_NormalQuality = settings.FindPropertyRelative("NormalSamples");
             m_Downsample = settings.FindPropertyRelative("Downsample");
+            m_DownsampleSize = settings.FindPropertyRelative("DownsampleSize");
             m_AfterOpaque = settings.FindPropertyRelative("AfterOpaque");
             m_BlurQuality = settings.FindPropertyRelative("BlurQuality");
             m_Samples = settings.FindPropertyRelative("Samples");
@@ -122,6 +125,7 @@ namespace UnityEditor.Rendering.Universal
                 GUI.enabled = true;
 
                 EditorGUILayout.PropertyField(m_Downsample, Styles.Downsample);
+                EditorGUILayout.PropertyField(m_DownsampleSize, Styles.DownsampleSize);
                 EditorGUILayout.PropertyField(m_AfterOpaque, Styles.AfterOpaque);
                 EditorGUILayout.PropertyField(m_BlurQuality, Styles.BlurQuality);
                 EditorGUILayout.PropertyField(m_Samples, Styles.Samples);

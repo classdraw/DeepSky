@@ -11,6 +11,7 @@ namespace UnityEngine.Rendering.Universal
         // Parameters
         [SerializeField] internal AOMethodOptions AOMethod = AOMethodOptions.BlueNoise;
         [SerializeField] internal bool Downsample = false;
+        [SerializeField] internal int DownsampleSize = 4;
         [SerializeField] internal bool AfterOpaque = false;
         [SerializeField] internal DepthSource Source = DepthSource.DepthNormals;
         [SerializeField] internal NormalQuality NormalSamples = NormalQuality.Medium;
@@ -301,7 +302,7 @@ namespace UnityEngine.Rendering.Universal
             public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)
             {
                 RenderTextureDescriptor cameraTargetDescriptor = renderingData.cameraData.cameraTargetDescriptor;
-                int downsampleDivider = m_CurrentSettings.Downsample ? 4 : 1;
+                int downsampleDivider = m_CurrentSettings.Downsample ? m_CurrentSettings.DownsampleSize : 1;
 
 #if ENABLE_VR && ENABLE_XR_MODULE
                 int eyeCount = renderingData.cameraData.xr.enabled && renderingData.cameraData.xr.singlePassEnabled ? 2 : 1;
@@ -441,6 +442,7 @@ namespace UnityEngine.Rendering.Universal
                 m_AOPassDescriptor = descriptor;
                 m_AOPassDescriptor.width /= downsampleDivider;
                 m_AOPassDescriptor.height /= downsampleDivider;
+
                 bool useRedComponentOnly = m_SupportsR8RenderTextureFormat && m_BlurType > BlurTypes.Bilateral;
                 m_AOPassDescriptor.colorFormat = useRedComponentOnly ? RenderTextureFormat.R8 : RenderTextureFormat.ARGB32;
 

@@ -12019,6 +12019,13 @@
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 26
+        },
+        {
+            "Address": "excel_Hello",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/ExcelData/Hello.json",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 27
         }
     ],
     "BundleList": [
@@ -12288,6 +12295,16 @@
             "FileHash": "7afcf3736c8847af0468445fd8672420",
             "FileCRC": "00000000",
             "FileSize": 8382,
+            "Encrypted": false,
+            "Tags": [],
+            "DependIDs": []
+        },
+        {
+            "BundleName": "defaultpackage_assets_editor_mygameassets_gameres_exceldata.bundle",
+            "UnityCRC": 0,
+            "FileHash": "e676106162fd5d13cd26c2957967e425",
+            "FileCRC": "00000000",
+            "FileSize": 442,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

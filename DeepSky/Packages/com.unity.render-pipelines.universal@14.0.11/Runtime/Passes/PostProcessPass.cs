@@ -1101,18 +1101,20 @@ namespace UnityEngine.Rendering.Universal
         void SetupBloom(CommandBuffer cmd, RTHandle source, Material uberMaterial)
         {
             // Start at half-res
-            int downres = 1;
+            //jyy从1/2开始
+            int downres = 2;
             switch (m_Bloom.downscale.value)
             {
                 case BloomDownscaleMode.Half:
-                    downres = 1;
+                    downres = 2;
                     break;
                 case BloomDownscaleMode.Quarter:
-                    downres = 2;
+                    downres = 4;
                     break;
                 default:
                     throw new System.ArgumentOutOfRangeException();
             }
+
             int tw = m_Descriptor.width >> downres;
             int th = m_Descriptor.height >> downres;
 

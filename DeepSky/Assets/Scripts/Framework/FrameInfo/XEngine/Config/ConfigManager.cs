@@ -18,13 +18,13 @@ public class ConfigManager : Singleton<ConfigManager>
     private AudioClipConfig m_AudioClipConfig;
     public void InitConfig(System.Action callSuccess)
     {
-        ResHandle resHandle = GameResourceManager.GetInstance().LoadResourceAsync("ShaderConfig", (resHandle) =>
+        ResHandle resHandle = GameResourceManager.GetInstance().LoadResourceAsync("ScriptObject_ShaderConfig", (resHandle) =>
         {
             m_ShaderConfig = resHandle.GetObjT<ShaderConfig>();
             m_ShaderConfig.Init();
             resHandle.Dispose();
 
-            ResHandle resHandle1 = GameResourceManager.GetInstance().LoadResourceAsync("AudioClipConfig", (re) =>
+            ResHandle resHandle1 = GameResourceManager.GetInstance().LoadResourceAsync("ScriptObject_AudioClipConfig", (re) =>
             {
 
                 m_AudioClipConfig = re.GetObjT<AudioClipConfig>();

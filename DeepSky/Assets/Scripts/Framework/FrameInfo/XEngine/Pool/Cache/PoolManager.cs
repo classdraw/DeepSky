@@ -31,9 +31,10 @@ namespace XEngine.Pool
         }
 
 		public void InitConfig(){
-            var sc=GameResourceManager.GetInstance().LoadResourceSync("PoolConfig");
+            var sc=GameResourceManager.GetInstance().LoadResourceSync("ScriptObject_PoolConfig");
             m_Config=sc.GetObjT<PoolConfig>();
             m_Config.Init();
+            sc.Release();
 		}
 
 		public void Tick(){

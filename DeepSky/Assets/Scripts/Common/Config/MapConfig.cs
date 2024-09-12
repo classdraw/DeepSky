@@ -21,4 +21,10 @@ public class MapConfig : ScriptableObject
         m_vTerrainCoordOffset=new Vector2Int((int)vx,(int)vy);
         return m_vTerrainCoordOffset;
     }
+
+    public bool CheckCoord(Vector2Int coord){
+        float x=m_vMapSize.x/m_fTerrainSize/2f;
+        float y=m_vMapSize.y/m_fTerrainSize/2f;
+        return Mathf.Abs(coord.x)<x&&Mathf.Abs(coord.y)<y;
+    }
 }

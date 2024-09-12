@@ -11300,35 +11300,28 @@
             "BundleID": 4
         },
         {
-            "Address": "AudioClipConfig",
+            "Address": "ScriptObject_AudioClipConfig",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/ScriptObject/AudioClipConfig.asset",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 5
         },
         {
-            "Address": "Links",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/ScriptObject/Links.asset",
-            "AssetGUID": "",
-            "AssetTags": [],
-            "BundleID": 5
-        },
-        {
-            "Address": "MapConfig",
+            "Address": "ScriptObject_MapConfig",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/ScriptObject/MapConfig.asset",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 5
         },
         {
-            "Address": "PoolConfig",
+            "Address": "ScriptObject_PoolConfig",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/ScriptObject/PoolConfig.asset",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 5
         },
         {
-            "Address": "ShaderConfig",
+            "Address": "ScriptObject_ShaderConfig",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/ScriptObject/ShaderConfig.asset",
             "AssetGUID": "",
             "AssetTags": [],
@@ -12007,6 +12000,13 @@
             "BundleID": 26
         },
         {
+            "Address": "tools_ClienGameScene",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/ClienGameScene.prefab",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 26
+        },
+        {
             "Address": "tools_NetworkManager",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/NetworkManager.prefab",
             "AssetGUID": "",
@@ -12084,7 +12084,7 @@
             "UnityCRC": 0,
             "FileHash": "75fed8feb11b076b82c1a33de8aea6af",
             "FileCRC": "00000000",
-            "FileSize": 3570,
+            "FileSize": 2820,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -12294,7 +12294,7 @@
             "UnityCRC": 0,
             "FileHash": "7afcf3736c8847af0468445fd8672420",
             "FileCRC": "00000000",
-            "FileSize": 8382,
+            "FileSize": 22509,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

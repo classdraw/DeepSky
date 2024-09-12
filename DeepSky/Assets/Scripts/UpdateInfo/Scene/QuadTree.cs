@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
 
 
@@ -28,15 +27,36 @@ namespace UpdateInfo{
                     DivideNode();
                 }
             }
-
+#if UNITY_EDITOR
+            public void Draw(){
+                
+                if(m_bIsTerrain){
+                    Gizmos.color=Color.green;
+                }else{
+                    Gizmos.color=Color.white;
+                }
+                Gizmos.DrawWireCube(m_kBounds.center,m_kBounds.size*0.99f);
+                Gizmos.color=Color.white;
+                m_kLeftAndTop?.Draw();
+                m_kRightAndTop?.Draw();
+                m_kLeftAndBottom?.Draw();
+                m_kRightAndBottom?.Draw();
+                
+            }
+#endif
             private bool CheckTerrain(out Vector2Int terrainCoord){
                 terrainCoord=Vector2Int.zero;
 
                 Vector3 size=this.m_kBounds.size;
-                bool isTerrain=size.x==QuadTree.s_MapConfig.m_fTerrainSize&&size.y==QuadTree.s_MapConfig.m_fTerrainSize;
+                bool isTerrain=size.x==QuadTree.s_MapConfig.m_fTerrainSize&&size.z==QuadTree.s_MapConfig.m_fTerrainSize;
                 if(isTerrain){
                     terrainCoord.x=(int)(m_kBounds.center.x/QuadTree.s_MapConfig.m_fTerrainSize);
                     terrainCoord.y=(int)(m_kBounds.center.z/QuadTree.s_MapConfig.m_fTerrainSize);
+                
+                    if(!QuadTree.s_MapConfig.CheckCoord(terrainCoord)){
+                        isTerrain=false;
+
+                    }
                 }
                 return isTerrain;
             }
@@ -69,5 +89,12 @@ namespace UpdateInfo{
             var b=new Bounds(new Vector3(0f,tHeight/2f,0f),new Vector3(QuadTree.s_MapConfig.m_vQuadTreeSize.x,tHeight,QuadTree.s_MapConfig.m_vQuadTreeSize.y));
             m_kRoot=new Node(b, true);
         }
+#if UNITY_EDITOR
+        public void Draw(){
+            if(m_kRoot!=null){
+                m_kRoot.Draw(); 
+            }
+        }
+#endif
     }
 }

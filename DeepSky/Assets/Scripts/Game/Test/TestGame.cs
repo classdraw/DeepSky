@@ -1,4 +1,5 @@
 using UnityEngine;
+using UpdateInfo;
 using XEngine.Server;
 using XEngine.Utilities;
 
@@ -10,6 +11,9 @@ public class TestGame : MonoBehaviour
         if(GameConsts.IsClient()||GameConsts.IsHost()){
             ServerFacade.GetInstance().InitClient();
         }
+
+        //TerrainCtrl terrainCtrl=new TerrainCtrl();
+        //terrainCtrl.RequestLoad(new Vector2Int(1,1));
     }
 
     void Update(){

@@ -25,6 +25,6 @@ public class MapConfig : ScriptableObject
     public bool CheckCoord(Vector2Int coord){
         float x=m_vMapSize.x/m_fTerrainSize/2f;
         float y=m_vMapSize.y/m_fTerrainSize/2f;
-        return Mathf.Abs(coord.x)<x&&Mathf.Abs(coord.y)<y;
+        return Mathf.Abs(coord.x)<=x&&Mathf.Abs(coord.y)<=y;
     }
 }

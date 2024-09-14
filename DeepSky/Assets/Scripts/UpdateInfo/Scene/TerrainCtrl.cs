@@ -6,6 +6,7 @@ using XEngine.Pool;
 
 namespace UpdateInfo{
     public enum Terrain_State_Enum{
+        None,
         Request,
         Enable,
         Disable
@@ -18,7 +19,9 @@ namespace UpdateInfo{
         public float m_fDestroyTime;
         private bool m_bInit;
         private Vector2Int m_kCoord;
+        public Vector2Int Coord{get{return m_kCoord;}}
         public void RequestLoad(Vector2Int coord){
+            m_eState=Terrain_State_Enum.Request;
             m_kCoord=coord;
             var terrainName=Tools.ConvertCoordToTerrainResName(coord);
             m_kResHandle=GameResourceManager.GetInstance().LoadResourceAsync(terrainName,OnLoadComplete);
@@ -71,13 +74,14 @@ namespace UpdateInfo{
             }
             m_kTerrain=null;
             m_fDestroyTime=0f;
+            m_eState=Terrain_State_Enum.None;
+            m_kCoord=Vector2Int.zero;
         }
 
         public bool Tick(){
             if(m_eState==Terrain_State_Enum.Disable){
                 m_fDestroyTime+=Time.deltaTime;
                 if(m_fDestroyTime>=ClientMapManager.Instance.m_fDestroyTime){
-                    // QuadTree.s_TerrainCtrlPools
                     //销毁
                     return true;
                 }

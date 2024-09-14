@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 using XEngine.Pool;
 
@@ -7,8 +9,14 @@ namespace UpdateInfo{
     //private static MapConfig 
     public class QuadTree
     {
-        public static ObjectPoolT<TerrainCtrl> s_TerrainCtrlPools=new ObjectPoolT<TerrainCtrl>(l=>l.Get(), l=>l.Release());
+        private static Action<Vector2Int> s_ActionEnable;
+        private static Action<Vector2Int> s_ActionDisable;
         private static ObjectPoolT<Node> s_NodePools=new ObjectPoolT<Node>(l=>l.Get(), l=>l.Release());
+        private enum Terrain_Type_Enum{
+            None,//非叶节点
+            EmptyTerrain,//空的用于计算
+            RealTerrain//实际的地表
+        }
         private class Node:IAutoReleaseComponent{
             public Bounds m_kBounds;
             private Node m_kLeftAndTop;
@@ -16,7 +24,7 @@ namespace UpdateInfo{
             private Node m_kLeftAndBottom;
             private Node m_kRightAndBottom;
             
-            private bool m_bIsTerrain;
+            private Terrain_Type_Enum m_eTerrainType=Terrain_Type_Enum.None;
             private Vector2Int m_vTerrainCoord;//坐标
             private bool m_bInit=false;
 
@@ -29,7 +37,7 @@ namespace UpdateInfo{
                 m_kRightAndTop=null;
                 m_kLeftAndBottom=null;
                 m_kRightAndBottom=null;
-                m_bIsTerrain=false;
+                m_eTerrainType=Terrain_Type_Enum.None;
                 m_vTerrainCoord=Vector2Int.zero;
             }
 
@@ -56,18 +64,62 @@ namespace UpdateInfo{
 
             public void Init(Bounds bounds,bool divide){
                 this.m_kBounds=bounds;
-                this.m_bIsTerrain=CheckTerrain(out Vector2Int terrainCoord);
+                CheckTerrainType(out Vector2Int terrainCoord);
                 m_vTerrainCoord=terrainCoord;
                 //需要分裂并且大于最小尺寸
-                if(divide&&this.m_kBounds.size.x>ClientMapManager.Instance.MapConfig.m_fMinQuadTreeNodeSize){
+                if(divide&&this.m_eTerrainType==Terrain_Type_Enum.None){
                     //分裂切割逻辑
                     DivideNode();
+                }
+            }
+
+            public void RefreshPlayerTerrainCoord(Vector2Int coord){
+                // var worldPos=Tools.ConvertCoordToWorldPos(coord);
+                if(this.m_vTerrainCoord.x==-20&&this.m_vTerrainCoord.y==-20){
+                    int a=0;
+                    }
+                if(this.m_eTerrainType==Terrain_Type_Enum.None){
+                    m_kLeftAndTop?.RefreshPlayerTerrainCoord(coord);
+                    m_kRightAndTop?.RefreshPlayerTerrainCoord(coord);
+                    m_kLeftAndBottom?.RefreshPlayerTerrainCoord(coord);
+                    m_kRightAndBottom?.RefreshPlayerTerrainCoord(coord);
+                }else if(this.m_eTerrainType==Terrain_Type_Enum.EmptyTerrain){
+                    //空节点不用做处理
+                }else{
+                    
+                    //需要显示与否判断
+                    bool isNear=Tools.IsNearCoord(this.m_vTerrainCoord,coord);
+                    if(isNear){
+                        if(s_ActionEnable!=null){
+                            s_ActionEnable(this.m_vTerrainCoord);
+                        }
+                    }else{
+                        if(s_ActionDisable!=null){
+                            s_ActionDisable(this.m_vTerrainCoord);
+                        }
+                    }
+                }
+
+            }
+
+            private void DisableChild(){
+                if(this.m_eTerrainType==Terrain_Type_Enum.None){
+                    m_kLeftAndTop?.DisableChild();
+                    m_kRightAndTop?.DisableChild();
+                    m_kLeftAndBottom?.DisableChild();
+                    m_kRightAndBottom?.DisableChild();
+                }else if(this.m_eTerrainType==Terrain_Type_Enum.EmptyTerrain){
+                    //空节点不用做处理
+                }else{
+                    if(s_ActionDisable!=null){
+                        s_ActionDisable(this.m_vTerrainCoord);
+                    }
                 }
             }
 #if UNITY_EDITOR
             public void Draw(){
                 
-                if(m_bIsTerrain){
+                if(this.m_eTerrainType==Terrain_Type_Enum.RealTerrain){
                     Gizmos.color=Color.green;
                 }else{
                     Gizmos.color=Color.white;
@@ -81,21 +133,21 @@ namespace UpdateInfo{
                 
             }
 #endif
-            private bool CheckTerrain(out Vector2Int terrainCoord){
+            private void CheckTerrainType(out Vector2Int terrainCoord){
+                m_eTerrainType=Terrain_Type_Enum.None;
                 terrainCoord=Vector2Int.zero;
                 var mapConfig=ClientMapManager.Instance.MapConfig;
                 Vector3 size=this.m_kBounds.size;
-                bool isTerrain=size.x==mapConfig.m_fTerrainSize&&size.z==mapConfig.m_fTerrainSize;
-                if(isTerrain){
+                bool isLeaf=size.x==mapConfig.m_fTerrainSize&&size.z==mapConfig.m_fTerrainSize;
+                if(isLeaf){
+                    m_eTerrainType=Terrain_Type_Enum.RealTerrain;
                     terrainCoord.x=(int)(m_kBounds.center.x/mapConfig.m_fTerrainSize);
                     terrainCoord.y=(int)(m_kBounds.center.z/mapConfig.m_fTerrainSize);
                 
                     if(!mapConfig.CheckCoord(terrainCoord)){
-                        isTerrain=false;
-
+                        m_eTerrainType=Terrain_Type_Enum.EmptyTerrain;
                     }
                 }
-                return isTerrain;
             }
 
             //自身进行分裂创建4个小的node 
@@ -133,7 +185,15 @@ namespace UpdateInfo{
         }
     
         private Node m_kRoot;
-        public QuadTree(){
+
+        public void RefreshPlayerTerrainCoord(Vector2Int coord){
+            if(m_kRoot!=null){
+                m_kRoot.RefreshPlayerTerrainCoord(coord);
+            }
+        }
+        public QuadTree(Action<Vector2Int> actionEnable=null,Action<Vector2Int> actionDisable=null){
+            s_ActionDisable=actionDisable;
+            s_ActionEnable=actionEnable;
             float tSize=ClientMapManager.Instance.MapConfig.m_fTerrainSize;
             float tHeight=ClientMapManager.Instance.MapConfig.m_fTerrainMaxHeight;
             var b=new Bounds(new Vector3(0f,tHeight/2f,0f),new Vector3(ClientMapManager.Instance.MapConfig.m_vQuadTreeSize.x,tHeight,ClientMapManager.Instance.MapConfig.m_vQuadTreeSize.y));

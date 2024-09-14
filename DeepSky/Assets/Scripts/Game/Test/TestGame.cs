@@ -12,8 +12,17 @@ public class TestGame : MonoBehaviour
             ServerFacade.GetInstance().InitClient();
         }
 
-        //TerrainCtrl terrainCtrl=new TerrainCtrl();
-        //terrainCtrl.RequestLoad(new Vector2Int(1,1));
+        // TerrainCtrl terrainCtrl=new TerrainCtrl();
+        // terrainCtrl.RequestLoad(new Vector2Int(-20,-20));
+
+        // TerrainCtrl terrainCtrl1=new TerrainCtrl();
+        // terrainCtrl1.RequestLoad(new Vector2Int(-19,-19));
+
+        // TerrainCtrl terrainCtrl2=new TerrainCtrl();
+        // terrainCtrl2.RequestLoad(new Vector2Int(-20,-19));
+
+        // TerrainCtrl terrainCtrl3=new TerrainCtrl();
+        // terrainCtrl3.RequestLoad(new Vector2Int(-19,-20));
     }
 
     void Update(){

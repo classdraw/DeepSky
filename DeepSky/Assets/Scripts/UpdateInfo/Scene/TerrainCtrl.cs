@@ -17,17 +17,34 @@ namespace UpdateInfo{
         public Terrain_State_Enum m_eState;
         public float m_fDestroyTime;
         private bool m_bInit;
+        private Vector2Int m_kCoord;
         public void RequestLoad(Vector2Int coord){
-            var terrainName="Terrains_"+coord.x+"_"+coord.y;
+            m_kCoord=coord;
+            var terrainName=Tools.ConvertCoordToTerrainResName(coord);
             m_kResHandle=GameResourceManager.GetInstance().LoadResourceAsync(terrainName,OnLoadComplete);
         }
 
         private void OnLoadComplete(ResHandle resHandle){
-            m_kTerrain=resHandle.GetGameObject().GetComponent<Terrain>();
             if(IsReleased()){
                 return;
             }
             //坐标设置
+            m_kTerrain=resHandle.GetGameObject().GetComponent<Terrain>();
+            m_kTerrain.basemapDistance=100f;
+            m_kTerrain.heightmapPixelError=50f;
+            m_kTerrain.heightmapMaximumLOD=1;
+            m_kTerrain.detailObjectDensity=0.9f;
+            m_kTerrain.treeDistance=10f;
+            m_kTerrain.treeCrossFadeLength=10f;
+            m_kTerrain.treeMaximumFullLODCount=10;
+            m_kTerrain.transform.position=Tools.ConvertCoordToVector3(this.m_kCoord);
+            m_kTerrain.transform.parent=ClientMapManager.Instance.transform;
+
+            if(m_eState==Terrain_State_Enum.Disable&&m_kTerrain.gameObject.activeSelf){
+                m_kTerrain.gameObject.SetActive(false);
+            }else if(!m_kTerrain.gameObject.activeSelf){
+                m_kTerrain.gameObject.SetActive(true);
+            }
         }
         public void Enable(){
             if(m_eState!=Terrain_State_Enum.Enable){
@@ -54,6 +71,19 @@ namespace UpdateInfo{
             }
             m_kTerrain=null;
             m_fDestroyTime=0f;
+        }
+
+        public bool Tick(){
+            if(m_eState==Terrain_State_Enum.Disable){
+                m_fDestroyTime+=Time.deltaTime;
+                if(m_fDestroyTime>=ClientMapManager.Instance.m_fDestroyTime){
+                    // QuadTree.s_TerrainCtrlPools
+                    //销毁
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public void Get()

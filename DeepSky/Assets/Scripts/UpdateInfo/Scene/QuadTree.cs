@@ -19,6 +19,7 @@ namespace UpdateInfo{
         }
         private class Node:IAutoReleaseComponent{
             public Bounds m_kBounds;
+            public Bounds m_kLookBounds;
             private Node m_kLeftAndTop;
             private Node m_kRightAndTop;
             private Node m_kLeftAndBottom;
@@ -27,6 +28,7 @@ namespace UpdateInfo{
             private Terrain_Type_Enum m_eTerrainType=Terrain_Type_Enum.None;
             private Vector2Int m_vTerrainCoord;//坐标
             private bool m_bInit=false;
+
 
             public void Get(){
                 m_bInit=true;
@@ -64,6 +66,8 @@ namespace UpdateInfo{
 
             public void Init(Bounds bounds,bool divide){
                 this.m_kBounds=bounds;
+                this.m_kLookBounds=this.m_kBounds;
+                this.m_kLookBounds.size*=2f;
                 CheckTerrainType(out Vector2Int terrainCoord);
                 m_vTerrainCoord=terrainCoord;
                 //需要分裂并且大于最小尺寸
@@ -73,11 +77,9 @@ namespace UpdateInfo{
                 }
             }
 
+
             public void RefreshPlayerTerrainCoord(Vector2Int coord){
                 // var worldPos=Tools.ConvertCoordToWorldPos(coord);
-                if(this.m_vTerrainCoord.x==-20&&this.m_vTerrainCoord.y==-20){
-                    int a=0;
-                    }
                 if(this.m_eTerrainType==Terrain_Type_Enum.None){
                     m_kLeftAndTop?.RefreshPlayerTerrainCoord(coord);
                     m_kRightAndTop?.RefreshPlayerTerrainCoord(coord);
@@ -86,10 +88,11 @@ namespace UpdateInfo{
                 }else if(this.m_eTerrainType==Terrain_Type_Enum.EmptyTerrain){
                     //空节点不用做处理
                 }else{
-                    
                     //需要显示与否判断
                     bool isNear=Tools.IsNearCoord(this.m_vTerrainCoord,coord);
-                    if(isNear){
+                    bool isNearTwo=Tools.IsNearCoord(this.m_vTerrainCoord,coord,2);
+                    // var bound=this.m_kBounds;
+                    if(isNear||(isNearTwo&&ClientMapManager.Instance.CheckInCameraPlane(this.m_kLookBounds))){
                         if(s_ActionEnable!=null){
                             s_ActionEnable(this.m_vTerrainCoord);
                         }

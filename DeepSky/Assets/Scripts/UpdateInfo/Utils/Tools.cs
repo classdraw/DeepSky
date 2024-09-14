@@ -23,7 +23,9 @@ namespace UpdateInfo{
 
         public static Vector2Int ConvertWorldPosToCoord(Vector3 worldPos){
             var mapConfig=ClientMapManager.Instance.MapConfig;
-            return new Vector2Int((int)(worldPos.x/mapConfig.m_fTerrainSize)-1,(int)(worldPos.z/mapConfig.m_fTerrainSize)-1);
+            int subX=worldPos.x<0?-1:0;
+            int subY=worldPos.z<0?-1:0;
+            return new Vector2Int((int)(worldPos.x/mapConfig.m_fTerrainSize)+subX,(int)(worldPos.z/mapConfig.m_fTerrainSize)+subY);
         }
         
         public static Vector3 ConvertCoordToWorldPos(Vector2Int coord){

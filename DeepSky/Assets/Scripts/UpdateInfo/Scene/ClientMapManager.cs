@@ -15,7 +15,8 @@ namespace UpdateInfo{
         [SerializeField]
         private string m_sMapPath;
 
-
+        [SerializeField]
+        public float m_fDirtyActiveTime=1f;
 
 
         private static ClientMapManager s_kClientMapManager;
@@ -69,7 +70,10 @@ namespace UpdateInfo{
         // }
         [SerializeField]
         private GameObject m_TestObj;
+
+
         private void Update(){
+            TickCameraPlane();
             if(m_bPlayerTerrainCoordDirty&&m_kQuadTree!=null){
                 m_kQuadTree.RefreshPlayerTerrainCoord(m_kPlayerTerrainCoord);
                 m_bPlayerTerrainCoordDirty=false;
@@ -91,9 +95,27 @@ namespace UpdateInfo{
             }
             m_kNeedDestroyKeys.Clear();
             // //jyy test
-            // if(m_TestObj!=null){
-            //     SetPlayerTerrainCoordDirty(Tools.ConvertWorldPosToCoord(m_TestObj.transform.position));
-            // }
+            if(m_TestObj!=null){
+                SetPlayerTerrainCoordDirty(Tools.ConvertWorldPosToCoord(m_TestObj.transform.position));
+            }
+        }
+        private Camera m_kCamera;
+        private Plane[] m_kCameraPlanes=new Plane[6];
+        private void TickCameraPlane(){
+            if(m_kCamera==null){
+                m_kCamera=Camera.main;
+            }
+            if(m_kCamera==null){
+                return;
+            }
+            GeometryUtility.CalculateFrustumPlanes(m_kCamera,m_kCameraPlanes);
+        }
+
+        public bool CheckInCameraPlane(Bounds bounds){
+            if(m_kCamera==null||m_kCameraPlanes==null){
+                return false;
+            }
+            return GeometryUtility.TestPlanesAABB(m_kCameraPlanes,bounds);
         }
         
         protected virtual void OnDestroy(){

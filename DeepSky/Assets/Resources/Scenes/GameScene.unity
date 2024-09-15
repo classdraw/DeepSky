@@ -298,6 +298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 6304986050666241834, guid: bace763fab68c4a4480fa7375869b24f, type: 3}
+      propertyPath: m_fVelocity
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7742353154775011728, guid: bace763fab68c4a4480fa7375869b24f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.35
@@ -469,7 +473,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 220
+  far clip plane: 300
   field of view: 50
   orthographic: 0
   orthographic size: 5
@@ -552,6 +556,14 @@ PrefabInstance:
       propertyPath: m_TestObj
       value: 
       objectReference: {fileID: 2056847845}
+    - target: {fileID: 7449579556980927060, guid: a254f300bedeff249865c5535b07cecc, type: 3}
+      propertyPath: m_fDestroyTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449579556980927060, guid: a254f300bedeff249865c5535b07cecc, type: 3}
+      propertyPath: m_fDirtyActiveTime
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

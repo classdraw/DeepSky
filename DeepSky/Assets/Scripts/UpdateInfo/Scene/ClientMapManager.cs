@@ -94,7 +94,7 @@ namespace UpdateInfo{
                 s_TerrainCtrlPools.Release(ctrl);
             }
             m_kNeedDestroyKeys.Clear();
-            // //jyy test
+            // // //jyy test
             if(m_TestObj!=null){
                 SetPlayerTerrainCoordDirty(Tools.ConvertWorldPosToCoord(m_TestObj.transform.position));
             }

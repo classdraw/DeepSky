@@ -17,7 +17,7 @@ namespace UpdateInfo{
 
         public static Vector3 ConvertCoordToVector3(Vector2Int coord){
             var mapConfig=ClientMapManager.Instance.MapConfig;
-            var half=mapConfig.m_fTerrainSize/2f;
+            // var half=mapConfig.m_fTerrainSize/2f;
             return new Vector3(mapConfig.m_fTerrainSize*coord.x,0f,mapConfig.m_fTerrainSize*coord.y);
         }
 

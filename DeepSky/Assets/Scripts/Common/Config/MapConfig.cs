@@ -15,6 +15,8 @@ public class MapConfig : ScriptableObject
     public float m_fMinQuadTreeNodeSize=300;//最小四叉树尺寸
     public float m_fTerrainMaxHeight=200f;//高度
 
+    // public Vector3 m_vCenterOffset=new Vector3(150f,0f,150f);
+
     public Vector2Int GetTerrainCoordOffset(){
         float vx=m_vMapSize.x/m_fTerrainSize/2;
         float vy=m_vMapSize.y/m_fTerrainSize/2;

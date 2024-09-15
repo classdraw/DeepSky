@@ -67,7 +67,7 @@ namespace UpdateInfo{
             public void Init(Bounds bounds,bool divide){
                 this.m_kBounds=bounds;
                 this.m_kLookBounds=this.m_kBounds;
-                this.m_kLookBounds.size*=2f;
+                this.m_kLookBounds.size*=1.5f;
                 CheckTerrainType(out Vector2Int terrainCoord);
                 m_vTerrainCoord=terrainCoord;
                 //需要分裂并且大于最小尺寸
@@ -197,7 +197,7 @@ namespace UpdateInfo{
         public QuadTree(Action<Vector2Int> actionEnable=null,Action<Vector2Int> actionDisable=null){
             s_ActionDisable=actionDisable;
             s_ActionEnable=actionEnable;
-            float tSize=ClientMapManager.Instance.MapConfig.m_fTerrainSize;
+            // float tSize=ClientMapManager.Instance.MapConfig.m_fTerrainSize;
             float tHeight=ClientMapManager.Instance.MapConfig.m_fTerrainMaxHeight;
             var b=new Bounds(new Vector3(0f,tHeight/2f,0f),new Vector3(ClientMapManager.Instance.MapConfig.m_vQuadTreeSize.x,tHeight,ClientMapManager.Instance.MapConfig.m_vQuadTreeSize.y));
             m_kRoot=QuadTree.s_NodePools.Get<Node>();

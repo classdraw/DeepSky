@@ -1,15 +1,21 @@
 using UnityEngine;
 using UpdateInfo;
+using XEngine.Loader;
+using XEngine.Pool;
 using XEngine.Server;
 using XEngine.Utilities;
 
 public class TestGame : MonoBehaviour
 {
-    
+    private ResHandle m_kResHandle;
     void Start()
     {
         if(GameConsts.IsClient()||GameConsts.IsHost()){
             ServerFacade.GetInstance().InitClient();
+
+            m_kResHandle=GameResourceManager.Instance.LoadResourceAsync("tools_ClientGameScene",(handle)=>{
+
+            });
         }
 
         // TerrainCtrl terrainCtrl=new TerrainCtrl();
@@ -55,5 +61,10 @@ public class TestGame : MonoBehaviour
         // }
     }
 
-
+    void OnDestroy(){
+        if(m_kResHandle!=null){
+            m_kResHandle.Dispose();
+        }
+        m_kResHandle=null;
+    }
 }

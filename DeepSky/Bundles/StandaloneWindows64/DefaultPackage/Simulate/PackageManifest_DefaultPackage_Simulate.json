@@ -12000,8 +12000,8 @@
             "BundleID": 26
         },
         {
-            "Address": "tools_ClienGameScene",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/ClienGameScene.prefab",
+            "Address": "tools_ClientGameScene",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/ClientGameScene.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 26
@@ -12294,7 +12294,7 @@
             "UnityCRC": 0,
             "FileHash": "7afcf3736c8847af0468445fd8672420",
             "FileCRC": "00000000",
-            "FileSize": 22635,
+            "FileSize": 29477,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

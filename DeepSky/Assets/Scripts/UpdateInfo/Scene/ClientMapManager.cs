@@ -74,10 +74,12 @@ namespace UpdateInfo{
 
         private void Update(){
             TickCameraPlane();
-            if(m_bPlayerTerrainCoordDirty&&m_kQuadTree!=null){
-                m_kQuadTree.RefreshPlayerTerrainCoord(m_kPlayerTerrainCoord);
-                m_bPlayerTerrainCoordDirty=false;
-            }
+            // if(m_bPlayerTerrainCoordDirty&&m_kQuadTree!=null){
+            //     m_kQuadTree.RefreshPlayerTerrainCoord(m_kPlayerTerrainCoord);
+            //     m_bPlayerTerrainCoordDirty=false;
+            // }
+
+
 
             foreach(var kvp in m_kTerrainCtrlDic){
                 bool needDestroy=kvp.Value.Tick();
@@ -97,6 +99,11 @@ namespace UpdateInfo{
             // // //jyy test
             if(m_TestObj!=null){
                 SetPlayerTerrainCoordDirty(Tools.ConvertWorldPosToCoord(m_TestObj.transform.position));
+            }
+
+
+            if(m_kQuadTree!=null){
+                m_kQuadTree.CheckVisible();
             }
         }
         private Camera m_kCamera;
@@ -137,27 +144,37 @@ namespace UpdateInfo{
 
 
         public void OnEnableTerrain(Vector2Int coord){
-            TerrainCtrl terrainCtrl=null;
-            if(m_kTerrainCtrlDic.ContainsKey(coord)){
-                terrainCtrl=m_kTerrainCtrlDic[coord];
-            }else{
-                terrainCtrl=s_TerrainCtrlPools.Get<TerrainCtrl>();
-                m_kTerrainCtrlDic.Add(coord,terrainCtrl);
-                terrainCtrl.RequestLoad(coord);
+            if(coord.x<=39&&coord.y<=39){
+                TerrainCtrl terrainCtrl=null;
+                if(m_kTerrainCtrlDic.ContainsKey(coord)){
+                    terrainCtrl=m_kTerrainCtrlDic[coord];
+                }else{
+                    terrainCtrl=s_TerrainCtrlPools.Get<TerrainCtrl>();
+                    m_kTerrainCtrlDic.Add(coord,terrainCtrl);
+                    terrainCtrl.RequestLoad(coord);
+                }
+
+                terrainCtrl.Enable();
             }
 
-            terrainCtrl.Enable();
         }
 
         public void OnDisableTerrain(Vector2Int coord){
-            if(m_kTerrainCtrlDic.ContainsKey(coord)){
-                m_kTerrainCtrlDic[coord].Disable();
+            if(coord.x<=39&&coord.y<=39){
+                if(m_kTerrainCtrlDic.ContainsKey(coord)){
+                    m_kTerrainCtrlDic[coord].Disable();
+                }
             }
+
         }
 
         public void SetPlayerTerrainCoordDirty(Vector2Int coord){
             m_kPlayerTerrainCoord=coord;
             m_bPlayerTerrainCoordDirty=true;
+        }
+
+        public Vector2Int GetPlayerCoord(){
+            return m_kPlayerTerrainCoord;
         }
     }
 

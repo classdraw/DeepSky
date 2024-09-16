@@ -300,7 +300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6304986050666241834, guid: bace763fab68c4a4480fa7375869b24f, type: 3}
       propertyPath: m_fVelocity
-      value: 8
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7742353154775011728, guid: bace763fab68c4a4480fa7375869b24f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -474,7 +474,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 300
-  field of view: 50
+  field of view: 45
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

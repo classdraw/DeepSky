@@ -28,12 +28,14 @@ namespace UpdateInfo{
             private Terrain_Type_Enum m_eTerrainType=Terrain_Type_Enum.None;
             private Vector2Int m_vTerrainCoord;//坐标
             private bool m_bInit=false;
-
+            private bool m_bVisible=false;
 
             public void Get(){
                 m_bInit=true;
             }
             public void Release(){
+                m_bVisible=false;
+                // m_bLastState=false;
                 m_bInit=false;
                 m_kLeftAndTop=null;
                 m_kRightAndTop=null;
@@ -76,33 +78,74 @@ namespace UpdateInfo{
                     DivideNode();
                 }
             }
+            // private bool m_bLastState=false;
+            // public void RefreshPlayerTerrainCoord(Vector2Int coord){
+
+            //     if(this.m_eTerrainType==Terrain_Type_Enum.None){
+            //             m_kLeftAndTop?.RefreshPlayerTerrainCoord(coord);
+            //             m_kRightAndTop?.RefreshPlayerTerrainCoord(coord);
+            //             m_kLeftAndBottom?.RefreshPlayerTerrainCoord(coord);
+            //             m_kRightAndBottom?.RefreshPlayerTerrainCoord(coord);
+            //         }else if(this.m_eTerrainType==Terrain_Type_Enum.EmptyTerrain){
+            //             //空节点不用做处理
+            //         }else{
+            //             //需要显示与否判断
+            //             bool nowActive=CheckActive(coord);
+            //             if(nowActive){
+            //                 if(s_ActionEnable!=null){
+            //                     s_ActionEnable(this.m_vTerrainCoord);
+            //                 }
+            //             }else{
+            //                 if(s_ActionDisable!=null){
+            //                     s_ActionDisable(this.m_vTerrainCoord);
+            //                 }
+            //             }
+            //         }
+
+            // }
+            // private bool CheckActive(Vector2Int coord){
+            //     //需要显示与否判断
+            //     bool isNear=Tools.IsNearCoord(this.m_vTerrainCoord,coord);
+            //     bool isNearTwo=Tools.IsNearCoord(this.m_vTerrainCoord,coord,2);
+            //     return isNear||(isNearTwo&&ClientMapManager.Instance.CheckInCameraPlane(this.m_kLookBounds));
+            // }
+
+            public void CheckVisible(){
+                bool nowActive=CheckActive();
+                if(!m_bVisible&&!nowActive){
+                    return;//默认不显示直接return
+                }
 
 
-            public void RefreshPlayerTerrainCoord(Vector2Int coord){
-                // var worldPos=Tools.ConvertCoordToWorldPos(coord);
-                if(this.m_eTerrainType==Terrain_Type_Enum.None){
-                    m_kLeftAndTop?.RefreshPlayerTerrainCoord(coord);
-                    m_kRightAndTop?.RefreshPlayerTerrainCoord(coord);
-                    m_kLeftAndBottom?.RefreshPlayerTerrainCoord(coord);
-                    m_kRightAndBottom?.RefreshPlayerTerrainCoord(coord);
-                }else if(this.m_eTerrainType==Terrain_Type_Enum.EmptyTerrain){
-                    //空节点不用做处理
-                }else{
-                    //需要显示与否判断
-                    bool isNear=Tools.IsNearCoord(this.m_vTerrainCoord,coord);
-                    bool isNearTwo=Tools.IsNearCoord(this.m_vTerrainCoord,coord,2);
-                    // var bound=this.m_kBounds;
-                    if(isNear||(isNearTwo&&ClientMapManager.Instance.CheckInCameraPlane(this.m_kLookBounds))){
+                if(nowActive){
+                    if(this.m_eTerrainType==Terrain_Type_Enum.None){
+                        m_kLeftAndTop?.CheckVisible();
+                        m_kRightAndTop?.CheckVisible();
+                        m_kLeftAndBottom?.CheckVisible();
+                        m_kRightAndBottom?.CheckVisible();
+                    }else if(this.m_eTerrainType==Terrain_Type_Enum.EmptyTerrain){
+                        //空节点不用做处理
+                    }else{
                         if(s_ActionEnable!=null){
                             s_ActionEnable(this.m_vTerrainCoord);
                         }
-                    }else{
-                        if(s_ActionDisable!=null){
-                            s_ActionDisable(this.m_vTerrainCoord);
-                        }
                     }
+                }else{
+                    DisableChild();
                 }
 
+                m_bVisible=nowActive;
+            }
+
+            private bool CheckActive(){
+                bool isBound=ClientMapManager.Instance.CheckInCameraPlane(this.m_kLookBounds);
+                if(isBound){
+                    return true;
+                }
+                var playerCoord=ClientMapManager.Instance.GetPlayerCoord();
+                bool isNear=Tools.IsNearCoord(this.m_vTerrainCoord,playerCoord);
+                // bool isNearTwo=Tools.IsNearCoord(this.m_vTerrainCoord,playerCoord,3);
+                return isNear;
             }
 
             private void DisableChild(){
@@ -189,11 +232,17 @@ namespace UpdateInfo{
     
         private Node m_kRoot;
 
-        public void RefreshPlayerTerrainCoord(Vector2Int coord){
+        public void CheckVisible(){
             if(m_kRoot!=null){
-                m_kRoot.RefreshPlayerTerrainCoord(coord);
+                m_kRoot.CheckVisible();
             }
         }
+
+        // public void RefreshPlayerTerrainCoord(Vector2Int coord){
+        //     if(m_kRoot!=null){
+        //         m_kRoot.RefreshPlayerTerrainCoord(coord);
+        //     }
+        // }
         public QuadTree(Action<Vector2Int> actionEnable=null,Action<Vector2Int> actionDisable=null){
             s_ActionDisable=actionDisable;
             s_ActionEnable=actionEnable;

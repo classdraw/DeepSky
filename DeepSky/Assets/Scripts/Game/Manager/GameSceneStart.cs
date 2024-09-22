@@ -24,6 +24,8 @@ public class GameSceneStart : MonoBehaviour
         }
 
         if(GameConsts.HasServer()){
+            //server不需要这边初始化 已经在luainitstate初始化
+            
             m_kServerResHandle=GameResourceManager.Instance.LoadResourceAsync("tools_ServerGameScene",(handle)=>{
 
             });

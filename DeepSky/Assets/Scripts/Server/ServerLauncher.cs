@@ -18,6 +18,8 @@ namespace XEngine.Server{
         private ResHandle m_ServerHandle;
         private ResHandle m_NetResHandle;
 
+        private ResHandle m_ClientResHandle;
+
         public void UnInit(){
             StopConnected();
             _clearServerCache();
@@ -50,6 +52,10 @@ namespace XEngine.Server{
             if(serverGlobal!=null){
                 serverGlobal.UnInit();
                 serverGlobal=null;
+            }
+            if(m_ClientResHandle!=null){
+                m_ClientResHandle.Dispose();
+                m_ClientResHandle=null;
             }
 
         }
@@ -88,6 +94,9 @@ namespace XEngine.Server{
             var obj1=m_NetResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj1);
 
+            m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientInfo");
+            var obj2=m_ClientResHandle.GetGameObject();
+            GameObject.DontDestroyOnLoad(obj2);
             NetManager.GetInstance().InitClient();
         }
 
@@ -95,6 +104,10 @@ namespace XEngine.Server{
             m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
             var obj1=m_NetResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj1);
+
+            m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientInfo");
+            var obj2=m_ClientResHandle.GetGameObject();
+            GameObject.DontDestroyOnLoad(obj2);
 
             //host先启动服务器
             m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ServerInfo");

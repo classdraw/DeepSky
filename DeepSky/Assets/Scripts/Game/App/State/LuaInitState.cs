@@ -67,7 +67,7 @@ namespace Game.Fsm
         private void LoadDll(){
             Global.LoadMetadataForAOTAssemblies();//aot
             ReflexDelegate.Init();//热更新c#
-            XLogger.LogServer("LoadDll Success!!!");
+            XLogger.Log("LoadDll Success!!!");
 
             // ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_UpdateInfo.dll");
             // Assembly hotUpdate=Assembly.Load(resHandle.GetObjT<TextAsset>().bytes);

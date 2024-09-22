@@ -51,6 +51,7 @@ namespace XEngine.Utilities
             "System.dll",
             "System.Core.dll",
         };
+		public static string HotUpdateAssemblyName="bytes_UpdateInfo.dll";
         #endregion
 
 #region 配置方法

@@ -88,25 +88,30 @@ namespace XEngine.Server{
             var obj1=m_NetResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj1);
 
-            //先启动Server逻辑
-            if(GameConsts.IsHost()){
-                //host先启动服务器
-                m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ServerInfo");
-                var obj=m_ServerHandle.GetGameObject();
-                GameObject.DontDestroyOnLoad(obj);
-                
-                serverGlobal=obj.GetComponent<ServerGlobal>();
-                serverGlobal.Init();
-
-                clientManager=obj.GetComponent<ClientsManager>();
-                clientManager.Init();
-
-                serverAOIManager=obj.GetComponent<ServerAOIManager>();
-                serverAOIManager.Init();
-                
-                GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerInitOver);
-            }
             NetManager.GetInstance().InitClient();
+        }
+
+        public void InitHost(){
+            m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
+            var obj1=m_NetResHandle.GetGameObject();
+            GameObject.DontDestroyOnLoad(obj1);
+
+            //host先启动服务器
+            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ServerInfo");
+            var obj=m_ServerHandle.GetGameObject();
+            GameObject.DontDestroyOnLoad(obj);
+                
+            serverGlobal=obj.GetComponent<ServerGlobal>();
+            serverGlobal.Init();
+
+            clientManager=obj.GetComponent<ClientsManager>();
+            clientManager.Init();
+
+            serverAOIManager=obj.GetComponent<ServerAOIManager>();
+            serverAOIManager.Init();
+                
+            GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerInitOver);
+            NetManager.GetInstance().InitHost();
         }
 
         public ClientsManager GetClientsManager(){

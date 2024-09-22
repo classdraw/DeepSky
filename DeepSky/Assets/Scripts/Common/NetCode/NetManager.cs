@@ -20,16 +20,13 @@ namespace XEngine.Net{
             XLogger.LogImport("StartServer");
         }
         public void InitClient(){
-            if(GameConsts.NetModel==GameConsts.Game_NetModel_Type.Host){
-                this.StartHost();
-                XLogger.LogImport("StartHost");
-            }else if(GameConsts.NetModel==GameConsts.Game_NetModel_Type.Server){
-                this.StartServer();
-                XLogger.LogImport("StartServer");
-            }else{
-                this.StartClient();
-                XLogger.LogImport("StartClient");
-            }
+            this.StartClient();
+            XLogger.LogImport("StartClient");
+        }
+
+        public void InitHost(){
+            this.StartHost();
+            XLogger.LogImport("StartHost");
         }
 
         void Awake(){

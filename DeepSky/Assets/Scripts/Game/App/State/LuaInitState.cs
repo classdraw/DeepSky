@@ -11,6 +11,7 @@ using System.IO;
 using HybridCLR;
 
 using XEngine.Utilities;
+using XEngine.Reflex;
 
 namespace Game.Fsm
 {
@@ -25,7 +26,7 @@ namespace Game.Fsm
             XLogger.Log("LuaInitState Enter");
             XFacade.Init();//框架初始化
             Global.CreateInstance();//游戏全局mono初始化
-            LoadDllTest();
+            LoadDll();
 
 
             //对象池初始化
@@ -63,9 +64,10 @@ namespace Game.Fsm
         //     }
         // }
 
-        private void LoadDllTest(){
-            Global.LoadMetadataForAOTAssemblies();
-
+        private void LoadDll(){
+            Global.LoadMetadataForAOTAssemblies();//aot
+            ReflexDelegate.Init();//热更新c#
+            XLogger.LogServer("LoadDll Success!!!");
 
             // ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_UpdateInfo.dll");
             // Assembly hotUpdate=Assembly.Load(resHandle.GetObjT<TextAsset>().bytes);

@@ -16,10 +16,14 @@ namespace XEngine.Reflex{
 
         private static void CheckInitHotUpdateAssembly(){
             if(m_HotUpdate==null){
-                ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("Bytes_UpdateInfo.dll");
+                ResHandle resHandle=GameResourceManager.GetInstance().LoadResourceSync("bytes_UpdateInfo.dll");
                 m_HotUpdate=Assembly.Load(resHandle.GetObjT<TextAsset>().bytes);
-                resHandle.Dispose();
             }
+        }
+
+        public static void Init(){
+            CheckInitHotUpdateAssembly();
+
         }
         public static Type GetReflexType(string className){//className包含包名
             CheckInitHotUpdateAssembly();

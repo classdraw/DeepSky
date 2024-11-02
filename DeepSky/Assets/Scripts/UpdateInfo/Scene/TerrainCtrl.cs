@@ -22,6 +22,10 @@ namespace UpdateInfo{
         public Vector2Int Coord{get{return m_kCoord;}}
         private float m_bDirtyActiveTime=-1f;
         public void RequestLoad(Vector2Int coord){
+            if(m_kResHandle!=null){
+                m_kResHandle.Dispose();
+                m_kResHandle=null;
+            }
             m_eState=Terrain_State_Enum.Request;
             m_kCoord=coord;
             var terrainName=Tools.ConvertCoordToTerrainResName(coord);

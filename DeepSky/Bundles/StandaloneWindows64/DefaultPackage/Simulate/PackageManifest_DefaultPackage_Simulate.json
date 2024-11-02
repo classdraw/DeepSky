@@ -12000,15 +12000,15 @@
             "BundleID": 26
         },
         {
-            "Address": "tools_ClientGameScene",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/ClientGameScene.prefab",
+            "Address": "tools_ClientCtrl",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/ClientCtrl.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 26
         },
         {
-            "Address": "tools_ClientInfo",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/ClientInfo.prefab",
+            "Address": "tools_ClientGameScene",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/ClientGameScene.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 26
@@ -12021,15 +12021,15 @@
             "BundleID": 26
         },
         {
-            "Address": "tools_ServerGameScene",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/ServerGameScene.prefab",
+            "Address": "tools_ServerCtrl",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/ServerCtrl.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 26
         },
         {
-            "Address": "tools_ServerInfo",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/ServerInfo.prefab",
+            "Address": "tools_ServerGameScene",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Tools/ServerGameScene.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 26
@@ -12058,7 +12058,7 @@
             "UnityCRC": 0,
             "FileHash": "133336903836182f1c4bb6ba30ba9802",
             "FileCRC": "00000000",
-            "FileSize": 18318,
+            "FileSize": 18319,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -12308,7 +12308,7 @@
             "UnityCRC": 0,
             "FileHash": "7afcf3736c8847af0468445fd8672420",
             "FileCRC": "00000000",
-            "FileSize": 22954,
+            "FileSize": 22929,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

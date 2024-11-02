@@ -8,9 +8,11 @@ using XEngine.Utilities;
 using XEngine.Loader;
 using Game.Scenes;
 using XEngine.Event;
+using UpdateInfo;
 namespace XEngine.Server{
     public class ServerFacade : Singleton<ServerFacade>
     {
+        private ClientGlobal clientGlobal;
         private ServerGlobal serverGlobal;
         private ClientsManager clientManager;
         private ServerAOIManager serverAOIManager;
@@ -57,7 +59,30 @@ namespace XEngine.Server{
                 m_ClientResHandle.Dispose();
                 m_ClientResHandle=null;
             }
+            if(clientGlobal!=null){
+                clientGlobal.UnInit();
+            }
 
+        }
+        public void NetConnect(){
+            if(GameConsts.IsClient()){
+                NetManager.GetInstance().InitClient();
+            }else if(GameConsts.IsHost()){
+                NetManager.GetInstance().InitHost();
+            }else if(GameConsts.IsServer()){
+                NetManager.GetInstance().InitServer();
+            }
+            XLogger.LogServer("NetStart!!!");
+        }
+        public void ServerStart(){
+            serverGlobal.Init();
+            clientManager.Init();
+            serverAOIManager.Init();
+
+            GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerInitOver);
+            
+            
+            XLogger.LogServer("ServerStart!!!");
         }
 
         //只有服务器会调用
@@ -69,23 +94,12 @@ namespace XEngine.Server{
             GameObject.DontDestroyOnLoad(obj1);
 
 
-            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ServerInfo");
+            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ServerCtrl");
             var obj=m_ServerHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj);
-
             serverGlobal=obj.GetComponent<ServerGlobal>();
-            serverGlobal.Init();
-
             clientManager=obj.GetComponent<ClientsManager>();
-            clientManager.Init();
-            
             serverAOIManager=obj.GetComponent<ServerAOIManager>();
-            serverAOIManager.Init();
-
-            GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerInitOver);
-            NetManager.GetInstance().InitServer();
-
-            
         }
 
         //只有client和host会调用这个方法
@@ -97,7 +111,9 @@ namespace XEngine.Server{
             m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientInfo");
             var obj2=m_ClientResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj2);
-            NetManager.GetInstance().InitClient();
+            
+            clientGlobal=obj2.GetComponent<ClientGlobal>();
+            clientGlobal.Init();
         }
 
         public void InitHost(){
@@ -105,26 +121,20 @@ namespace XEngine.Server{
             var obj1=m_NetResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj1);
 
-            m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientInfo");
+            m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientCtrl");
             var obj2=m_ClientResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj2);
+            clientGlobal=obj2.GetComponent<ClientGlobal>();
+            clientGlobal.Init();
 
             //host先启动服务器
-            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ServerInfo");
+            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ServerCtrl");
             var obj=m_ServerHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj);
-                
             serverGlobal=obj.GetComponent<ServerGlobal>();
-            serverGlobal.Init();
-
             clientManager=obj.GetComponent<ClientsManager>();
-            clientManager.Init();
-
             serverAOIManager=obj.GetComponent<ServerAOIManager>();
-            serverAOIManager.Init();
-                
-            GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerInitOver);
-            NetManager.GetInstance().InitHost();
+            
         }
 
         public ClientsManager GetClientsManager(){

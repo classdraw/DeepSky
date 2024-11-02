@@ -143,8 +143,9 @@ namespace UpdateInfo{
                     return true;
                 }
                 var playerCoord=ClientMapManager.Instance.GetPlayerCoord();
-                bool isNear=Tools.IsNearCoord(this.m_vTerrainCoord,playerCoord);
-                // bool isNearTwo=Tools.IsNearCoord(this.m_vTerrainCoord,playerCoord,3);
+                bool isNear=Tools.IsNearCoord(this.m_vTerrainCoord,playerCoord,1);
+                //bool isNearTwo=Tools.IsNearCoord(this.m_vTerrainCoord,playerCoord,2);
+                //return isNear||isNearTwo;
                 return isNear;
             }
 

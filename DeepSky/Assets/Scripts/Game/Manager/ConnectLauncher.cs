@@ -9,17 +9,18 @@ using XEngine.Loader;
 using Game.Scenes;
 using XEngine.Event;
 using UpdateInfo;
+
 namespace XEngine.Server{
-    public class ServerFacade : Singleton<ServerFacade>
+    public class ConnectFacade : Singleton<ConnectFacade>
     {
-        private ClientGlobal clientGlobal;
         private ServerGlobal serverGlobal;
         private ClientsManager clientManager;
         private ServerAOIManager serverAOIManager;
-
+        private ServerGameSceneManager serverGameSceneManager;
+        
         private ResHandle m_ServerHandle;
         private ResHandle m_NetResHandle;
-
+        private ResHandle m_kServerResHandle;
         private ResHandle m_ClientResHandle;
 
         public void UnInit(){
@@ -59,10 +60,11 @@ namespace XEngine.Server{
                 m_ClientResHandle.Dispose();
                 m_ClientResHandle=null;
             }
-            if(clientGlobal!=null){
-                clientGlobal.UnInit();
+            if(m_kServerResHandle!=null){
+                m_kServerResHandle.Dispose();
+                m_kServerResHandle=null;
             }
-
+            serverGameSceneManager=null;
         }
         public void NetConnect(){
             if(GameConsts.IsClient()){
@@ -81,7 +83,8 @@ namespace XEngine.Server{
 
             GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerInitOver);
             
-            
+            m_kServerResHandle=GameResourceManager.Instance.LoadResourceSync("server_ServerGameScene");
+            serverGameSceneManager=m_kServerResHandle.GetGameObject().GetComponent<ServerGameSceneManager>();
             XLogger.LogServer("ServerStart!!!");
         }
 
@@ -94,7 +97,7 @@ namespace XEngine.Server{
             GameObject.DontDestroyOnLoad(obj1);
 
 
-            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ServerCtrl");
+            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("server_ServerCtrl");
             var obj=m_ServerHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj);
             serverGlobal=obj.GetComponent<ServerGlobal>();
@@ -108,12 +111,9 @@ namespace XEngine.Server{
             var obj1=m_NetResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj1);
 
-            m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientInfo");
+            m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientCtrl");
             var obj2=m_ClientResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj2);
-            
-            clientGlobal=obj2.GetComponent<ClientGlobal>();
-            clientGlobal.Init();
         }
 
         public void InitHost(){
@@ -124,11 +124,9 @@ namespace XEngine.Server{
             m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientCtrl");
             var obj2=m_ClientResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj2);
-            clientGlobal=obj2.GetComponent<ClientGlobal>();
-            clientGlobal.Init();
 
             //host先启动服务器
-            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ServerCtrl");
+            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("server_ServerCtrl");
             var obj=m_ServerHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj);
             serverGlobal=obj.GetComponent<ServerGlobal>();

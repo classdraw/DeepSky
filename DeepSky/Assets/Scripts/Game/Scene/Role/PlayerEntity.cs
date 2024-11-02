@@ -30,7 +30,7 @@ namespace Game.Role{
 
             if(GameConsts.HasServer()){
                 //var intPos=XEngine.Server.ServerAOIManager.ConvertWorldPositionToCoord(this.transform.position);
-                XEngine.Server.ServerFacade.GetInstance().GetServerAOIManager().InitClient(OwnerClientId,Vector2Int.zero);
+                XEngine.Server.ConnectFacade.GetInstance().GetServerAOIManager().InitClient(OwnerClientId,Vector2Int.zero);
             }
         }
         void Awake()
@@ -113,7 +113,7 @@ namespace Game.Role{
             var newIntPos=ServerAOIManager.ConvertWorldPositionToCoord(transform.position);
             //aoi相关
             if(newIntPos!=oldIntPos){
-                ServerFacade.GetInstance().GetServerAOIManager().UpdateClientChunkCoord(OwnerClientId,oldIntPos,newIntPos);
+                ConnectFacade.GetInstance().GetServerAOIManager().UpdateClientChunkCoord(OwnerClientId,oldIntPos,newIntPos);
             }
             
         }

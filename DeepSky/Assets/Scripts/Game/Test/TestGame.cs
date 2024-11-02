@@ -12,9 +12,9 @@ public class TestGame : MonoBehaviour
     {
         if(GameConsts.IsClient()||GameConsts.IsHost()){
             if(GameConsts.IsClient()){
-                ServerFacade.GetInstance().InitClient();
+                ConnectFacade.GetInstance().InitClient();
             }else{
-                ServerFacade.GetInstance().InitHost();
+                ConnectFacade.GetInstance().InitHost();
             }
             m_kResHandle=GameResourceManager.Instance.LoadResourceAsync("tools_ClientGameScene",(handle)=>{
 

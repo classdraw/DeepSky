@@ -96,7 +96,7 @@ namespace Game.Fsm
             //对象池初始化
             XEngine.Pool.PoolManager.GetInstance().InitConfig();
             GameSceneManager.GetInstance().LoadSceneAsync("ServerScene",()=>{//服务器加了一个ServerScene，可能后续有逻辑 
-                ServerFacade.GetInstance().InitServer();
+                ConnectFacade.GetInstance().InitServer();
                 //server跳转Gamescene场景
                 GameSceneManager.GetInstance().LoadSceneAsync("GameScene",()=>{
                     XLogger.Log("Server Success!!!");

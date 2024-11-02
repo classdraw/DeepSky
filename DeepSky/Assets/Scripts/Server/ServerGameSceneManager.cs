@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace UpdateInfo{
+namespace XEngine.Server{
     public class ServerGameSceneManager : MonoBehaviour
     {
         private static ServerGameSceneManager s_kServerGameSceneManager;

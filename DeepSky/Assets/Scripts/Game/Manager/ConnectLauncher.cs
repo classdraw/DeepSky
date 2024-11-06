@@ -65,6 +65,7 @@ namespace XEngine.Server{
                 m_kServerResHandle=null;
             }
             serverGameSceneManager=null;
+            
         }
         public void NetConnect(){
             if(GameConsts.IsClient()){

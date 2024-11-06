@@ -28,7 +28,7 @@ namespace UpdateInfo{
             }
             m_eState=Terrain_State_Enum.Request;
             m_kCoord=coord;
-            var terrainName=Tools.ConvertCoordToTerrainResName(coord);
+            var terrainName=Common.Utilities.Tools.ConvertCoordToTerrainResName(coord,ClientMapManager.Instance.MapConfig);
             m_kResHandle=GameResourceManager.GetInstance().LoadResourceAsync(terrainName,OnLoadComplete);
         }
 
@@ -45,7 +45,7 @@ namespace UpdateInfo{
             m_kTerrain.treeDistance=10f;
             m_kTerrain.treeCrossFadeLength=10f;
             m_kTerrain.treeMaximumFullLODCount=10;
-            m_kTerrain.transform.position=Tools.ConvertCoordToVector3(this.m_kCoord);
+            m_kTerrain.transform.position=Common.Utilities.Tools.ConvertCoordToVector3(this.m_kCoord,ClientMapManager.Instance.MapConfig);
             m_kTerrain.transform.parent=ClientMapManager.Instance.transform;
             CheckActive();
 

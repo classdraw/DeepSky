@@ -98,7 +98,7 @@ namespace UpdateInfo{
             m_kNeedDestroyKeys.Clear();
             // // //jyy test
             if(m_TestObj!=null){
-                SetPlayerTerrainCoordDirty(Tools.ConvertWorldPosToCoord(m_TestObj.transform.position));
+                SetPlayerTerrainCoordDirty(Common.Utilities.Tools.ConvertWorldPosToCoord(m_TestObj.transform.position,ClientMapManager.Instance.MapConfig));
             }
 
 

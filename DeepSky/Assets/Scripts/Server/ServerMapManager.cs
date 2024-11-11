@@ -31,6 +31,7 @@ public class ServerMapManager : MonoBehaviour
                 m_TerrainHandles.Add(handle,sm);
             }
         }
+        XEngine.Utilities.XLogger.LogServer("ServerMapManager Init!!!");
     }
 
     private void OnLoadComplete(ResHandle resHandle){

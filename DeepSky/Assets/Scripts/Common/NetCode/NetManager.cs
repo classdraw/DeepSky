@@ -29,7 +29,7 @@ namespace XEngine.Net{
             XLogger.LogImport("StartHost");
         }
 
-        void Awake(){
+        public void Init(){
             m_Instance=this;
             SelfUnityTransport=this.GetComponent<UnityTransport>();
         }

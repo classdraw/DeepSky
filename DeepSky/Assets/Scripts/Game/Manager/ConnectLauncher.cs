@@ -96,7 +96,8 @@ namespace XEngine.Server{
             m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
             var obj1=m_NetResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj1);
-
+            var net=obj1.GetComponent<NetManager>();
+            net.Init();
 
             m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("server_ServerCtrl");
             var obj=m_ServerHandle.GetGameObject();
@@ -111,6 +112,8 @@ namespace XEngine.Server{
             m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
             var obj1=m_NetResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj1);
+            var net=obj1.GetComponent<NetManager>();
+            net.Init();
 
             m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientCtrl");
             var obj2=m_ClientResHandle.GetGameObject();
@@ -121,6 +124,8 @@ namespace XEngine.Server{
             m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
             var obj1=m_NetResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj1);
+            var net=obj1.GetComponent<NetManager>();
+            net.Init();
 
             m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientCtrl");
             var obj2=m_ClientResHandle.GetGameObject();

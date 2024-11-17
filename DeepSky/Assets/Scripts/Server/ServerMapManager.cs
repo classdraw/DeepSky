@@ -43,6 +43,7 @@ public class ServerMapManager : MonoBehaviour
         terrain.enabled=false;
         terrain.transform.position=Common.Utilities.Tools.ConvertCoordToVector3(mapInfo.m_vPos,m_kMapConfig);
         terrain.transform.parent=this.transform;
+        terrain.name+="_s";
     }
 
     private void OnDestroy() {

@@ -46,11 +46,13 @@ namespace XEngine.Utilities
 
 		public static List<string> AOTMetaAssemblyNames { get; } = new List<string>()
         {
+			"Common.dll",
 			"FrameInfo.dll",
             "mscorlib.dll",
             "System.dll",
             "System.Core.dll",
         };
+		public static string HotCommonAssemblyName="bytes_Common.dll";
 		public static string HotUpdateAssemblyName="bytes_UpdateInfo.dll";
         #endregion
 

@@ -1,0 +1,56 @@
+// #if !UNITY_SERVER  
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using XEngine.Utilities;
+using XEngine.Event;
+
+//这个代码只有客户端用
+public class PlayerManager : MonoBehaviour
+{
+    private PlayerCtrl m_kLocalPlayer;
+    public PlayerCtrl LocalPlayer{
+        get{
+            if(GameConsts.IsServer()){
+                XLogger.LogServer("LocalPlayer Can't use in Server!!!");
+                return null;
+            }
+            return m_kLocalPlayer;
+        }
+    }
+    private static PlayerManager s_kPlayerManager;
+    public static PlayerManager Instance{
+        get{
+            if(s_kPlayerManager==null){
+                var obj=new GameObject("PlayerManager");
+                s_kPlayerManager=obj.AddComponent<PlayerManager>();
+            }
+            return s_kPlayerManager;
+        }
+    }
+
+    private void Awake(){
+        s_kPlayerManager=this;
+        DontDestroyOnLoad(gameObject);
+
+        MessageManager.GetInstance().AddListener((int)MessageManager_Enum.InitLocalPlayer,OnInitLocalPlayer);
+    }
+
+    private void OnDestroy(){
+        if(MessageManager.GetInstance()!=null){
+            MessageManager.GetInstance().RemoveListener((int)MessageManager_Enum.InitLocalPlayer,OnInitLocalPlayer);
+        }
+    }
+    private void OnInitLocalPlayer(System.Object obj){
+
+        var playerCtrl=(InitLocalPlayer)obj;
+        InitPlayer(playerCtrl.m_kLocalPlayer);
+    }
+    public void InitPlayer(PlayerCtrl playerCtrl){
+        if(!GameConsts.IsServer()){
+            m_kLocalPlayer=playerCtrl;
+        }
+        
+    }
+}
+//#endif

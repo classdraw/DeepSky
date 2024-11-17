@@ -11293,6 +11293,13 @@
             "BundleID": 4
         },
         {
+            "Address": "bytes_Common.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/Common.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5
+        },
+        {
             "Address": "bytes_FrameInfo.dll",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/FrameInfo.dll.bytes",
             "AssetGUID": "",
@@ -12021,8 +12028,8 @@
             "BundleID": 28
         },
         {
-            "Address": "role_RealPlayer",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Role/RealPlayer.prefab",
+            "Address": "role_Role_Player1",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Role/Role_Player1.prefab",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 28
@@ -12105,7 +12112,7 @@
             "UnityCRC": 0,
             "FileHash": "75842c50a6e1aa0765bbd85481419e91",
             "FileCRC": "00000000",
-            "FileSize": 3354112,
+            "FileSize": 3361792,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -12305,7 +12312,7 @@
             "UnityCRC": 0,
             "FileHash": "7afcf3736c8847af0468445fd8672420",
             "FileCRC": "00000000",
-            "FileSize": 19278,
+            "FileSize": 42522,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []
@@ -12335,7 +12342,7 @@
             "UnityCRC": 0,
             "FileHash": "133336903836182f1c4bb6ba30ba9802",
             "FileCRC": "00000000",
-            "FileSize": 227798,
+            "FileSize": 24529,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

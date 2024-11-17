@@ -55,9 +55,10 @@ namespace XEngine.Server{
             if(!IsValid()){
                 return;
             }
+            //登录注册流程
             XLogger.LogServer("ClientEnter=>"+clientId);
             //todo 后续预制体走配置 坐标走地图配置
-            NetManager.GetInstance().SpawnObject(clientId,m_PlayerPrefab,Vector3.zero);
+            NetManager.GetInstance().SpawnObject(clientId,m_PlayerPrefab,new Vector3(5f,55f,5f));
         }
 
         private void OnClientDisconnectCallback(ulong clientId){

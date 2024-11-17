@@ -39,19 +39,19 @@ public class PlayerManager : MonoBehaviour
     }
 
     private void OnDestroy(){
-        if(MessageManager.GetInstance()!=null){
+        if(MessageManager.HasInstance()){
             MessageManager.GetInstance().RemoveListener((int)MessageManager_Enum.InitLocalPlayer,OnInitLocalPlayer);
         }
     }
     private void OnInitLocalPlayer(System.Object obj){
-
         var playerCtrl=(InitLocalPlayer)obj;
         InitPlayer(playerCtrl.m_kLocalPlayer);
     }
     public void InitPlayer(PlayerCtrl playerCtrl){
         m_kLocalPlayer=playerCtrl;
         m_kCinemachineFreeLook.transform.position=playerCtrl.transform.position;
-        Debug.LogError("1111111111111111");
+        m_kCinemachineFreeLook.LookAt=playerCtrl.m_kLookAtObj.transform;
+        m_kCinemachineFreeLook.Follow=playerCtrl.m_kFollowObj.transform;
         // m_kCinemachineFreeLook.Follow=playerCtrl
     }
 }

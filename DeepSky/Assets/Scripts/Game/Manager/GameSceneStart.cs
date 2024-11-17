@@ -15,16 +15,12 @@ public class GameSceneStart : MonoBehaviour
     {
         //初始化网络资源
         if(GameConsts.IsClient()||GameConsts.IsHost()){
+            m_kResHandle=GameResourceManager.Instance.LoadResourceSync("tools_ClientGameScene");
             if(GameConsts.IsClient()){
                 ConnectFacade.GetInstance().InitClient();
             }else{
                 ConnectFacade.GetInstance().InitHost();
             }
-
-            
-            m_kResHandle=GameResourceManager.Instance.LoadResourceAsync("tools_ClientGameScene",(handle)=>{
-
-            });
         }
         //如果有服务器 服务器开始
         if(GameConsts.HasServer()){

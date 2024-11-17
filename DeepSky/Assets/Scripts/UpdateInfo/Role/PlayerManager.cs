@@ -1,13 +1,15 @@
-// #if !UNITY_SERVER  
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using XEngine.Utilities;
 using XEngine.Event;
+using Cinemachine;
 
 //这个代码只有客户端用
 public class PlayerManager : MonoBehaviour
 {
+    [SerializeField]
+    private CinemachineFreeLook m_kCinemachineFreeLook;
     private PlayerCtrl m_kLocalPlayer;
     public PlayerCtrl LocalPlayer{
         get{
@@ -47,10 +49,9 @@ public class PlayerManager : MonoBehaviour
         InitPlayer(playerCtrl.m_kLocalPlayer);
     }
     public void InitPlayer(PlayerCtrl playerCtrl){
-        if(!GameConsts.IsServer()){
-            m_kLocalPlayer=playerCtrl;
-        }
-        
+        m_kLocalPlayer=playerCtrl;
+        m_kCinemachineFreeLook.transform.position=playerCtrl.transform.position;
+        Debug.LogError("1111111111111111");
+        // m_kCinemachineFreeLook.Follow=playerCtrl
     }
 }
-//#endif

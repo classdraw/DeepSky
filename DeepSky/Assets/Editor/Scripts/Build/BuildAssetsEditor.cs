@@ -41,6 +41,10 @@ public class BuildAssetsEditor
         string path3=dllResPath+"/Common.dll";
         string path4=destPath+"Common.dll.bytes";
         File.Copy(path3,path4,true);
+
+        string path5=dllResPath+"/Server.dll";
+        string path6=destPath+"Server.dll.bytes";
+        File.Copy(path5,path6,true);
         
         string aotResPath=System.Environment.CurrentDirectory+"/HybridCLRData/AssembliesPostIl2CppStrip/"+targetName+"/";
         for(int i=0;i<SettingsUtil.AOTAssemblyNames.Count;i++){

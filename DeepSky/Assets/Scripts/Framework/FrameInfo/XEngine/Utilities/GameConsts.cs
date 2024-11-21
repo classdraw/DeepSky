@@ -46,7 +46,6 @@ namespace XEngine.Utilities
 
 		public static List<string> AOTMetaAssemblyNames { get; } = new List<string>()
         {
-			"Common.dll",
 			"FrameInfo.dll",
             "mscorlib.dll",
             "System.dll",

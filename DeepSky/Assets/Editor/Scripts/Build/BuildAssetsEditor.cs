@@ -38,9 +38,9 @@ public class BuildAssetsEditor
         string path2=destPath+"UpdateInfo.dll.bytes";
         File.Copy(path1,path2,true);
 
-        string path3=dllResPath+"/Common.dll";
-        string path4=destPath+"Common.dll.bytes";
-        File.Copy(path3,path4,true);
+        // string path3=dllResPath+"/Common.dll";
+        // string path4=destPath+"Common.dll.bytes";
+        // File.Copy(path3,path4,true);
 
         string path5=dllResPath+"/Server.dll";
         string path6=destPath+"Server.dll.bytes";

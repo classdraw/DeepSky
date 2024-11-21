@@ -15,10 +15,10 @@ namespace XEngine.Reflex{
     {
         private static Assembly m_HotUpdate;//热更新的程序集
         private static ResHandle m_kResHandle;
-        private static ResHandle m_kResHandle1;
+        // private static ResHandle m_kResHandle1;
         private static void CheckInitHotUpdateAssembly(){
             if(m_HotUpdate==null){
-                m_kResHandle1=GameResourceManager.GetInstance().LoadResourceSync(GameConsts.HotCommonAssemblyName);
+                // m_kResHandle1=GameResourceManager.GetInstance().LoadResourceSync(GameConsts.HotCommonAssemblyName);
                 m_kResHandle=GameResourceManager.GetInstance().LoadResourceSync(GameConsts.HotUpdateAssemblyName);
                 m_HotUpdate=Assembly.Load(m_kResHandle.GetObjT<TextAsset>().bytes);
             }
@@ -35,10 +35,10 @@ namespace XEngine.Reflex{
             }
             m_HotUpdate=null;
 
-            if(m_kResHandle1!=null){
-                m_kResHandle1.Dispose();
-                m_kResHandle1=null;
-            }
+            // if(m_kResHandle1!=null){
+            //     m_kResHandle1.Dispose();
+            //     m_kResHandle1=null;
+            // }
         }
         public static Type GetReflexType(string className){//className包含包名
             CheckInitHotUpdateAssembly();

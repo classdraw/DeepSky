@@ -11293,13 +11293,6 @@
             "BundleID": 4
         },
         {
-            "Address": "bytes_Common.dll",
-            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/Common.dll.bytes",
-            "AssetGUID": "",
-            "AssetTags": [],
-            "BundleID": 5
-        },
-        {
             "Address": "bytes_FrameInfo.dll",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/FrameInfo.dll.bytes",
             "AssetGUID": "",
@@ -11309,6 +11302,13 @@
         {
             "Address": "bytes_mscorlib.dll",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/mscorlib.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5
+        },
+        {
+            "Address": "bytes_Server.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/Server.dll.bytes",
             "AssetGUID": "",
             "AssetTags": [],
             "BundleID": 5
@@ -12112,7 +12112,7 @@
             "UnityCRC": 0,
             "FileHash": "75842c50a6e1aa0765bbd85481419e91",
             "FileCRC": "00000000",
-            "FileSize": 3361792,
+            "FileSize": 231424,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

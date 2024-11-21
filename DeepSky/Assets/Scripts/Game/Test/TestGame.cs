@@ -1,5 +1,4 @@
 using UnityEngine;
-using UpdateInfo;
 using XEngine.Loader;
 using XEngine.Pool;
 using XEngine.Server;

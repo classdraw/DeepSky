@@ -1,7 +1,6 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
-using UpdateInfo;
 using XEngine.Loader;
 using XEngine.Pool;
 using XEngine.Server;

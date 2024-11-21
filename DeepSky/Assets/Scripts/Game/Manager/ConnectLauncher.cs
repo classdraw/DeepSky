@@ -8,7 +8,6 @@ using XEngine.Utilities;
 using XEngine.Loader;
 using Game.Scenes;
 using XEngine.Event;
-using UpdateInfo;
 
 namespace XEngine.Server{
     public class ConnectFacade : Singleton<ConnectFacade>

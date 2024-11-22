@@ -8,6 +8,7 @@ using Unity.Netcode;
 using XEngine.Event;
 using XEngine.Net;
 using XEngine.Server;
+using Utilities;
 
 namespace Game.Role{
     public class PlayerEntity : NetworkBehaviour
@@ -30,7 +31,9 @@ namespace Game.Role{
 
             if(GameConsts.HasServer()){
                 //var intPos=XEngine.Server.ServerAOIManager.ConvertWorldPositionToCoord(this.transform.position);
-                XEngine.Server.ConnectFacade.GetInstance().GetServerAOIManager().InitClient(OwnerClientId,Vector2Int.zero);
+
+                //改成通知
+                //XEngine.Server.ConnectFacade.GetInstance().GetServerAOIManager().InitClient(OwnerClientId,Vector2Int.zero);
             }
         }
         void Awake()
@@ -104,16 +107,18 @@ namespace Game.Role{
         //呼叫服务器自身的netobject
         [ServerRpc(RequireOwnership =true)]//是否需要验证宿主、、
         private void HandleMoveServerRpc(Vector3 inputDir){//结尾必须ServerRpc
-            // XLogger.LogError(Time.deltaTime+">>"+inputDir+">>>>"+moveSpeed);
-            // transform.Translate(Time.deltaTime*moveSpeed*inputDir);//服务器端调用
 
-            var oldIntPos=ServerAOIManager.ConvertWorldPositionToCoord(transform.position);
+            var oldIntPos=GameUtils.ConvertWorldPositionToCoord(transform.position);
             var dir=0.02f*moveSpeed*(inputDir.normalized);
             transform.position=transform.position+dir;
-            var newIntPos=ServerAOIManager.ConvertWorldPositionToCoord(transform.position);
+            var newIntPos=GameUtils.ConvertWorldPositionToCoord(transform.position);
             //aoi相关
             if(newIntPos!=oldIntPos){
-                ConnectFacade.GetInstance().GetServerAOIManager().UpdateClientChunkCoord(OwnerClientId,oldIntPos,newIntPos);
+                MessageManager.GetInstance().SendMessage((int)MessageManager_Enum.PlayerMovePos,new DATA_ServerMovePos(){
+                    clientId=OwnerClientId,
+                    oldPos=oldIntPos,
+                    newPos=newIntPos
+                });
             }
             
         }

@@ -36,13 +36,18 @@ namespace XEngine.Server{
         public void Init(){
             m_bInit=false;
             GlobalEventListener.AddListenter(GlobalEventDefine.ServerInitOver,OnServerInitOver);
-           
+            MessageManager.GetInstance().AddListener((int)MessageManager_Enum.PlayerMovePos,OnServerMovePos);
         }
 
         public void UnInit(){
             m_bInit=false;
             GlobalEventListener.RemoveListener(GlobalEventDefine.ServerInitOver,OnServerInitOver);
+            MessageManager.GetInstance().RemoveListener((int)MessageManager_Enum.PlayerMovePos,OnServerMovePos);
+        }
 
+        private void OnServerMovePos(object obj){
+            DATA_ServerMovePos smp=(DATA_ServerMovePos)obj;
+            Debug.LogError(smp.clientId);
         }
 
         private void OnServerInitOver(object obj){
@@ -200,11 +205,7 @@ namespace XEngine.Server{
             chunkServerObjectDic[newCoord].Add(serverObject);
         }
 
-        //世界坐标转换区域坐标
-        public static Vector2Int ConvertWorldPositionToCoord(Vector3 worldPos){
-            return new Vector2Int((int)(worldPos.x/chunkSize),(int)(worldPos.z/chunkSize));
 
-        }
 
         
         #endregion

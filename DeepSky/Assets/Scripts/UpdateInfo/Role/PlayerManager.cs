@@ -44,7 +44,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
     private void OnInitLocalPlayer(System.Object obj){
-        var playerCtrl=(InitLocalPlayer)obj;
+        var playerCtrl=(DATA_InitLocalPlayer)obj;
         InitPlayer(playerCtrl.m_kLocalPlayer);
     }
     public void InitPlayer(PlayerCtrl playerCtrl){

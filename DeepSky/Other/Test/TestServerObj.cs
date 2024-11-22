@@ -15,7 +15,7 @@ public class TestServerObj : NetworkBehaviour
         base.OnNetworkSpawn();
         if(GameConsts.HasServer()){
             Instance=this;
-            XEngine.Server.ConnectFacade.GetInstance().GetServerAOIManager().InitServer(NetworkObject,Vector2Int.zero);
+            // XEngine.Server.ConnectFacade.GetInstance().GetServerAOIManager().InitServer(NetworkObject,Vector2Int.zero);
         }
 
     }
@@ -35,12 +35,12 @@ public class TestServerObj : NetworkBehaviour
 
     private void HandleMove(Vector3 inputDir){
         
-        var oldIntPos=ServerAOIManager.ConvertWorldPositionToCoord(transform.position);
-        var dir=0.02f*m_MoveSpeed*(inputDir.normalized);
-        transform.position=transform.position+dir;
-        var newIntPos=ServerAOIManager.ConvertWorldPositionToCoord(transform.position);
-        if(newIntPos!=oldIntPos){
-            ConnectFacade.GetInstance().GetServerAOIManager().UpdateServerChunkCoord(NetworkObject,oldIntPos,newIntPos);
-        }
+        // var oldIntPos=ServerAOIManager.ConvertWorldPositionToCoord(transform.position);
+        // var dir=0.02f*m_MoveSpeed*(inputDir.normalized);
+        // transform.position=transform.position+dir;
+        // var newIntPos=ServerAOIManager.ConvertWorldPositionToCoord(transform.position);
+        // if(newIntPos!=oldIntPos){
+        //     ConnectFacade.GetInstance().GetServerAOIManager().UpdateServerChunkCoord(NetworkObject,oldIntPos,newIntPos);
+        // }
     }
 }

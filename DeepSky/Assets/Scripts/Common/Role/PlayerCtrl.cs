@@ -14,9 +14,16 @@ public class PlayerCtrl : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
-        var init=new InitLocalPlayer();
+        var init=new DATA_InitLocalPlayer();
         init.m_kLocalPlayer=this;
         MessageManager.GetInstance().SendMessage((int)MessageManager_Enum.InitLocalPlayer,init);
+    
+    
+        // MessageManager.GetInstance().SendMessage((int)MessageManager_Enum.PlayerMovePos,new DATA_ServerMovePos(){
+        //     clientId=11111,
+        //     oldPos=Vector2Int.down,
+        //     newPos=Vector2Int.left
+        // });
     }
     
 }

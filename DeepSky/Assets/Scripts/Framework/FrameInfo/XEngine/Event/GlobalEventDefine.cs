@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace XEngine.Event{
@@ -21,6 +22,10 @@ namespace XEngine.Event{
 
 
         public const int ServerInitOver=100;//所有服务器初始化结束
+
+        public const int ServerStart=101;//服务器初始化
+        public const int ServerEnd=102;//服务器结束
+        
         
     }
 

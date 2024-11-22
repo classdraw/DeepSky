@@ -86,7 +86,11 @@ namespace Utilities{
             return obj==null;
         }
 
-        
+        //世界坐标转换区域坐标
+        public static Vector2Int ConvertWorldPositionToCoord(Vector3 worldPos){
+            return new Vector2Int((int)(worldPos.x/GameConsts.ServerChunkSize),(int)(worldPos.z/GameConsts.ServerChunkSize));
+
+        }
     }
 
 }

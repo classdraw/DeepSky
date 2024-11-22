@@ -12,19 +12,16 @@ using XEngine.Event;
 namespace XEngine.Server{
     public class ConnectFacade : Singleton<ConnectFacade>
     {
-        private ServerGlobal serverGlobal;
-        private ClientsManager clientManager;
-        private ServerAOIManager serverAOIManager;
-        private ServerGameSceneManager serverGameSceneManager;
-        
+
         private ResHandle m_ServerHandle;
         private ResHandle m_NetResHandle;
-        private ResHandle m_kServerResHandle;
+        
         private ResHandle m_ClientResHandle;
 
         public void UnInit(){
+            GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerEnd);
             StopConnected();
-            _clearServerCache();
+            _clearCache();
 
         }
 
@@ -37,33 +34,19 @@ namespace XEngine.Server{
 
 
         //只有host以及server才有这些对象
-        private void _clearServerCache(){
-            if(serverAOIManager!=null){
-                serverAOIManager.UnInit();
-                serverAOIManager=null;
-            }
+        private void _clearCache(){
 
-            if(clientManager!=null){
-                clientManager.UnInit();
-                clientManager=null;
-            }
             if(m_ServerHandle!=null){
                 m_ServerHandle.Dispose();
                 m_ServerHandle=null;
             }
-            if(serverGlobal!=null){
-                serverGlobal.UnInit();
-                serverGlobal=null;
-            }
+
             if(m_ClientResHandle!=null){
                 m_ClientResHandle.Dispose();
                 m_ClientResHandle=null;
             }
-            if(m_kServerResHandle!=null){
-                m_kServerResHandle.Dispose();
-                m_kServerResHandle=null;
-            }
-            serverGameSceneManager=null;
+
+            
             
         }
         public void NetConnect(){
@@ -77,15 +60,7 @@ namespace XEngine.Server{
             XLogger.LogServer("NetStart!!!");
         }
         public void ServerStart(){
-            serverGlobal.Init();
-            clientManager.Init();
-            serverAOIManager.Init();
-
-            GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerInitOver);
-            
-            m_kServerResHandle=GameResourceManager.Instance.LoadResourceSync("server_ServerGameScene");
-            serverGameSceneManager=m_kServerResHandle.GetGameObject().GetComponent<ServerGameSceneManager>();
-            XLogger.LogServer("ServerStart!!!");
+            GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerStart);
         }
 
         //只有服务器会调用
@@ -98,12 +73,10 @@ namespace XEngine.Server{
             var net=obj1.GetComponent<NetManager>();
             net.Init();
 
-            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("server_ServerCtrl");
+            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("server_ServerFacade");
             var obj=m_ServerHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj);
-            serverGlobal=obj.GetComponent<ServerGlobal>();
-            clientManager=obj.GetComponent<ClientsManager>();
-            serverAOIManager=obj.GetComponent<ServerAOIManager>();
+
         }
 
         //只有client和host会调用这个方法
@@ -131,40 +104,13 @@ namespace XEngine.Server{
             GameObject.DontDestroyOnLoad(obj2);
 
             //host先启动服务器
-            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("server_ServerCtrl");
+            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("server_ServerFacade");
             var obj=m_ServerHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj);
-            serverGlobal=obj.GetComponent<ServerGlobal>();
-            clientManager=obj.GetComponent<ClientsManager>();
-            serverAOIManager=obj.GetComponent<ServerAOIManager>();
+
             
         }
 
-        public ClientsManager GetClientsManager(){
-            if(GameConsts.HasServer()){
-                return clientManager;
-            }else{
-                XLogger.LogError("GetClientsManager Error!!!");//client不应该访问这个
-                return null;
-            }
-        }
 
-        public ServerGlobal GetServerGlobal(){
-            if(GameConsts.HasServer()){
-                return serverGlobal;
-            }else{
-                XLogger.LogError("GetServerGlobal Error!!!");//client不应该访问这个
-                return null;
-            }
-        }
-
-        public ServerAOIManager GetServerAOIManager(){
-            if(GameConsts.HasServer()){
-                return serverAOIManager;
-            }else{
-                XLogger.LogError("GetServerAOIManager Error!!!");//client不应该访问这个
-                return null;
-            }
-        }
     }
 }

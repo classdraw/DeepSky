@@ -79,9 +79,9 @@ public class ClientInfo : MonoBehaviour
                 GUILayout.Label("OtherClients:"+otherClients,m_kStyle2);
             }
 
-            if(NetManager.GetInstance().IsServer&&TestServerObj.Instance!=null){
-                GUILayout.Label("ServerPos:"+TestServerObj.Instance.transform.position,m_kStyle2);
-            }
+            // if(NetManager.GetInstance().IsServer&&TestServerObj.Instance!=null){
+            //     GUILayout.Label("ServerPos:"+TestServerObj.Instance.transform.position,m_kStyle2);
+            // }
 
             GUILayout.EndArea();
         }

@@ -32,7 +32,7 @@ namespace XEngine.Server{
         #endregion
         
         #region 生命周期相关
-        public bool IsValid(){return m_bInit&&GameConsts.HasServer()&&!GameConsts.IsHost();}//不能是host
+        public bool IsValid(){return m_bInit&&GameConsts.HasServer();}//不能是host &&!GameConsts.IsHost()
         public void Init(){
             m_bInit=false;
             GlobalEventListener.AddListenter(GlobalEventDefine.ServerInitOver,OnServerInitOver);

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ePlayMode: 0
   m_ePartType: 1
-  m_eNetModel: 0
+  m_eNetModel: 1
   m_eDefaultBuildPipeline: 0
   ShowLogInfo: 1
+  ShowClientInfo: 1
+  LogLevel: -1

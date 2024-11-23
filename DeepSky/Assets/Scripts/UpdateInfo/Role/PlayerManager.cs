@@ -44,14 +44,14 @@ public class PlayerManager : MonoBehaviour
         }
     }
     private void OnInitLocalPlayer(System.Object obj){
-        var playerCtrl=(DATA_InitLocalPlayer)obj;
-        InitPlayer(playerCtrl.m_kLocalPlayer);
+        #if !UNITY_SERVER || UNITY_EDITOR
+            var playerCtrl=((DATA_InitLocalPlayer)obj).m_kLocalPlayer;
+            m_kLocalPlayer=playerCtrl;
+            m_kCinemachineFreeLook.transform.position=playerCtrl.transform.position;
+            m_kCinemachineFreeLook.LookAt=playerCtrl.m_kLookAtObj.transform;
+            m_kCinemachineFreeLook.Follow=playerCtrl.m_kFollowObj.transform;
+            // m_kCinemachineFreeLook.Follow=playerCtrl
+        #endif
     }
-    public void InitPlayer(PlayerCtrl playerCtrl){
-        m_kLocalPlayer=playerCtrl;
-        m_kCinemachineFreeLook.transform.position=playerCtrl.transform.position;
-        m_kCinemachineFreeLook.LookAt=playerCtrl.m_kLookAtObj.transform;
-        m_kCinemachineFreeLook.Follow=playerCtrl.m_kFollowObj.transform;
-        // m_kCinemachineFreeLook.Follow=playerCtrl
-    }
+
 }

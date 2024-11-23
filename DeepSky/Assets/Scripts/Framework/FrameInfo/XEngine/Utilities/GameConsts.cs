@@ -9,7 +9,7 @@ namespace XEngine.Utilities
     {
 		//网络启动类型
 		public enum Game_NetModel_Type{
-			Host,//自己是主机
+			// Host,//自己是主机 禁用不让选
 			Server,//自己是服务器
 			Client//自己是客户端
 		}
@@ -39,7 +39,7 @@ namespace XEngine.Utilities
         #endregion
 
         #region 内置配置
-		public static Game_NetModel_Type NetModel=Game_NetModel_Type.Host;
+		public static Game_NetModel_Type NetModel=Game_NetModel_Type.Client;
 
         public static EPlayMode PlayMode;
         public static Game_Package_Type PackageType;
@@ -59,14 +59,14 @@ namespace XEngine.Utilities
 #region 配置方法
 
 		public static bool HasServer(){
-			return IsServer()||IsHost();
+			return IsServer();//||IsHost()
 		}
 		public static bool IsServer(){
 			return NetModel==GameConsts.Game_NetModel_Type.Server;
 		}
-		public static bool IsHost(){
-			return NetModel==GameConsts.Game_NetModel_Type.Host;
-		}
+		// public static bool IsHost(){
+		// 	return NetModel==GameConsts.Game_NetModel_Type.Host;
+		// }
 
 		public static bool IsClient(){
 			return NetModel==GameConsts.Game_NetModel_Type.Client;

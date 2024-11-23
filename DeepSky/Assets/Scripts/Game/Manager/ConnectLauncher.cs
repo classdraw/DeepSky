@@ -52,13 +52,15 @@ namespace XEngine.Server{
         public void NetConnect(){
             if(GameConsts.IsClient()){
                 NetManager.GetInstance().InitClient();
-            }else if(GameConsts.IsHost()){
-                NetManager.GetInstance().InitHost();
             }else if(GameConsts.IsServer()){
                 NetManager.GetInstance().InitServer();
             }
             XLogger.LogServer("NetStart!!!");
         }
+        /*
+        else if(GameConsts.IsHost()){
+                NetManager.GetInstance().InitHost();
+            }*/
         public void ServerStart(){
             GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerStart);
         }
@@ -93,20 +95,22 @@ namespace XEngine.Server{
         }
 
         public void InitHost(){
-            m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
-            var obj1=m_NetResHandle.GetGameObject();
-            GameObject.DontDestroyOnLoad(obj1);
-            var net=obj1.GetComponent<NetManager>();
-            net.Init();
+            //禁用host模式
+            XLogger.LogError("host模式禁用");
+            // m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
+            // var obj1=m_NetResHandle.GetGameObject();
+            // GameObject.DontDestroyOnLoad(obj1);
+            // var net=obj1.GetComponent<NetManager>();
+            // net.Init();
 
-            m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientCtrl");
-            var obj2=m_ClientResHandle.GetGameObject();
-            GameObject.DontDestroyOnLoad(obj2);
+            // m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientCtrl");
+            // var obj2=m_ClientResHandle.GetGameObject();
+            // GameObject.DontDestroyOnLoad(obj2);
 
-            //host先启动服务器
-            m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("server_ServerFacade");
-            var obj=m_ServerHandle.GetGameObject();
-            GameObject.DontDestroyOnLoad(obj);
+            // //host先启动服务器
+            // m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("server_ServerFacade");
+            // var obj=m_ServerHandle.GetGameObject();
+            // GameObject.DontDestroyOnLoad(obj);
 
             
         }

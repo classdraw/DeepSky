@@ -36,18 +36,39 @@ namespace XEngine.Server{
         public void Init(){
             m_bInit=false;
             GlobalEventListener.AddListenter(GlobalEventDefine.ServerInitOver,OnServerInitOver);
-            MessageManager.GetInstance().AddListener((int)MessageManager_Enum.PlayerMovePos,OnServerMovePos);
+            MessageManager.GetInstance().AddListener((int)MessageManager_Enum.AOIUpdatePlayerPos,OnAOIUpdatePlayerPos);
+
+            MessageManager.GetInstance().AddListener((int)MessageManager_Enum.AOIAddPlayer,OnAOIAddPlayer);
+            MessageManager.GetInstance().AddListener((int)MessageManager_Enum.AOIRemovePlayer,OnAOIRemovePlayer);
         }
 
         public void UnInit(){
             m_bInit=false;
             GlobalEventListener.RemoveListener(GlobalEventDefine.ServerInitOver,OnServerInitOver);
-            MessageManager.GetInstance().RemoveListener((int)MessageManager_Enum.PlayerMovePos,OnServerMovePos);
+            MessageManager.GetInstance().RemoveListener((int)MessageManager_Enum.AOIUpdatePlayerPos,OnAOIUpdatePlayerPos);
+
+            MessageManager.GetInstance().RemoveListener((int)MessageManager_Enum.AOIAddPlayer,OnAOIAddPlayer);
+            MessageManager.GetInstance().RemoveListener((int)MessageManager_Enum.AOIRemovePlayer,OnAOIRemovePlayer);
         }
 
-        private void OnServerMovePos(object obj){
-            DATA_ServerMovePos smp=(DATA_ServerMovePos)obj;
-            Debug.LogError(smp.clientId);
+        private void OnAOIAddPlayer(object obj){
+            
+            var arg=(DATA_AOIAddPlayer)obj;
+            XLogger.LogServer("OnAOIAddPlayer>>"+arg.m_kPlayer.OwnerClientId);
+            this.InitClient(arg.m_kPlayer.OwnerClientId,arg.m_kPos);
+        }
+
+        private void OnAOIRemovePlayer(object obj){
+            
+            var arg=(DATA_AOIRemovePlayer)obj;
+            XLogger.LogServer("OnAOIRemovePlayer>>"+arg.m_kPlayer.OwnerClientId);
+            this.RemoveClient(arg.m_kPlayer.OwnerClientId,arg.m_kPos);
+        }
+
+        private void OnAOIUpdatePlayerPos(object obj){
+            var arg=(DATA_AOIUpdatePlayerPos)obj;
+            XLogger.LogServer("OnAOIUpdatePlayerPos>>"+arg.m_kPlayer.OwnerClientId+"__"+arg.m_kNewPos);
+            this.UpdateClientChunkCoord(arg.m_kPlayer.OwnerClientId,arg.m_kOldPos,arg.m_kNewPos);
         }
 
         private void OnServerInitOver(object obj){

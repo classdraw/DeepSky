@@ -34,11 +34,14 @@ public static class XFacade
     }
 
     
-    public static void CallFrame(Action action){
-        TimeManager.GetInstance().CallFrame(action);
+    public static void AddCallFrame(Action action){
+        TimeManager.GetInstance().AddCallFrame(action);
     }
 
-    
+    public static void RemoveCallFrame(Action action){
+        TimeManager.GetInstance().RemoveCallFrame(action);
+    }
+
     public static void CallFrameLater(Action action){
         TimeManager.GetInstance().CallFrameLater(action);
     }

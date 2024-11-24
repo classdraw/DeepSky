@@ -31,10 +31,11 @@ namespace XLua.CSObjectWrap
 			Utils.EndObjectRegister(type, L, translator, null, null,
 			    null, null, null);
 
-		    Utils.BeginClassRegister(type, L, __CreateInstance, 10, 0, 0);
+		    Utils.BeginClassRegister(type, L, __CreateInstance, 11, 0, 0);
 			Utils.RegisterFunc(L, Utils.CLS_IDX, "Init", _m_Init_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "Tick", _m_Tick_xlua_st_);
-            Utils.RegisterFunc(L, Utils.CLS_IDX, "CallFrame", _m_CallFrame_xlua_st_);
+            Utils.RegisterFunc(L, Utils.CLS_IDX, "AddCallFrame", _m_AddCallFrame_xlua_st_);
+            Utils.RegisterFunc(L, Utils.CLS_IDX, "RemoveCallFrame", _m_RemoveCallFrame_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "CallFrameLater", _m_CallFrameLater_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "CallRepeat", _m_CallRepeat_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "CallLater", _m_CallLater_xlua_st_);
@@ -110,7 +111,7 @@ namespace XLua.CSObjectWrap
         }
         
         [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-        static int _m_CallFrame_xlua_st_(RealStatePtr L)
+        static int _m_AddCallFrame_xlua_st_(RealStatePtr L)
         {
 		    try {
             
@@ -122,7 +123,33 @@ namespace XLua.CSObjectWrap
                 {
                     System.Action _action = translator.GetDelegate<System.Action>(L, 1);
                     
-                    XFacade.CallFrame( _action );
+                    XFacade.AddCallFrame( _action );
+                    
+                    
+                    
+                    return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_RemoveCallFrame_xlua_st_(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+            
+                
+                {
+                    System.Action _action = translator.GetDelegate<System.Action>(L, 1);
+                    
+                    XFacade.RemoveCallFrame( _action );
                     
                     
                     

@@ -50,12 +50,13 @@ namespace XEngine.Server{
             
         }
         public void NetConnect(){
+            XLogger.LogServer("NetConnect!!!");
             if(GameConsts.IsClient()){
                 NetManager.GetInstance().InitClient();
             }else if(GameConsts.IsServer()){
                 NetManager.GetInstance().InitServer();
             }
-            XLogger.LogServer("NetStart!!!");
+            
         }
         /*
         else if(GameConsts.IsHost()){

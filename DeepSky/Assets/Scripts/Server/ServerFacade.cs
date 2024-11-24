@@ -44,17 +44,17 @@ namespace XEngine.Server{
             
         }
 
-        private void OnServerStart(object obj){
+        private void OnServerInit(object obj){
             serverGlobal.Init();
             clientManager.Init();
             serverAOIManager.Init();
             GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerInitOver);
-            XLogger.LogServer("ServerStart!!!");
+            XLogger.LogServer("OnServerInit!!!");
         }
 
         private void OnServerEnd(object obj){
             ClearServerCache();
-            GlobalEventListener.RemoveListener(GlobalEventDefine.ServerStart,OnServerStart);
+            GlobalEventListener.RemoveListener(GlobalEventDefine.ServerStart,OnServerInit);
             GlobalEventListener.RemoveListener(GlobalEventDefine.ServerEnd,OnServerEnd);
             XLogger.LogServer("ServerEnd!!!");
         }
@@ -82,7 +82,7 @@ namespace XEngine.Server{
         
         private void Awake(){
             InitServer();
-            GlobalEventListener.AddListenter(GlobalEventDefine.ServerStart,OnServerStart);
+            GlobalEventListener.AddListenter(GlobalEventDefine.ServerStart,OnServerInit);
             GlobalEventListener.AddListenter(GlobalEventDefine.ServerEnd,OnServerEnd);
         }
 

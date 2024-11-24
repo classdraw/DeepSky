@@ -20,7 +20,6 @@ namespace XEngine.Utilities
 		}
 
         #region 通用配置
-		public static float ServerChunkSize=5f;//最大的格子内对象
         public static bool EnableBundle = false;
         public static bool EnableCSharpHotfix=false;//是否c#热更
 

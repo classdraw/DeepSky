@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.AI;
 using XEngine.Utilities;
 
 namespace XEngine.Time
@@ -24,7 +25,8 @@ namespace XEngine.Time
         private List<TimeEvent> _eventActives;
 
         private Action _nextFrameAction;
-        private Action _frameAction;
+        // private Action _frameAction;
+        private List<Action> _frameActions;
         [Header("活动的数量")]
         public int _activeCount=0;
         [Header("池的数量")]
@@ -40,6 +42,7 @@ namespace XEngine.Time
             XLogger.Log("TimeManager初始化");
             _eventPools=new List<TimeEvent>();
             _eventActives=new List<TimeEvent>();
+            _frameActions=new List<Action>();
         }
     
         public void Tick(){
@@ -65,8 +68,10 @@ namespace XEngine.Time
 
 
             //每帧调用方法
-            if(_frameAction!=null){
-                _frameAction();
+            if(_frameActions!=null){
+                for(var i=0;i<_frameActions.Count;i++){
+                    _frameActions[i]();
+                }
             }
 
             if(_nextFrameAction!=null){
@@ -82,7 +87,7 @@ namespace XEngine.Time
             _eventIndex=0;
             _eventBatchCount=0;
             _nextFrameAction=null;
-            _frameAction=null;
+            _frameActions.Clear();
         }
 
         #endregion
@@ -130,8 +135,16 @@ namespace XEngine.Time
             RemoveFromContainer(te);
         }
 
-        public void CallFrame(Action action){
-            _frameAction+=action;
+        public void AddCallFrame(Action action){
+            if(!_frameActions.Contains(action)){
+                _frameActions.Add(action);
+            }
+        }
+
+        public void RemoveCallFrame(Action action){
+            if(!_frameActions.Contains(action)){
+                _frameActions.Add(action);
+            }
         }
 
         public void CallFrameLater(Action action){

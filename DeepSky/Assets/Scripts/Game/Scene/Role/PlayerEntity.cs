@@ -9,6 +9,7 @@ using XEngine.Event;
 using XEngine.Net;
 using XEngine.Server;
 using Utilities;
+using Common.Utilities;
 
 namespace Game.Role{
     public class PlayerEntity : NetworkBehaviour
@@ -107,19 +108,19 @@ namespace Game.Role{
         //呼叫服务器自身的netobject
         [ServerRpc(RequireOwnership =true)]//是否需要验证宿主、、
         private void HandleMoveServerRpc(Vector3 inputDir){//结尾必须ServerRpc
-
-            var oldIntPos=GameUtils.ConvertWorldPositionToCoord(transform.position);
-            var dir=0.02f*moveSpeed*(inputDir.normalized);
-            transform.position=transform.position+dir;
-            var newIntPos=GameUtils.ConvertWorldPositionToCoord(transform.position);
-            //aoi相关
-            if(newIntPos!=oldIntPos){
-                MessageManager.GetInstance().SendMessage((int)MessageManager_Enum.PlayerMovePos,new DATA_ServerMovePos(){
-                    clientId=OwnerClientId,
-                    oldPos=oldIntPos,
-                    newPos=newIntPos
-                });
-            }
+            
+            // var oldIntPos=AOIUtilities.ConvertWorldPositionToCoord(transform.position);
+            // var dir=0.02f*moveSpeed*(inputDir.normalized);
+            // transform.position=transform.position+dir;
+            // var newIntPos=AOIUtilities.ConvertWorldPositionToCoord(transform.position);
+            // //aoi相关
+            // if(newIntPos!=oldIntPos){
+            //     MessageManager.GetInstance().SendMessage((int)MessageManager_Enum.AOIUpdatePlayerPos,new DATA_AOIUpdatePlayerPos(){
+            //         clientId=OwnerClientId,
+            //         oldPos=oldIntPos,
+            //         newPos=newIntPos
+            //     });
+            // }
             
         }
     }

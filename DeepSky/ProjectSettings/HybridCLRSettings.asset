@@ -29,6 +29,7 @@ MonoBehaviour:
   - mscorlib
   - System
   - System.Core
+  - Common
   outputLinkFile: HybridCLRGenerate/link.xml
   outputAOTGenericReferenceFile: HybridCLRGenerate/AOTGenericReferences.cs
   maxGenericReferenceIteration: 10

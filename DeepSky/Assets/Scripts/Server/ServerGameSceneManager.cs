@@ -13,6 +13,7 @@ namespace XEngine.Server{
         }
 
         protected virtual void Awake(){
+            Application.targetFrameRate=30;//服务器固定30
             s_kServerGameSceneManager=this;
         }
 

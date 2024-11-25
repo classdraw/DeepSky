@@ -28,35 +28,40 @@ public class BuildAssetsEditor
     public static void CreateDllIOS(){
         _createDllByTarget(BuildTarget.iOS);
     }
-
+    private static List<string> m_HotList=new List<string>(){
+        "UpdateInfo","Server"
+    };
     private static void _createDllByTarget(BuildTarget target){
         CompileDllCommand.CompileDll(target);
         string targetName=target.ToString();
-        string dllResPath=System.Environment.CurrentDirectory+"/HybridCLRData/HotUpdateDlls/"+targetName;
-        string destPath=System.Environment.CurrentDirectory+"/Assets/Editor/MyGameAssets/GameRes/Bytes/";
-        string path1=dllResPath+"/UpdateInfo.dll";
-        string path2=destPath+"UpdateInfo.dll.bytes";
-        File.Copy(path1,path2,true);
-
-        // string path3=dllResPath+"/Common.dll";
-        // string path4=destPath+"Common.dll.bytes";
-        // File.Copy(path3,path4,true);
-
-        string path5=dllResPath+"/Server.dll";
-        string path6=destPath+"Server.dll.bytes";
-        File.Copy(path5,path6,true);
-        
         string aotResPath=System.Environment.CurrentDirectory+"/HybridCLRData/AssembliesPostIl2CppStrip/"+targetName+"/";
+        string hotResPath=System.Environment.CurrentDirectory+"/HybridCLRData/HotUpdateDlls/"+targetName+"/";
+        string destPath=System.Environment.CurrentDirectory+"/Assets/Editor/MyGameAssets/GameRes/Bytes/";
+        
+        
         for(int i=0;i<SettingsUtil.AOTAssemblyNames.Count;i++){
             string na=SettingsUtil.AOTAssemblyNames[i]+".dll";
+            bool copySuccess=false;
             if(File.Exists(aotResPath+na)){
+                copySuccess=true;
                 File.Copy(aotResPath+na,destPath+na+".bytes",true);
             }else{
+                string nm=hotResPath+na;
+                if(File.Exists(nm)){
+                    copySuccess=true;
+                    File.Copy(nm,destPath+na+".bytes",true);
+                }
+                // 
+            }
+            if(!copySuccess){
                 XLogger.LogError("AOT拷贝失败"+na+" 点击Generate/AOTGenericReference生成下当前平台");
             }
-            
         }
-        //
+        foreach(var v in m_HotList){
+            string path1=hotResPath+v+".dll";
+            string path2=destPath+v+".dll.bytes";
+            File.Copy(path1,path2,true);
+        }
 
         AssetDatabase.Refresh();
         AssetDatabase.SaveAssets();

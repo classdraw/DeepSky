@@ -5,10 +5,11 @@ using XEngine.Loader;
 using XEngine.Pool;
 using XEngine.Server;
 using XEngine.Utilities;
+using XEngine.Event;
 
 public class GameSceneStart : MonoBehaviour
 {
-    private ResHandle m_kResHandle;
+
 
     void Awake()
     {
@@ -23,8 +24,8 @@ public class GameSceneStart : MonoBehaviour
         // }
         //初始化网络资源
         if(GameConsts.IsClient()){
-            m_kResHandle=GameResourceManager.Instance.LoadResourceSync("tools_ClientGameScene");
-            ConnectFacade.GetInstance().InitClient();
+            
+            ConnectFacade.GetInstance().StartClient();
         }
         //如果有服务器 服务器开始
         if(GameConsts.HasServer()){
@@ -38,10 +39,6 @@ public class GameSceneStart : MonoBehaviour
 
 
     void OnDestroy(){
-        if(m_kResHandle!=null){
-            m_kResHandle.Dispose();
-            m_kResHandle=null;
-        }
-
+        GlobalEventListener.DispatchEvent(GlobalEventDefine.ClientEnd);
     }
 }

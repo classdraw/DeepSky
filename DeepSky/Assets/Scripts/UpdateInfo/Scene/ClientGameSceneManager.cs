@@ -12,7 +12,7 @@ namespace UpdateInfo{
             }
         }
 
-        protected virtual void Awake(){
+        public void Init(){
             Application.targetFrameRate=60;//客户端先配置60
             s_kClientGameSceneManager=this;
             

@@ -45,7 +45,8 @@ namespace UpdateInfo{
 
         private bool m_bPlayerTerrainCoordDirty=true;
         private Vector2Int m_kPlayerTerrainCoord=Vector2Int.zero;
-        protected virtual void Awake(){
+        private bool m_bInit=false;
+        public void Init(){
             s_kClientMapManager=this;
             if(!string.IsNullOrEmpty(m_sMapPath)){
                 var h=GameResourceManager.GetInstance().LoadResourceSync(m_sMapPath);
@@ -56,7 +57,7 @@ namespace UpdateInfo{
                 XLogger.LogError(SceneManager.GetActiveScene().name+" Map is Empty!!!");
             }
 
-            
+            m_bInit=true;
         }
 
         // protected virtual void Update(){
@@ -73,6 +74,9 @@ namespace UpdateInfo{
 
 
         private void Update(){
+            if(!m_bInit){
+                return;
+            }
             TickCameraPlane();
             // if(m_bPlayerTerrainCoordDirty&&m_kQuadTree!=null){
             //     m_kQuadTree.RefreshPlayerTerrainCoord(m_kPlayerTerrainCoord);

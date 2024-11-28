@@ -81,8 +81,6 @@ namespace XEngine.Server{
             GameObject.DontDestroyOnLoad(obj);
 
         }
-
-        //只有client和host会调用这个方法
         public void InitClient(){
             m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
             var obj1=m_NetResHandle.GetGameObject();
@@ -90,9 +88,22 @@ namespace XEngine.Server{
             var net=obj1.GetComponent<NetManager>();
             net.Init();
 
-            m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientCtrl");
+            m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientFacade");
             var obj2=m_ClientResHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj2);
+        }
+        //只有client和host会调用这个方法
+        public void StartClient(){
+            GlobalEventListener.DispatchEvent(GlobalEventDefine.ClientStart);
+            // m_NetResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_NetworkManager");
+            // var obj1=m_NetResHandle.GetGameObject();
+            // GameObject.DontDestroyOnLoad(obj1);
+            // var net=obj1.GetComponent<NetManager>();
+            // net.Init();
+
+            // m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientCtrl");
+            // var obj2=m_ClientResHandle.GetGameObject();
+            // GameObject.DontDestroyOnLoad(obj2);
         }
 
         public void InitHost(){

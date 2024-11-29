@@ -59,7 +59,9 @@ namespace UpdateInfo{
 
             m_bInit=true;
         }
-
+        public void UnInit(){
+            m_bInit=false;
+        }
         // protected virtual void Update(){
         //     if(Input.GetKeyDown(KeyCode.P)){
         //         if(m_kQuadTree!=null){
@@ -69,8 +71,8 @@ namespace UpdateInfo{
         //         m_kQuadTree=new QuadTree();
         //     }
         // }
-        [SerializeField]
-        private GameObject m_TestObj;
+        // [SerializeField]
+        // private GameObject m_TestObj;
 
 
         private void Update(){
@@ -101,9 +103,9 @@ namespace UpdateInfo{
             }
             m_kNeedDestroyKeys.Clear();
             // // //jyy test
-            if(m_TestObj!=null){
-                SetPlayerTerrainCoordDirty(Common.Utilities.Tools.ConvertWorldPosToCoord(m_TestObj.transform.position,ClientMapManager.Instance.MapConfig));
-            }
+            // if(m_TestObj!=null){
+            //     SetPlayerTerrainCoordDirty(Common.Utilities.Tools.ConvertWorldPosToCoord(m_TestObj.transform.position,ClientMapManager.Instance.MapConfig));
+            // }
 
 
             if(m_kQuadTree!=null){

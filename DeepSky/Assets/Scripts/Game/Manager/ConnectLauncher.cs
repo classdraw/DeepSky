@@ -19,6 +19,7 @@ namespace XEngine.Server{
         private ResHandle m_ClientResHandle;
 
         public void UnInit(){
+            GlobalEventListener.DispatchEvent(GlobalEventDefine.ClientEnd);
             GlobalEventListener.DispatchEvent(GlobalEventDefine.ServerEnd);
             StopConnected();
             _clearCache();
@@ -26,6 +27,7 @@ namespace XEngine.Server{
         }
 
         public void StopConnected(){
+            NetManager.GetInstance().Shutdown(true);
             if(m_NetResHandle!=null){
                 m_NetResHandle.Dispose();
                 m_NetResHandle=null;

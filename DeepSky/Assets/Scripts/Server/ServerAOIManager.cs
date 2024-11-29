@@ -34,8 +34,7 @@ namespace XEngine.Server{
         #region 生命周期相关
         public bool IsValid(){return m_bInit&&GameConsts.HasServer();}//不能是host &&!GameConsts.IsHost()
         public void Init(){
-            m_bInit=false;
-            GlobalEventListener.AddListenter(GlobalEventDefine.ServerInitOver,OnServerInitOver);
+            m_bInit=true;
             MessageManager.GetInstance().AddListener((int)MessageManager_Enum.AOIUpdatePlayerPos,OnAOIUpdatePlayerPos);
 
             MessageManager.GetInstance().AddListener((int)MessageManager_Enum.AOIAddPlayer,OnAOIAddPlayer);
@@ -44,7 +43,6 @@ namespace XEngine.Server{
 
         public void UnInit(){
             m_bInit=false;
-            GlobalEventListener.RemoveListener(GlobalEventDefine.ServerInitOver,OnServerInitOver);
             MessageManager.GetInstance().RemoveListener((int)MessageManager_Enum.AOIUpdatePlayerPos,OnAOIUpdatePlayerPos);
 
             MessageManager.GetInstance().RemoveListener((int)MessageManager_Enum.AOIAddPlayer,OnAOIAddPlayer);
@@ -71,9 +69,6 @@ namespace XEngine.Server{
             this.UpdateClientChunkCoord(arg.m_kPlayer.OwnerClientId,arg.m_kOldPos,arg.m_kNewPos);
         }
 
-        private void OnServerInitOver(object obj){
-            m_bInit=true;
-        }
         #endregion
 
         #region 常用方法

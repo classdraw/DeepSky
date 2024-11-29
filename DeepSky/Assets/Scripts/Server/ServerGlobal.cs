@@ -11,20 +11,15 @@ namespace XEngine.Server{
             return m_bInit;
         }
         public void Init(){
-            m_bInit=false;
-            GlobalEventListener.AddListenter(GlobalEventDefine.ServerInitOver,OnServerInitOver);
+            m_bInit=true;
            
         }
 
         public void UnInit(){
             m_bInit=false;
-            GlobalEventListener.RemoveListener(GlobalEventDefine.ServerInitOver,OnServerInitOver);
 
         }
 
-        private void OnServerInitOver(object obj){
-            m_bInit=true;
-        }
     }
 
 }

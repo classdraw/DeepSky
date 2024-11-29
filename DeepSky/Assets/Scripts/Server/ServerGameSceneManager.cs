@@ -5,16 +5,24 @@ using UnityEngine;
 namespace XEngine.Server{
     public class ServerGameSceneManager : MonoBehaviour
     {
-        private static ServerGameSceneManager s_kServerGameSceneManager;
-        public static ServerGameSceneManager Instance{
-            get{
-                return s_kServerGameSceneManager;
-            }
+        [SerializeField]
+        private ServerMapManager m_kServerMapManager;
+        private bool m_bInit=false;
+        public bool IsValid(){
+            return m_bInit;
+        }
+        public void Init(){
+            m_bInit=true;
+            m_kServerMapManager.Init();
         }
 
+        public void UnInit(){
+            m_bInit=false;
+            m_kServerMapManager.UnInit();
+        }
         protected virtual void Awake(){
             Application.targetFrameRate=30;//服务器固定30
-            s_kServerGameSceneManager=this;
+            
         }
 
     }

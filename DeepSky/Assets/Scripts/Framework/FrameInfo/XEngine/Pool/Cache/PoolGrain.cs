@@ -4,6 +4,7 @@ using UnityEngine;
 using XEngine.Loader;
 using YooAsset;
 using System;
+using XEngine.Utilities;
 
 namespace XEngine.Pool
 {

@@ -21,7 +21,7 @@ namespace XEngine.Server{
             return m_bInit;
         }
         public void Init(){
-            m_bInit=false;
+            m_bInit=true;
            registerEvent();
            
         }
@@ -32,19 +32,14 @@ namespace XEngine.Server{
 
         }
 
-        private void OnServerInitOver(object obj){
-            m_bInit=true;
-        }
 
         private void registerEvent(){
             NetManager.GetInstance().OnClientConnectedCallback+=OnClientConnectedCallback;
             NetManager.GetInstance().OnClientDisconnectCallback+=OnClientDisconnectCallback;
-            GlobalEventListener.AddListenter(GlobalEventDefine.ServerInitOver,OnServerInitOver);
         }
         private void unregisterEvent(){
             NetManager.GetInstance().OnClientConnectedCallback-=OnClientConnectedCallback;
             NetManager.GetInstance().OnClientDisconnectCallback-=OnClientDisconnectCallback;
-            GlobalEventListener.RemoveListener(GlobalEventDefine.ServerInitOver,OnServerInitOver);
         }
         #endregion
 

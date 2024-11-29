@@ -24,14 +24,16 @@ namespace Game.Fsm
         }
         public override void Enter(params object[]objs){
             XLogger.Log("LuaInitState Enter");
+            //对象池初始化
+            PoolManager.GetInstance().InitConfig();
+            
             ConnectFacade.GetInstance().InitClient();
             XFacade.Init();//框架初始化
             Global.CreateInstance();//游戏全局mono初始化
             LoadDll();
 
 
-            //对象池初始化
-            PoolManager.GetInstance().InitConfig();
+            
             XEngine.Config.ConfigManager.GetInstance().InitConfig(()=>{
                 LuaScriptManager.GetInstance().InitGame();
             });

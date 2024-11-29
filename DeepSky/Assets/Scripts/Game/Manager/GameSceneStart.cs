@@ -37,8 +37,8 @@ public class GameSceneStart : MonoBehaviour
         ConnectFacade.GetInstance().NetConnect();
     }
 
-
+    //测试代码
     void OnDestroy(){
-        GlobalEventListener.DispatchEvent(GlobalEventDefine.ClientEnd);
+        ConnectFacade.GetInstance().UnInit();
     }
 }

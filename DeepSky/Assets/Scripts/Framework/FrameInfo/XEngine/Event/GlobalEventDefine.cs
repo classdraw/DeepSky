@@ -21,8 +21,6 @@ namespace XEngine.Event{
         public const int TestPlayerChange=21;//
 
 
-        public const int ServerInitOver=100;//所有服务器初始化结束
-
         public const int ServerStart=101;//服务器初始化
         public const int ServerEnd=102;//服务器结束
         public const int ClientStart=103;//前端启动

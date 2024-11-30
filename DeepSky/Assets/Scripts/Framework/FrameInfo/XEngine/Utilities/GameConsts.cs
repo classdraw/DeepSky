@@ -43,6 +43,7 @@ namespace XEngine.Utilities
         public static EPlayMode PlayMode;
         public static Game_Package_Type PackageType;
         public static EDefaultBuildPipeline DefaultBuildPipeline;
+		public static bool ShowClientInfo=false;
 
 		public static List<string> AOTMetaAssemblyNames { get; } = new List<string>()
         {

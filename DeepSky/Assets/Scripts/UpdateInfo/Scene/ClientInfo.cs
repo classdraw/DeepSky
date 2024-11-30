@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Game.Role;
 using UnityEngine;
 using XEngine.Net;
 using Unity.Netcode;
@@ -56,13 +55,13 @@ public class ClientInfo : MonoBehaviour
     private GUIStyle m_kStyle2;
     private void OnGUI()
     {
-        if(PlayerEntity.LocalPlayer!=null){
+        if(ClientFacade.GetInstance().PlayerManager!=null&&ClientFacade.GetInstance().PlayerManager.LocalPlayer!=null){
             GUILayout.BeginArea(new Rect(20, 20, 200, 200));
             GUILayout.Label("ClientInfo:",m_kStyle1);
             //延迟
             GUILayout.Label("Delay:"+RttMs+" Ms",m_kStyle2);
             //当前坐标
-            GUILayout.Label("Position:"+PlayerEntity.LocalPlayer.transform.position,m_kStyle2);
+            GUILayout.Label("Position:"+ClientFacade.GetInstance().PlayerManager.LocalPlayer.transform.position,m_kStyle2);
             if(NetManager.GetInstance()!=null){
                 //服务器端对象数量
                 if(NetManager.GetInstance().SpawnManager.OwnershipToObjectsTable.TryGetValue(NetManager.ServerClientId,out Dictionary<ulong,NetworkObject> objs)){

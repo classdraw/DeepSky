@@ -13,32 +13,15 @@ public class PlayerManager : MonoBehaviour
     private PlayerCtrl m_kLocalPlayer;
     public PlayerCtrl LocalPlayer{
         get{
-            if(GameConsts.IsServer()){
-                XLogger.LogServer("LocalPlayer Can't use in Server!!!");
-                return null;
-            }
             return m_kLocalPlayer;
         }
     }
-    private static PlayerManager s_kPlayerManager;
-    public static PlayerManager Instance{
-        get{
-            if(s_kPlayerManager==null){
-                var obj=new GameObject("PlayerManager");
-                s_kPlayerManager=obj.AddComponent<PlayerManager>();
-            }
-            return s_kPlayerManager;
-        }
-    }
 
-    private void Awake(){
-        s_kPlayerManager=this;
-        DontDestroyOnLoad(gameObject);
-
+    public void Init(){
         MessageManager.GetInstance().AddListener((int)MessageManager_Enum.InitLocalPlayer,OnInitLocalPlayer);
     }
 
-    private void OnDestroy(){
+    public void UnInit(){
         if(MessageManager.HasInstance()){
             MessageManager.GetInstance().RemoveListener((int)MessageManager_Enum.InitLocalPlayer,OnInitLocalPlayer);
         }

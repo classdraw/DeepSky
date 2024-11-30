@@ -52,17 +52,22 @@ namespace XEngine.Server{
 
         private void OnServerInit(object obj){
             InitServer();
-            m_kServerGameSceneManager.Init();
             m_kServerGlobal.Init();
             m_kClientManager.Init();
             m_kServerAOIManager.Init();
+            m_kServerGameSceneManager.Init();
+            
+            
+            
             XLogger.LogServer("OnServerInit!!!");
         }
 
         private void OnServerEnd(object obj){
             ClearServerCache();
-            GlobalEventListener.RemoveListener(GlobalEventDefine.ServerStart,OnServerInit);
-            GlobalEventListener.RemoveListener(GlobalEventDefine.ServerEnd,OnServerEnd);
+            if(MessageManager.HasInstance()){
+                GlobalEventListener.RemoveListener(GlobalEventDefine.ServerStart,OnServerInit);
+                GlobalEventListener.RemoveListener(GlobalEventDefine.ServerEnd,OnServerEnd);
+            }
             XLogger.LogServer("ServerEnd!!!");
         }
 

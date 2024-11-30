@@ -49,7 +49,7 @@ namespace Game.Fsm
             GameConsts.NetModel=startConfig.m_eNetModel;
             GameConsts.DefaultBuildPipeline=startConfig.m_eDefaultBuildPipeline;
 
-
+            GameConsts.ShowClientInfo=startConfig.ShowClientInfo;
             XLogger.SetLogLevel(startConfig.LogLevel);
             XLogger.Log("NetModel:"+startConfig.m_eNetModel);
     
@@ -64,13 +64,6 @@ namespace Game.Fsm
                 GameObject.DontDestroyOnLoad(gameObject);
                 gameObject.AddComponent<RuntimeScreeLogger>();
             }
-
-            if(startConfig.ShowClientInfo){
-                GameObject gameObject=new GameObject("ClientInfo");
-                GameObject.DontDestroyOnLoad(gameObject);
-                gameObject.AddComponent<ClientInfo>();
-            }
-
         }
 
         private void OnYooAssetCallback(){

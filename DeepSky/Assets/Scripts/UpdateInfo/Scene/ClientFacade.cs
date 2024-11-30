@@ -25,18 +25,23 @@ public class ClientFacade : MonoBehaviour
         m_kInstance=this;
         GlobalEventListener.AddListenter(GlobalEventDefine.ClientStart,OnClientInit);
         GlobalEventListener.AddListenter(GlobalEventDefine.ClientEnd,OnClientEnd);
+
+        if(GameConsts.ShowClientInfo){
+            gameObject.AddComponent<ClientInfo>();
+        }
     }
 
     private void OnClientInit(object obj){
 
         m_kResHandle=GameResourceManager.Instance.LoadResourceSync("tools_ClientGameScene");
         m_kClientGameSceneManager=m_kResHandle.GetGameObject().GetComponent<ClientGameSceneManager>();
+        m_kClientGameSceneManager.transform.parent=this.transform;
         m_ClientResHandle=GameResourceManager.GetInstance().LoadResourceSync("tools_ClientCtrl");
         m_kClientGlobal=m_ClientResHandle.GetGameObject().GetComponent<ClientGlobal>();
+        m_kClientGlobal.transform.parent=this.transform;
 
-
-        m_kClientGameSceneManager.Init();
         m_kClientGlobal.Init();
+        m_kClientGameSceneManager.Init();
     }
 
     private void OnClientEnd(object obj){
@@ -53,8 +58,21 @@ public class ClientFacade : MonoBehaviour
         }
         m_kClientGameSceneManager=null;
         m_kClientGlobal=null;
-        GlobalEventListener.RemoveListener(GlobalEventDefine.ClientStart,OnClientInit);
-        GlobalEventListener.RemoveListener(GlobalEventDefine.ClientEnd,OnClientEnd);
+        if(MessageManager.HasInstance()){
+            GlobalEventListener.RemoveListener(GlobalEventDefine.ClientStart,OnClientInit);
+            GlobalEventListener.RemoveListener(GlobalEventDefine.ClientEnd,OnClientEnd);
+        }
+        
     }
 
+
+    public PlayerManager PlayerManager{
+        get{
+            if(m_kClientGameSceneManager!=null){
+                return m_kClientGameSceneManager.m_kPlayerManager;
+            }
+            return null;
+        }
+
+    }
 }

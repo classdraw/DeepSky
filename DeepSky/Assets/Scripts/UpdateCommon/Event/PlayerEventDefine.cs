@@ -17,6 +17,8 @@ public struct DATA_AOIRemovePlayer{
     public PlayerCtrl m_kPlayer;
     public Vector2Int m_kPos;
 }
+
+
 public enum MessageManager_Enum:int{
     InitLocalPlayer=0,
     AOIUpdatePlayerPos=1,

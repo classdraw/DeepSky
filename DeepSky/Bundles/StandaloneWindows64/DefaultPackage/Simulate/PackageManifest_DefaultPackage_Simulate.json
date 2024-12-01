@@ -11335,6 +11335,13 @@
             "BundleID": 5
         },
         {
+            "Address": "bytes_UpdateCommon.dll",
+            "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/UpdateCommon.dll.bytes",
+            "AssetGUID": "",
+            "AssetTags": [],
+            "BundleID": 5
+        },
+        {
             "Address": "bytes_UpdateInfo.dll",
             "AssetPath": "Assets/Editor/MyGameAssets/GameRes/Bytes/UpdateInfo.dll.bytes",
             "AssetGUID": "",
@@ -12133,7 +12140,7 @@
             "UnityCRC": 0,
             "FileHash": "75842c50a6e1aa0765bbd85481419e91",
             "FileCRC": "00000000",
-            "FileSize": 3382784,
+            "FileSize": 3390976,
             "Encrypted": false,
             "Tags": [],
             "DependIDs": []

@@ -44,7 +44,7 @@ public partial class PlayerCtrl : NetworkBehaviour
             float v=Input.GetAxisRaw("Vertical");
             if(h!=0||v!=0){
                 Vector3 inputDir=new Vector3(h,0f,v);
-                HandleMoveServerRpc(inputDir);
+                SendInputMoveServerRpc(inputDir);
             }
         }
     }

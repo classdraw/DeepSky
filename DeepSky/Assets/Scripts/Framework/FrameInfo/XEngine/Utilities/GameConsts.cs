@@ -52,7 +52,7 @@ namespace XEngine.Utilities
             "System.dll",
             "System.Core.dll",
         };
-		public static string HotCommonAssemblyName="bytes_Common.dll";
+		public static string HotUpdateCommonAssemblyName="bytes_UpdateCommon.dll";
 		public static string HotUpdateAssemblyName="bytes_UpdateInfo.dll";
         #endregion
 

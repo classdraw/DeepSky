@@ -29,7 +29,7 @@ public class BuildAssetsEditor
         _createDllByTarget(BuildTarget.iOS);
     }
     private static List<string> m_HotList=new List<string>(){
-        "UpdateInfo","Server"
+        "UpdateInfo","Server","UpdateCommon"
     };
     private static void _createDllByTarget(BuildTarget target){
         CompileDllCommand.CompileDll(target);

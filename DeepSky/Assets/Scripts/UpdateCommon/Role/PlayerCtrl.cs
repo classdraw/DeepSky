@@ -40,9 +40,9 @@ public partial class PlayerCtrl : NetworkBehaviour
     
     //呼叫服务器自身的netobject
     [ServerRpc(RequireOwnership =true)]//是否需要验证宿主、、
-    private void HandleMoveServerRpc(Vector3 inputDir){//结尾必须ServerRpc
+    private void SendInputMoveServerRpc(Vector3 inputDir){//结尾必须ServerRpc
 #if UNITY_SERVER || UNITY_EDITOR
-        this.Movement(inputDir);
+        this.Server_ReceiveMovement(inputDir);
 #endif
         // var oldIntPos=AOIUtilities.ConvertWorldPositionToCoord(transform.position);
         // var dir=0.02f*moveSpeed*(inputDir.normalized);

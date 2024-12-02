@@ -4,10 +4,10 @@ using UnityEngine;
 using XEngine.Fsm;
 using XEngine.Utilities;
 
+#if UNITY_SERVER || UNITY_EDITOR
 namespace UpdateCommon.Role{
     public class PlayerMoveState : BasePlayerState
     {
-        public static int Index=1;
         public PlayerMoveState(BaseFsm fsm) : base(fsm)
         {
         }
@@ -38,3 +38,4 @@ namespace UpdateCommon.Role{
     }
 }
 
+#endif

@@ -4,6 +4,7 @@ using UnityEngine;
 using XEngine.Utilities;
 using XEngine.Event;
 using Cinemachine;
+using UpdateCommon.Role;
 
 //这个代码只有客户端用
 public class PlayerManager : MonoBehaviour

@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UpdateCommon.Role;
 public struct DATA_InitLocalPlayer{
     public PlayerCtrl m_kLocalPlayer;
 }

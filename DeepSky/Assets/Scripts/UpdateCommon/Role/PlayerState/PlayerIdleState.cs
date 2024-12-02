@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using XEngine.Fsm;
 using XEngine.Utilities;
-
+#if UNITY_SERVER || UNITY_EDITOR
 namespace UpdateCommon.Role{
     public class PlayerIdleState : BasePlayerState
     {
-        public static int Index=0;
         public PlayerIdleState(BaseFsm fsm) : base(fsm)
         {
         }
@@ -38,3 +37,4 @@ namespace UpdateCommon.Role{
     }
 }
 
+#endif

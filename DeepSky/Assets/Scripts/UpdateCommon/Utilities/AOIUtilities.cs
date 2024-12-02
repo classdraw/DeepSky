@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using XEngine.Event;
+using UpdateCommon.Role;
 
 namespace Common.Utilities{
     public static class AOIUtilities

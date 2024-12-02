@@ -67,17 +67,7 @@ namespace UpdateCommon.Role{
                         
                 }
 
-                public void ChangeState(PlayerStateEnum newState){
-                        m_eCurrentState.Value=newState;
-                        switch(newState){
-                                case PlayerStateEnum.Idle:
 
-                                break;
-                                case PlayerStateEnum.Move:
-
-                                break;
-                        }
-                }
         }
 
 

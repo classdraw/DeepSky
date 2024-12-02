@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using XEngine.Event;
 using UpdateCommon.Role;
-
-namespace Common.Utilities{
+namespace UpdateCommon.Utilities{
     public static class AOIUtilities
     {
         public static float ServerChunkSize=50f;//最大的格子内对象

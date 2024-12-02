@@ -1,3 +1,4 @@
+#if UNITY_SERVER || UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,6 @@ using XEngine.Fsm;
 
 
 
-#if UNITY_SERVER || UNITY_EDITOR
 namespace UpdateCommon.Role{
 
 

@@ -1,12 +1,13 @@
+#if UNITY_SERVER || UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using XEngine.Event;
 using Unity.Netcode;
 using XEngine.Utilities;
-using Common.Utilities;
+using UpdateCommon.Utilities;
 
-#if UNITY_SERVER || UNITY_EDITOR
+
 
 namespace UpdateCommon.Role{
     public class InputData{
@@ -21,7 +22,7 @@ namespace UpdateCommon.Role{
 
         public InputData m_kInputData{get;private set;}
 
-        private Vector2Int m_kCurrentAOICoord;
+        public Vector2Int m_kCurrentAOICoord{get;set;}
 
         private PlayerStateFsm m_kFsm;
         private void Server_OnNetworkSpawn(){
@@ -29,7 +30,7 @@ namespace UpdateCommon.Role{
             m_kFsm.m_kOwner=this;
             m_kCurrentAOICoord=AOIUtilities.ConvertWorldPositionToCoord(transform.position);
             AOIUtilities.AddPlayer(this,m_kCurrentAOICoord);
-            m_kFsm.TryChangeState((int)PlayerStateEnum.Idle);
+            this.ChangeState(PlayerStateEnum.Idle);
         }
 
         private void Server_OnNetworkDespawn(){
@@ -37,15 +38,24 @@ namespace UpdateCommon.Role{
         }
         private void Server_ReceiveMovement(Vector3 inputDir){
             m_kInputData.m_kInputDir=inputDir;
-            //状态类走别的逻辑
-            // var dir=0.02f*MoveSpeed*(inputDir.normalized);
-            // transform.position=transform.position+dir;
-            // var newIntPos=AOIUtilities.ConvertWorldPositionToCoord(transform.position);
-            // //aoi相关
-            // if(newIntPos!=m_kCurrentAOICoord){
-            //     AOIUtilities.UpdatePlayerCoord(this,m_kCurrentAOICoord,newIntPos);
-            //     m_kCurrentAOICoord=newIntPos;
-            // }
+            this.ChangeState(PlayerStateEnum.Move);
+
+        }
+        public void ChangeState(PlayerStateEnum newState){
+            m_eCurrentState.Value=newState;
+            switch(newState){
+                case PlayerStateEnum.Idle:
+                    m_kFsm.TryChangeState((int)PlayerStateEnum.Idle);
+                break;
+                case PlayerStateEnum.Move:
+                    m_kFsm.TryChangeState((int)PlayerStateEnum.Move);
+                break;
+            }
+        }
+        void Update(){
+            if(m_kFsm!=null){
+                m_kFsm.Tick();
+            }
         }
     }
         

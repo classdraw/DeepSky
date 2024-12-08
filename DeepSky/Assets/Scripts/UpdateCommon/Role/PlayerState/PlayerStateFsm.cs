@@ -5,9 +5,7 @@ using UnityEngine;
 using XEngine.Fsm;
 using Common.Define;
 
-
 namespace UpdateCommon.Role{
-
 
     public class PlayerStateFsm : BaseFsm
     {

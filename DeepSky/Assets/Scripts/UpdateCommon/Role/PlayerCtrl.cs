@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using XEngine.Event;
 using Unity.Netcode;
-using JetBrains.Annotations;
 using Common.Define;
 
 namespace UpdateCommon.Role{
-
         //公共
         public partial class PlayerCtrl : NetworkBehaviour
         {
                 //当前角色状态机状态
-                private NetworkVariable<Player_State_Enum> m_eCurrentState=new NetworkVariable<Player_State_Enum>(Player_State_Enum.None);
+                private NetworkVariable<int> m_eCurrentState=new NetworkVariable<int>(-1);
                 public override void OnNetworkSpawn()
                 {
                         base.OnNetworkSpawn();

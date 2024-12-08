@@ -47,10 +47,10 @@ namespace UpdateCommon.Role{
             }
         }
         public void ChangeState(Player_State_Enum newState){
-            if(m_eCurrentState.Value==newState){
+            if(m_eCurrentState.Value==(int)newState){
                 return;
             }
-            m_eCurrentState.Value=newState;
+            m_eCurrentState.Value=(int)newState;
             switch(newState){
                 case Player_State_Enum.Idle:
                     m_kFsm.TryChangeState((int)Player_State_Enum.Idle);

@@ -4,18 +4,15 @@ using UnityEngine;
 using XEngine.Event;
 using Unity.Netcode;
 using JetBrains.Annotations;
+using Common.Define;
 
 namespace UpdateCommon.Role{
-        public enum PlayerStateEnum:int{
-                None=-1,
-                Idle=0,
-                Move=1,
-        }
+
         //公共
         public partial class PlayerCtrl : NetworkBehaviour
         {
                 //当前角色状态机状态
-                private NetworkVariable<PlayerStateEnum> m_eCurrentState=new NetworkVariable<PlayerStateEnum>(PlayerStateEnum.None);
+                private NetworkVariable<Player_State_Enum> m_eCurrentState=new NetworkVariable<Player_State_Enum>(Player_State_Enum.None);
                 public override void OnNetworkSpawn()
                 {
                         base.OnNetworkSpawn();
@@ -47,7 +44,7 @@ namespace UpdateCommon.Role{
 
                 
                 //呼叫服务器自身的netobject
-                [ServerRpc(RequireOwnership =true)]//是否需要验证宿主、、
+                [ServerRpc(RequireOwnership =false)]//是否需要验证宿主、、
                 private void SendInputMoveServerRpc(Vector3 inputDir){//结尾必须ServerRpc
                 #if UNITY_SERVER || UNITY_EDITOR
                         this.Server_ReceiveMovement(inputDir);

@@ -36,6 +36,14 @@ namespace Common.Utilities{
         public static bool IsNearCoord(Vector2Int v1,Vector2Int v2,int subValue=1){
             return Mathf.Abs(v1.x-v2.x)<=subValue&&Mathf.Abs(v1.y-v2.y)<=subValue;
         }
+
+        public static bool IsNearVector2(Vector2 v1,Vector2 v2,float subValue=0.01f){
+            if(Mathf.Abs(v2.x-v1.x)<=subValue&&Mathf.Abs(v2.y-v1.y)<=subValue){
+                return true;
+            }
+            return false;
+
+        }
     }
 
 }

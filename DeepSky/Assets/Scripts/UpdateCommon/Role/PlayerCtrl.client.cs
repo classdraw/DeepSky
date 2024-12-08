@@ -26,8 +26,6 @@ namespace UpdateCommon.Role{
             
                 TimeManager.GetInstance().AddCallFrame(this.LocalClient_Update);
             }
-
-            
         }
 
         private void Client_OnNetworkDespawn(){
@@ -43,10 +41,10 @@ namespace UpdateCommon.Role{
             if(IsOwner){
                 float h=Input.GetAxisRaw("Horizontal");
                 float v=Input.GetAxisRaw("Vertical");
-                if(h!=0||v!=0){
+                //if(h!=0||v!=0){
                     Vector3 inputDir=new Vector3(h,0f,v);
                     SendInputMoveServerRpc(inputDir);
-                }
+                //}
             }
         }
     }

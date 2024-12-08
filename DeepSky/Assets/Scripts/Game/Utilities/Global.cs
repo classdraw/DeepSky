@@ -76,7 +76,6 @@ public class Global:MonoSingleton<Global>
         
     }
 
-
     public static void LoadMetadataForAOTAssemblies(){
         HomologousImageMode mode = HomologousImageMode.SuperSet;
         for(int i=0;i<GameConsts.AOTMetaAssemblyNames.Count;i++){

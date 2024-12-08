@@ -5,6 +5,8 @@ using UnityEngine;
 using XEngine.Fsm;
 using XEngine.Utilities;
 using UpdateCommon.Utilities;
+using Common.Utilities;
+using Common.Define;
 
 namespace UpdateCommon.Role{
     public class PlayerMoveState : BasePlayerState
@@ -26,8 +28,8 @@ namespace UpdateCommon.Role{
                 return;
             }
             var inputDir=m_kOwner.m_kInputData.m_kInputDir;
-            if(inputDir==Vector2.zero){
-                m_kOwner.ChangeState(PlayerStateEnum.Idle);
+            if(Tools.IsNearVector2(inputDir,Vector2.zero)){
+                m_kOwner.ChangeState(Player_State_Enum.Idle);
             }else{
                 var oldPos=m_kOwner.transform.position;
                 var dir=0.02f*m_kOwner.MoveSpeed*(inputDir.normalized);

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using XEngine.Fsm;
 using XEngine.Utilities;
+using Common.Utilities;
+using Common.Define;
 
 namespace UpdateCommon.Role{
     public class PlayerIdleState : BasePlayerState
@@ -21,7 +23,13 @@ namespace UpdateCommon.Role{
         }
 
         public override void Tick(){
-
+            if(m_kOwner==null){
+                return;
+            }
+            var inputDir=m_kOwner.m_kInputData.m_kInputDir;
+            if(!Tools.IsNearVector2(inputDir,Vector2.zero)){
+                m_kOwner.ChangeState(Player_State_Enum.Move);
+            }
         }
 
         public override void Release(){

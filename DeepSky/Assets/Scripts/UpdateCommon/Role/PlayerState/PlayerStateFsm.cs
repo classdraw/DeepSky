@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using XEngine.Fsm;
-
+using Common.Define;
 
 
 namespace UpdateCommon.Role{
@@ -14,9 +14,9 @@ namespace UpdateCommon.Role{
         public PlayerCtrl m_kOwner;
         protected override void Init()
         {
-            m_States.Add((int)PlayerStateEnum.Idle,new BaseFsmState(this));
-            m_States.Add((int)PlayerStateEnum.Move,new BaseFsmState(this));
-            m_Default=m_States[(int)PlayerStateEnum.Idle];
+            m_States.Add((int)Player_State_Enum.Idle,new BaseFsmState(this));
+            m_States.Add((int)Player_State_Enum.Move,new BaseFsmState(this));
+            m_Default=m_States[(int)Player_State_Enum.Idle];
         }
             
         protected override BaseFsmState ChooseState(int fsmEnum)

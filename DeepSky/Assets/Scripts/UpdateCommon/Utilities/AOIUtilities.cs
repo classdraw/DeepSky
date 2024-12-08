@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using XEngine.Event;
 using UpdateCommon.Role;
+using Common.Define;
+
 namespace UpdateCommon.Utilities{
     public static class AOIUtilities
     {
@@ -37,6 +39,9 @@ namespace UpdateCommon.Utilities{
             MessageManager.GetInstance().SendMessage((int)MessageManager_Enum.AOIUpdatePlayerPos,d);
         }
 
+        public static void TestA<Player_State_Enum>(){
+
+        }
     }
 
 }

@@ -23,6 +23,7 @@ namespace XEngine.Reflex{
                 m_UpdateCommon=Assembly.Load(m_kResHandle1.GetObjT<TextAsset>().bytes);
                 m_kResHandle=GameResourceManager.GetInstance().LoadResourceSync(GameConsts.HotUpdateAssemblyName);
                 m_HotUpdate=Assembly.Load(m_kResHandle.GetObjT<TextAsset>().bytes);
+                XLogger.Log("ReflexDelegate Success");
             }
         }
 

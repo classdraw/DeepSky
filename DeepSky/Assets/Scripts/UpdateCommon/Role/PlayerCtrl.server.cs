@@ -6,7 +6,8 @@ using XEngine.Event;
 using Unity.Netcode;
 using XEngine.Utilities;
 using UpdateCommon.Utilities;
-
+using Common.Utilities;
+using Common.Define;
 
 
 namespace UpdateCommon.Role{
@@ -26,11 +27,12 @@ namespace UpdateCommon.Role{
 
         private PlayerStateFsm m_kFsm;
         private void Server_OnNetworkSpawn(){
+            m_kInputData=new InputData();
             m_kFsm=new PlayerStateFsm();
             m_kFsm.m_kOwner=this;
             m_kCurrentAOICoord=AOIUtilities.ConvertWorldPositionToCoord(transform.position);
             AOIUtilities.AddPlayer(this,m_kCurrentAOICoord);
-            this.ChangeState(PlayerStateEnum.Idle);
+            this.ChangeState(Player_State_Enum.Idle);
         }
 
         private void Server_OnNetworkDespawn(){
@@ -38,17 +40,23 @@ namespace UpdateCommon.Role{
         }
         private void Server_ReceiveMovement(Vector3 inputDir){
             m_kInputData.m_kInputDir=inputDir;
-            this.ChangeState(PlayerStateEnum.Move);
-
+            if(Tools.IsNearVector2(m_kInputData.m_kInputDir,Vector2.zero)){
+                this.ChangeState(Player_State_Enum.Idle);
+            }else{
+                this.ChangeState(Player_State_Enum.Move);
+            }
         }
-        public void ChangeState(PlayerStateEnum newState){
+        public void ChangeState(Player_State_Enum newState){
+            if(m_eCurrentState.Value==newState){
+                return;
+            }
             m_eCurrentState.Value=newState;
             switch(newState){
-                case PlayerStateEnum.Idle:
-                    m_kFsm.TryChangeState((int)PlayerStateEnum.Idle);
+                case Player_State_Enum.Idle:
+                    m_kFsm.TryChangeState((int)Player_State_Enum.Idle);
                 break;
-                case PlayerStateEnum.Move:
-                    m_kFsm.TryChangeState((int)PlayerStateEnum.Move);
+                case Player_State_Enum.Move:
+                    m_kFsm.TryChangeState((int)Player_State_Enum.Move);
                 break;
             }
         }

@@ -62,7 +62,7 @@ public class ClientInfo : MonoBehaviour
             GUILayout.Label("Delay:"+RttMs+" Ms",m_kStyle2);
             //当前坐标
             GUILayout.Label("Position:"+ClientFacade.GetInstance().PlayerManager.LocalPlayer.transform.position,m_kStyle2);
-            if(NetManager.GetInstance()!=null){
+            if(NetManager.GetInstance()!=null&&NetManager.GetInstance().SpawnManager!=null&&NetManager.GetInstance().SpawnManager.OwnershipToObjectsTable!=null){
                 //服务器端对象数量
                 if(NetManager.GetInstance().SpawnManager.OwnershipToObjectsTable.TryGetValue(NetManager.ServerClientId,out Dictionary<ulong,NetworkObject> objs)){
                     GUILayout.Label("ServerObjects:"+objs.Count,m_kStyle2);

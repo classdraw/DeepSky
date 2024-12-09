@@ -36,6 +36,8 @@ namespace UpdateCommon.Role{
         }
 
         private void Server_OnNetworkDespawn(){
+            m_kFsm.Release();
+            m_kFsm=null;
             AOIUtilities.RemovePlayer(this,m_kCurrentAOICoord);
         }
         private void Server_ReceiveMovement(Vector3 inputDir){
@@ -47,10 +49,10 @@ namespace UpdateCommon.Role{
             }
         }
         public void ChangeState(Player_State_Enum newState){
-            if(m_eCurrentState.Value==(int)newState){
+            if(m_eCurrentState.Value==newState){
                 return;
             }
-            m_eCurrentState.Value=(int)newState;
+            m_eCurrentState.Value=newState;
             switch(newState){
                 case Player_State_Enum.Idle:
                     m_kFsm.TryChangeState((int)Player_State_Enum.Idle);

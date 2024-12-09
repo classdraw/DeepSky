@@ -40,7 +40,7 @@ namespace XEngine.Net{
             networkObject.transform.position=position;
             networkObject.SpawnWithOwnership(clientId);
             // networkObject.ChangeOwnership(clientId);
-            // networkObject.NetworkShow(clientId);
+            networkObject.NetworkShow(clientId);
 
             // var t1=NetManager.GetInstance().SpawnManager.OwnershipToObjectsTable;
             return networkObject;

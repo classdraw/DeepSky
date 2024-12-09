@@ -4,16 +4,18 @@ using UnityEngine;
 using XEngine.Event;
 using Unity.Netcode;
 using Common.Define;
+using XEngine.Net;
 
 namespace UpdateCommon.Role{
         //公共
         public partial class PlayerCtrl : NetworkBehaviour
         {
                 //当前角色状态机状态
-                private NetworkVariable<int> m_eCurrentState=new NetworkVariable<int>(-1);
+                private NetVaribale<Player_State_Enum> m_eCurrentState=new NetVaribale<Player_State_Enum>(Player_State_Enum.None);
                 public override void OnNetworkSpawn()
                 {
                         base.OnNetworkSpawn();
+                        // Debug.LogError(">>>>>>>>>>>>>>>>>>>>>"+this.NetworkObjectId);
                         if(IsClient){
                 #if !UNITY_SERVER || UNITY_EDITOR
                         Client_OnNetworkSpawn();

@@ -32,6 +32,8 @@ public class ClientFacade : MonoBehaviour
     }
 
     private void OnClientInit(object obj){
+        //序列化绑定
+        NetworkVaribaleSerialization.Init();
 
         m_kResHandle=GameResourceManager.Instance.LoadResourceSync("tools_ClientGameScene");
         m_kClientGameSceneManager=m_kResHandle.GetGameObject().GetComponent<ClientGameSceneManager>();

@@ -8,7 +8,7 @@ public class RefTypes
 {
     public void MyAOTRefs()
     {
-        new Unity.Netcode.NetworkVariable<int>();
+        new Unity.Netcode.NetworkVariable<Player_State_Enum>();
         // new Unity.Netcode.NetworkVariable<Player_State_Enum>();
     }
 }

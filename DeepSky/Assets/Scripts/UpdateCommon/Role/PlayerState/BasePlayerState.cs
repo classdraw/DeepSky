@@ -8,10 +8,13 @@ using XEngine.Fsm;
 namespace UpdateCommon.Role{
     public class BasePlayerState : BaseFsmState
     {
-        protected PlayerCtrl m_kOwner;
+        protected PlayerStateFsm m_PlayerStateFsm;
+        protected PlayerCtrl GetOwner(){
+            return m_PlayerStateFsm.m_kOwner;
+        }
         public BasePlayerState(BaseFsm fsm) : base(fsm)
         {
-            m_kOwner=((PlayerStateFsm)fsm).m_kOwner;
+            m_PlayerStateFsm=(PlayerStateFsm)fsm;
         }
     }
 

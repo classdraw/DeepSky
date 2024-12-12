@@ -8,7 +8,7 @@ using XEngine.Utilities;
 using UpdateCommon.Utilities;
 using Common.Utilities;
 using Common.Define;
-
+using XEngine.Time;
 
 namespace UpdateCommon.Role{
     public class InputData{
@@ -40,8 +40,10 @@ namespace UpdateCommon.Role{
             m_kFsm=null;
             AOIUtilities.RemovePlayer(this,m_kCurrentAOICoord);
         }
+
+
         private void Server_ReceiveMovement(Vector3 inputDir){
-            m_kInputData.m_kInputDir=inputDir;
+            m_kInputData.m_kInputDir=new Vector2(inputDir.x,inputDir.z);
             if(Tools.IsNearVector2(m_kInputData.m_kInputDir,Vector2.zero)){
                 this.ChangeState(Player_State_Enum.Idle);
             }else{
@@ -62,9 +64,12 @@ namespace UpdateCommon.Role{
                 break;
             }
         }
-        void Update(){
-            if(m_kFsm!=null){
-                m_kFsm.Tick();
+
+        private void Server_Update() {
+            if(IsServer){
+                if(m_kFsm!=null){
+                    m_kFsm.Tick();
+                }
             }
         }
     }

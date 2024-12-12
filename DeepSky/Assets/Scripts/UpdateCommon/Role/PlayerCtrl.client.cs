@@ -47,6 +47,10 @@ namespace UpdateCommon.Role{
                 //}
             }
         }
+
+        private void Client_Update(){
+            
+        }
     }
 }
 

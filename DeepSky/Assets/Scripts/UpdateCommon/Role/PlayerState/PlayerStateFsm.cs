@@ -12,8 +12,8 @@ namespace UpdateCommon.Role{
         public PlayerCtrl m_kOwner;
         protected override void Init()
         {
-            m_States.Add((int)Player_State_Enum.Idle,new BaseFsmState(this));
-            m_States.Add((int)Player_State_Enum.Move,new BaseFsmState(this));
+            m_States.Add((int)Player_State_Enum.Idle,new PlayerIdleState(this));
+            m_States.Add((int)Player_State_Enum.Move,new PlayerMoveState(this));
             m_Default=m_States[(int)Player_State_Enum.Idle];
         }
             

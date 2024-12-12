@@ -15,7 +15,7 @@ namespace UpdateCommon.Role{
         }
         public override void Enter(params object[] objs)
         {
-            XLogger.LogError("PlayerIdleState Enter");
+            // XLogger.LogError("PlayerIdleState Enter");
         }
 
         public override void Exit(){
@@ -23,12 +23,12 @@ namespace UpdateCommon.Role{
         }
 
         public override void Tick(){
-            if(m_kOwner==null){
+            if(GetOwner()==null){
                 return;
             }
-            var inputDir=m_kOwner.m_kInputData.m_kInputDir;
+            var inputDir=GetOwner().m_kInputData.m_kInputDir;
             if(!Tools.IsNearVector2(inputDir,Vector2.zero)){
-                m_kOwner.ChangeState(Player_State_Enum.Move);
+                GetOwner().ChangeState(Player_State_Enum.Move);
             }
         }
 

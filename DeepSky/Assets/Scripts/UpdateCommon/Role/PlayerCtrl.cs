@@ -15,7 +15,6 @@ namespace UpdateCommon.Role{
                 public override void OnNetworkSpawn()
                 {
                         base.OnNetworkSpawn();
-                        // Debug.LogError(">>>>>>>>>>>>>>>>>>>>>"+this.NetworkObjectId);
                         if(IsClient){
                 #if !UNITY_SERVER || UNITY_EDITOR
                         Client_OnNetworkSpawn();
@@ -42,26 +41,27 @@ namespace UpdateCommon.Role{
                         }
                 }
 
-                
                 //呼叫服务器自身的netobject
-                [ServerRpc(RequireOwnership =false)]//是否需要验证宿主、、
+                [ServerRpc(RequireOwnership =false)]//是否需要验证宿主
                 private void SendInputMoveServerRpc(Vector3 inputDir){//结尾必须ServerRpc
+                        if(IsServer){
                 #if UNITY_SERVER || UNITY_EDITOR
                         this.Server_ReceiveMovement(inputDir);
                 #endif
-                        // var oldIntPos=AOIUtilities.ConvertWorldPositionToCoord(transform.position);
-                        // var dir=0.02f*moveSpeed*(inputDir.normalized);
-                        // transform.position=transform.position+dir;
-                        // var newIntPos=AOIUtilities.ConvertWorldPositionToCoord(transform.position);
-                        // //aoi相关
-                        // if(newIntPos!=oldIntPos){
-                        //     MessageManager.GetInstance().SendMessage((int)MessageManager_Enum.PlayerMovePos,new DATA_ServerMovePos(){
-                        //         clientId=OwnerClientId,
-                        //         oldPos=oldIntPos,
-                        //         newPos=newIntPos
-                        //     });
-                        // }
-                        
+                        }
+                }
+
+                private void Update(){
+                        if(IsClient){
+                #if !UNITY_SERVER || UNITY_EDITOR
+                        Client_Update();
+                #endif
+                        }else if(IsServer){
+                #if UNITY_SERVER || UNITY_EDITOR
+                        Server_Update();
+                #endif
+                        }
+
                 }
 
 

@@ -16,7 +16,7 @@ namespace UpdateCommon.Role{
         }
         public override void Enter(params object[] objs)
         {
-            XLogger.LogError("PlayerMoveState Enter");
+            // XLogger.LogError("PlayerMoveState Enter");
         }
 
         public override void Exit(){
@@ -24,27 +24,27 @@ namespace UpdateCommon.Role{
         }
 
         public override void Tick(){
-            if(m_kOwner==null){
+            if(GetOwner()==null){
                 return;
             }
-            var inputDir=m_kOwner.m_kInputData.m_kInputDir;
+            var inputDir=GetOwner().m_kInputData.m_kInputDir;
             if(Tools.IsNearVector2(inputDir,Vector2.zero)){
-                m_kOwner.ChangeState(Player_State_Enum.Idle);
+                GetOwner().ChangeState(Player_State_Enum.Idle);
             }else{
-                var oldPos=m_kOwner.transform.position;
-                var dir=0.02f*m_kOwner.MoveSpeed*(inputDir.normalized);
+                
+                var oldPos=GetOwner().transform.position;
+                var dir=0.02f*GetOwner().MoveSpeed*(inputDir.normalized);
                 var newPos=oldPos+new Vector3(dir.x,0f,dir.y);
-                m_kOwner.transform.position=newPos;
-
+                GetOwner().transform.position=newPos;
                 var newIntPos=AOIUtilities.ConvertWorldPositionToCoord(newPos);
                 //aoi相关
-                if(newIntPos!=m_kOwner.m_kCurrentAOICoord){
-                    AOIUtilities.UpdatePlayerCoord(m_kOwner,m_kOwner.m_kCurrentAOICoord,newIntPos);
-                    m_kOwner.m_kCurrentAOICoord=newIntPos;
+                if(newIntPos!=GetOwner().m_kCurrentAOICoord){
+                    AOIUtilities.UpdatePlayerCoord(GetOwner(),GetOwner().m_kCurrentAOICoord,newIntPos);
+                    GetOwner().m_kCurrentAOICoord=newIntPos;
                 }
             }
             
-                        //状态类走别的逻辑
+            //状态类走别的逻辑
             // var dir=0.02f*MoveSpeed*(inputDir.normalized);
             // transform.position=transform.position+dir;
             // var newIntPos=AOIUtilities.ConvertWorldPositionToCoord(transform.position);

@@ -5,6 +5,7 @@ using XEngine.Event;
 using Unity.Netcode;
 using XEngine.Utilities;
 using XEngine.Time;
+using Common.Utilities;
 
 #if !UNITY_SERVER || UNITY_EDITOR
 namespace UpdateCommon.Role{
@@ -35,16 +36,22 @@ namespace UpdateCommon.Role{
             
         }
 
+        private Vector2 m_vLastDir=Vector2.zero;
 
         private void LocalClient_Update(){
             if(!IsSpawned)return;
             if(IsOwner){
+                if(m_eCurrentState.Value==Common.Define.Player_State_Enum.None){
+                    return;
+                }
                 float h=Input.GetAxisRaw("Horizontal");
                 float v=Input.GetAxisRaw("Vertical");
-                //if(h!=0||v!=0){
-                    Vector3 inputDir=new Vector3(h,0f,v);
-                    SendInputMoveServerRpc(inputDir);
-                //}
+                Vector2 inputDir=new Vector2(h,v);
+                if(Tools.IsNearVector2(m_vLastDir,inputDir)){
+                    return;
+                }
+                m_vLastDir=inputDir;
+                SendInputMoveServerRpc(inputDir);
             }
         }
 

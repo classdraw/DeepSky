@@ -21,6 +21,17 @@ namespace UpdateCommon.Role{
         private float m_fMoveSpeed=3f;
         public float MoveSpeed{get=>m_fMoveSpeed;}
 
+        [SerializeField]
+        private Animator m_kAnimator;
+        public Animator SelfAnimator{
+            get{
+                if(m_kAnimator==null){
+                    m_kAnimator=this.transform.Find("PlayerView").GetComponent<Animator>();
+                }
+                return m_kAnimator;
+            }
+        }
+
         public InputData m_kInputData{get;private set;}
 
         public Vector2Int m_kCurrentAOICoord{get;set;}
@@ -42,8 +53,8 @@ namespace UpdateCommon.Role{
         }
 
 
-        private void Server_ReceiveMovement(Vector3 inputDir){
-            m_kInputData.m_kInputDir=new Vector2(inputDir.x,inputDir.z);
+        private void Server_ReceiveMovement(Vector2 inputDir){
+            m_kInputData.m_kInputDir=inputDir;
             if(Tools.IsNearVector2(m_kInputData.m_kInputDir,Vector2.zero)){
                 this.ChangeState(Player_State_Enum.Idle);
             }else{
@@ -63,6 +74,11 @@ namespace UpdateCommon.Role{
                     m_kFsm.TryChangeState((int)Player_State_Enum.Move);
                 break;
             }
+        }
+
+        public void PlayAnimation(string animationName,float fixedTime=0.25f){
+            if(this.SelfAnimator==null){return;}
+            this.SelfAnimator.CrossFadeInFixedTime(animationName,fixedTime);
         }
 
         private void Server_Update() {

@@ -16,6 +16,7 @@ namespace UpdateCommon.Role{
         public override void Enter(params object[] objs)
         {
             // XLogger.LogError("PlayerIdleState Enter");
+            this.GetOwner().PlayAnimation("idle");
         }
 
         public override void Exit(){

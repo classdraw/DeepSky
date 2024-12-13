@@ -17,6 +17,7 @@ namespace UpdateCommon.Role{
         public override void Enter(params object[] objs)
         {
             // XLogger.LogError("PlayerMoveState Enter");
+            this.GetOwner().PlayAnimation("run");
         }
 
         public override void Exit(){

@@ -43,7 +43,7 @@ namespace UpdateCommon.Role{
 
                 //呼叫服务器自身的netobject
                 [ServerRpc(RequireOwnership =false)]//是否需要验证宿主
-                private void SendInputMoveServerRpc(Vector3 inputDir){//结尾必须ServerRpc
+                private void SendInputMoveServerRpc(Vector2 inputDir){//结尾必须ServerRpc
                         if(IsServer){
                 #if UNITY_SERVER || UNITY_EDITOR
                         this.Server_ReceiveMovement(inputDir);

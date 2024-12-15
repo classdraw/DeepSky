@@ -1,5 +1,6 @@
 using UnityEngine;
 using UpdateCommon.Role;
+using Unity.Netcode;
 public struct DATA_InitLocalPlayer{
     public PlayerCtrl m_kLocalPlayer;
 }
@@ -9,12 +10,12 @@ public struct DATA_AOIUpdatePlayerPos{
     public Vector2Int m_kNewPos;
 }
 public struct DATA_AOIAddPlayer{
-    public PlayerCtrl m_kPlayer;
+    public NetworkBehaviour m_kNetObject;
     public Vector2Int m_kPos;
 }
 
 public struct DATA_AOIRemovePlayer{
-    public PlayerCtrl m_kPlayer;
+    public NetworkBehaviour m_kNetObject;
     public Vector2Int m_kPos;
 }
 

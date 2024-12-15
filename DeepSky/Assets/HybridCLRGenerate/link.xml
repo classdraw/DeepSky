@@ -38,6 +38,7 @@
   <assembly fullname="Unity.Netcode.Runtime">
     <type fullname="Unity.Netcode.FastBufferReader" preserve="all" />
     <type fullname="Unity.Netcode.FastBufferWriter" preserve="all" />
+    <type fullname="Unity.Netcode.LogLevel" preserve="all" />
     <type fullname="Unity.Netcode.NetworkBehaviour" preserve="all" />
     <type fullname="Unity.Netcode.NetworkBehaviour/RpcReceiveHandler" preserve="all" />
     <type fullname="Unity.Netcode.NetworkBehaviour/__RpcExecStage" preserve="all" />
@@ -53,6 +54,7 @@
     <type fullname="Unity.Netcode.RpcDelivery" preserve="all" />
     <type fullname="Unity.Netcode.ServerRpcAttribute" preserve="all" />
     <type fullname="Unity.Netcode.ServerRpcParams" preserve="all" />
+    <type fullname="Unity.Netcode.ServerRpcReceiveParams" preserve="all" />
     <type fullname="Unity.Netcode.Transports.UTP.UnityTransport" preserve="all" />
     <type fullname="Unity.Netcode.__RpcParams" preserve="all" />
   </assembly>
@@ -66,6 +68,7 @@
     <type fullname="UnityEngine.Camera" preserve="all" />
     <type fullname="UnityEngine.Color" preserve="all" />
     <type fullname="UnityEngine.Component" preserve="all" />
+    <type fullname="UnityEngine.Debug" preserve="all" />
     <type fullname="UnityEngine.Events.UnityAction`1" preserve="all" />
     <type fullname="UnityEngine.GameObject" preserve="all" />
     <type fullname="UnityEngine.GeometryUtility" preserve="all" />
@@ -90,6 +93,9 @@
     <type fullname="UnityEngine.GUILayoutOption" preserve="all" />
     <type fullname="UnityEngine.GUIStyle" preserve="all" />
     <type fullname="UnityEngine.GUIStyleState" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.InputLegacyModule">
+    <type fullname="UnityEngine.Input" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.TerrainModule">
     <type fullname="UnityEngine.Terrain" preserve="all" />

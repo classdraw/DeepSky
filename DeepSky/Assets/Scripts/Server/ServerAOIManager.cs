@@ -51,15 +51,15 @@ namespace XEngine.Server{
 
         private void OnAOIAddPlayer(object obj){
             var arg=(DATA_AOIAddPlayer)obj;
-            XLogger.LogServer("OnAOIAddPlayer>>"+arg.m_kPlayer.OwnerClientId);
-            this.InitClient(arg.m_kPlayer.OwnerClientId,arg.m_kPos);
+            XLogger.LogServer("OnAOIAddPlayer>>"+arg.m_kNetObject.OwnerClientId);
+            this.InitClient(arg.m_kNetObject.OwnerClientId,arg.m_kPos);
         }
 
         private void OnAOIRemovePlayer(object obj){
             
             var arg=(DATA_AOIRemovePlayer)obj;
-            XLogger.LogServer("OnAOIRemovePlayer>>"+arg.m_kPlayer.OwnerClientId);
-            this.RemoveClient(arg.m_kPlayer.OwnerClientId,arg.m_kPos);
+            XLogger.LogServer("OnAOIRemovePlayer>>"+arg.m_kNetObject.OwnerClientId);
+            this.RemoveClient(arg.m_kNetObject.OwnerClientId,arg.m_kPos);
         }
 
         private void OnAOIUpdatePlayerPos(object obj){

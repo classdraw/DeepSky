@@ -18,7 +18,7 @@ namespace UpdateCommon.Role{
     public partial class PlayerCtrl : NetworkBehaviour
     {
         [SerializeField]
-        private float m_fMoveSpeed=3f;
+        private float m_fMoveSpeed=10f;
         public float MoveSpeed{get=>m_fMoveSpeed;}
 
         [SerializeField]

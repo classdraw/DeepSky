@@ -4,6 +4,7 @@ using UnityEngine;
 using XEngine.Event;
 using UpdateCommon.Role;
 using Common.Define;
+using Unity.Netcode;
 
 namespace UpdateCommon.Utilities{
     public static class AOIUtilities
@@ -15,17 +16,17 @@ namespace UpdateCommon.Utilities{
 
         }
 
-        public static void AddPlayer(PlayerCtrl player,Vector2Int aoiCoord){
+        public static void AddPlayer(NetworkBehaviour netObject,Vector2Int aoiCoord){
             var d=new DATA_AOIAddPlayer(){
-                m_kPlayer=player,
+                m_kNetObject=netObject,
                 m_kPos=aoiCoord
             };
             MessageManager.GetInstance().SendMessage((int)MessageManager_Enum.AOIAddPlayer,d);
         }
 
-        public static void RemovePlayer(PlayerCtrl player,Vector2Int aoiCoord){
+        public static void RemovePlayer(NetworkBehaviour netObject,Vector2Int aoiCoord){
             var d=new DATA_AOIRemovePlayer(){
-                m_kPlayer=player,
+                m_kNetObject=netObject,
                 m_kPos=aoiCoord
             };
             MessageManager.GetInstance().SendMessage((int)MessageManager_Enum.AOIRemovePlayer,d);

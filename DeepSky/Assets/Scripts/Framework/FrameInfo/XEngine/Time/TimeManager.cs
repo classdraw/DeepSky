@@ -87,7 +87,11 @@ namespace XEngine.Time
             _eventIndex=0;
             _eventBatchCount=0;
             _nextFrameAction=null;
-            _frameActions.Clear();
+
+            if(_frameActions!=null){
+                _frameActions.Clear();
+                _frameActions=null;
+            }
         }
 
         #endregion

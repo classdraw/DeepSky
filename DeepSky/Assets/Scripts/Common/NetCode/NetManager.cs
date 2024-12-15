@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
+using Unity.Netcode.Components;
 using Unity.Netcode.Transports.UTP;
 using UnityEngine;
 using XEngine.Utilities;
@@ -36,13 +37,16 @@ namespace XEngine.Net{
         //动态创建物理 并且绑定
         public NetworkObject SpawnObject(ulong clientId,GameObject prefab,Vector3 position){
             //todo 后续增加网络对象对象池
-            NetworkObject networkObject=Instantiate(prefab).GetComponent<NetworkObject>();
+            var obj=GameObject.Instantiate(prefab);
+            
+            NetworkObject networkObject=obj.GetComponent<NetworkObject>();
+
             networkObject.transform.position=position;
             networkObject.SpawnWithOwnership(clientId);
-            // networkObject.ChangeOwnership(clientId);
-            networkObject.NetworkShow(clientId);
-
-            // var t1=NetManager.GetInstance().SpawnManager.OwnershipToObjectsTable;
+            if(!networkObject.IsNetworkVisibleTo(clientId)){
+                networkObject.NetworkShow(clientId);
+            }
+            // NetManager.GetInstance().SpawnManager.InstantiateAndSpawn(prefab.GetComponent<NetworkObject>(),clientId,false,true,false,position,Quaternion.identity);
             return networkObject;
         }
     }

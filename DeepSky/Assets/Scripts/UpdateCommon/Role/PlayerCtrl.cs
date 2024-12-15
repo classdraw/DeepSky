@@ -5,6 +5,7 @@ using XEngine.Event;
 using Unity.Netcode;
 using Common.Define;
 using XEngine.Net;
+using XEngine.Utilities;
 
 namespace UpdateCommon.Role{
         //公共
@@ -14,6 +15,8 @@ namespace UpdateCommon.Role{
                 private NetVaribale<Player_State_Enum> m_eCurrentState=new NetVaribale<Player_State_Enum>(Player_State_Enum.None);
                 public override void OnNetworkSpawn()
                 {
+                        this.name="PLAYER_"+this.OwnerClientId;
+                        // XLogger.LogError("OnNetworkSpawn>>>>>>>>>>"+this.OwnerClientId);
                         base.OnNetworkSpawn();
                         if(IsClient){
                 #if !UNITY_SERVER || UNITY_EDITOR

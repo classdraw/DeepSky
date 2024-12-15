@@ -24,7 +24,7 @@ public class GameSceneStart : MonoBehaviour
         // }
         //初始化网络资源
         if(GameConsts.IsClient()){
-            
+            // var handle=GameResourceManager.Instance.LoadResourceSync("role_Role_Player");
             ConnectFacade.GetInstance().StartClient();
         }
         //如果有服务器 服务器开始

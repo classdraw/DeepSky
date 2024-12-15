@@ -1,10 +1,12 @@
 // #if UNITY_SERVER || SERVER_EDITOR_TEST
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using XEngine.Event;
 using XEngine.Net;
 using XEngine.Utilities;
+using XEngine.Loader;
 
 namespace XEngine.Server{
     /// <summary>
@@ -15,6 +17,8 @@ namespace XEngine.Server{
         [SerializeField]
         private GameObject m_PlayerPrefab;
         private bool m_bInit=false;
+
+        private Dictionary<ulong,NetworkObject> m_kClients=new Dictionary<ulong, NetworkObject>();
 
         #region 生命周期相关
         public bool IsValid(){
@@ -47,21 +51,30 @@ namespace XEngine.Server{
         
         //每个客户端链接成功后回调
         private void OnClientConnectedCallback(ulong clientId){
-            if(!IsValid()){
+            if(!IsValid()||m_kClients.ContainsKey(clientId)){
                 return;
             }
             //登录注册流程
             XLogger.LogServer("ClientEnter=>"+clientId);
             //todo 后续预制体走配置 坐标走地图配置
-            NetManager.GetInstance().SpawnObject(clientId,m_PlayerPrefab,new Vector3(5f,55f,5f));
+            var obj=NetManager.GetInstance().SpawnObject(clientId,m_PlayerPrefab,new Vector3(5f,55f,5f));
+            m_kClients.Add(clientId,obj);
         }
 
         private void OnClientDisconnectCallback(ulong clientId){
-            if(!IsValid()){
+            if(!IsValid()||!m_kClients.ContainsKey(clientId)){
                 return;
             }
             XLogger.LogServer("ClientExit=>"+clientId);
+            var obj=m_kClients[clientId];
+            if(obj!=null){
+                GameObject.Destroy(obj);
+            }
+            m_kClients.Remove(clientId);
+            //理论上删除召唤物等等
         }
+
+
         #endregion
     }
 }

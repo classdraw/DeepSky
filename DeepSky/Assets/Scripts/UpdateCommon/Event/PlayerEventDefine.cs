@@ -5,7 +5,7 @@ public struct DATA_InitLocalPlayer{
     public PlayerCtrl m_kLocalPlayer;
 }
 public struct DATA_AOIUpdatePlayerPos{
-    public PlayerCtrl m_kPlayer;
+    public NetworkBehaviour m_kNetObject;
     public Vector2Int m_kOldPos;
     public Vector2Int m_kNewPos;
 }

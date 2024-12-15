@@ -64,8 +64,8 @@ namespace XEngine.Server{
 
         private void OnAOIUpdatePlayerPos(object obj){
             var arg=(DATA_AOIUpdatePlayerPos)obj;
-            XLogger.LogServer("OnAOIUpdatePlayerPos>>"+arg.m_kPlayer.OwnerClientId+"__"+arg.m_kNewPos);
-            this.UpdateClientChunkCoord(arg.m_kPlayer.OwnerClientId,arg.m_kOldPos,arg.m_kNewPos);
+            XLogger.LogServer("OnAOIUpdatePlayerPos>>"+arg.m_kNetObject.OwnerClientId+"__"+arg.m_kNewPos);
+            this.UpdateClientChunkCoord(arg.m_kNetObject.OwnerClientId,arg.m_kOldPos,arg.m_kNewPos);
         }
 
         #endregion
@@ -237,6 +237,21 @@ namespace XEngine.Server{
                 }
             }
         }
+
+        // private void InitSelfDisplay(ulong clientA){
+        //     if(!IsValid()){
+        //         return;
+        //     }
+        //     bool flaga=NetManager.GetInstance().SpawnManager.OwnershipToObjectsTable.TryGetValue(clientA,out Dictionary<ulong,NetworkObject> dictA);
+        //     if(flaga){
+        //         foreach(NetworkObject aItem in dictA.Values){
+        //             if(!aItem.IsNetworkVisibleTo(clientA)){
+        //                 aItem.NetworkShow(clientA);
+        //             }
+
+        //         }
+        //     }
+        // }
         //客户端互相可见
         private void ClientMutualShow(ulong clientA,ulong clientB){
             if(!IsValid()||clientA==clientB){

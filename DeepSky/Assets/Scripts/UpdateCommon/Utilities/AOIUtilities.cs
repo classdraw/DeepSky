@@ -31,9 +31,9 @@ namespace UpdateCommon.Utilities{
             };
             MessageManager.GetInstance().SendMessage((int)MessageManager_Enum.AOIRemovePlayer,d);
         }
-        public static void UpdatePlayerCoord(PlayerCtrl player,Vector2Int oldCoord,Vector2Int newCoord){
+        public static void UpdatePlayerCoord(NetworkBehaviour netObject,Vector2Int oldCoord,Vector2Int newCoord){
             var d=new DATA_AOIUpdatePlayerPos(){
-                m_kPlayer=player,
+                m_kNetObject=netObject,
                 m_kOldPos=oldCoord,
                 m_kNewPos=newCoord
             };

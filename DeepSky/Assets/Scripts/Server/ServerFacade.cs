@@ -15,6 +15,7 @@ namespace XEngine.Server{
             return m_kInstance;
         }
         private ServerGlobal m_kServerGlobal;
+        public ServerGlobal SC_ServerGlobal{get=>m_kServerGlobal;}
         private ClientsManager m_kClientManager;
         private ServerAOIManager m_kServerAOIManager;
         private ServerGameSceneManager m_kServerGameSceneManager;

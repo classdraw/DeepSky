@@ -56,8 +56,9 @@ namespace XEngine.Server{
             }
             //登录注册流程
             XLogger.LogServer("ClientEnter=>"+clientId);
+            var pos=ServerFacade.GetInstance().SC_ServerGlobal.GetDefaultPlayerPos();
             //todo 后续预制体走配置 坐标走地图配置
-            var obj=NetManager.GetInstance().SpawnObject(clientId,m_PlayerPrefab,new Vector3(5f,55f,5f));
+            var obj=NetManager.GetInstance().SpawnObject(clientId,m_PlayerPrefab,pos);
             m_kClients.Add(clientId,obj);
         }
 

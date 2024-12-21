@@ -9,6 +9,7 @@ using UpdateCommon.Utilities;
 using Common.Utilities;
 using Common.Define;
 using XEngine.Time;
+using System;
 
 namespace UpdateCommon.Role{
     public class InputData{
@@ -31,10 +32,30 @@ namespace UpdateCommon.Role{
                 return m_kAnimator;
             }
         }
+        [SerializeField]
+        private CharacterController m_kCharacterController;
+        public CharacterController SelfCharacterController{
+            get{
+                if(m_kCharacterController==null){
+                    m_kCharacterController=this.transform.GetComponent<CharacterController>();
+                }
+                return m_kCharacterController;
+            }
+        }
+        [SerializeField]
+        private AnimeEventComponent m_kAnimeEventComponent;
+        public AnimeEventComponent SelfAnimeEventComponent{
+            get{
+                if(m_kAnimeEventComponent==null){
+                    m_kAnimeEventComponent=this.transform.Find("PlayerView").GetComponent<AnimeEventComponent>();
+                }
+                return m_kAnimeEventComponent;
+            }
+        }
 
         public InputData m_kInputData{get;private set;}
 
-        public Vector2Int m_kCurrentAOICoord{get;set;}
+        public Vector2Int m_kCurrentAOICoord{get;private set;}
 
         private PlayerStateFsm m_kFsm;
         private void Server_OnNetworkSpawn(){
@@ -86,6 +107,15 @@ namespace UpdateCommon.Role{
                 if(m_kFsm!=null){
                     m_kFsm.Tick();
                 }
+            }
+        }
+
+        public void UpdateAOICoord(){
+            var newIntPos=AOIUtilities.ConvertWorldPositionToCoord(this.transform.position);
+            //aoi相关
+            if(newIntPos!=this.m_kCurrentAOICoord){
+                AOIUtilities.UpdatePlayerCoord(this,this.m_kCurrentAOICoord,newIntPos);
+                this.m_kCurrentAOICoord=newIntPos;
             }
         }
     }

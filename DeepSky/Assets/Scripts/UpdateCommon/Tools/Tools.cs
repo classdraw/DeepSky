@@ -44,6 +44,14 @@ namespace Common.Utilities{
             return false;
 
         }
+
+        public static bool IsNearVector3(Vector3 v1,Vector3 v2,float subValue=0.01f){
+            if(Mathf.Abs(v2.x-v1.x)<=subValue&&Mathf.Abs(v2.y-v1.y)<=subValue&&Mathf.Abs(v2.z-v1.z)<=subValue){
+                return true;
+            }
+            return false;
+
+        }
     }
 
 }

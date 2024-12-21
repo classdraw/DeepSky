@@ -30,6 +30,10 @@ namespace UpdateCommon.Role{
             var inputDir=GetOwner().m_kInputData.m_kInputDir;
             if(!Tools.IsNearVector2(inputDir,Vector2.zero)){
                 GetOwner().ChangeState(Player_State_Enum.Move);
+            }else{
+                if(GetOwner().SelfCharacterController.isGrounded){
+                    GetOwner().SelfCharacterController.Move(new Vector3(0f,-9.8f*Time.deltaTime,0f));
+                }
             }
         }
 

@@ -13,14 +13,18 @@ using System;
 
 namespace UpdateCommon.Role{
     public class InputData{
-        public Vector2 m_kInputDir;
+        public Vector2 m_vMoveDir;
     }
     //服务器端
     public partial class PlayerCtrl : NetworkBehaviour
     {
         [SerializeField]
-        private float m_fMoveSpeed=10f;
+        private float m_fMoveSpeed=1f;
         public float MoveSpeed{get=>m_fMoveSpeed;}
+
+        [SerializeField]
+        private float m_fRotateSpeed=1000f;
+        public float RotateSpeed{get=>m_fRotateSpeed;}
 
         [SerializeField]
         private Animator m_kAnimator;
@@ -74,9 +78,9 @@ namespace UpdateCommon.Role{
         }
 
 
-        private void Server_ReceiveMovement(Vector2 inputDir){
-            m_kInputData.m_kInputDir=inputDir;
-            if(Tools.IsNearVector2(m_kInputData.m_kInputDir,Vector2.zero)){
+        private void Server_ReceiveMovement(Vector3 moveDir){
+            m_kInputData.m_vMoveDir=moveDir.normalized;
+            if(Tools.IsNearVector3(m_kInputData.m_vMoveDir,Vector3.zero)){
                 this.ChangeState(Player_State_Enum.Idle);
             }else{
                 this.ChangeState(Player_State_Enum.Move);

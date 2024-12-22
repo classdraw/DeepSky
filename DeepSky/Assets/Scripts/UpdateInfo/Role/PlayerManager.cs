@@ -34,7 +34,7 @@ public class PlayerManager : MonoBehaviour
             m_kCinemachineFreeLook.transform.position=playerCtrl.transform.position;
             m_kCinemachineFreeLook.LookAt=playerCtrl.m_kLookAtObj.transform;
             m_kCinemachineFreeLook.Follow=playerCtrl.m_kFollowObj.transform;
-            // m_kCinemachineFreeLook.Follow=playerCtrl
+            XLogger.Log("OnInitLocalPlayer Success!!!");
         #endif
     }
 

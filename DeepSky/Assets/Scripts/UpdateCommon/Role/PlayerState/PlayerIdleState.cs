@@ -27,8 +27,8 @@ namespace UpdateCommon.Role{
             if(GetOwner()==null){
                 return;
             }
-            var inputDir=GetOwner().m_kInputData.m_kInputDir;
-            if(!Tools.IsNearVector2(inputDir,Vector2.zero)){
+            var moveDir=GetOwner().m_kInputData.m_vMoveDir;
+            if(!Tools.IsNearVector3(moveDir,Vector3.zero)){
                 GetOwner().ChangeState(Player_State_Enum.Move);
             }else{
                 if(GetOwner().SelfCharacterController.isGrounded){

@@ -17,7 +17,7 @@ namespace UpdateCommon.Role{
         public override void Enter(params object[] objs)
         {
             // XLogger.LogError("PlayerMoveState Enter");
-            this.GetOwner().PlayAnimation("run");
+            this.GetOwner().PlayAnimation("Move");
             //注册
             this.GetOwner().SelfAnimeEventComponent.SetRootMotionAction(OnPlayerMotionCallback);
         }
@@ -30,11 +30,13 @@ namespace UpdateCommon.Role{
             if(GetOwner()==null){
                 return;
             }
-            var inputDir=GetOwner().m_kInputData.m_kInputDir;
-            if(Tools.IsNearVector2(inputDir,Vector2.zero)){
+            var moveDir=GetOwner().m_kInputData.m_vMoveDir;
+            if(Tools.IsNearVector3(moveDir,Vector3.zero)){
                 GetOwner().ChangeState(Player_State_Enum.Idle);
             }else{
-                
+                //旋转
+                var viewTran=GetOwner().SelfAnimeEventComponent.transform;
+                viewTran.rotation=Quaternion.RotateTowards(viewTran.rotation,Quaternion.LookRotation(moveDir),Time.deltaTime*GetOwner().RotateSpeed);
                 // var oldPos=GetOwner().transform.position;
                 // var dir=0.02f*GetOwner().MoveSpeed*(inputDir.normalized);
                 // var newPos=oldPos+new Vector3(dir.x,0f,dir.y);

@@ -36,7 +36,7 @@ namespace UpdateCommon.Role{
             
         }
 
-        private Vector2 m_vLastDir=Vector2.zero;
+        private Vector3 m_vLastDir=Vector3.zero;
 
         private void LocalClient_Update(){
             if(!IsSpawned)return;
@@ -46,12 +46,17 @@ namespace UpdateCommon.Role{
                 }
                 float h=Input.GetAxisRaw("Horizontal");
                 float v=Input.GetAxisRaw("Vertical");
-                Vector2 inputDir=new Vector2(h,v);
-                if(Tools.IsNearVector2(m_vLastDir,inputDir)){
+                Vector3 inputDir=new Vector3(h,0f,v);
+
+                if(Tools.IsNearVector3(m_vLastDir,inputDir)&&Tools.IsNearVector3(m_vLastDir,Vector3.zero)){
                     return;
                 }
-                m_vLastDir=inputDir;
-                SendInputMoveServerRpc(inputDir);
+                float cameraY=Camera.main.transform.eulerAngles.y;
+                //四元数和向量相乘  这个向量按四元数角度旋转
+                var dir=Quaternion.Euler(0f,cameraY,0f)*inputDir;
+
+                m_vLastDir=dir;
+                SendInputMoveServerRpc(dir);
             }
         }
 

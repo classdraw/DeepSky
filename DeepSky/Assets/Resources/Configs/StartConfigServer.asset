@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d1182e03fea7b4d8c93ca158bbddf3, type: 3}
   m_Name: StartConfigServer
   m_EditorClassIdentifier: 
-  m_ePlayMode: 0
+  m_ePlayMode: 1
   m_ePartType: 1
   m_eNetModel: 0
   m_eDefaultBuildPipeline: 0

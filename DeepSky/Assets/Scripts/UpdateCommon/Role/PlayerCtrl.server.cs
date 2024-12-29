@@ -78,8 +78,9 @@ namespace UpdateCommon.Role{
         }
 
 
-        private void Server_ReceiveMovement(Vector3 moveDir){
-            m_kInputData.m_vMoveDir=moveDir.normalized;
+        private void Server_ReceiveMovement(Vector3 inputDir){
+            var t=inputDir.normalized;
+            m_kInputData.m_vMoveDir=new Vector2(t.x,t.z);
             if(Tools.IsNearVector3(m_kInputData.m_vMoveDir,Vector3.zero)){
                 this.ChangeState(Player_State_Enum.Idle);
             }else{

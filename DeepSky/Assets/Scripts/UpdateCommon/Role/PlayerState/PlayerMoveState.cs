@@ -19,11 +19,11 @@ namespace UpdateCommon.Role{
             // XLogger.LogError("PlayerMoveState Enter");
             this.GetOwner().PlayAnimation("Move");
             //注册
-            this.GetOwner().SelfAnimeEventComponent.SetRootMotionAction(OnPlayerMotionCallback);
+            // this.GetOwner().SelfAnimeEventComponent.SetRootMotionAction(OnPlayerMotionCallback);
         }
 
         public override void Exit(){
-            this.GetOwner().SelfAnimeEventComponent.ClearRootMotionAction();
+            // this.GetOwner().SelfAnimeEventComponent.ClearRootMotionAction();
         }
 
         public override void Tick(){
@@ -31,22 +31,32 @@ namespace UpdateCommon.Role{
                 return;
             }
             var moveDir=GetOwner().m_kInputData.m_vMoveDir;
-            if(Tools.IsNearVector3(moveDir,Vector3.zero)){
+            if(Tools.IsNearVector2(moveDir,Vector2.zero)){
                 GetOwner().ChangeState(Player_State_Enum.Idle);
             }else{
+                float dtTime=Time.deltaTime;
+                var oldPos=GetOwner().transform.position;
+                var dir=dtTime*GetOwner().MoveSpeed*moveDir;
+                var deltaPos=new Vector3(dir.x,0f,dir.y);
+
                 //旋转
+                var newPos=oldPos+deltaPos;
                 var viewTran=GetOwner().SelfAnimeEventComponent.transform;
-                viewTran.rotation=Quaternion.RotateTowards(viewTran.rotation,Quaternion.LookRotation(moveDir),Time.deltaTime*GetOwner().RotateSpeed);
-                // var oldPos=GetOwner().transform.position;
-                // var dir=0.02f*GetOwner().MoveSpeed*(inputDir.normalized);
-                // var newPos=oldPos+new Vector3(dir.x,0f,dir.y);
+
+                var lookPos=newPos-viewTran.position;
+                lookPos.y=0f;
+                var needRotate=Quaternion.LookRotation(lookPos);
+                // viewTran.rotation=Quaternion.RotateTowards(viewTran.rotation,Quaternion.LookRotation(lookRotPos),Time.deltaTime*GetOwner().RotateSpeed);
+                viewTran.rotation=Quaternion.Lerp(viewTran.rotation,needRotate,dtTime*GetOwner().RotateSpeed);
+                
+
+                deltaPos.y-=9.8f*dtTime;//可以走配表 模拟重力
                 // GetOwner().transform.position=newPos;
-                // var newIntPos=AOIUtilities.ConvertWorldPositionToCoord(newPos);
-                // //aoi相关
-                // if(newIntPos!=GetOwner().m_kCurrentAOICoord){
-                //     AOIUtilities.UpdatePlayerCoord(GetOwner(),GetOwner().m_kCurrentAOICoord,newIntPos);
-                //     GetOwner().m_kCurrentAOICoord=newIntPos;
-                // }
+                GetOwner().SelfCharacterController.Move(deltaPos);
+
+                if(!Tools.IsNearVector3(dir,Vector2.zero)){
+                    GetOwner().UpdateAOICoord();
+                }
             }
             
             //状态类走别的逻辑
@@ -59,6 +69,8 @@ namespace UpdateCommon.Role{
             //     m_kCurrentAOICoord=newIntPos;
             // }
         }
+
+        //动画位移逻辑 目前不用
         private void OnPlayerMotionCallback(Vector3 deltaPos,Quaternion deltaRotate){
 
             this.GetOwner().SelfAnimator.speed=this.GetOwner().MoveSpeed;

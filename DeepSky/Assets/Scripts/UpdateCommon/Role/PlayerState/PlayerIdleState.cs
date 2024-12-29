@@ -28,12 +28,12 @@ namespace UpdateCommon.Role{
                 return;
             }
             var moveDir=GetOwner().m_kInputData.m_vMoveDir;
-            if(!Tools.IsNearVector3(moveDir,Vector3.zero)){
+            if(!Tools.IsNearVector2(moveDir,Vector2.zero)){
                 GetOwner().ChangeState(Player_State_Enum.Move);
             }else{
-                if(GetOwner().SelfCharacterController.isGrounded){
-                    GetOwner().SelfCharacterController.Move(new Vector3(0f,-9.8f*Time.deltaTime,0f));
-                }
+                // if(!GetOwner().SelfCharacterController.isGrounded){
+                //     GetOwner().SelfCharacterController.Move(new Vector3(0f,-9.8f*Time.deltaTime,0f));
+                // }
             }
         }
 

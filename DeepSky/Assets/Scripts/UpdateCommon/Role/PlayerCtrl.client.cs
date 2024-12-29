@@ -46,17 +46,17 @@ namespace UpdateCommon.Role{
                 }
                 float h=Input.GetAxisRaw("Horizontal");
                 float v=Input.GetAxisRaw("Vertical");
-                Vector3 inputDir=new Vector3(h,0f,v);
+                Vector3 inputDir=new Vector3(h,0f,v);//输入和朝向需要转下
 
                 if(Tools.IsNearVector3(m_vLastDir,inputDir)&&Tools.IsNearVector3(m_vLastDir,Vector3.zero)){
                     return;
                 }
                 float cameraY=Camera.main.transform.eulerAngles.y;
                 //四元数和向量相乘  这个向量按四元数角度旋转
-                var dir=Quaternion.Euler(0f,cameraY,0f)*inputDir;
-
-                m_vLastDir=dir;
-                SendInputMoveServerRpc(dir);
+                inputDir=Quaternion.Euler(0f,cameraY,0f)*inputDir;
+                
+                m_vLastDir=inputDir;
+                SendInputMoveServerRpc(inputDir);
             }
         }
 

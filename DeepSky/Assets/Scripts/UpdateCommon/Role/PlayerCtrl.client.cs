@@ -18,7 +18,12 @@ namespace UpdateCommon.Role{
         [SerializeField]
         public GameObject m_kFollowObj;
 
-        
+        private void Start(){
+            //start一定在Client_OnNetworkSpawn后，如果IsSpawned=false 那么是异常对象
+            if(!IsSpawned){
+                Destroy(gameObject);//后续走网络对象池
+            }
+        }
         private void Client_OnNetworkSpawn(){
             if(IsOwner){//自己是主角才行
                 var init=new DATA_InitLocalPlayer();

@@ -43,9 +43,10 @@ namespace XEngine.Net{
 
             networkObject.transform.position=position;
             networkObject.SpawnWithOwnership(clientId);
-            if(!networkObject.IsNetworkVisibleTo(clientId)){
-                networkObject.NetworkShow(clientId);
-            }
+            networkObject.NetworkShow(clientId);
+            // if(!networkObject.IsNetworkVisibleTo(clientId)){
+            //     networkObject.NetworkShow(clientId);
+            // }
             // NetManager.GetInstance().SpawnManager.InstantiateAndSpawn(prefab.GetComponent<NetworkObject>(),clientId,false,true,false,position,Quaternion.identity);
             return networkObject;
         }

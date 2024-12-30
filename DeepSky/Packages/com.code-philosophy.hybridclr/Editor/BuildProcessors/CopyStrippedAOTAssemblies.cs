@@ -110,6 +110,11 @@ namespace HybridCLR.Editor.BuildProcessors
 
         public void OnPreprocessBuild(BuildReport report)
         {
+            // //jyy避免打包服务端导致目录全部删除
+            // if(!SettingsUtil.Enable){
+            //     Debug.Log("拦截华佗删除!!!");
+            //     return;
+            // }
             BuildTarget target = report.summary.platform;
             var dstPath = SettingsUtil.GetAssembliesPostIl2CppStripDir(target);
             BashUtil.RecreateDir(dstPath);

@@ -74,10 +74,11 @@ public class BuildAssetsEditor
     #region  build相关操作
     [MenuItem("Deep/Build/所有bundle需要手动打，手动拷贝，没加入流程！", priority = 0)]
     public static void BuildTest(){
-
+        // PrebuildCommand.GenerateAll();
     }
     [MenuItem("Deep/Build/BuildServer", priority = 1)]
     public static void BuildServer(){
+        BuildSceneFilterAssemblies.enable=false;
         string ss1 = System.Environment.CurrentDirectory+"/BuildOut";
         string projectRoot = ss1+"/Server";
         if(Directory.Exists(projectRoot)){
@@ -110,6 +111,7 @@ public class BuildAssetsEditor
 
     [MenuItem("Deep/Build/BuildWindowsClient", priority = 2)]
     public static void BuildWindowsClient(){
+        BuildSceneFilterAssemblies.enable=false;
         PrebuildCommand.GenerateAll();
         CreateDllWindows();//拷贝所有dll
         _buildClient(BuildTarget.StandaloneWindows64,".exe");
@@ -120,6 +122,7 @@ public class BuildAssetsEditor
     
     [MenuItem("Deep/Build/BuildAndroidClient", priority = 3)]
     public static void BuildAndroidClient(){
+        BuildSceneFilterAssemblies.enable=false;
         PrebuildCommand.GenerateAll();//生成dll
         CreateDllAndroid();//拷贝所有dll
         _buildClient(BuildTarget.Android,".apk");//构建
@@ -129,6 +132,7 @@ public class BuildAssetsEditor
 
         [MenuItem("Deep/Build/BuildWindowsUpdate", priority = 4)]
     public static void BuildWindowsUpdate(){
+        BuildSceneFilterAssemblies.enable=false;
         PrebuildCommand.GenerateAll();//生成dll
         CreateDllWindows();//拷贝所有dll
         //yooasset构建以及bundle拷贝

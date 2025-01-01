@@ -2,6 +2,7 @@
 <linker>
   <assembly fullname="Cinemachine">
     <type fullname="Cinemachine.CinemachineFreeLook" preserve="all" />
+    <type fullname="Cinemachine.CinemachineVirtualCameraBase" preserve="all" />
   </assembly>
   <assembly fullname="Common">
     <type fullname="Common.Define.Player_State_Enum" preserve="all" />
@@ -15,12 +16,11 @@
     <type fullname="XEngine.Event.GlobalEventListener" preserve="all" />
     <type fullname="XEngine.Event.MessageManager" preserve="all" />
     <type fullname="XEngine.Event.TestABC" preserve="all" />
-    <type fullname="XEngine.Fsm.BaseFsm" preserve="all" />
-    <type fullname="XEngine.Fsm.BaseFsmState" preserve="all" />
     <type fullname="XEngine.Loader.GameResourceManager" preserve="all" />
     <type fullname="XEngine.Pool.IAutoReleaseComponent" preserve="all" />
     <type fullname="XEngine.Pool.ObjectPoolT`1" preserve="all" />
     <type fullname="XEngine.Pool.ResHandle" preserve="all" />
+    <type fullname="XEngine.Time.TimeManager" preserve="all" />
     <type fullname="XEngine.Utilities.GameConsts" preserve="all" />
     <type fullname="XEngine.Utilities.MonoSingleton`1" preserve="all" />
     <type fullname="XEngine.Utilities.Singleton`1" preserve="all" />
@@ -59,9 +59,6 @@
     <type fullname="Unity.Netcode.Transports.UTP.UnityTransport" preserve="all" />
     <type fullname="Unity.Netcode.__RpcParams" preserve="all" />
   </assembly>
-  <assembly fullname="UnityEngine.AnimationModule">
-    <type fullname="UnityEngine.Animator" preserve="all" />
-  </assembly>
   <assembly fullname="UnityEngine.CoreModule">
     <type fullname="UnityEngine.Application" preserve="all" />
     <type fullname="UnityEngine.Behaviour" preserve="all" />
@@ -99,10 +96,6 @@
   <assembly fullname="UnityEngine.InputLegacyModule">
     <type fullname="UnityEngine.Input" preserve="all" />
   </assembly>
-  <assembly fullname="UnityEngine.PhysicsModule">
-    <type fullname="UnityEngine.CharacterController" preserve="all" />
-    <type fullname="UnityEngine.CollisionFlags" preserve="all" />
-  </assembly>
   <assembly fullname="UnityEngine.TerrainModule">
     <type fullname="UnityEngine.Terrain" preserve="all" />
   </assembly>
@@ -110,8 +103,8 @@
     <type fullname="UnityEngine.Font" preserve="all" />
   </assembly>
   <assembly fullname="mscorlib">
+    <type fullname="System.Action" preserve="all" />
     <type fullname="System.Action`1" preserve="all" />
-    <type fullname="System.Action`2" preserve="all" />
     <type fullname="System.Array" preserve="all" />
     <type fullname="System.Byte" preserve="all" />
     <type fullname="System.Collections.Generic.Dictionary`2" preserve="all" />
@@ -127,7 +120,6 @@
     <type fullname="System.IDisposable" preserve="all" />
     <type fullname="System.Int32" preserve="all" />
     <type fullname="System.Object" preserve="all" />
-    <type fullname="System.ParamArrayAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.CompilerGeneratedAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" preserve="all" />

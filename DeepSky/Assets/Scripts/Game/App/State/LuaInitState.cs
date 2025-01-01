@@ -12,6 +12,7 @@ using HybridCLR;
 using XEngine.Server;
 using XEngine.Utilities;
 using XEngine.Reflex;
+using Game.Scenes;
 
 namespace Game.Fsm
 {
@@ -24,20 +25,40 @@ namespace Game.Fsm
         }
         public override void Enter(params object[]objs){
             XLogger.Log("LuaInitState Enter");
-            
+            bool serverStart=false;
+            #if UNITY_SERVER
+                serverStart=true;
+            #else
+                if(GameConsts.IsServer()){
+                    serverStart=true;
+                }else{
+                    serverStart=false;
+                }
+            #endif
+
             //对象池初始化
             PoolManager.GetInstance().InitConfig();
-            LoadDll();
-            ConnectFacade.GetInstance().InitClient();
             XFacade.Init();//框架初始化
             Global.CreateInstance();//游戏全局mono初始化
             
 
 
+            if(serverStart){
+                GameSceneManager.GetInstance().LoadSceneAsync("ServerScene",()=>{//服务器加了一个ServerScene，可能后续有逻辑 
+                    ConnectFacade.GetInstance().InitServer();
+                    //server跳转Gamescene场景
+                    GameSceneManager.GetInstance().LoadSceneAsync("GameScene",()=>{
+                        XLogger.Log("Server Success!!!");
+                    });
+                });
+            }else{
+                LoadDll();
+                ConnectFacade.GetInstance().InitClient();
+                XEngine.Config.ConfigManager.GetInstance().InitConfig(()=>{
+                    LuaScriptManager.GetInstance().InitGame();
+                });
+            }
             
-            XEngine.Config.ConfigManager.GetInstance().InitConfig(()=>{
-                LuaScriptManager.GetInstance().InitGame();
-            });
             
             // var b=GameResourceManager.GetInstance().LoadResourceSync("main");
             // Debug.LogError("11111111111");

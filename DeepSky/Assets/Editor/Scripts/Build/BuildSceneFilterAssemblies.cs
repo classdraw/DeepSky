@@ -11,21 +11,21 @@ public class BuildSceneFilterAssemblies : IFilterBuildAssemblies
     public static bool enable=false;
     public string[] OnFilterAssemblies(BuildOptions buildOptions, string[] assemblies)
     {
-        return assemblies;
-        // if(!enable){
-        //     return assemblies;
-        // }
+        // return assemblies;
+        if(!enable){
+            return assemblies;
+        }
 
-        // List<string> list=new List<string>();
-        // for(int i=0;i<assemblies.Length;i++){
-        //     string s=assemblies[i];
-        //     string assName=Path.GetFileNameWithoutExtension(s);
-        //     if(assName.Contains("UpdateInfo")){
-        //         Debug.Log("BuildSceneFilterAssemblies Filter "+assName);
-        //     }else{
-        //         list.Add(s);
-        //     }
-        // }//for
-        // return list.ToArray();
+        List<string> list=new List<string>();
+        for(int i=0;i<assemblies.Length;i++){
+            string s=assemblies[i];
+            string assName=Path.GetFileNameWithoutExtension(s);
+            if(assName.Contains("UpdateInfo")){
+                Debug.Log("BuildSceneFilterAssemblies Filter "+assName);
+            }else{
+                list.Add(s);
+            }
+        }//for
+        return list.ToArray();
     }
 }

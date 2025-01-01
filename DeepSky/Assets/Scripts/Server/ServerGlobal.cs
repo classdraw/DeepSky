@@ -14,6 +14,11 @@ namespace XEngine.Server{
             if(m_kServerConfig==null)return Vector3.zero;
             return m_kServerConfig.m_vPlayerDefaultPos;
         }
+
+        public GameObject GetPlayerPrefab(){
+            if(m_kServerConfig==null)return null;
+            return m_kServerConfig.m_kPlayerPrefab;
+        }
         private bool m_bInit=false;
         public bool IsValid(){
             return m_bInit;

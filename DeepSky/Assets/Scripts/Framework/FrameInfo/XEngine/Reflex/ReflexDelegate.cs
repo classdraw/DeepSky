@@ -21,8 +21,12 @@ namespace XEngine.Reflex{
             if(m_HotUpdate==null){
                 m_kResHandle1=GameResourceManager.GetInstance().LoadResourceSync(GameConsts.HotUpdateCommonAssemblyName);
                 m_UpdateCommon=Assembly.Load(m_kResHandle1.GetObjT<TextAsset>().bytes);
-                m_kResHandle=GameResourceManager.GetInstance().LoadResourceSync(GameConsts.HotUpdateAssemblyName);
-                m_HotUpdate=Assembly.Load(m_kResHandle.GetObjT<TextAsset>().bytes);
+                //服务器不应该加载updateinfo 前端代码
+                if(GameConsts.IsClient()){
+                    m_kResHandle=GameResourceManager.GetInstance().LoadResourceSync(GameConsts.HotUpdateAssemblyName);
+                    m_HotUpdate=Assembly.Load(m_kResHandle.GetObjT<TextAsset>().bytes);
+                }
+
                 XLogger.Log("ReflexDelegate Success");
             }
         }

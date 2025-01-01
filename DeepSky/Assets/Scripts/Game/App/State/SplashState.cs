@@ -68,34 +68,26 @@ namespace Game.Fsm
 
         private void OnYooAssetCallback(){
             XLogger.Log("YooAsset初始化结束");
-            if(GameConsts.NetModel==GameConsts.Game_NetModel_Type.Server){
-                StartServer();
-            }else{
-                #if UNITY_SERVER
-                    StartServer();
-                #else
-                    //到这里位置 热更新就结束了
-                    AppStateManager.GetInstance().ChangeState(LuaInitState.Index);
-                #endif
-            }
+            //到这里位置 热更新就结束了
+            AppStateManager.GetInstance().ChangeState(LuaInitState.Index);
 
             
         }
 
-        private void StartServer(){
-            XFacade.Init();//框架初始化
-            Global.CreateInstance();//游戏全局mono初始化
+        // private void StartServer(){
+        //     XFacade.Init();//框架初始化
+        //     Global.CreateInstance();//游戏全局mono初始化
             
-            //对象池初始化
-            XEngine.Pool.PoolManager.GetInstance().InitConfig();
-            GameSceneManager.GetInstance().LoadSceneAsync("ServerScene",()=>{//服务器加了一个ServerScene，可能后续有逻辑 
-                ConnectFacade.GetInstance().InitServer();
-                //server跳转Gamescene场景
-                GameSceneManager.GetInstance().LoadSceneAsync("GameScene",()=>{
-                    XLogger.Log("Server Success!!!");
-                });
-            });
-        }
+        //     //对象池初始化
+        //     XEngine.Pool.PoolManager.GetInstance().InitConfig();
+        //     GameSceneManager.GetInstance().LoadSceneAsync("ServerScene",()=>{//服务器加了一个ServerScene，可能后续有逻辑 
+        //         ConnectFacade.GetInstance().InitServer();
+        //         //server跳转Gamescene场景
+        //         GameSceneManager.GetInstance().LoadSceneAsync("GameScene",()=>{
+        //             XLogger.Log("Server Success!!!");
+        //         });
+        //     });
+        // }
 
         public override void Exit(){
 

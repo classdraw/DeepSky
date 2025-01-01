@@ -14,8 +14,7 @@ namespace XEngine.Server{
     /// </summary>
     public class ClientsManager : MonoBehaviour
     {
-        [SerializeField]
-        private GameObject m_PlayerPrefab;
+
         private bool m_bInit=false;
 
         private Dictionary<ulong,NetworkObject> m_kClients=new Dictionary<ulong, NetworkObject>();
@@ -57,8 +56,9 @@ namespace XEngine.Server{
             //登录注册流程
             XLogger.LogServer("ClientEnter=>"+clientId);
             var pos=ServerFacade.GetInstance().SC_ServerGlobal.GetDefaultPlayerPos();
+            var prefab=ServerFacade.GetInstance().SC_ServerGlobal.GetPlayerPrefab();
             //todo 后续预制体走配置 坐标走地图配置
-            var obj=NetManager.GetInstance().SpawnObject(clientId,m_PlayerPrefab,pos);
+            var obj=NetManager.GetInstance().SpawnObject(clientId,prefab,pos);
             m_kClients.Add(clientId,obj);
         }
 

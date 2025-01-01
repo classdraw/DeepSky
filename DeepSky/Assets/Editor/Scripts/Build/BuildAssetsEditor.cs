@@ -78,7 +78,7 @@ public class BuildAssetsEditor
     }
     [MenuItem("Deep/Build/BuildServer", priority = 1)]
     public static void BuildServer(){
-        BuildSceneFilterAssemblies.enable=false;
+        BuildSceneFilterAssemblies.enable=true;
         string ss1 = System.Environment.CurrentDirectory+"/BuildOut";
         string projectRoot = ss1+"/Server";
         if(Directory.Exists(projectRoot)){
@@ -106,6 +106,7 @@ public class BuildAssetsEditor
         BuildPipeline.BuildPlayer(build);
 
         HybridCLR.Editor.SettingsUtil.Enable=true;
+        BuildSceneFilterAssemblies.enable=false;
         XLogger.LogImport("Build Server Success!!!");
     }
 

@@ -16,23 +16,30 @@ namespace XEngine.Net{
 
 
         public UnityTransport SelfUnityTransport{get;private set;}
+
+        public NetMessageManager SelfNetMessageManager{get;private set;}
         public void InitServer(){
             this.StartServer();
             XLogger.LogImport("StartServer");
+            SelfNetMessageManager.Init();
         }
         public void InitClient(){
             this.StartClient();
             XLogger.LogImport("StartClient");
+            SelfNetMessageManager.Init();
         }
 
         public void InitHost(){
             this.StartHost();
             XLogger.LogImport("StartHost");
+            SelfNetMessageManager.Init();
         }
 
         public void Init(){
             m_Instance=this;
             SelfUnityTransport=this.GetComponent<UnityTransport>();
+            SelfNetMessageManager=this.GetComponent<NetMessageManager>();
+            
         }
         //动态创建物理 并且绑定
         public NetworkObject SpawnObject(ulong clientId,GameObject prefab,Vector3 position){

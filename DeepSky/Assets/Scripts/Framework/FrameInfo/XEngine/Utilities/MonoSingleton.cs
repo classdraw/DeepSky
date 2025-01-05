@@ -41,6 +41,7 @@ public class  AutoCreateInstanceAttribute:Attribute
 
 
         public static T CreateInstance(Transform parent=null){
+            // Debug.LogError(">>>>>"+typeof(T));
             if(MonoSingleton<T>._instance==null){ 
                 Type t=typeof(T);
                 GameObject go=new GameObject(t.Name,t);

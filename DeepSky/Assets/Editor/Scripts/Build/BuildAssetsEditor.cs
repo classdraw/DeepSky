@@ -78,7 +78,7 @@ public class BuildAssetsEditor
     }
     [MenuItem("Deep/Build/BuildServer", priority = 1)]
     public static void BuildServer(){
-        BuildSceneFilterAssemblies.enable=true;
+        BuildCustomFilterAssemblies.ServerFilterEnable=true;
         string ss1 = System.Environment.CurrentDirectory+"/BuildOut";
         string projectRoot = ss1+"/Server";
         if(Directory.Exists(projectRoot)){
@@ -106,13 +106,13 @@ public class BuildAssetsEditor
         BuildPipeline.BuildPlayer(build);
 
         HybridCLR.Editor.SettingsUtil.Enable=true;
-        BuildSceneFilterAssemblies.enable=false;
+        BuildCustomFilterAssemblies.ServerFilterEnable=false;
         XLogger.LogImport("Build Server Success!!!");
     }
 
     [MenuItem("Deep/Build/BuildWindowsClient", priority = 2)]
     public static void BuildWindowsClient(){
-        BuildSceneFilterAssemblies.enable=false;
+        BuildCustomFilterAssemblies.ServerFilterEnable=false;
         PrebuildCommand.GenerateAll();
         CreateDllWindows();//拷贝所有dll
         _buildClient(BuildTarget.StandaloneWindows64,".exe");
@@ -123,7 +123,7 @@ public class BuildAssetsEditor
     
     [MenuItem("Deep/Build/BuildAndroidClient", priority = 3)]
     public static void BuildAndroidClient(){
-        BuildSceneFilterAssemblies.enable=false;
+        BuildCustomFilterAssemblies.ServerFilterEnable=false;
         PrebuildCommand.GenerateAll();//生成dll
         CreateDllAndroid();//拷贝所有dll
         _buildClient(BuildTarget.Android,".apk");//构建
@@ -133,7 +133,7 @@ public class BuildAssetsEditor
 
         [MenuItem("Deep/Build/BuildWindowsUpdate", priority = 4)]
     public static void BuildWindowsUpdate(){
-        BuildSceneFilterAssemblies.enable=false;
+        BuildCustomFilterAssemblies.ServerFilterEnable=false;
         PrebuildCommand.GenerateAll();//生成dll
         CreateDllWindows();//拷贝所有dll
         //yooasset构建以及bundle拷贝

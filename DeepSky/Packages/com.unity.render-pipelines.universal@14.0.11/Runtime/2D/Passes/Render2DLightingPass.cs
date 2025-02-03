@@ -195,7 +195,7 @@ namespace UnityEngine.Rendering.Universal
             var rtCount = 0U;
 
             // Account for Sprite Mask and normal map usage where the first and last layer has to render the stencil pass
-            bool hasSpriteMask = UnityEngine.SpriteMaskUtility.HasSpriteMaskInScene();
+            bool hasSpriteMask = true;//UnityEngine.SpriteMaskUtility.HasSpriteMaskInScene();
             bool normalsFirstClear = true;
 
             // Draw lights

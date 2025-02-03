@@ -7,7 +7,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	{
 		"Common.dll",
 		"FrameInfo.dll",
-		"System.Core.dll",
 		"Unity.Netcode.Runtime.dll",
 		"UnityEngine.CoreModule.dll",
 		"mscorlib.dll",
@@ -20,7 +19,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// {{ AOT generic types
 	// System.Action<UnityEngine.Vector2Int>
 	// System.Action<object>
-	// System.Action<ulong>
 	// System.Collections.Generic.ArraySortHelper<UnityEngine.Vector2Int>
 	// System.Collections.Generic.ArraySortHelper<object>
 	// System.Collections.Generic.Comparer<UnityEngine.Vector2Int>
@@ -46,15 +44,11 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.EqualityComparer<UnityEngine.Vector2Int>
 	// System.Collections.Generic.EqualityComparer<object>
 	// System.Collections.Generic.EqualityComparer<ulong>
-	// System.Collections.Generic.HashSet.Enumerator<ulong>
-	// System.Collections.Generic.HashSet<ulong>
-	// System.Collections.Generic.HashSetEqualityComparer<ulong>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<UnityEngine.Vector2Int,object>>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<ulong,object>>
 	// System.Collections.Generic.ICollection<UnityEngine.Vector2Int>
 	// System.Collections.Generic.ICollection<object>
-	// System.Collections.Generic.ICollection<ulong>
 	// System.Collections.Generic.IComparer<UnityEngine.Vector2Int>
 	// System.Collections.Generic.IComparer<object>
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<UnityEngine.Vector2Int,object>>
@@ -62,13 +56,11 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<ulong,object>>
 	// System.Collections.Generic.IEnumerable<UnityEngine.Vector2Int>
 	// System.Collections.Generic.IEnumerable<object>
-	// System.Collections.Generic.IEnumerable<ulong>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<UnityEngine.Vector2Int,object>>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<ulong,object>>
 	// System.Collections.Generic.IEnumerator<UnityEngine.Vector2Int>
 	// System.Collections.Generic.IEnumerator<object>
-	// System.Collections.Generic.IEnumerator<ulong>
 	// System.Collections.Generic.IEqualityComparer<UnityEngine.Vector2Int>
 	// System.Collections.Generic.IEqualityComparer<object>
 	// System.Collections.Generic.IEqualityComparer<ulong>
@@ -96,7 +88,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Comparison<object>
 	// System.Predicate<UnityEngine.Vector2Int>
 	// System.Predicate<object>
-	// System.Predicate<ulong>
 	// Unity.Netcode.FallbackSerializer<int>
 	// Unity.Netcode.INetworkVariableSerializer<int>
 	// Unity.Netcode.NetworkVariable.CheckExceedsDirtinessThresholdDelegate<int>

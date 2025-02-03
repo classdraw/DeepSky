@@ -37,6 +37,7 @@ namespace XEngine.Server{
         public ServerGlobal SC_ServerGlobal{get=>m_kServerGlobal;}
         private ClientsManager m_kClientManager;
         private ServerAOIManager m_kServerAOIManager;
+        private DatabaseManager m_kDatabaseManager;
         private ServerGameSceneManager m_kServerGameSceneManager;
         private ResHandle m_ServerHandle;
         private ResHandle m_kServerResHandle;
@@ -57,8 +58,11 @@ namespace XEngine.Server{
             testUser.m_iTime=DateTime.Now;
             userInfo.InsertOne(testUser);
 
+
+            
             //查询
-            var t=userInfo.Find(Builders<TestUser>.Filter.Eq("m_iUseId",123)).FirstOrDefault();
+            // var t=userInfo.Find(Builders<TestUser>.Filter.Eq("m_iUseId",123)).FirstOrDefault();
+            var t=userInfo.Find(Builders<TestUser>.Filter.And(Builders<TestUser>.Filter.Eq("m_iUseId",123),Builders<TestUser>.Filter.Eq("m_iUseId",345))).FirstOrDefault();
             if(t!=null){
                 XLogger.LogError(">>>>"+t.m_sName);
             }
@@ -82,6 +86,10 @@ namespace XEngine.Server{
         }
 
         private void ClearServerCache(){
+            if(m_kDatabaseManager!=null){
+                m_kDatabaseManager.UnInit();
+                m_kDatabaseManager=null;
+            }
             if(m_kServerGameSceneManager!=null){
                 m_kServerGameSceneManager.UnInit();
                 m_kServerGameSceneManager=null;
@@ -107,12 +115,13 @@ namespace XEngine.Server{
                 m_kServerResHandle.Dispose();
                 m_kServerResHandle=null;
             }
-            
+
         }
 
         private void OnServerInit(object obj){
             // TestConnectDB();
             InitServer();
+            m_kDatabaseManager.Init();
             m_kServerGlobal.Init();
             m_kClientManager.Init();
             m_kServerAOIManager.Init();
@@ -136,6 +145,7 @@ namespace XEngine.Server{
             m_ServerHandle=GameResourceManager.GetInstance().LoadResourceSync("server_ServerCtrl");
             var obj=m_ServerHandle.GetGameObject();
             GameObject.DontDestroyOnLoad(obj);
+            m_kDatabaseManager=obj.GetComponent<DatabaseManager>();
             m_kServerGlobal=obj.GetComponent<ServerGlobal>();
             m_kClientManager=obj.GetComponent<ClientsManager>();
             m_kServerAOIManager=obj.GetComponent<ServerAOIManager>();
